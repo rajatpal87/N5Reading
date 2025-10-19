@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import db from './db/db.js';
+import { db, dbType } from './db/db.js';
 
 dotenv.config();
 
@@ -31,26 +31,47 @@ app.get('/api/health', (req, res) => {
 });
 
 // Test database connection
-app.get('/api/test-db', (req, res) => {
-  db.get('SELECT COUNT(*) as count FROM jlpt_vocabulary WHERE jlpt_level = 5', (err, row) => {
-    if (err) {
-      res.status(500).json({ error: 'Database error', details: err.message });
+app.get('/api/test-db', async (req, res) => {
+  try {
+    if (dbType === 'postgresql') {
+      // PostgreSQL
+      const vocabResult = await db.query('SELECT COUNT(*) as count FROM jlpt_vocabulary WHERE jlpt_level = 5');
+      const grammarResult = await db.query('SELECT COUNT(*) as count FROM grammar_patterns WHERE jlpt_level = 5');
+      
+      res.json({
+        status: 'ok',
+        database: 'PostgreSQL',
+        data: {
+          n5_vocabulary: parseInt(vocabResult.rows[0].count),
+          n5_grammar: parseInt(grammarResult.rows[0].count)
+        }
+      });
     } else {
-      db.get('SELECT COUNT(*) as count FROM grammar_patterns WHERE jlpt_level = 5', (err2, row2) => {
-        if (err2) {
-          res.status(500).json({ error: 'Database error', details: err2.message });
+      // SQLite
+      db.get('SELECT COUNT(*) as count FROM jlpt_vocabulary WHERE jlpt_level = 5', (err, row) => {
+        if (err) {
+          res.status(500).json({ error: 'Database error', details: err.message });
         } else {
-          res.json({
-            status: 'ok',
-            data: {
-              n5_vocabulary: row.count,
-              n5_grammar: row2.count
+          db.get('SELECT COUNT(*) as count FROM grammar_patterns WHERE jlpt_level = 5', (err2, row2) => {
+            if (err2) {
+              res.status(500).json({ error: 'Database error', details: err2.message });
+            } else {
+              res.json({
+                status: 'ok',
+                database: 'SQLite',
+                data: {
+                  n5_vocabulary: row.count,
+                  n5_grammar: row2.count
+                }
+              });
             }
           });
         }
       });
     }
-  });
+  } catch (error) {
+    res.status(500).json({ error: 'Database error', details: error.message });
+  }
 });
 
 // Routes will be added in Phase 1

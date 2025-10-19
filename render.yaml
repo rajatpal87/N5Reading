@@ -1,0 +1,40 @@
+# Render.com deployment configuration
+services:
+  # Backend API
+  - type: web
+    name: n5reading-backend
+    runtime: node
+    region: oregon
+    plan: starter
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: OPENAI_API_KEY
+        sync: false # Set manually in Render dashboard
+      - key: DEEPL_API_KEY
+        sync: false # Set manually in Render dashboard
+    healthCheckPath: /api/health
+    
+  # Frontend Static Site
+  - type: web
+    name: n5reading-frontend
+    runtime: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: VITE_API_URL
+        value: https://n5reading-backend.onrender.com/api
+
+databases:
+  # PostgreSQL database (for production - Phase 8+)
+  # Uncomment when ready to use PostgreSQL instead of SQLite
+  # - name: n5reading-db
+  #   databaseName: n5reading
+  #   user: n5reading
+  #   plan: starter
+
