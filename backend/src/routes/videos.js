@@ -160,27 +160,30 @@ router.post('/youtube', uploadLimiter, async (req, res) => {
 
     // Extract metadata using FFmpeg
     const metadata = await extractVideoMetadata(videoInfo.filePath);
-    const duration = metadata.format.duration ? parseFloat(metadata.format.duration) : videoInfo.duration || 0;
-    const resolution = metadata.streams.find(s => s.codec_type === 'video') 
-      ? `${metadata.streams.find(s => s.codec_type === 'video').width}x${metadata.streams.find(s => s.codec_type === 'video').height}` 
-      : null;
+    const duration = metadata.format && metadata.format.duration ? parseFloat(metadata.format.duration) : videoInfo.duration || 0;
+    
+    // Safely extract resolution
+    let resolution = null;
+    if (metadata.streams && Array.isArray(metadata.streams)) {
+      const videoStream = metadata.streams.find(s => s.codec_type === 'video');
+      if (videoStream && videoStream.width && videoStream.height) {
+        resolution = `${videoStream.width}x${videoStream.height}`;
+      }
+    }
 
-    // Store in database
+    // Store in database (using correct column names from schema)
     const insertQuery = dbType === 'postgresql'
-      ? `INSERT INTO videos (title, filename, original_filename, mime_type, size, duration, resolution, upload_date, status, local_path, youtube_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *`
-      : `INSERT INTO videos (title, filename, original_filename, mime_type, size, duration, resolution, upload_date, status, local_path, youtube_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+      ? `INSERT INTO videos (filename, original_name, file_path, mime_type, file_size, duration, status, youtube_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *`
+      : `INSERT INTO videos (filename, original_name, file_path, mime_type, file_size, duration, status, youtube_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
 
     const values = [
-      videoInfo.youtubeTitle || videoInfo.originalName,
       videoInfo.filename,
-      videoInfo.originalName,
+      videoInfo.youtubeTitle || videoInfo.originalName,
+      `/uploads/${videoInfo.filename}`,
       videoInfo.mimeType,
       videoInfo.fileSize,
       duration,
-      resolution,
-      new Date().toISOString(),
       'uploaded',
-      `/uploads/${videoInfo.filename}`,
       url
     ];
 
@@ -195,20 +198,17 @@ router.post('/youtube', uploadLimiter, async (req, res) => {
           if (err) {
             reject(err);
           } else {
-            // Build video object with inserted ID
+            // Build video object with inserted ID (matching schema column names)
             const video = {
               id: this.lastID,
-              title: values[0],
-              filename: values[1],
-              original_filename: values[2],
+              filename: values[0],
+              original_name: values[1],
+              file_path: values[2],
               mime_type: values[3],
-              size: values[4],
+              file_size: values[4],
               duration: values[5],
-              resolution: values[6],
-              upload_date: values[7],
-              status: values[8],
-              local_path: values[9],
-              youtube_url: values[10]
+              status: values[6],
+              youtube_url: values[7]
             };
             resolve(video);
           }

@@ -14,16 +14,33 @@ const __dirname = path.dirname(__filename);
  */
 export async function downloadYouTubeVideo(url, outputDir) {
   try {
+    console.log('📥 Starting YouTube download:', url);
+    console.log('📁 Output directory:', outputDir);
+    
     // Ensure output directory exists
     if (!fs.existsSync(outputDir)) {
+      console.log('📁 Creating output directory...');
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
     // Generate filename based on timestamp
     const timestamp = Date.now();
     const outputTemplate = path.join(outputDir, `${timestamp}-%(title)s.%(ext)s`);
+    console.log('📝 Output template:', outputTemplate);
 
-    console.log('📥 Downloading YouTube video:', url);
+    console.log('🔍 Fetching video info first...');
+    
+    // Get video info first (faster and tests if video is accessible)
+    const info = await youtubedl(url, {
+      dumpSingleJson: true,
+      noWarnings: true,
+      noPlaylist: true,
+    });
+    
+    console.log('✅ Video info retrieved:', info.title);
+    console.log('📊 Duration:', info.duration, 'seconds');
+
+    console.log('⬇️ Starting video download...');
 
     // Download video
     const output = await youtubedl(url, {
@@ -36,13 +53,8 @@ export async function downloadYouTubeVideo(url, outputDir) {
       noPart: true,
       noOverwrites: true,
     });
-
-    // Get video info
-    const info = await youtubedl(url, {
-      dumpSingleJson: true,
-      noWarnings: true,
-      noPlaylist: true,
-    });
+    
+    console.log('✅ Download complete');
 
     // Find the downloaded file
     const files = fs.readdirSync(outputDir)
