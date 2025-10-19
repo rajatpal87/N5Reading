@@ -14,10 +14,13 @@ export const createTables = (db, dbType = 'sqlite') => {
         file_size INTEGER,
         duration REAL,
         mime_type TEXT,
-        status TEXT DEFAULT 'uploaded' CHECK(status IN ('uploaded', 'processing', 'audio_extracted', 'transcribing', 'translating', 'analyzing', 'completed', 'error')),
+        status TEXT DEFAULT 'uploaded' CHECK(status IN ('uploaded', 'processing', 'audio_extracted', 'transcribing', 'translating', 'completed', 'error', 'downloading_youtube', 'extracting_audio', 'compressing_audio')),
         audio_path TEXT,
         youtube_url TEXT,
         error_message TEXT,
+        progress INTEGER DEFAULT 0,
+        status_message TEXT,
+        estimated_time_remaining INTEGER,
         created_at TIMESTAMP DEFAULT ${dbType === 'postgresql' ? 'CURRENT_TIMESTAMP' : "CURRENT_TIMESTAMP"}
       )`,
 

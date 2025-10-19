@@ -2,18 +2,22 @@ import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 
 // Rate limiting configuration
+// Higher limits in development to avoid issues during testing
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
 export const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
+  max: isDevelopment ? 1000 : 100, // Much higher limit in dev
   message: 'Too many requests from this IP, please try again later.',
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  skip: (req) => isDevelopment && req.ip === '::1' || req.ip === '127.0.0.1', // Skip for localhost in dev
 });
 
 // Stricter rate limit for upload endpoint
 export const uploadLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10, // Limit each IP to 10 uploads per 15 minutes
+  max: isDevelopment ? 100 : 10, // Higher limit in dev
   message: 'Too many upload requests, please try again later.',
   standardHeaders: true,
   legacyHeaders: false,

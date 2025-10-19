@@ -8,8 +8,11 @@ import { extractVideoMetadata, extractAudio } from '../services/videoService.js'
 import { downloadYouTubeVideo, isYouTubeUrl } from '../services/youtubeService.js';
 import { transcribeAudio } from '../services/transcriptionService.js';
 import { translateText, translateSegments } from '../services/translationService.js';
+import { analyzeVideo, getVideoAnalysis, getN5Timeline } from '../services/analysisService.js';
+import { generateVocabularyCSV, generateAnkiCSV, generateGrammarCSV } from '../services/exportService.js';
 import { uploadLimiter } from '../middleware/security.js';
 import { validateVideoId, validateFileUpload, sanitizeFilename } from '../middleware/validation.js';
+import { updateProgress, ProgressPresets, estimateTime } from '../utils/progressTracker.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -318,41 +321,38 @@ router.post('/:id/process', validateVideoId, async (req, res) => {
       return res.status(400).json({ error: 'Video is already being processed' });
     }
 
-    // Update status to processing
-    const updateQuery = dbType === 'postgresql'
-      ? `UPDATE videos SET status = $1 WHERE id = $2`
-      : `UPDATE videos SET status = ? WHERE id = ?`;
+    // Update status to extracting_audio with progress
+    await updateProgress(db, dbType, id, ProgressPresets.AUDIO_START(video.duration || 0));
 
-    if (dbType === 'postgresql') {
-      await db.query(updateQuery, ['processing', id]);
-    } else {
-      await new Promise((resolve, reject) => {
-        db.run(updateQuery, ['processing', id], (err) => {
-          if (err) reject(err);
-          else resolve();
-        });
-      });
-    }
-
-    // Extract audio
+    // Extract audio with progress tracking
     const videoPath = path.join(uploadsDir, video.filename);
     const audioFilename = `${video.filename.split('.')[0]}.wav`;
     const audioPath = path.join(uploadsDir, audioFilename);
 
     console.log('🎵 Extracting audio for video:', video.id);
 
-    const audioInfo = await extractAudio(videoPath, audioPath);
+    const audioInfo = await extractAudio(videoPath, audioPath, video.duration || 0, async (progressData) => {
+      // Report progress during extraction
+      if (progressData.stage === 'extracting') {
+        await updateProgress(db, dbType, id, ProgressPresets.AUDIO_PROGRESS(
+          progressData.progress,
+          video.duration || 0
+        ));
+      }
+    });
 
-    // Update video with audio path
+    // Update video with audio path and mark as complete
+    await updateProgress(db, dbType, id, ProgressPresets.AUDIO_COMPLETE);
+    
     const updateAudioQuery = dbType === 'postgresql'
-      ? `UPDATE videos SET audio_path = $1, status = $2 WHERE id = $3`
-      : `UPDATE videos SET audio_path = ?, status = ? WHERE id = ?`;
+      ? `UPDATE videos SET audio_path = $1 WHERE id = $2`
+      : `UPDATE videos SET audio_path = ? WHERE id = ?`;
 
     if (dbType === 'postgresql') {
-      await db.query(updateAudioQuery, [`/uploads/${audioFilename}`, 'audio_extracted', id]);
+      await db.query(updateAudioQuery, [`/uploads/${audioFilename}`, id]);
     } else {
       await new Promise((resolve, reject) => {
-        db.run(updateAudioQuery, [`/uploads/${audioFilename}`, 'audio_extracted', id], (err) => {
+        db.run(updateAudioQuery, [`/uploads/${audioFilename}`, id], (err) => {
           if (err) reject(err);
           else resolve();
         });
@@ -374,16 +374,8 @@ router.post('/:id/process', validateVideoId, async (req, res) => {
   } catch (error) {
     console.error('Error processing video:', error);
 
-    // Update status to error
-    const errorQuery = dbType === 'postgresql'
-      ? `UPDATE videos SET status = $1, error_message = $2 WHERE id = $3`
-      : `UPDATE videos SET status = ?, error_message = ? WHERE id = ?`;
-
-    if (dbType === 'postgresql') {
-      await db.query(errorQuery, ['error', error.message, id]);
-    } else {
-      db.run(errorQuery, ['error', error.message, id]);
-    }
+    // Update status to error with progress tracker
+    await updateProgress(db, dbType, id, ProgressPresets.ERROR(error.message));
 
     res.status(500).json({
       error: 'Failed to process video',
@@ -476,29 +468,27 @@ router.post('/:id/transcribe', validateVideoId, async (req, res) => {
       return res.status(400).json({ error: 'Video is already being processed' });
     }
 
-    // Update status to transcribing
-    const updateStatusQuery = dbType === 'postgresql'
-      ? `UPDATE videos SET status = $1 WHERE id = $2`
-      : `UPDATE videos SET status = ? WHERE id = ?`;
-
-    if (dbType === 'postgresql') {
-      await db.query(updateStatusQuery, ['transcribing', id]);
-    } else {
-      await new Promise((resolve, reject) => {
-        db.run(updateStatusQuery, ['transcribing', id], (err) => {
-          if (err) reject(err);
-          else resolve();
-        });
-      });
-    }
+    // Update status to transcribing with progress
+    await updateProgress(db, dbType, id, ProgressPresets.TRANSCRIPTION_START(video.duration || 0));
 
     console.log('🎤 Starting transcription for video:', video.id);
 
     // Get audio file path
     const audioPath = path.join(uploadsDir, path.basename(video.audio_path));
 
-    // Step 1: Transcribe audio
-    const transcriptionResult = await transcribeAudio(audioPath);
+    // Step 1: Transcribe audio with progress tracking
+    const transcriptionResult = await transcribeAudio(audioPath, async (progressData) => {
+      // Report progress during transcription/compression
+      if (progressData.stage === 'compressing') {
+        const originalSizeMB = parseFloat(progressData.message.match(/\d+\.\d+/)[0]);
+        const targetSizeMB = parseFloat(progressData.message.match(/\d+\.\d+/g)[1]);
+        await updateProgress(db, dbType, id, ProgressPresets.COMPRESSION_START(originalSizeMB, targetSizeMB));
+      } else if (progressData.stage === 'compressed') {
+        await updateProgress(db, dbType, id, ProgressPresets.COMPRESSION_COMPLETE);
+      } else if (progressData.stage === 'transcribing') {
+        await updateProgress(db, dbType, id, ProgressPresets.TRANSCRIPTION_PROGRESS(video.duration || 0));
+      }
+    });
 
     console.log('✅ Transcription complete, storing in database...');
 
@@ -541,25 +531,24 @@ router.post('/:id/transcribe', validateVideoId, async (req, res) => {
       });
     }
 
-    // Update video status to translating
-    if (dbType === 'postgresql') {
-      await db.query(updateStatusQuery, ['translating', id]);
-    } else {
-      await new Promise((resolve, reject) => {
-        db.run(updateStatusQuery, ['translating', id], (err) => {
-          if (err) reject(err);
-          else resolve();
-        });
-      });
-    }
+    // Update video status to translating with progress
+    await updateProgress(db, dbType, id, ProgressPresets.TRANSLATION_START(transcriptionResult.segments.length));
 
     console.log('🌏 Starting translation...');
 
     // Step 2: Translate full text
     const translationResult = await translateText(transcriptionResult.text);
 
-    // Step 3: Translate segments
-    const translatedSegments = await translateSegments(transcriptionResult.segments);
+    // Step 3: Translate segments with progress tracking
+    const translatedSegments = await translateSegments(transcriptionResult.segments, async (progressData) => {
+      // Report progress during translation
+      if (progressData.stage === 'translating' && progressData.current) {
+        await updateProgress(db, dbType, id, ProgressPresets.TRANSLATION_PROGRESS(
+          progressData.current,
+          progressData.total
+        ));
+      }
+    });
 
     console.log('✅ Translation complete, storing in database...');
 
@@ -602,17 +591,8 @@ router.post('/:id/transcribe', validateVideoId, async (req, res) => {
       });
     }
 
-    // Update video status to analyzing (ready for Phase 4)
-    if (dbType === 'postgresql') {
-      await db.query(updateStatusQuery, ['analyzing', id]);
-    } else {
-      await new Promise((resolve, reject) => {
-        db.run(updateStatusQuery, ['analyzing', id], (err) => {
-          if (err) reject(err);
-          else resolve();
-        });
-      });
-    }
+    // Update video status to analyzing (ready for Phase 4) with progress complete
+    await updateProgress(db, dbType, id, ProgressPresets.TRANSLATION_COMPLETE);
 
     console.log('✅ Transcription and translation complete for video:', video.id);
 
@@ -646,19 +626,286 @@ router.post('/:id/transcribe', validateVideoId, async (req, res) => {
   } catch (error) {
     console.error('Error transcribing video:', error);
 
-    // Update status to error
-    const errorQuery = dbType === 'postgresql'
-      ? `UPDATE videos SET status = $1, error_message = $2 WHERE id = $3`
-      : `UPDATE videos SET status = ?, error_message = ? WHERE id = ?`;
-
-    if (dbType === 'postgresql') {
-      await db.query(errorQuery, ['error', error.message, id]);
-    } else {
-      db.run(errorQuery, ['error', error.message, id]);
-    }
+    // Update status to error with progress tracker
+    await updateProgress(db, dbType, id, ProgressPresets.ERROR(error.message));
 
     res.status(500).json({
       error: 'Failed to transcribe video',
+      details: error.message
+    });
+  }
+});
+
+// GET /api/videos/:id/transcription - Get transcription and translation for a video
+router.get('/:id/transcription', validateVideoId, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // Get transcription
+    let transcription;
+    if (dbType === 'postgresql') {
+      const result = await db.query(
+        'SELECT * FROM transcriptions WHERE video_id = $1', 
+        [id]
+      );
+      transcription = result.rows[0];
+    } else {
+      transcription = await new Promise((resolve, reject) => {
+        db.get('SELECT * FROM transcriptions WHERE video_id = ?', [id], (err, row) => {
+          if (err) reject(err);
+          resolve(row);
+        });
+      });
+    }
+
+    if (!transcription) {
+      return res.status(404).json({ error: 'Transcription not found for this video' });
+    }
+
+    // Get translation
+    let translation;
+    if (dbType === 'postgresql') {
+      const result = await db.query(
+        'SELECT * FROM translations WHERE transcription_id = $1', 
+        [transcription.id]
+      );
+      translation = result.rows[0];
+    } else {
+      translation = await new Promise((resolve, reject) => {
+        db.get('SELECT * FROM translations WHERE transcription_id = ?', [transcription.id], (err, row) => {
+          if (err) reject(err);
+          resolve(row);
+        });
+      });
+    }
+
+    // Parse JSON segments
+    const segments = JSON.parse(transcription.segments || '[]');
+    const translatedSegmentsArray = translation ? JSON.parse(translation.segments || '[]') : [];
+
+    // Merge segments with translations
+    const mergedSegments = segments.map((seg, idx) => {
+      const translatedSeg = translatedSegmentsArray[idx];
+      return {
+        id: seg.id,
+        start: seg.start,
+        end: seg.end,
+        text: seg.text,
+        translated_text: translatedSeg?.translation || translatedSeg?.translated_text || ''
+      };
+    });
+
+    res.json({
+      japanese: transcription.full_text,
+      english: translation?.full_text || '',
+      segments: mergedSegments
+    });
+
+  } catch (error) {
+    console.error('Error fetching transcription:', error);
+    res.status(500).json({ 
+      error: 'Failed to fetch transcription',
+      details: error.message 
+    });
+  }
+});
+
+// POST /api/videos/:id/analyze - Analyze video for N5 content
+router.post('/:id/analyze', validateVideoId, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // Get video info
+    let video;
+    if (dbType === 'postgresql') {
+      const result = await db.query('SELECT * FROM videos WHERE id = $1', [id]);
+      video = result.rows[0];
+    } else {
+      video = await new Promise((resolve, reject) => {
+        db.get('SELECT * FROM videos WHERE id = ?', [id], (err, row) => {
+          if (err) reject(err);
+          resolve(row);
+        });
+      });
+    }
+
+    if (!video) {
+      return res.status(404).json({ error: 'Video not found' });
+    }
+
+    // Check if transcription/translation is complete
+    if (video.status !== 'completed') {
+      return res.status(400).json({ 
+        error: 'Video must be transcribed and translated first',
+        current_status: video.status
+      });
+    }
+
+    console.log('📊 Starting N5 analysis for video:', video.id);
+
+    // Analyze video
+    const analysis = await analyzeVideo(id);
+
+    res.json({
+      message: 'N5 analysis complete',
+      analysis: analysis
+    });
+
+  } catch (error) {
+    console.error('Error analyzing video:', error);
+    res.status(500).json({
+      error: 'Failed to analyze video',
+      details: error.message
+    });
+  }
+});
+
+// GET /api/videos/:id/analysis - Get N5 analysis results
+router.get('/:id/analysis', validateVideoId, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const analysis = await getVideoAnalysis(id);
+    res.json(analysis);
+  } catch (error) {
+    console.error('Error fetching analysis:', error);
+    res.status(500).json({
+      error: 'Failed to fetch analysis',
+      details: error.message
+    });
+  }
+});
+
+// GET /api/videos/:id/timeline - Get N5 timeline data for visualization
+router.get('/:id/timeline', validateVideoId, async (req, res) => {
+  const { id } = req.params;
+  const segmentDuration = parseInt(req.query.duration) || 15; // Default 15 seconds
+
+  try {
+    const timeline = await getN5Timeline(id, segmentDuration);
+    res.json(timeline);
+  } catch (error) {
+    console.error('Error generating timeline:', error);
+    res.status(500).json({
+      error: 'Failed to generate timeline',
+      details: error.message
+    });
+  }
+});
+
+// GET /api/videos/:id/export/vocabulary - Export vocabulary as CSV
+router.get('/:id/export/vocabulary', validateVideoId, async (req, res) => {
+  const { id } = req.params;
+  const format = req.query.format || 'csv'; // 'csv' or 'anki'
+
+  try {
+    // Get analysis data
+    const analysis = await getVideoAnalysis(id);
+    const vocabularyData = analysis.vocabulary?.words || [];
+    
+    // Get video info for filename
+    let video;
+    if (dbType === 'postgresql') {
+      const result = await db.query('SELECT original_name FROM videos WHERE id = $1', [id]);
+      video = result.rows[0];
+    } else {
+      video = await new Promise((resolve, reject) => {
+        db.get('SELECT original_name FROM videos WHERE id = ?', [id], (err, row) => {
+          if (err) reject(err);
+          else resolve(row);
+        });
+      });
+    }
+    
+    const videoName = video?.original_name || `video_${id}`;
+    const safeName = videoName.replace(/[^a-z0-9]/gi, '_').substring(0, 50);
+    
+    // Generate CSV based on format
+    let csvContent;
+    let filename;
+    
+    if (format === 'anki') {
+      // Get transcription segments for context
+      let transcription;
+      if (dbType === 'postgresql') {
+        const result = await db.query('SELECT segments FROM transcriptions WHERE video_id = $1', [id]);
+        transcription = result.rows[0];
+      } else {
+        transcription = await new Promise((resolve, reject) => {
+          db.get('SELECT segments FROM transcriptions WHERE video_id = ?', [id], (err, row) => {
+            if (err) reject(err);
+            else resolve(row);
+          });
+        });
+      }
+      const segments = transcription ? JSON.parse(transcription.segments || '[]') : [];
+      
+      csvContent = generateAnkiCSV(vocabularyData, segments);
+      filename = `${safeName}_n5_vocabulary_anki.csv`;
+    } else {
+      csvContent = generateVocabularyCSV(vocabularyData);
+      filename = `${safeName}_n5_vocabulary.csv`;
+    }
+    
+    // Set headers for file download
+    res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    
+    // Add UTF-8 BOM for Excel compatibility
+    res.write('\ufeff');
+    res.end(csvContent);
+    
+  } catch (error) {
+    console.error('Error exporting vocabulary:', error);
+    res.status(500).json({
+      error: 'Failed to export vocabulary',
+      details: error.message
+    });
+  }
+});
+
+// GET /api/videos/:id/export/grammar - Export grammar patterns as CSV
+router.get('/:id/export/grammar', validateVideoId, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // Get analysis data
+    const analysis = await getVideoAnalysis(id);
+    const grammarData = analysis.grammar?.patterns || [];
+    
+    // Get video info for filename
+    let video;
+    if (dbType === 'postgresql') {
+      const result = await db.query('SELECT original_name FROM videos WHERE id = $1', [id]);
+      video = result.rows[0];
+    } else {
+      video = await new Promise((resolve, reject) => {
+        db.get('SELECT original_name FROM videos WHERE id = ?', [id], (err, row) => {
+          if (err) reject(err);
+          else resolve(row);
+        });
+      });
+    }
+    
+    const videoName = video?.original_name || `video_${id}`;
+    const safeName = videoName.replace(/[^a-z0-9]/gi, '_').substring(0, 50);
+    
+    // Generate CSV
+    const csvContent = generateGrammarCSV(grammarData);
+    const filename = `${safeName}_n5_grammar.csv`;
+    
+    // Set headers for file download
+    res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    
+    // Add UTF-8 BOM for Excel compatibility
+    res.write('\ufeff');
+    res.end(csvContent);
+    
+  } catch (error) {
+    console.error('Error exporting grammar:', error);
+    res.status(500).json({
+      error: 'Failed to export grammar',
       details: error.message
     });
   }

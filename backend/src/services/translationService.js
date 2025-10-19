@@ -75,11 +75,12 @@ export async function translateText(text) {
 }
 
 /**
- * Translate an array of text segments
+ * Translate an array of text segments with progress tracking
  * @param {Array<Object>} segments - Array of segments with text
+ * @param {Function} onProgress - Progress callback (optional)
  * @returns {Promise<Array<Object>>} Array of translated segments
  */
-export async function translateSegments(segments) {
+export async function translateSegments(segments, onProgress = null) {
   try {
     console.log(`🌏 Translating ${segments.length} segments...`);
 
@@ -105,9 +106,21 @@ export async function translateSegments(segments) {
         });
         totalChars += result.charCount;
 
+        // Report progress
+        const progress = Math.round(((i + 1) / segments.length) * 100);
+        if (onProgress && (i + 1) % 5 === 0) {
+          onProgress({
+            stage: 'translating',
+            progress: progress,
+            current: i + 1,
+            total: segments.length,
+            message: `Translating segment ${i + 1}/${segments.length}...`,
+          });
+        }
+
         // Log progress every 5 segments
         if ((i + 1) % 5 === 0) {
-          console.log(`📊 Progress: ${i + 1}/${segments.length} segments`);
+          console.log(`📊 Progress: ${i + 1}/${segments.length} segments (${progress}%)`);
         }
 
         // Small delay to avoid rate limiting (DeepL allows ~100 requests/min)
@@ -127,6 +140,15 @@ export async function translateSegments(segments) {
 
     const totalCost = totalChars * 0.000025;
     console.log(`✅ All segments translated. Total: ${totalChars} chars, Cost: $${totalCost.toFixed(4)}`);
+
+    // Report completion
+    if (onProgress) {
+      onProgress({
+        stage: 'complete',
+        progress: 100,
+        message: 'Translation complete',
+      });
+    }
 
     return translatedSegments;
 

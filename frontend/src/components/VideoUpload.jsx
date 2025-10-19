@@ -135,11 +135,11 @@ export default function VideoUpload({ onUploadSuccess }) {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6">
+    <div className="w-full">
       {/* Upload Area */}
       <div
         className={`
-          border-2 border-dashed rounded-lg p-8 text-center cursor-pointer
+          border-2 border-dashed rounded-lg p-6 text-center cursor-pointer
           transition-all duration-200
           ${dragActive ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:border-gray-400'}
           ${uploading ? 'pointer-events-none opacity-50' : ''}
@@ -159,11 +159,11 @@ export default function VideoUpload({ onUploadSuccess }) {
           disabled={uploading}
         />
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {/* Upload Icon */}
           <div className="flex justify-center">
             <svg
-              className="w-16 h-16 text-gray-400"
+              className="w-12 h-12 text-gray-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -179,20 +179,20 @@ export default function VideoUpload({ onUploadSuccess }) {
 
           {/* Upload Text */}
           <div>
-            <p className="text-lg font-medium text-gray-700">
-              Drop your video here or click to browse
+            <p className="text-base font-medium text-gray-700">
+              Drop video or click to browse
             </p>
-            <p className="text-sm text-gray-500 mt-2">
-              Supports: MP4, AVI, MOV, MKV, WEBM (max 100MB)
+            <p className="text-xs text-gray-500 mt-1">
+              MP4, AVI, MOV • Max 100MB
             </p>
           </div>
 
           {/* Selected File Info */}
           {selectedFile && !uploading && (
-            <div className="mt-4 p-4 bg-gray-50 rounded-lg text-left">
-              <p className="text-sm font-medium text-gray-700">Selected file:</p>
-              <p className="text-sm text-gray-600 mt-1 truncate">{selectedFile.name}</p>
-              <p className="text-xs text-gray-500 mt-1">{formatFileSize(selectedFile.size)}</p>
+            <div className="mt-3 p-3 bg-gray-50 rounded-lg text-left">
+              <p className="text-xs font-medium text-gray-700">Selected:</p>
+              <p className="text-xs text-gray-600 mt-0.5 truncate">{selectedFile.name}</p>
+              <p className="text-xs text-gray-500 mt-0.5">{formatFileSize(selectedFile.size)}</p>
             </div>
           )}
         </div>
@@ -200,21 +200,21 @@ export default function VideoUpload({ onUploadSuccess }) {
 
       {/* Error Message */}
       {error && (
-        <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-          <p className="text-sm text-red-600">{error}</p>
+        <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-lg">
+          <p className="text-xs text-red-600">{error}</p>
         </div>
       )}
 
       {/* Upload Progress */}
       {uploading && (
-        <div className="mt-6">
-          <div className="flex items-center justify-between mb-2">
-            <p className="text-sm font-medium text-gray-700">Uploading...</p>
-            <p className="text-sm font-medium text-gray-700">{uploadProgress}%</p>
+        <div className="mt-4">
+          <div className="flex items-center justify-between mb-1.5">
+            <p className="text-xs font-medium text-gray-700">Uploading...</p>
+            <p className="text-xs font-medium text-gray-700">{uploadProgress}%</p>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div className="w-full bg-gray-200 rounded-full h-2">
             <div
-              className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
+              className="bg-blue-600 h-2 rounded-full transition-all duration-300"
               style={{ width: `${uploadProgress}%` }}
             ></div>
           </div>
@@ -226,9 +226,10 @@ export default function VideoUpload({ onUploadSuccess }) {
         <button
           onClick={handleUpload}
           className="
-            mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium
-            py-3 px-6 rounded-lg transition-colors duration-200
+            mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium
+            py-2.5 px-4 rounded-lg transition-colors duration-200
             disabled:opacity-50 disabled:cursor-not-allowed
+            text-sm
           "
           disabled={uploading}
         >

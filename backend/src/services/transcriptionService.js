@@ -1,5 +1,10 @@
 import OpenAI from 'openai';
 import fs from 'fs';
+import util from 'util';
+import { exec } from 'child_process';
+import path from 'path';
+
+const execPromise = util.promisify(exec);
 
 // Lazy initialization of OpenAI client
 let openai = null;
@@ -20,11 +25,63 @@ function getOpenAIClient() {
 }
 
 /**
+ * Compress audio file to meet Whisper API 25MB limit
+ * @param {string} inputPath - Path to input audio file
+ * @param {Function} onProgress - Progress callback (optional)
+ * @returns {Promise<string>} Path to compressed audio file
+ */
+async function compressAudio(inputPath, onProgress = null) {
+  const outputPath = inputPath.replace('.wav', '_compressed.mp3');
+  
+  console.log('🗜️ Compressing audio file to meet 25MB limit...');
+  
+  const originalStats = fs.statSync(inputPath);
+  const originalSizeMB = (originalStats.size / (1024 * 1024)).toFixed(1);
+  const estimatedSizeMB = (originalSizeMB * 0.15).toFixed(1); // Rough estimate for 64kbps
+  
+  if (onProgress) {
+    onProgress({
+      stage: 'compressing',
+      progress: 0,
+      message: `Compressing audio (${originalSizeMB}MB → ~${estimatedSizeMB}MB)...`,
+    });
+  }
+  
+  try {
+    // Compress to MP3 with lower bitrate (64kbps is fine for speech recognition)
+    // Mono channel, 16kHz sample rate - optimized for Whisper
+    await execPromise(
+      `ffmpeg -i "${inputPath}" -acodec libmp3lame -b:a 64k -ar 16000 -ac 1 "${outputPath}" -y`
+    );
+    
+    const compressedStats = fs.statSync(outputPath);
+    const compressedSizeMB = compressedStats.size / (1024 * 1024);
+    console.log(`✅ Audio compressed: ${compressedSizeMB.toFixed(2)} MB`);
+    
+    if (onProgress) {
+      onProgress({
+        stage: 'compressed',
+        progress: 100,
+        message: `Audio compressed (${compressedSizeMB.toFixed(1)}MB)`,
+      });
+    }
+    
+    return outputPath;
+  } catch (error) {
+    console.error('❌ Compression error:', error.message);
+    throw new Error(`Failed to compress audio: ${error.message}`);
+  }
+}
+
+/**
  * Transcribe audio using OpenAI Whisper API
  * @param {string} audioPath - Path to audio file
+ * @param {Function} onProgress - Progress callback (optional)
  * @returns {Promise<Object>} Transcription result with text and segments
  */
-export async function transcribeAudio(audioPath) {
+export async function transcribeAudio(audioPath, onProgress = null) {
+  let compressedPath = null;
+  
   try {
     console.log('🎤 Starting transcription for:', audioPath);
 
@@ -38,12 +95,26 @@ export async function transcribeAudio(audioPath) {
     const fileSizeMB = stats.size / (1024 * 1024);
     console.log(`📊 Audio file size: ${fileSizeMB.toFixed(2)} MB`);
 
-    if (fileSizeMB > 25) {
-      throw new Error(`Audio file too large (${fileSizeMB.toFixed(2)}MB). Whisper API limit is 25MB.`);
-    }
+    let fileToTranscribe = audioPath;
+    
+            // If file is > 25MB, compress it
+            if (fileSizeMB > 25) {
+              console.log('⚠️ File exceeds 25MB limit, compressing...');
+              compressedPath = await compressAudio(audioPath, onProgress);
+              fileToTranscribe = compressedPath;
+            }
+            
+            // Report transcription start
+            if (onProgress) {
+              onProgress({
+                stage: 'transcribing',
+                progress: 50,
+                message: 'Transcribing Japanese audio...',
+              });
+            }
 
     // Create read stream for the audio file
-    const audioStream = fs.createReadStream(audioPath);
+    const audioStream = fs.createReadStream(fileToTranscribe);
 
     // Call Whisper API with verbose JSON for timestamps
     const startTime = Date.now();
@@ -56,23 +127,32 @@ export async function transcribeAudio(audioPath) {
       timestamp_granularities: ['segment'], // Segment-level timestamps
     });
 
-    const duration = ((Date.now() - startTime) / 1000).toFixed(2);
-    console.log(`✅ Transcription complete in ${duration}s`);
-    console.log(`📝 Text length: ${transcription.text.length} characters`);
-    console.log(`📊 Segments: ${transcription.segments?.length || 0}`);
+            const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+            console.log(`✅ Transcription complete in ${duration}s`);
+            console.log(`📝 Text length: ${transcription.text.length} characters`);
+            console.log(`📊 Segments: ${transcription.segments?.length || 0}`);
 
-    // Calculate cost (Whisper API is $0.006 per minute)
-    const audioDurationMin = (transcription.duration || 0) / 60;
-    const estimatedCost = audioDurationMin * 0.006;
-    console.log(`💰 Estimated cost: $${estimatedCost.toFixed(4)}`);
+            // Calculate cost (Whisper API is $0.006 per minute)
+            const audioDurationMin = (transcription.duration || 0) / 60;
+            const estimatedCost = audioDurationMin * 0.006;
+            console.log(`💰 Estimated cost: $${estimatedCost.toFixed(4)}`);
+            
+            // Report completion
+            if (onProgress) {
+              onProgress({
+                stage: 'complete',
+                progress: 100,
+                message: 'Transcription complete',
+              });
+            }
 
-    return {
-      text: transcription.text,
-      language: transcription.language,
-      duration: transcription.duration,
-      segments: transcription.segments || [],
-      cost: estimatedCost,
-    };
+            return {
+              text: transcription.text,
+              language: transcription.language,
+              duration: transcription.duration,
+              segments: transcription.segments || [],
+              cost: estimatedCost,
+            };
 
   } catch (error) {
     console.error('❌ Transcription error:', error.message);
@@ -93,6 +173,16 @@ export async function transcribeAudio(audioPath) {
     }
 
     throw new Error(`Transcription failed: ${error.message}`);
+  } finally {
+    // Clean up compressed file if it was created
+    if (compressedPath && fs.existsSync(compressedPath)) {
+      try {
+        fs.unlinkSync(compressedPath);
+        console.log('🗑️ Cleaned up compressed audio file');
+      } catch (err) {
+        console.error('⚠️ Failed to clean up compressed file:', err.message);
+      }
+    }
   }
 }
 
