@@ -189,12 +189,28 @@ router.post('/youtube', uploadLimiter, async (req, res) => {
       const result = await db.query(insertQuery, values);
       newVideo = result.rows[0];
     } else {
-      await new Promise((resolve, reject) => {
+      // SQLite
+      newVideo = await new Promise((resolve, reject) => {
         db.run(insertQuery, values, function(err) {
-          if (err) reject(err);
-          else {
-            newVideo = { id: this.lastID, ...Object.fromEntries(values.map((v, i) => [['title', 'filename', 'original_filename', 'mime_type', 'size', 'duration', 'resolution', 'upload_date', 'status', 'local_path', 'youtube_url'][i], v])) };
-            resolve();
+          if (err) {
+            reject(err);
+          } else {
+            // Build video object with inserted ID
+            const video = {
+              id: this.lastID,
+              title: values[0],
+              filename: values[1],
+              original_filename: values[2],
+              mime_type: values[3],
+              size: values[4],
+              duration: values[5],
+              resolution: values[6],
+              upload_date: values[7],
+              status: values[8],
+              local_path: values[9],
+              youtube_url: values[10]
+            };
+            resolve(video);
           }
         });
       });
