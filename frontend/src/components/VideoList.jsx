@@ -208,10 +208,10 @@ export default function VideoList({ refreshTrigger }) {
         {videos.map((video) => (
           <div
             key={video.id}
-            className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200"
+            className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200 flex flex-col h-full"
           >
             {/* Video Thumbnail Placeholder */}
-            <div className="bg-gray-800 aspect-video flex items-center justify-center">
+            <div className="bg-gray-800 aspect-video flex items-center justify-center flex-shrink-0">
               <svg
                 className="w-16 h-16 text-gray-400"
                 fill="currentColor"
@@ -221,8 +221,8 @@ export default function VideoList({ refreshTrigger }) {
               </svg>
             </div>
 
-            {/* Video Info */}
-            <div className="p-4">
+            {/* Video Info - Flex grow to fill space */}
+            <div className="p-4 flex flex-col flex-grow">
               <h3 className="font-medium text-gray-900 truncate" title={video.original_name}>
                 {video.original_name}
               </h3>
@@ -268,7 +268,10 @@ export default function VideoList({ refreshTrigger }) {
                 </div>
               )}
 
-              {/* Actions */}
+              {/* Spacer to push actions to bottom */}
+              <div className="flex-grow"></div>
+
+              {/* Actions - Always at bottom */}
               <div className="mt-4 flex gap-2">
                 {video.status === 'uploaded' && (
                   <button
