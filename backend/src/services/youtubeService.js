@@ -35,6 +35,7 @@ export async function downloadYouTubeVideo(url, outputDir) {
       dumpSingleJson: true,
       noWarnings: true,
       noPlaylist: true,
+      cookiesFromBrowser: 'chrome', // Use Chrome cookies to bypass bot detection
     });
     
     console.log('✅ Video info retrieved:', info.title);
@@ -42,7 +43,7 @@ export async function downloadYouTubeVideo(url, outputDir) {
 
     console.log('⬇️ Starting video download...');
 
-    // Download video
+    // Download video (with browser cookies to avoid bot detection)
     const output = await youtubedl(url, {
       output: outputTemplate,
       format: 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
@@ -52,6 +53,7 @@ export async function downloadYouTubeVideo(url, outputDir) {
       noWarnings: true,
       noPart: true,
       noOverwrites: true,
+      cookiesFromBrowser: 'chrome', // Use Chrome cookies to bypass bot detection
     });
     
     console.log('✅ Download complete');
