@@ -274,43 +274,43 @@ export default function VideoList({ refreshTrigger }) {
                 </div>
               )}
 
-              {/* Audio Player - Show if audio has been extracted */}
-              {video.audio_path && (
-                <div className="mt-3">
-                  {playingAudio === video.id ? (
-                    <div className="bg-gray-50 border border-gray-200 rounded p-2">
-                      <audio
-                        controls
-                        autoPlay
-                        className="w-full h-8"
-                        onEnded={() => setPlayingAudio(null)}
-                        src={`http://localhost:3000${video.audio_path}`}
-                      >
-                        Your browser does not support the audio element.
-                      </audio>
-                    </div>
-                  ) : (
-                    <button
-                      onClick={() => toggleAudioPlayback(video.id)}
-                      className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2 px-3 rounded transition-colors duration-200 flex items-center justify-center gap-2"
-                    >
-                      🔊 Play Audio
-                    </button>
-                  )}
-                </div>
-              )}
-
               {/* Spacer to push actions to bottom */}
               <div className="flex-grow"></div>
 
+              {/* Audio Player - Inline when playing */}
+              {playingAudio === video.id && (
+                <div className="mt-3 bg-gray-50 border border-gray-200 rounded p-2">
+                  <audio
+                    controls
+                    autoPlay
+                    className="w-full h-8"
+                    onEnded={() => setPlayingAudio(null)}
+                    src={`http://localhost:3000${video.audio_path}`}
+                  >
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              )}
+
               {/* Actions - Always at bottom */}
               <div className="mt-4 flex gap-2">
+                {/* Show Extract Audio button for uploaded status */}
                 {video.status === 'uploaded' && (
                   <button
                     onClick={() => handleProcess(video.id)}
                     className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
                   >
                     🎵 Extract Audio
+                  </button>
+                )}
+                
+                {/* Show Play Audio button once audio is extracted */}
+                {video.audio_path && !['uploaded', 'completed'].includes(video.status) && playingAudio !== video.id && (
+                  <button
+                    onClick={() => toggleAudioPlayback(video.id)}
+                    className="flex-1 bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
+                  >
+                    🔊 Play Audio
                   </button>
                 )}
                 {video.status === 'completed' && (
