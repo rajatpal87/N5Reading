@@ -78,6 +78,22 @@ export async function downloadYouTubeVideo(url, outputDir) {
 
   } catch (error) {
     console.error('❌ YouTube download error:', error.message);
+    
+    // Check if yt-dlp is not installed
+    if (error.message.includes('spawn') || error.message.includes('ENOENT')) {
+      throw new Error('yt-dlp is not installed. Please install it with: brew install yt-dlp');
+    }
+    
+    // Check for video unavailability
+    if (error.message.includes('unavailable') || error.message.includes('not available')) {
+      throw new Error('This video is unavailable or private');
+    }
+    
+    // Check for file size limit
+    if (error.message.includes('too large') || error.message.includes('max-filesize')) {
+      throw new Error('Video exceeds 100MB size limit');
+    }
+    
     throw new Error(`Failed to download YouTube video: ${error.message}`);
   }
 }
