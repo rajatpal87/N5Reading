@@ -33,30 +33,50 @@ Upload a Japanese video → Get:
 
 ## 📊 Project Status
 
-**Current Phase**: Phase 0 - Setup & Data Preparation
+**Current Phase**: Phase 2 - Video Processing Pipeline
 
-### Completed
-- [x] Project planning
-- [x] Technology stack selection
-- [x] Database schema design
+### ✅ Completed Phases
 
-### In Progress
-- [ ] Extract N5 data from PDFs
-- [ ] Initialize project structure
-- [ ] Set up database with seed data
+**Phase 0: Setup & Data Preparation**
+- [x] Project planning & documentation
+- [x] Initialize Git repository
+- [x] Frontend setup (React + Vite + Tailwind)
+- [x] Backend setup (Express + SQLite)
+- [x] Extract N5 data (296 words + 50 grammar patterns)
+- [x] Database seeding
 
-### Next Steps
-- [ ] Build video upload page
-- [ ] Integrate Whisper API
-- [ ] Implement N5 analysis engine
+**Phase 1: Video Upload & Storage**
+- [x] Drag-and-drop upload UI
+- [x] File validation (size, format, type)
+- [x] Video metadata extraction
+- [x] Video list with cards
+- [x] Delete functionality
+
+**Phase 1B: Security Hardening** 🔒
+- [x] Rate limiting (IP-based)
+- [x] Security headers (Helmet.js)
+- [x] Input validation & sanitization
+- [x] CORS restrictions
+- [x] Request logging
+- [x] Error sanitization
+- [x] XSS & SQL injection protection
+
+### 🚧 Next Steps
+- [ ] YouTube URL download (Phase 2)
+- [ ] Audio extraction with FFmpeg (Phase 2)
+- [ ] Background job queue (Phase 2)
+- [ ] Whisper API integration (Phase 3)
+- [ ] DeepL translation (Phase 3)
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: React + Vite + Tailwind CSS
 - **Backend**: Node.js + Express
+- **Security**: Rate limiting, Helmet.js, Input validation, CORS
 - **Database**: SQLite (MVP) → PostgreSQL (Production)
 - **APIs**: OpenAI Whisper, DeepL
 - **Processing**: FFmpeg, TinySegmenter/Kuromoji
+- **Deployment**: Render.com (ready for $7/month)
 
 ## 📖 Documentation
 
@@ -68,6 +88,16 @@ Upload a Japanese video → Get:
   - Japanese text processing strategy
   - Kanji handling approach
   - External services & costs
+- [SECURITY.md](./SECURITY.md) - 🔒 Security documentation
+  - Implemented security measures
+  - Rate limiting configuration
+  - Input validation
+  - Testing instructions
+  - Incident response plan
+- [DEPLOYMENT_PLAN.md](./DEPLOYMENT_PLAN.md) - 🚀 Deployment guide
+  - Render.com setup ($7/month)
+  - Environment configuration
+  - Scaling strategy
 
 ## 🎓 For Developers
 

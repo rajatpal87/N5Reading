@@ -8,17 +8,17 @@
 
 ---
 
-## Phase 0: Setup & Data Preparation (1-2 days)
+## Phase 0: Setup & Data Preparation (1-2 days) ✅ COMPLETE
 
 ### Tasks
-- [ ] Initialize Git repository
-- [ ] Set up frontend: React + Vite + Tailwind CSS
-- [ ] Set up backend: Node.js + Express + SQLite
-- [ ] **Extract N5 data from PDFs** (use Claude in other project)
-  - [ ] ~800 N5 vocabulary words
-  - [ ] ~50 N5 grammar patterns with regex
-- [ ] Create database schema
-- [ ] Seed database with N5 reference data
+- [x] Initialize Git repository
+- [x] Set up frontend: React + Vite + Tailwind CSS
+- [x] Set up backend: Node.js + Express + SQLite
+- [x] **Extract N5 data from PDFs** (use Claude in other project)
+  - [x] 296 N5 vocabulary words
+  - [x] 50 N5 grammar patterns with regex
+- [x] Create database schema
+- [x] Seed database with N5 reference data
 
 ### File Structure Setup
 ```
@@ -39,22 +39,22 @@ N5Reading/
 
 ---
 
-## Phase 1: Video Upload & Storage (2-3 days)
+## Phase 1: Video Upload & Storage (2-3 days) ✅ COMPLETE
 
 ### Frontend Tasks
-- [ ] Build drag-and-drop upload UI
-- [ ] File validation (MP4, AVI, MOV, max 100MB)
-- [ ] Upload progress bar
-- [ ] Video list page with thumbnails
-- [ ] Basic video metadata display (title, duration, size)
+- [x] Build drag-and-drop upload UI
+- [x] File validation (MP4, AVI, MOV, max 100MB)
+- [x] Upload progress bar
+- [x] Video list page with thumbnails
+- [x] Basic video metadata display (title, duration, size)
 
 ### Backend Tasks
-- [ ] Install Multer for file uploads
-- [ ] Create video upload endpoint (`POST /api/videos/upload`)
-- [ ] Store videos in local filesystem
-- [ ] Extract video metadata using FFmpeg
-- [ ] Create `videos` table in SQLite
-- [ ] Store video records in database
+- [x] Install Multer for file uploads
+- [x] Create video upload endpoint (`POST /api/videos/upload`)
+- [x] Store videos in local filesystem
+- [x] Extract video metadata using FFmpeg
+- [x] Create `videos` table in SQLite
+- [x] Store video records in database
 
 ### API Endpoints
 ```
@@ -66,6 +66,32 @@ DELETE /api/videos/:id      - Delete video
 
 ### Key Deliverable
 ✅ Users can upload videos and see them in a list
+
+---
+
+## Phase 1B: Security Hardening (1 day) ✅ COMPLETE
+
+### Security Features Added
+- [x] Rate limiting (100 req/15min global, 10 uploads/15min)
+- [x] Security headers (Helmet.js with CSP)
+- [x] Request logging (Morgan)
+- [x] CORS restrictions (whitelist origins)
+- [x] Input validation (express-validator)
+- [x] Error sanitization (hide internals)
+- [x] Request size limits (10MB JSON, 100MB uploads)
+- [x] XSS prevention (script tag stripping)
+- [x] SQL injection protection (parameterized queries)
+- [x] Path traversal prevention (filename sanitization)
+
+### Files Created
+```
+backend/src/middleware/security.js    - Rate limiting, helmet, CORS
+backend/src/middleware/validation.js  - Input validation
+SECURITY.md                            - Security documentation
+```
+
+### Key Deliverable
+✅ Production-ready security baseline (FREE, no paid services)
 
 ---
 

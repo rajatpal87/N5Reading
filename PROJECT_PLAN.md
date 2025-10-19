@@ -54,6 +54,12 @@ A web-based platform that helps Japanese learners study authentic video content 
 - **Language**: JavaScript/TypeScript
   - Consistency across stack
   - Strong typing with TypeScript (optional)
+- **Security Middleware**: ✅ Implemented
+  - `express-rate-limit`: Rate limiting (100 req/15min)
+  - `helmet`: Security headers (CSP, XSS protection)
+  - `morgan`: Request logging
+  - `express-validator`: Input validation & sanitization
+  - `cors`: CORS restrictions
 - **File Storage**: Local filesystem for MVP
   - Cloud storage (S3/CloudFlare R2) for production
 - **Database**: 
@@ -582,24 +588,38 @@ CREATE TABLE detected_grammar (
 
 ## Development Phases
 
-### Phase 0: Setup & Data Preparation (1-2 days)
-- [ ] Initialize Git repository
-- [ ] Set up frontend (React + Vite + Tailwind)
-- [ ] Set up backend (Express + SQLite)
-- [ ] Extract N5 data from PDFs
-- [ ] Create JLPT N5 reference database:
-  - N5 vocabulary list (~800 words)
-  - N5 grammar patterns (~50 patterns with regex)
-- [ ] Seed database with reference data
+### Phase 0: Setup & Data Preparation (1-2 days) ✅ COMPLETE
+- [x] Initialize Git repository
+- [x] Set up frontend (React + Vite + Tailwind)
+- [x] Set up backend (Express + SQLite)
+- [x] Extract N5 data from PDFs
+- [x] Create JLPT N5 reference database:
+  - N5 vocabulary list (296 words)
+  - N5 grammar patterns (50 patterns with regex)
+- [x] Seed database with reference data
 
-### Phase 1: Video Upload & Storage (2-3 days)
-- [ ] Build upload UI with drag-and-drop
-- [ ] Implement file validation (size, format, type)
-- [ ] Create video storage system
-- [ ] Extract video metadata (duration, format, codec)
-- [ ] Display upload progress bar
-- [ ] Basic video list page with thumbnails
-- [ ] Error handling for unsupported formats
+### Phase 1: Video Upload & Storage (2-3 days) ✅ COMPLETE
+- [x] Build upload UI with drag-and-drop
+- [x] Implement file validation (size, format, type)
+- [x] Create video storage system
+- [x] Extract video metadata (duration, format, codec)
+- [x] Display upload progress bar
+- [x] Basic video list page with thumbnails
+- [x] Error handling for unsupported formats
+
+### Phase 1B: Security Hardening (1 day) ✅ COMPLETE
+- [x] Rate limiting (100 requests/15min per IP)
+- [x] Upload rate limiting (10 uploads/15min per IP)
+- [x] Security headers (Helmet.js with CSP)
+- [x] Request logging (Morgan)
+- [x] CORS restrictions (whitelist origins)
+- [x] Input validation & sanitization
+- [x] Error response sanitization
+- [x] Request size limits (10MB JSON, 100MB uploads)
+- [x] XSS prevention
+- [x] SQL injection protection
+- [x] Path traversal prevention
+- [x] Comprehensive security documentation
 
 ### Phase 2: Transcription Pipeline (3-4 days)
 - [ ] Integrate OpenAI Whisper API

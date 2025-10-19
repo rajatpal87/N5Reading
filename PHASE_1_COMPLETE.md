@@ -1,4 +1,4 @@
-# ✅ Phase 1 Complete: Video Upload & Storage
+# ✅ Phase 1 & 1B Complete: Video Upload & Storage + Security
 
 ## 🎯 Deliverables Completed
 
@@ -22,6 +22,43 @@
   - Remove video from database
   - Delete physical file from filesystem
   - Cascade delete related records
+
+### Security Middleware ✅ (Phase 1B)
+- **Rate Limiting**
+  - Global: 100 requests per 15 minutes per IP
+  - Upload: 10 uploads per 15 minutes per IP
+  - Middleware: `express-rate-limit`
+
+- **Security Headers** (Helmet.js)
+  - Content-Security-Policy
+  - X-Content-Type-Options: nosniff
+  - X-Frame-Options: DENY
+  - X-XSS-Protection: 1; mode=block
+
+- **Input Validation & Sanitization**
+  - Video ID validation (express-validator)
+  - File upload validation (type, size)
+  - Filename sanitization (path traversal prevention)
+  - XSS prevention (strip script tags)
+
+- **CORS Protection**
+  - Whitelist origins (localhost dev + production)
+  - Credentials support
+  - OPTIONS pre-flight handling
+
+- **Error Sanitization**
+  - Development: Full error details
+  - Production: Generic error messages
+  - Server-side error logging
+
+- **Request Logging** (Morgan)
+  - Development: 'dev' format (colored, concise)
+  - Production: 'combined' format (Apache standard)
+
+- **Request Size Limits**
+  - JSON payload: 10MB
+  - URL-encoded: 10MB
+  - File upload: 100MB
 
 ### Frontend UI ✅
 - **Video Upload Component**
@@ -51,9 +88,11 @@
 
 **Backend:**
 ```
-backend/src/routes/videos.js          // Video API routes
-backend/src/services/videoService.js  // FFmpeg metadata extraction
-backend/uploads/                       // Video file storage
+backend/src/routes/videos.js            // Video API routes
+backend/src/services/videoService.js    // FFmpeg metadata extraction
+backend/src/middleware/security.js      // 🔒 Rate limiting, helmet, CORS (Phase 1B)
+backend/src/middleware/validation.js    // 🔒 Input validation & sanitization (Phase 1B)
+backend/uploads/                         // Video file storage
 ```
 
 **Frontend:**
@@ -64,6 +103,13 @@ frontend/src/pages/Home.jsx              // Main page
 frontend/src/App.jsx                     // Updated routing
 frontend/vite.config.js                  // API proxy setup
 frontend/index.html                      // Updated title
+```
+
+**Documentation:**
+```
+SECURITY.md                              // 🔒 Security documentation (Phase 1B)
+DEPLOYMENT_PLAN.md                       // 🚀 Deployment guide
+RENDER_DEPLOYMENT.md                     // 🚀 Render.com quick start
 ```
 
 ---
