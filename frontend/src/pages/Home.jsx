@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import VideoUpload from '../components/VideoUpload';
+import YouTubeUpload from '../components/YouTubeUpload';
 import VideoList from '../components/VideoList';
 
 export default function Home() {
   const [refreshKey, setRefreshKey] = useState(0);
+  const [uploadMethod, setUploadMethod] = useState('file'); // 'file' or 'youtube'
 
   const handleUploadSuccess = (video) => {
     console.log('Video uploaded successfully:', video);
@@ -27,7 +29,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
-                Phase 1: Upload
+                Phase 2: Processing
               </span>
             </div>
           </div>
@@ -40,9 +42,43 @@ export default function Home() {
         <section className="mb-12">
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-6">
-              Upload a Video
+              Add a Video
             </h2>
-            <VideoUpload onUploadSuccess={handleUploadSuccess} />
+            
+            {/* Upload Method Tabs */}
+            <div className="flex gap-2 mb-6">
+              <button
+                onClick={() => setUploadMethod('file')}
+                className={`
+                  px-4 py-2 rounded-lg font-medium text-sm transition-colors
+                  ${uploadMethod === 'file'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }
+                `}
+              >
+                📁 Upload File
+              </button>
+              <button
+                onClick={() => setUploadMethod('youtube')}
+                className={`
+                  px-4 py-2 rounded-lg font-medium text-sm transition-colors
+                  ${uploadMethod === 'youtube'
+                    ? 'bg-red-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }
+                `}
+              >
+                📺 YouTube URL
+              </button>
+            </div>
+
+            {/* Upload Components */}
+            {uploadMethod === 'file' ? (
+              <VideoUpload onUploadSuccess={handleUploadSuccess} />
+            ) : (
+              <YouTubeUpload onUploadSuccess={handleUploadSuccess} />
+            )}
           </div>
         </section>
 

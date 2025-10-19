@@ -61,15 +61,31 @@ export async function extractVideoMetadata(videoPath) {
  * Extract audio from video file
  * @param {string} videoPath - Path to video file
  * @param {string} outputPath - Path for output audio file
- * @returns {Promise<string>} Path to extracted audio file
+ * @returns {Promise<Object>} Audio file info
  */
 export async function extractAudio(videoPath, outputPath) {
   try {
+    console.log('🎵 Extracting audio from video:', videoPath);
+    
+    // Extract audio as WAV (16kHz, mono, for Whisper API)
     await execPromise(
-      `ffmpeg -i "${videoPath}" -vn -acodec pcm_s16le -ar 16000 -ac 1 "${outputPath}"`
+      `ffmpeg -i "${videoPath}" -vn -acodec pcm_s16le -ar 16000 -ac 1 "${outputPath}" -y`
     );
-    return outputPath;
+    
+    const fs = await import('fs');
+    const stats = fs.statSync(outputPath);
+    
+    console.log('✅ Audio extracted:', outputPath);
+    
+    return {
+      path: outputPath,
+      size: stats.size,
+      format: 'wav',
+      sampleRate: 16000,
+      channels: 1,
+    };
   } catch (error) {
+    console.error('❌ Audio extraction error:', error.message);
     throw new Error(`Failed to extract audio: ${error.message}`);
   }
 }

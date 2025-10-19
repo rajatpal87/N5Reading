@@ -4,7 +4,8 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { db, dbType } from '../db/db.js';
-import { extractVideoMetadata } from '../services/videoService.js';
+import { extractVideoMetadata, extractAudio } from '../services/videoService.js';
+import { downloadYouTubeVideo, isYouTubeUrl } from '../services/youtubeService.js';
 import { uploadLimiter } from '../middleware/security.js';
 import { validateVideoId, validateFileUpload, sanitizeFilename } from '../middleware/validation.js';
 
@@ -139,6 +140,82 @@ router.post('/upload', uploadLimiter, upload.single('video'), validateFileUpload
   }
 });
 
+// POST /api/videos/youtube - Download video from YouTube URL
+router.post('/youtube', uploadLimiter, async (req, res) => {
+  try {
+    const { url } = req.body;
+
+    if (!url) {
+      return res.status(400).json({ error: 'YouTube URL is required' });
+    }
+
+    if (!isYouTubeUrl(url)) {
+      return res.status(400).json({ error: 'Invalid YouTube URL' });
+    }
+
+    console.log('📥 Downloading YouTube video:', url);
+
+    // Download video
+    const videoInfo = await downloadYouTubeVideo(url, uploadsDir);
+
+    // Extract metadata using FFmpeg
+    const metadata = await extractVideoMetadata(videoInfo.filePath);
+    const duration = metadata.format.duration ? parseFloat(metadata.format.duration) : videoInfo.duration || 0;
+    const resolution = metadata.streams.find(s => s.codec_type === 'video') 
+      ? `${metadata.streams.find(s => s.codec_type === 'video').width}x${metadata.streams.find(s => s.codec_type === 'video').height}` 
+      : null;
+
+    // Store in database
+    const insertQuery = dbType === 'postgresql'
+      ? `INSERT INTO videos (title, filename, original_filename, mime_type, size, duration, resolution, upload_date, status, local_path, youtube_url) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *`
+      : `INSERT INTO videos (title, filename, original_filename, mime_type, size, duration, resolution, upload_date, status, local_path, youtube_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+    const values = [
+      videoInfo.youtubeTitle || videoInfo.originalName,
+      videoInfo.filename,
+      videoInfo.originalName,
+      videoInfo.mimeType,
+      videoInfo.fileSize,
+      duration,
+      resolution,
+      new Date().toISOString(),
+      'uploaded',
+      `/uploads/${videoInfo.filename}`,
+      url
+    ];
+
+    let newVideo;
+    if (dbType === 'postgresql') {
+      const result = await db.query(insertQuery, values);
+      newVideo = result.rows[0];
+    } else {
+      await new Promise((resolve, reject) => {
+        db.run(insertQuery, values, function(err) {
+          if (err) reject(err);
+          else {
+            newVideo = { id: this.lastID, ...Object.fromEntries(values.map((v, i) => [['title', 'filename', 'original_filename', 'mime_type', 'size', 'duration', 'resolution', 'upload_date', 'status', 'local_path', 'youtube_url'][i], v])) };
+            resolve();
+          }
+        });
+      });
+    }
+
+    console.log('✅ YouTube video downloaded and saved');
+
+    res.status(201).json({ 
+      message: 'YouTube video downloaded successfully', 
+      video: newVideo 
+    });
+
+  } catch (error) {
+    console.error('Error downloading YouTube video:', error);
+    res.status(500).json({ 
+      error: 'Failed to download YouTube video', 
+      details: error.message 
+    });
+  }
+});
+
 // GET /api/videos - List all videos
 router.get('/', async (req, res) => {
   try {
@@ -192,6 +269,108 @@ router.get('/:id', validateVideoId, async (req, res) => {
   } catch (error) {
     console.error('Error fetching video:', error);
     res.status(500).json({ error: 'Failed to fetch video' });
+  }
+});
+
+// POST /api/videos/:id/process - Extract audio and prepare for transcription
+router.post('/:id/process', validateVideoId, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // Get video info
+    let video;
+    if (dbType === 'postgresql') {
+      const result = await db.query('SELECT * FROM videos WHERE id = $1', [id]);
+      video = result.rows[0];
+    } else {
+      video = await new Promise((resolve, reject) => {
+        db.get('SELECT * FROM videos WHERE id = ?', [id], (err, row) => {
+          if (err) reject(err);
+          resolve(row);
+        });
+      });
+    }
+
+    if (!video) {
+      return res.status(404).json({ error: 'Video not found' });
+    }
+
+    // Check if already processing
+    if (video.status === 'processing') {
+      return res.status(400).json({ error: 'Video is already being processed' });
+    }
+
+    // Update status to processing
+    const updateQuery = dbType === 'postgresql'
+      ? `UPDATE videos SET status = $1 WHERE id = $2`
+      : `UPDATE videos SET status = ? WHERE id = ?`;
+
+    if (dbType === 'postgresql') {
+      await db.query(updateQuery, ['processing', id]);
+    } else {
+      await new Promise((resolve, reject) => {
+        db.run(updateQuery, ['processing', id], (err) => {
+          if (err) reject(err);
+          else resolve();
+        });
+      });
+    }
+
+    // Extract audio
+    const videoPath = path.join(uploadsDir, video.filename);
+    const audioFilename = `${video.filename.split('.')[0]}.wav`;
+    const audioPath = path.join(uploadsDir, audioFilename);
+
+    console.log('🎵 Extracting audio for video:', video.id);
+
+    const audioInfo = await extractAudio(videoPath, audioPath);
+
+    // Update video with audio path
+    const updateAudioQuery = dbType === 'postgresql'
+      ? `UPDATE videos SET audio_path = $1, status = $2 WHERE id = $3`
+      : `UPDATE videos SET audio_path = ?, status = ? WHERE id = ?`;
+
+    if (dbType === 'postgresql') {
+      await db.query(updateAudioQuery, [`/uploads/${audioFilename}`, 'audio_extracted', id]);
+    } else {
+      await new Promise((resolve, reject) => {
+        db.run(updateAudioQuery, [`/uploads/${audioFilename}`, 'audio_extracted', id], (err) => {
+          if (err) reject(err);
+          else resolve();
+        });
+      });
+    }
+
+    console.log('✅ Audio extracted for video:', video.id);
+
+    res.json({
+      message: 'Audio extracted successfully',
+      video: {
+        id: video.id,
+        status: 'audio_extracted',
+        audioPath: `/uploads/${audioFilename}`,
+        audioSize: audioInfo.size,
+      }
+    });
+
+  } catch (error) {
+    console.error('Error processing video:', error);
+
+    // Update status to error
+    const errorQuery = dbType === 'postgresql'
+      ? `UPDATE videos SET status = $1, error_message = $2 WHERE id = $3`
+      : `UPDATE videos SET status = ?, error_message = ? WHERE id = ?`;
+
+    if (dbType === 'postgresql') {
+      await db.query(errorQuery, ['error', error.message, id]);
+    } else {
+      db.run(errorQuery, ['error', error.message, id]);
+    }
+
+    res.status(500).json({
+      error: 'Failed to process video',
+      details: error.message
+    });
   }
 });
 

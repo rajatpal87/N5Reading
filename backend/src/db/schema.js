@@ -14,7 +14,10 @@ export const createTables = (db, dbType = 'sqlite') => {
         file_size INTEGER,
         duration REAL,
         mime_type TEXT,
-        status TEXT DEFAULT 'uploaded' CHECK(status IN ('uploaded', 'processing', 'completed', 'failed')),
+        status TEXT DEFAULT 'uploaded' CHECK(status IN ('uploaded', 'processing', 'audio_extracted', 'transcribing', 'translating', 'analyzing', 'completed', 'error')),
+        audio_path TEXT,
+        youtube_url TEXT,
+        error_message TEXT,
         created_at TIMESTAMP DEFAULT ${dbType === 'postgresql' ? 'CURRENT_TIMESTAMP' : "CURRENT_TIMESTAMP"}
       )`,
 

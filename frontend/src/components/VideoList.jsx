@@ -70,19 +70,61 @@ export default function VideoList({ refreshTrigger }) {
     });
   };
 
+  // Process video (extract audio)
+  const handleProcess = async (id) => {
+    try {
+      // Update local state optimistically
+      setVideos(videos.map(v => v.id === id ? { ...v, status: 'processing' } : v));
+      
+      await axios.post(`${API_URL}/videos/${id}/process`);
+      
+      // Refresh video list after processing
+      await fetchVideos();
+      
+    } catch (err) {
+      console.error('Error processing video:', err);
+      alert(err.response?.data?.error || 'Failed to process video. Please try again.');
+      // Refresh to get actual status
+      await fetchVideos();
+    }
+  };
+
   // Get status badge color
   const getStatusColor = (status) => {
     switch (status) {
       case 'uploaded':
         return 'bg-green-100 text-green-800';
       case 'processing':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-100 text-yellow-800 animate-pulse';
+      case 'audio_extracted':
+        return 'bg-purple-100 text-purple-800';
+      case 'transcribing':
+        return 'bg-orange-100 text-orange-800 animate-pulse';
+      case 'translating':
+        return 'bg-indigo-100 text-indigo-800 animate-pulse';
+      case 'analyzing':
+        return 'bg-cyan-100 text-cyan-800 animate-pulse';
       case 'completed':
         return 'bg-blue-100 text-blue-800';
-      case 'failed':
+      case 'error':
         return 'bg-red-100 text-red-800';
       default:
         return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  // Get status display text
+  const getStatusText = (status) => {
+    switch (status) {
+      case 'uploaded': return '✅ Uploaded';
+      case 'processing': return '⏳ Processing...';
+      case 'audio_extracted': return '🎵 Audio Extracted';
+      case 'transcribing': return '📝 Transcribing...';
+      case 'translating': return '🌏 Translating...';
+      case 'analyzing': return '🔍 Analyzing...';
+      case 'completed': return '✨ Complete';
+      case 'error': return '❌ Error';
+      default: return status;
     }
   };
 
@@ -203,23 +245,61 @@ export default function VideoList({ refreshTrigger }) {
               {/* Status Badge */}
               <div className="mt-3">
                 <span className={`inline-block px-2 py-1 text-xs font-medium rounded ${getStatusColor(video.status)}`}>
-                  {video.status}
+                  {getStatusText(video.status)}
                 </span>
               </div>
 
+              {/* YouTube Badge */}
+              {video.youtube_url && (
+                <div className="mt-2">
+                  <span className="inline-block px-2 py-1 text-xs bg-red-50 text-red-700 rounded flex items-center gap-1 w-fit">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    YouTube
+                  </span>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {video.status === 'error' && video.error_message && (
+                <div className="mt-2 p-2 bg-red-50 border border-red-200 rounded text-xs text-red-600">
+                  {video.error_message}
+                </div>
+              )}
+
               {/* Actions */}
               <div className="mt-4 flex gap-2">
-                <button
-                  onClick={() => {/* TODO: Navigate to video analysis page */}}
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
-                >
-                  Analyze
-                </button>
+                {video.status === 'uploaded' && (
+                  <button
+                    onClick={() => handleProcess(video.id)}
+                    className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
+                  >
+                    🎵 Extract Audio
+                  </button>
+                )}
+                {video.status === 'completed' && (
+                  <button
+                    onClick={() => {/* TODO: Navigate to video analysis page */}}
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
+                  >
+                    View Analysis
+                  </button>
+                )}
+                {(video.status === 'processing' || video.status === 'transcribing' || video.status === 'translating' || video.status === 'analyzing') && (
+                  <button
+                    disabled
+                    className="flex-1 bg-gray-400 text-white text-sm font-medium py-2 px-3 rounded cursor-not-allowed"
+                  >
+                    Processing...
+                  </button>
+                )}
                 <button
                   onClick={() => handleDelete(video.id)}
                   className="bg-red-600 hover:bg-red-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
+                  title="Delete video"
                 >
-                  Delete
+                  🗑️
                 </button>
               </div>
             </div>
