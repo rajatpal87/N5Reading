@@ -277,21 +277,6 @@ export default function VideoList({ refreshTrigger }) {
               {/* Spacer to push actions to bottom */}
               <div className="flex-grow"></div>
 
-              {/* Audio Player - Inline when playing */}
-              {playingAudio === video.id && (
-                <div className="mt-3 bg-gray-50 border border-gray-200 rounded p-2">
-                  <audio
-                    controls
-                    autoPlay
-                    className="w-full h-8"
-                    onEnded={() => setPlayingAudio(null)}
-                    src={`http://localhost:3000${video.audio_path}`}
-                  >
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
-              )}
-
               {/* Actions - Always at bottom */}
               <div className="mt-4 flex gap-2">
                 {/* Show Extract Audio button for uploaded status */}
@@ -304,14 +289,29 @@ export default function VideoList({ refreshTrigger }) {
                   </button>
                 )}
                 
-                {/* Show Play Audio button once audio is extracted */}
-                {video.audio_path && !['uploaded', 'completed'].includes(video.status) && playingAudio !== video.id && (
-                  <button
-                    onClick={() => toggleAudioPlayback(video.id)}
-                    className="flex-1 bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
-                  >
-                    🔊 Play Audio
-                  </button>
+                {/* Show Play Audio button OR Audio Player (in same position) */}
+                {video.audio_path && !['uploaded', 'completed'].includes(video.status) && (
+                  playingAudio === video.id ? (
+                    <div className="flex-1 bg-gray-50 border border-gray-200 rounded p-2">
+                      <audio
+                        controls
+                        autoPlay
+                        className="w-full"
+                        style={{ height: '32px' }}
+                        onEnded={() => setPlayingAudio(null)}
+                        src={`http://localhost:3000${video.audio_path}`}
+                      >
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => toggleAudioPlayback(video.id)}
+                      className="flex-1 bg-green-600 hover:bg-green-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
+                    >
+                      🔊 Play Audio
+                    </button>
+                  )
                 )}
                 {video.status === 'completed' && (
                   <button
