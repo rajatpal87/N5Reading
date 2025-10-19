@@ -6,6 +6,8 @@ import { fileURLToPath } from 'url';
 import { db, dbType } from '../db/db.js';
 import { extractVideoMetadata, extractAudio } from '../services/videoService.js';
 import { downloadYouTubeVideo, isYouTubeUrl } from '../services/youtubeService.js';
+import { transcribeAudio } from '../services/transcriptionService.js';
+import { translateText, translateSegments } from '../services/translationService.js';
 import { uploadLimiter } from '../middleware/security.js';
 import { validateVideoId, validateFileUpload, sanitizeFilename } from '../middleware/validation.js';
 
@@ -438,6 +440,227 @@ router.delete('/:id', validateVideoId, async (req, res) => {
   } catch (error) {
     console.error('Error deleting video:', error);
     res.status(500).json({ error: 'Failed to delete video' });
+  }
+});
+
+// POST /api/videos/:id/transcribe - Transcribe and translate video audio
+router.post('/:id/transcribe', validateVideoId, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // Get video info
+    let video;
+    if (dbType === 'postgresql') {
+      const result = await db.query('SELECT * FROM videos WHERE id = $1', [id]);
+      video = result.rows[0];
+    } else {
+      video = await new Promise((resolve, reject) => {
+        db.get('SELECT * FROM videos WHERE id = ?', [id], (err, row) => {
+          if (err) reject(err);
+          resolve(row);
+        });
+      });
+    }
+
+    if (!video) {
+      return res.status(404).json({ error: 'Video not found' });
+    }
+
+    // Check if audio has been extracted
+    if (!video.audio_path) {
+      return res.status(400).json({ error: 'Audio not extracted yet. Please extract audio first.' });
+    }
+
+    // Check if already transcribing
+    if (video.status === 'transcribing' || video.status === 'translating') {
+      return res.status(400).json({ error: 'Video is already being processed' });
+    }
+
+    // Update status to transcribing
+    const updateStatusQuery = dbType === 'postgresql'
+      ? `UPDATE videos SET status = $1 WHERE id = $2`
+      : `UPDATE videos SET status = ? WHERE id = ?`;
+
+    if (dbType === 'postgresql') {
+      await db.query(updateStatusQuery, ['transcribing', id]);
+    } else {
+      await new Promise((resolve, reject) => {
+        db.run(updateStatusQuery, ['transcribing', id], (err) => {
+          if (err) reject(err);
+          else resolve();
+        });
+      });
+    }
+
+    console.log('🎤 Starting transcription for video:', video.id);
+
+    // Get audio file path
+    const audioPath = path.join(uploadsDir, path.basename(video.audio_path));
+
+    // Step 1: Transcribe audio
+    const transcriptionResult = await transcribeAudio(audioPath);
+
+    console.log('✅ Transcription complete, storing in database...');
+
+    // Store transcription in database
+    const insertTranscriptionQuery = dbType === 'postgresql'
+      ? `INSERT INTO transcriptions (video_id, language, full_text, segments) VALUES ($1, $2, $3, $4) RETURNING *`
+      : `INSERT INTO transcriptions (video_id, language, full_text, segments) VALUES (?, ?, ?, ?)`;
+
+    const segmentsJson = JSON.stringify(transcriptionResult.segments);
+
+    let transcription;
+    if (dbType === 'postgresql') {
+      const result = await db.query(insertTranscriptionQuery, [
+        id,
+        transcriptionResult.language,
+        transcriptionResult.text,
+        segmentsJson
+      ]);
+      transcription = result.rows[0];
+    } else {
+      transcription = await new Promise((resolve, reject) => {
+        db.run(insertTranscriptionQuery, [
+          id,
+          transcriptionResult.language,
+          transcriptionResult.text,
+          segmentsJson
+        ], function(err) {
+          if (err) {
+            reject(err);
+          } else {
+            resolve({
+              id: this.lastID,
+              video_id: id,
+              language: transcriptionResult.language,
+              full_text: transcriptionResult.text,
+              segments: segmentsJson
+            });
+          }
+        });
+      });
+    }
+
+    // Update video status to translating
+    if (dbType === 'postgresql') {
+      await db.query(updateStatusQuery, ['translating', id]);
+    } else {
+      await new Promise((resolve, reject) => {
+        db.run(updateStatusQuery, ['translating', id], (err) => {
+          if (err) reject(err);
+          else resolve();
+        });
+      });
+    }
+
+    console.log('🌏 Starting translation...');
+
+    // Step 2: Translate full text
+    const translationResult = await translateText(transcriptionResult.text);
+
+    // Step 3: Translate segments
+    const translatedSegments = await translateSegments(transcriptionResult.segments);
+
+    console.log('✅ Translation complete, storing in database...');
+
+    // Store translation in database
+    const insertTranslationQuery = dbType === 'postgresql'
+      ? `INSERT INTO translations (transcription_id, language, full_text, segments) VALUES ($1, $2, $3, $4) RETURNING *`
+      : `INSERT INTO translations (transcription_id, language, full_text, segments) VALUES (?, ?, ?, ?)`;
+
+    const translatedSegmentsJson = JSON.stringify(translatedSegments);
+
+    let translation;
+    if (dbType === 'postgresql') {
+      const result = await db.query(insertTranslationQuery, [
+        transcription.id,
+        'en',
+        translationResult.translatedText,
+        translatedSegmentsJson
+      ]);
+      translation = result.rows[0];
+    } else {
+      translation = await new Promise((resolve, reject) => {
+        db.run(insertTranslationQuery, [
+          transcription.id,
+          'en',
+          translationResult.translatedText,
+          translatedSegmentsJson
+        ], function(err) {
+          if (err) {
+            reject(err);
+          } else {
+            resolve({
+              id: this.lastID,
+              transcription_id: transcription.id,
+              language: 'en',
+              full_text: translationResult.translatedText,
+              segments: translatedSegmentsJson
+            });
+          }
+        });
+      });
+    }
+
+    // Update video status to analyzing (ready for Phase 4)
+    if (dbType === 'postgresql') {
+      await db.query(updateStatusQuery, ['analyzing', id]);
+    } else {
+      await new Promise((resolve, reject) => {
+        db.run(updateStatusQuery, ['analyzing', id], (err) => {
+          if (err) reject(err);
+          else resolve();
+        });
+      });
+    }
+
+    console.log('✅ Transcription and translation complete for video:', video.id);
+
+    // Calculate total cost
+    const totalCost = transcriptionResult.cost + translationResult.cost;
+
+    res.json({
+      message: 'Transcription and translation complete',
+      video: {
+        id: video.id,
+        status: 'analyzing',
+      },
+      transcription: {
+        id: transcription.id,
+        text: transcriptionResult.text,
+        language: transcriptionResult.language,
+        segmentCount: transcriptionResult.segments.length,
+      },
+      translation: {
+        id: translation.id,
+        text: translationResult.translatedText,
+        language: 'en',
+      },
+      cost: {
+        transcription: transcriptionResult.cost,
+        translation: translationResult.cost,
+        total: totalCost,
+      }
+    });
+
+  } catch (error) {
+    console.error('Error transcribing video:', error);
+
+    // Update status to error
+    const errorQuery = dbType === 'postgresql'
+      ? `UPDATE videos SET status = $1, error_message = $2 WHERE id = $3`
+      : `UPDATE videos SET status = ?, error_message = ? WHERE id = ?`;
+
+    if (dbType === 'postgresql') {
+      await db.query(errorQuery, ['error', error.message, id]);
+    } else {
+      db.run(errorQuery, ['error', error.message, id]);
+    }
+
+    res.status(500).json({
+      error: 'Failed to transcribe video',
+      details: error.message
+    });
   }
 });
 

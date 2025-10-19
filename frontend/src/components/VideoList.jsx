@@ -90,6 +90,27 @@ export default function VideoList({ refreshTrigger }) {
     }
   };
 
+  // Transcribe and translate video
+  const handleTranscribe = async (id) => {
+    try {
+      console.log('Starting transcription for video:', id);
+      
+      // Update local state optimistically
+      setVideos(videos.map(v => v.id === id ? { ...v, status: 'transcribing' } : v));
+      
+      await axios.post(`${API_URL}/videos/${id}/transcribe`);
+      
+      // Refresh video list after transcription
+      await fetchVideos();
+      
+    } catch (err) {
+      console.error('Error transcribing video:', err);
+      alert(err.response?.data?.error || err.response?.data?.details || 'Failed to transcribe video. Please try again.');
+      // Refresh to get actual status
+      await fetchVideos();
+    }
+  };
+
   // Get status badge color
   const getStatusColor = (status) => {
     switch (status) {
@@ -289,8 +310,18 @@ export default function VideoList({ refreshTrigger }) {
                   </button>
                 )}
                 
+                {/* Show Transcribe button for audio_extracted status */}
+                {video.status === 'audio_extracted' && (
+                  <button
+                    onClick={() => handleTranscribe(video.id)}
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-3 rounded transition-colors duration-200"
+                  >
+                    📝 Transcribe & Translate
+                  </button>
+                )}
+
                 {/* Show Play Audio button OR Audio Player (in same position) */}
-                {video.audio_path && !['uploaded', 'completed'].includes(video.status) && (
+                {video.audio_path && !['uploaded', 'audio_extracted', 'completed'].includes(video.status) && (
                   playingAudio === video.id ? (
                     <div className="flex-1 bg-gray-50 border border-gray-200 rounded p-2">
                       <audio
