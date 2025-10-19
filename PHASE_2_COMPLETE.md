@@ -148,18 +148,34 @@ node backend/src/db/migrate.js
 #         ✅ Added error_message column
 ```
 
-#### YouTube Download (Manual Testing Required)
+#### YouTube Download ✅ TESTED
 ```bash
 curl -X POST http://localhost:3000/api/videos/youtube \
   -H "Content-Type: application/json" \
-  -d '{"url":"https://www.youtube.com/watch?v=..."}'
-# Expected: Video downloaded, stored in database with youtube_url
+  -d '{"url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}'
+# ✅ PASSED: Downloaded Rick Astley video
+# ✅ Video ID: 1
+# ✅ File size: ~6.5MB
+# ✅ Status: uploaded
 ```
 
-#### Audio Extraction (Manual Testing Required)
+#### Audio Extraction ✅ TESTED
 ```bash
 curl -X POST http://localhost:3000/api/videos/1/process
-# Expected: Audio extracted, status updated to 'audio_extracted'
+# ✅ PASSED: Audio extracted successfully
+# ✅ Output: /uploads/1760883947072-Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster).wav
+# ✅ Audio size: 6,818,944 bytes (6.5MB)
+# ✅ Format: WAV, 16kHz, mono
+# ✅ Status: audio_extracted
+```
+
+#### FFmpeg Installation ✅ VERIFIED
+```bash
+ffmpeg -version
+# FFmpeg version 8.0
+# Installed via Homebrew
+# ✅ ffmpeg: /opt/homebrew/bin/ffmpeg
+# ✅ ffprobe: /opt/homebrew/bin/ffprobe
 ```
 
 ### ✅ Frontend Features
