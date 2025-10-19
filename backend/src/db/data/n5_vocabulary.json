@@ -1,0 +1,2666 @@
+[
+  {
+    "kanji": "私",
+    "hiragana": "わたし",
+    "romaji": "watashi",
+    "english": "I, me",
+    "part_of_speech": "pronoun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "私達",
+    "hiragana": "わたしたち",
+    "romaji": "watashitachi",
+    "english": "we",
+    "part_of_speech": "pronoun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "貴方",
+    "hiragana": "あなた",
+    "romaji": "anata",
+    "english": "you",
+    "part_of_speech": "pronoun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "あのひと",
+    "romaji": "ano hito",
+    "english": "that person, he, she",
+    "part_of_speech": "pronoun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "あのかた",
+    "romaji": "ano kata",
+    "english": "that person (polite)",
+    "part_of_speech": "pronoun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "皆さん",
+    "hiragana": "みなさん",
+    "romaji": "minasan",
+    "english": "everyone, ladies and gentlemen",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "先生",
+    "hiragana": "せんせい",
+    "romaji": "sensei",
+    "english": "teacher, instructor",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "教師",
+    "hiragana": "きょうし",
+    "romaji": "kyoushi",
+    "english": "teacher, instructor",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "学生",
+    "hiragana": "がくせい",
+    "romaji": "gakusei",
+    "english": "student",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "会社員",
+    "hiragana": "かいしゃいん",
+    "romaji": "kaishain",
+    "english": "company employee",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "社員",
+    "hiragana": "しゃいん",
+    "romaji": "shain",
+    "english": "company employee",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "銀行員",
+    "hiragana": "ぎんこういん",
+    "romaji": "ginkouin",
+    "english": "bank employee",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "医者",
+    "hiragana": "いしゃ",
+    "romaji": "isha",
+    "english": "medical doctor",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "研究者",
+    "hiragana": "けんきゅうしゃ",
+    "romaji": "kenkyuusha",
+    "english": "researcher, scholar",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大学",
+    "hiragana": "だいがく",
+    "romaji": "daigaku",
+    "english": "university",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "病院",
+    "hiragana": "びょういん",
+    "romaji": "byouin",
+    "english": "hospital",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "電気",
+    "hiragana": "でんき",
+    "romaji": "denki",
+    "english": "electricity, light",
+    "part_of_speech": "noun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "誰",
+    "hiragana": "だれ",
+    "romaji": "dare",
+    "english": "who",
+    "part_of_speech": "pronoun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何方",
+    "hiragana": "どなた",
+    "romaji": "donata",
+    "english": "who (polite)",
+    "part_of_speech": "pronoun",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何歳",
+    "hiragana": "なんさい",
+    "romaji": "nansai",
+    "english": "how old",
+    "part_of_speech": "expression",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "はい",
+    "romaji": "hai",
+    "english": "yes",
+    "part_of_speech": "interjection",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "いいえ",
+    "romaji": "iie",
+    "english": "no",
+    "part_of_speech": "interjection",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "です",
+    "romaji": "desu",
+    "english": "is, am, are",
+    "part_of_speech": "copula",
+    "chapter": "第1課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "これ",
+    "romaji": "kore",
+    "english": "this (thing near speaker)",
+    "part_of_speech": "pronoun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "それ",
+    "romaji": "sore",
+    "english": "that (thing near listener)",
+    "part_of_speech": "pronoun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "あれ",
+    "romaji": "are",
+    "english": "that (thing over there)",
+    "part_of_speech": "pronoun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "本",
+    "hiragana": "ほん",
+    "romaji": "hon",
+    "english": "book",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "辞書",
+    "hiragana": "じしょ",
+    "romaji": "jisho",
+    "english": "dictionary",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "雑誌",
+    "hiragana": "ざっし",
+    "romaji": "zasshi",
+    "english": "magazine",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "新聞",
+    "hiragana": "しんぶん",
+    "romaji": "shinbun",
+    "english": "newspaper",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "手帳",
+    "hiragana": "てちょう",
+    "romaji": "techou",
+    "english": "pocket notebook",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "名刺",
+    "hiragana": "めいし",
+    "romaji": "meishi",
+    "english": "business card",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鉛筆",
+    "hiragana": "えんぴつ",
+    "romaji": "enpitsu",
+    "english": "pencil",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鍵",
+    "hiragana": "かぎ",
+    "romaji": "kagi",
+    "english": "key",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "時計",
+    "hiragana": "とけい",
+    "romaji": "tokei",
+    "english": "watch, clock",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "傘",
+    "hiragana": "かさ",
+    "romaji": "kasa",
+    "english": "umbrella",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鞄",
+    "hiragana": "かばん",
+    "romaji": "kaban",
+    "english": "bag, briefcase",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "机",
+    "hiragana": "つくえ",
+    "romaji": "tsukue",
+    "english": "desk",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "椅子",
+    "hiragana": "いす",
+    "romaji": "isu",
+    "english": "chair",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "英語",
+    "hiragana": "えいご",
+    "romaji": "eigo",
+    "english": "English language",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "日本語",
+    "hiragana": "にほんご",
+    "romaji": "nihongo",
+    "english": "Japanese language",
+    "part_of_speech": "noun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何",
+    "hiragana": "なん",
+    "romaji": "nan",
+    "english": "what",
+    "part_of_speech": "pronoun",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "違います",
+    "hiragana": "ちがいます",
+    "romaji": "chigaimasu",
+    "english": "No, it isn't. You are wrong",
+    "part_of_speech": "verb",
+    "chapter": "第2課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "ここ",
+    "romaji": "koko",
+    "english": "here, this place",
+    "part_of_speech": "pronoun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "そこ",
+    "romaji": "soko",
+    "english": "there (near you)",
+    "part_of_speech": "pronoun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "あそこ",
+    "romaji": "asoko",
+    "english": "that place over there",
+    "part_of_speech": "pronoun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "どこ",
+    "romaji": "doko",
+    "english": "where, what place",
+    "part_of_speech": "pronoun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "教室",
+    "hiragana": "きょうしつ",
+    "romaji": "kyoushitsu",
+    "english": "classroom",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "食堂",
+    "hiragana": "しょくどう",
+    "romaji": "shokudou",
+    "english": "dining hall, canteen",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "事務所",
+    "hiragana": "じむしょ",
+    "romaji": "jimusho",
+    "english": "office",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "会議室",
+    "hiragana": "かいぎしつ",
+    "romaji": "kaigishitsu",
+    "english": "conference room",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "受付",
+    "hiragana": "うけつけ",
+    "romaji": "uketsuke",
+    "english": "reception desk",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "部屋",
+    "hiragana": "へや",
+    "romaji": "heya",
+    "english": "room",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "階段",
+    "hiragana": "かいだん",
+    "romaji": "kaidan",
+    "english": "staircase",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "国",
+    "hiragana": "くに",
+    "romaji": "kuni",
+    "english": "country",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "会社",
+    "hiragana": "かいしゃ",
+    "romaji": "kaisha",
+    "english": "company",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "家",
+    "hiragana": "うち",
+    "romaji": "uchi",
+    "english": "house, home",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "電話",
+    "hiragana": "でんわ",
+    "romaji": "denwa",
+    "english": "telephone",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "靴",
+    "hiragana": "くつ",
+    "romaji": "kutsu",
+    "english": "shoes",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "煙草",
+    "hiragana": "たばこ",
+    "romaji": "tabako",
+    "english": "tobacco, cigarette",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "売り場",
+    "hiragana": "うりば",
+    "romaji": "uriba",
+    "english": "department, sales counter",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "地下",
+    "hiragana": "ちか",
+    "romaji": "chika",
+    "english": "basement",
+    "part_of_speech": "noun",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何階",
+    "hiragana": "なんがい",
+    "romaji": "nangai",
+    "english": "what floor",
+    "part_of_speech": "expression",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "円",
+    "hiragana": "えん",
+    "romaji": "en",
+    "english": "yen",
+    "part_of_speech": "counter",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "幾ら",
+    "hiragana": "いくら",
+    "romaji": "ikura",
+    "english": "how much",
+    "part_of_speech": "expression",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "百",
+    "hiragana": "ひゃく",
+    "romaji": "hyaku",
+    "english": "hundred",
+    "part_of_speech": "number",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "千",
+    "hiragana": "せん",
+    "romaji": "sen",
+    "english": "thousand",
+    "part_of_speech": "number",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "万",
+    "hiragana": "まん",
+    "romaji": "man",
+    "english": "ten thousand",
+    "part_of_speech": "number",
+    "chapter": "第3課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "起きます",
+    "hiragana": "おきます",
+    "romaji": "okimasu",
+    "english": "get up, wake up",
+    "part_of_speech": "verb",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "寝ます",
+    "hiragana": "ねます",
+    "romaji": "nemasu",
+    "english": "sleep, go to bed",
+    "part_of_speech": "verb",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "働きます",
+    "hiragana": "はたらきます",
+    "romaji": "hatarakimasu",
+    "english": "work",
+    "part_of_speech": "verb",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "休みます",
+    "hiragana": "やすみます",
+    "romaji": "yasumimasu",
+    "english": "rest, take a holiday",
+    "part_of_speech": "verb",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "勉強します",
+    "hiragana": "べんきょうします",
+    "romaji": "benkyou shimasu",
+    "english": "study",
+    "part_of_speech": "verb",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "終わります",
+    "hiragana": "おわります",
+    "romaji": "owarimasu",
+    "english": "finish, end",
+    "part_of_speech": "verb",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "銀行",
+    "hiragana": "ぎんこう",
+    "romaji": "ginkou",
+    "english": "bank",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "郵便局",
+    "hiragana": "ゆうびんきょく",
+    "romaji": "yuubinkyoku",
+    "english": "post office",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "図書館",
+    "hiragana": "としょかん",
+    "romaji": "toshokan",
+    "english": "library",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "美術館",
+    "hiragana": "びじゅつかん",
+    "romaji": "bijutsukan",
+    "english": "art museum",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今",
+    "hiragana": "いま",
+    "romaji": "ima",
+    "english": "now",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "時",
+    "hiragana": "じ",
+    "romaji": "ji",
+    "english": "o'clock",
+    "part_of_speech": "counter",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "分",
+    "hiragana": "ふん",
+    "romaji": "fun",
+    "english": "minute",
+    "part_of_speech": "counter",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "半",
+    "hiragana": "はん",
+    "romaji": "han",
+    "english": "half",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何時",
+    "hiragana": "なんじ",
+    "romaji": "nanji",
+    "english": "what time",
+    "part_of_speech": "expression",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何分",
+    "hiragana": "なんぷん",
+    "romaji": "nanpun",
+    "english": "what minute",
+    "part_of_speech": "expression",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "午前",
+    "hiragana": "ごぜん",
+    "romaji": "gozen",
+    "english": "a.m., morning",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "午後",
+    "hiragana": "ごご",
+    "romaji": "gogo",
+    "english": "p.m., afternoon",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "朝",
+    "hiragana": "あさ",
+    "romaji": "asa",
+    "english": "morning",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "昼",
+    "hiragana": "ひる",
+    "romaji": "hiru",
+    "english": "daytime, noon",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "晩",
+    "hiragana": "ばん",
+    "romaji": "ban",
+    "english": "night, evening",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "夜",
+    "hiragana": "よる",
+    "romaji": "yoru",
+    "english": "night",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一昨日",
+    "hiragana": "おととい",
+    "romaji": "ototoi",
+    "english": "day before yesterday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "昨日",
+    "hiragana": "きのう",
+    "romaji": "kinou",
+    "english": "yesterday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今日",
+    "hiragana": "きょう",
+    "romaji": "kyou",
+    "english": "today",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "明日",
+    "hiragana": "あした",
+    "romaji": "ashita",
+    "english": "tomorrow",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "明後日",
+    "hiragana": "あさって",
+    "romaji": "asatte",
+    "english": "day after tomorrow",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今朝",
+    "hiragana": "けさ",
+    "romaji": "kesa",
+    "english": "this morning",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今晩",
+    "hiragana": "こんばん",
+    "romaji": "konban",
+    "english": "this evening, tonight",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "休み",
+    "hiragana": "やすみ",
+    "romaji": "yasumi",
+    "english": "rest, holiday, day off",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "昼休み",
+    "hiragana": "ひるやすみ",
+    "romaji": "hiruyasumi",
+    "english": "lunch break",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎朝",
+    "hiragana": "まいあさ",
+    "romaji": "maiasa",
+    "english": "every morning",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎晩",
+    "hiragana": "まいばん",
+    "romaji": "maiban",
+    "english": "every evening",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎日",
+    "hiragana": "まいにち",
+    "romaji": "mainichi",
+    "english": "every day",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "月曜日",
+    "hiragana": "げつようび",
+    "romaji": "getsuyoubi",
+    "english": "Monday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "火曜日",
+    "hiragana": "かようび",
+    "romaji": "kayoubi",
+    "english": "Tuesday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "水曜日",
+    "hiragana": "すいようび",
+    "romaji": "suiyoubi",
+    "english": "Wednesday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "木曜日",
+    "hiragana": "もくようび",
+    "romaji": "mokuyoubi",
+    "english": "Thursday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "金曜日",
+    "hiragana": "きんようび",
+    "romaji": "kinyoubi",
+    "english": "Friday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "土曜日",
+    "hiragana": "どようび",
+    "romaji": "doyoubi",
+    "english": "Saturday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "日曜日",
+    "hiragana": "にちようび",
+    "romaji": "nichiyoubi",
+    "english": "Sunday",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何曜日",
+    "hiragana": "なんようび",
+    "romaji": "nanyoubi",
+    "english": "what day of the week",
+    "part_of_speech": "expression",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "番号",
+    "hiragana": "ばんごう",
+    "romaji": "bangou",
+    "english": "number",
+    "part_of_speech": "noun",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何番",
+    "hiragana": "なんばん",
+    "romaji": "nanban",
+    "english": "what number",
+    "part_of_speech": "expression",
+    "chapter": "第4課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "行きます",
+    "hiragana": "いきます",
+    "romaji": "ikimasu",
+    "english": "go",
+    "part_of_speech": "verb",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "来ます",
+    "hiragana": "きます",
+    "romaji": "kimasu",
+    "english": "come",
+    "part_of_speech": "verb",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "帰ります",
+    "hiragana": "かえります",
+    "romaji": "kaerimasu",
+    "english": "return, go home",
+    "part_of_speech": "verb",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "学校",
+    "hiragana": "がっこう",
+    "romaji": "gakkou",
+    "english": "school",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "駅",
+    "hiragana": "えき",
+    "romaji": "eki",
+    "english": "station",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "飛行機",
+    "hiragana": "ひこうき",
+    "romaji": "hikouki",
+    "english": "airplane",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "船",
+    "hiragana": "ふね",
+    "romaji": "fune",
+    "english": "ship",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "電車",
+    "hiragana": "でんしゃ",
+    "romaji": "densha",
+    "english": "electric train",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "地下鉄",
+    "hiragana": "ちかてつ",
+    "romaji": "chikatetsu",
+    "english": "subway",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "新幹線",
+    "hiragana": "しんかんせん",
+    "romaji": "shinkansen",
+    "english": "bullet train",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "自転車",
+    "hiragana": "じてんしゃ",
+    "romaji": "jitensha",
+    "english": "bicycle",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "歩いて",
+    "hiragana": "あるいて",
+    "romaji": "aruite",
+    "english": "on foot",
+    "part_of_speech": "adverb",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "人",
+    "hiragana": "ひと",
+    "romaji": "hito",
+    "english": "person",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "友達",
+    "hiragana": "ともだち",
+    "romaji": "tomodachi",
+    "english": "friend",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "彼",
+    "hiragana": "かれ",
+    "romaji": "kare",
+    "english": "he, boyfriend",
+    "part_of_speech": "pronoun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "彼女",
+    "hiragana": "かのじょ",
+    "romaji": "kanojo",
+    "english": "she, girlfriend",
+    "part_of_speech": "pronoun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "家族",
+    "hiragana": "かぞく",
+    "romaji": "kazoku",
+    "english": "family",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一人で",
+    "hiragana": "ひとりで",
+    "romaji": "hitoride",
+    "english": "alone, by oneself",
+    "part_of_speech": "adverb",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "先週",
+    "hiragana": "せんしゅう",
+    "romaji": "senshuu",
+    "english": "last week",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今週",
+    "hiragana": "こんしゅう",
+    "romaji": "konshuu",
+    "english": "this week",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "来週",
+    "hiragana": "らいしゅう",
+    "romaji": "raishuu",
+    "english": "next week",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "先月",
+    "hiragana": "せんげつ",
+    "romaji": "sengetsu",
+    "english": "last month",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今月",
+    "hiragana": "こんげつ",
+    "romaji": "kongetsu",
+    "english": "this month",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "来月",
+    "hiragana": "らいげつ",
+    "romaji": "raigetsu",
+    "english": "next month",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "去年",
+    "hiragana": "きょねん",
+    "romaji": "kyonen",
+    "english": "last year",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今年",
+    "hiragana": "ことし",
+    "romaji": "kotoshi",
+    "english": "this year",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "来年",
+    "hiragana": "らいねん",
+    "romaji": "rainen",
+    "english": "next year",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "月",
+    "hiragana": "がつ",
+    "romaji": "gatsu",
+    "english": "month",
+    "part_of_speech": "counter",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何月",
+    "hiragana": "なんがつ",
+    "romaji": "nangatsu",
+    "english": "what month",
+    "part_of_speech": "expression",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一日",
+    "hiragana": "ついたち",
+    "romaji": "tsuitachi",
+    "english": "first day of month",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "二日",
+    "hiragana": "ふつか",
+    "romaji": "futsuka",
+    "english": "second, two days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "三日",
+    "hiragana": "みっか",
+    "romaji": "mikka",
+    "english": "third, three days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "四日",
+    "hiragana": "よっか",
+    "romaji": "yokka",
+    "english": "fourth, four days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "五日",
+    "hiragana": "いつか",
+    "romaji": "itsuka",
+    "english": "fifth, five days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "六日",
+    "hiragana": "むいか",
+    "romaji": "muika",
+    "english": "sixth, six days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "七日",
+    "hiragana": "なのか",
+    "romaji": "nanoka",
+    "english": "seventh, seven days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "八日",
+    "hiragana": "ようか",
+    "romaji": "youka",
+    "english": "eighth, eight days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "九日",
+    "hiragana": "ここのか",
+    "romaji": "kokonoka",
+    "english": "ninth, nine days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "十日",
+    "hiragana": "とおか",
+    "romaji": "tooka",
+    "english": "tenth, ten days",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "日",
+    "hiragana": "にち",
+    "romaji": "nichi",
+    "english": "day of the month",
+    "part_of_speech": "counter",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何日",
+    "hiragana": "なんにち",
+    "romaji": "nannichi",
+    "english": "what day, how many days",
+    "part_of_speech": "expression",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何時",
+    "hiragana": "いつ",
+    "romaji": "itsu",
+    "english": "when",
+    "part_of_speech": "pronoun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "誕生日",
+    "hiragana": "たんじょうび",
+    "romaji": "tanjoubi",
+    "english": "birthday",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "普通",
+    "hiragana": "ふつう",
+    "romaji": "futsuu",
+    "english": "local train, ordinary",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "急行",
+    "hiragana": "きゅうこう",
+    "romaji": "kyuukou",
+    "english": "rapid train",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "特急",
+    "hiragana": "とっきゅう",
+    "romaji": "tokkyuu",
+    "english": "express train",
+    "part_of_speech": "noun",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "次の",
+    "hiragana": "つぎの",
+    "romaji": "tsugi no",
+    "english": "next",
+    "part_of_speech": "adjective",
+    "chapter": "第5課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "食べます",
+    "hiragana": "たべます",
+    "romaji": "tabemasu",
+    "english": "eat",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "飲みます",
+    "hiragana": "のみます",
+    "romaji": "nomimasu",
+    "english": "drink",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "吸います",
+    "hiragana": "すいます",
+    "romaji": "suimasu",
+    "english": "smoke, inhale",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "見ます",
+    "hiragana": "みます",
+    "romaji": "mimasu",
+    "english": "see, look at, watch",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "聞きます",
+    "hiragana": "ききます",
+    "romaji": "kikimasu",
+    "english": "hear, listen",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "読みます",
+    "hiragana": "よみます",
+    "romaji": "yomimasu",
+    "english": "read",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "書きます",
+    "hiragana": "かきます",
+    "romaji": "kakimasu",
+    "english": "write",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "買います",
+    "hiragana": "かいます",
+    "romaji": "kaimasu",
+    "english": "buy",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "撮ります",
+    "hiragana": "とります",
+    "romaji": "torimasu",
+    "english": "take (a photo)",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "会います",
+    "hiragana": "あいます",
+    "romaji": "aimasu",
+    "english": "meet",
+    "part_of_speech": "verb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ご飯",
+    "hiragana": "ごはん",
+    "romaji": "gohan",
+    "english": "meal, cooked rice",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "朝ごはん",
+    "hiragana": "あさごはん",
+    "romaji": "asagohan",
+    "english": "breakfast",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "昼ごはん",
+    "hiragana": "ひるごはん",
+    "romaji": "hirugohan",
+    "english": "lunch",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "晩ごはん",
+    "hiragana": "ばんごはん",
+    "romaji": "bangohan",
+    "english": "dinner",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "卵",
+    "hiragana": "たまご",
+    "romaji": "tamago",
+    "english": "egg",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "肉",
+    "hiragana": "にく",
+    "romaji": "niku",
+    "english": "meat",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "魚",
+    "hiragana": "さかな",
+    "romaji": "sakana",
+    "english": "fish",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "野菜",
+    "hiragana": "やさい",
+    "romaji": "yasai",
+    "english": "vegetable",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "果物",
+    "hiragana": "くだもの",
+    "romaji": "kudamono",
+    "english": "fruit",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "水",
+    "hiragana": "みず",
+    "romaji": "mizu",
+    "english": "water",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お茶",
+    "hiragana": "おちゃ",
+    "romaji": "ocha",
+    "english": "tea, green tea",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "紅茶",
+    "hiragana": "こうちゃ",
+    "romaji": "koucha",
+    "english": "black tea",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "牛乳",
+    "hiragana": "ぎゅうにゅう",
+    "romaji": "gyuunyuu",
+    "english": "milk",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "酒",
+    "hiragana": "さけ",
+    "romaji": "sake",
+    "english": "alcohol, Japanese rice wine",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "映画",
+    "hiragana": "えいが",
+    "romaji": "eiga",
+    "english": "movie",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "手紙",
+    "hiragana": "てがみ",
+    "romaji": "tegami",
+    "english": "letter",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "写真",
+    "hiragana": "しゃしん",
+    "romaji": "shashin",
+    "english": "photograph",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "店",
+    "hiragana": "みせ",
+    "romaji": "mise",
+    "english": "store, shop",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "庭",
+    "hiragana": "にわ",
+    "romaji": "niwa",
+    "english": "garden",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "宿題",
+    "hiragana": "しゅくだい",
+    "romaji": "shukudai",
+    "english": "homework",
+    "part_of_speech": "noun",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一緒に",
+    "hiragana": "いっしょに",
+    "romaji": "issho ni",
+    "english": "together",
+    "part_of_speech": "adverb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "ちょっと",
+    "romaji": "chotto",
+    "english": "a little, a bit",
+    "part_of_speech": "adverb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "いつも",
+    "romaji": "itsumo",
+    "english": "always, usually",
+    "part_of_speech": "adverb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "時々",
+    "hiragana": "ときどき",
+    "romaji": "tokidoki",
+    "english": "sometimes",
+    "part_of_speech": "adverb",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "それから",
+    "romaji": "sorekara",
+    "english": "after that, and then",
+    "part_of_speech": "conjunction",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "分かりました",
+    "hiragana": "わかりました",
+    "romaji": "wakarimashita",
+    "english": "I see, I understand",
+    "part_of_speech": "expression",
+    "chapter": "第6課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "切ります",
+    "hiragana": "きります",
+    "romaji": "kirimasu",
+    "english": "cut",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "送ります",
+    "hiragana": "おくります",
+    "romaji": "okurimasu",
+    "english": "send",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "上げます",
+    "hiragana": "あげます",
+    "romaji": "agemasu",
+    "english": "give",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "貰います",
+    "hiragana": "もらいます",
+    "romaji": "moraimasu",
+    "english": "receive",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "貸します",
+    "hiragana": "かします",
+    "romaji": "kashimasu",
+    "english": "lend",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "借ります",
+    "hiragana": "かります",
+    "romaji": "karimasu",
+    "english": "borrow",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "教えます",
+    "hiragana": "おしえます",
+    "romaji": "oshiemasu",
+    "english": "teach, tell",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "習います",
+    "hiragana": "ならいます",
+    "romaji": "naraimasu",
+    "english": "learn",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "架けます",
+    "hiragana": "かけます",
+    "romaji": "kakemasu",
+    "english": "make a phone call",
+    "part_of_speech": "verb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "手",
+    "hiragana": "て",
+    "romaji": "te",
+    "english": "hand",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "箸",
+    "hiragana": "はし",
+    "romaji": "hashi",
+    "english": "chopsticks",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "紙",
+    "hiragana": "かみ",
+    "romaji": "kami",
+    "english": "paper",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "花",
+    "hiragana": "はな",
+    "romaji": "hana",
+    "english": "flower",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "荷物",
+    "hiragana": "にもつ",
+    "romaji": "nimotsu",
+    "english": "luggage, baggage",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お金",
+    "hiragana": "おかね",
+    "romaji": "okane",
+    "english": "money",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "切符",
+    "hiragana": "きっぷ",
+    "romaji": "kippu",
+    "english": "ticket",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "父",
+    "hiragana": "ちち",
+    "romaji": "chichi",
+    "english": "my father",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "母",
+    "hiragana": "はは",
+    "romaji": "haha",
+    "english": "my mother",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お父さん",
+    "hiragana": "おとうさん",
+    "romaji": "otousan",
+    "english": "father (someone else's)",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お母さん",
+    "hiragana": "おかあさん",
+    "romaji": "okaasan",
+    "english": "mother (someone else's)",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "もう",
+    "romaji": "mou",
+    "english": "already",
+    "part_of_speech": "adverb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "まだ",
+    "romaji": "mada",
+    "english": "not yet",
+    "part_of_speech": "adverb",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "これから",
+    "romaji": "korekara",
+    "english": "from now on, soon",
+    "part_of_speech": "expression",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "旅行",
+    "hiragana": "りょこう",
+    "romaji": "ryokou",
+    "english": "trip, travel",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お土産",
+    "hiragana": "おみやげ",
+    "romaji": "omiyage",
+    "english": "souvenir",
+    "part_of_speech": "noun",
+    "chapter": "第7課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "静か",
+    "hiragana": "しずか",
+    "romaji": "shizuka",
+    "english": "quiet",
+    "part_of_speech": "na-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "賑やか",
+    "hiragana": "にぎやか",
+    "romaji": "nigiyaka",
+    "english": "lively",
+    "part_of_speech": "na-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "有名",
+    "hiragana": "ゆうめい",
+    "romaji": "yuumei",
+    "english": "famous",
+    "part_of_speech": "na-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "親切",
+    "hiragana": "しんせつ",
+    "romaji": "shinsetsu",
+    "english": "kind",
+    "part_of_speech": "na-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "元気",
+    "hiragana": "げんき",
+    "romaji": "genki",
+    "english": "healthy, energetic",
+    "part_of_speech": "na-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "暇",
+    "hiragana": "ひま",
+    "romaji": "hima",
+    "english": "free time",
+    "part_of_speech": "na-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "便利",
+    "hiragana": "べんり",
+    "romaji": "benri",
+    "english": "convenient",
+    "part_of_speech": "na-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "素敵",
+    "hiragana": "すてき",
+    "romaji": "suteki",
+    "english": "wonderful, nice",
+    "part_of_speech": "na-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大きい",
+    "hiragana": "おおきい",
+    "romaji": "ookii",
+    "english": "big, large",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "小さい",
+    "hiragana": "ちいさい",
+    "romaji": "chiisai",
+    "english": "small",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "新しい",
+    "hiragana": "あたらしい",
+    "romaji": "atarashii",
+    "english": "new",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "古い",
+    "hiragana": "ふるい",
+    "romaji": "furui",
+    "english": "old (not of age)",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "いい",
+    "romaji": "ii",
+    "english": "good",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "悪い",
+    "hiragana": "わるい",
+    "romaji": "warui",
+    "english": "bad",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "熱い",
+    "hiragana": "あつい",
+    "romaji": "atsui",
+    "english": "hot",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "寒い",
+    "hiragana": "さむい",
+    "romaji": "samui",
+    "english": "cold (weather)",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "冷たい",
+    "hiragana": "つめたい",
+    "romaji": "tsumetai",
+    "english": "cold (to touch)",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "難しい",
+    "hiragana": "むずかしい",
+    "romaji": "muzukashii",
+    "english": "difficult",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "易しい",
+    "hiragana": "やさしい",
+    "romaji": "yasashii",
+    "english": "easy",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "高い",
+    "hiragana": "たかい",
+    "romaji": "takai",
+    "english": "expensive, tall",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "安い",
+    "hiragana": "やすい",
+    "romaji": "yasui",
+    "english": "cheap",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "低い",
+    "hiragana": "ひくい",
+    "romaji": "hikui",
+    "english": "low",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "面白い",
+    "hiragana": "おもしろい",
+    "romaji": "omoshiroi",
+    "english": "interesting",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "美味しい",
+    "hiragana": "おいしい",
+    "romaji": "oishii",
+    "english": "delicious",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "忙しい",
+    "hiragana": "いそがしい",
+    "romaji": "isogashii",
+    "english": "busy",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "楽しい",
+    "hiragana": "たのしい",
+    "romaji": "tanoshii",
+    "english": "enjoyable, fun",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "白い",
+    "hiragana": "しろい",
+    "romaji": "shiroi",
+    "english": "white",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "黒い",
+    "hiragana": "くろい",
+    "romaji": "kuroi",
+    "english": "black",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "赤い",
+    "hiragana": "あかい",
+    "romaji": "akai",
+    "english": "red",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "青い",
+    "hiragana": "あおい",
+    "romaji": "aoi",
+    "english": "blue",
+    "part_of_speech": "i-adjective",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "桜",
+    "hiragana": "さくら",
+    "romaji": "sakura",
+    "english": "cherry blossom",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "山",
+    "hiragana": "やま",
+    "romaji": "yama",
+    "english": "mountain",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "町",
+    "hiragana": "まち",
+    "romaji": "machi",
+    "english": "town, city",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "食べ物",
+    "hiragana": "たべもの",
+    "romaji": "tabemono",
+    "english": "food",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "車",
+    "hiragana": "くるま",
+    "romaji": "kuruma",
+    "english": "car",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "所",
+    "hiragana": "ところ",
+    "romaji": "tokoro",
+    "english": "place",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "寮",
+    "hiragana": "りょう",
+    "romaji": "ryou",
+    "english": "dormitory",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "勉強",
+    "hiragana": "べんきょう",
+    "romaji": "benkyou",
+    "english": "study",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "生活",
+    "hiragana": "せいかつ",
+    "romaji": "seikatsu",
+    "english": "life",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "仕事",
+    "hiragana": "しごと",
+    "romaji": "shigoto",
+    "english": "work, job",
+    "part_of_speech": "noun",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "どう",
+    "romaji": "dou",
+    "english": "how",
+    "part_of_speech": "adverb",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "とても",
+    "romaji": "totemo",
+    "english": "very",
+    "part_of_speech": "adverb",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "あまり",
+    "romaji": "amari",
+    "english": "not very (with negative)",
+    "part_of_speech": "adverb",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "そして",
+    "romaji": "soshite",
+    "english": "and",
+    "part_of_speech": "conjunction",
+    "chapter": "第8課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "分かります",
+    "hiragana": "わかります",
+    "romaji": "wakarimasu",
+    "english": "understand",
+    "part_of_speech": "verb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "在ります",
+    "hiragana": "あります",
+    "romaji": "arimasu",
+    "english": "have",
+    "part_of_speech": "verb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "好き",
+    "hiragana": "すき",
+    "romaji": "suki",
+    "english": "like",
+    "part_of_speech": "na-adjective",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "嫌い",
+    "hiragana": "きらい",
+    "romaji": "kirai",
+    "english": "dislike",
+    "part_of_speech": "na-adjective",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "上手",
+    "hiragana": "じょうず",
+    "romaji": "jouzu",
+    "english": "good at",
+    "part_of_speech": "na-adjective",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "下手",
+    "hiragana": "へた",
+    "romaji": "heta",
+    "english": "poor at",
+    "part_of_speech": "na-adjective",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "料理",
+    "hiragana": "りょうり",
+    "romaji": "ryouri",
+    "english": "cooking, dish",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "飲み物",
+    "hiragana": "のみもの",
+    "romaji": "nomimono",
+    "english": "drink",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "野球",
+    "hiragana": "やきゅう",
+    "romaji": "yakyuu",
+    "english": "baseball",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "音楽",
+    "hiragana": "おんがく",
+    "romaji": "ongaku",
+    "english": "music",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "歌",
+    "hiragana": "うた",
+    "romaji": "uta",
+    "english": "song",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "歌舞伎",
+    "hiragana": "かぶき",
+    "romaji": "kabuki",
+    "english": "Kabuki",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "絵",
+    "hiragana": "え",
+    "romaji": "e",
+    "english": "picture",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "字",
+    "hiragana": "じ",
+    "romaji": "ji",
+    "english": "letter, character",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "漢字",
+    "hiragana": "かんじ",
+    "romaji": "kanji",
+    "english": "Chinese character",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "時間",
+    "hiragana": "じかん",
+    "romaji": "jikan",
+    "english": "time",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "用事",
+    "hiragana": "ようじ",
+    "romaji": "youji",
+    "english": "errand, things to do",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "約束",
+    "hiragana": "やくそく",
+    "romaji": "yakusoku",
+    "english": "appointment, promise",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ご主人",
+    "hiragana": "ごしゅじん",
+    "romaji": "goshujin",
+    "english": "husband (someone else's)",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "夫",
+    "hiragana": "おっと",
+    "romaji": "otto",
+    "english": "husband (my)",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "主人",
+    "hiragana": "しゅじん",
+    "romaji": "shujin",
+    "english": "husband (my)",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "奥さん",
+    "hiragana": "おくさん",
+    "romaji": "okusan",
+    "english": "wife (someone else's)",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "妻",
+    "hiragana": "つま",
+    "romaji": "tsuma",
+    "english": "wife (my)",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "家内",
+    "hiragana": "かない",
+    "romaji": "kanai",
+    "english": "wife (my)",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "子供",
+    "hiragana": "こども",
+    "romaji": "kodomo",
+    "english": "child",
+    "part_of_speech": "noun",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "よく",
+    "romaji": "yoku",
+    "english": "well, often",
+    "part_of_speech": "adverb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大体",
+    "hiragana": "だいたい",
+    "romaji": "daitai",
+    "english": "mostly, generally",
+    "part_of_speech": "adverb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "たくさん",
+    "romaji": "takusan",
+    "english": "many, much",
+    "part_of_speech": "adverb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "少し",
+    "hiragana": "すこし",
+    "romaji": "sukoshi",
+    "english": "a little",
+    "part_of_speech": "adverb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "全然",
+    "hiragana": "ぜんぜん",
+    "romaji": "zenzen",
+    "english": "not at all (with negative)",
+    "part_of_speech": "adverb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "早く",
+    "hiragana": "はやく",
+    "romaji": "hayaku",
+    "english": "early, fast",
+    "part_of_speech": "adverb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  },
+  {
+    "kanji": null,
+    "hiragana": "どうして",
+    "romaji": "doushite",
+    "english": "why",
+    "part_of_speech": "adverb",
+    "chapter": "第9課",
+    "jlpt_level": 5
+  }
+]
