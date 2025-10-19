@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { db, dbType } from './db/db.js';
+import videoRoutes from './routes/videos.js';
 
 dotenv.config();
 
@@ -74,8 +75,8 @@ app.get('/api/test-db', async (req, res) => {
   }
 });
 
-// Routes will be added in Phase 1
-// app.use('/api/videos', videoRoutes);
+// Routes
+app.use('/api/videos', videoRoutes);
 
 // Error handling
 app.use((err, req, res, next) => {
