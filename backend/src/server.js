@@ -2,9 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
+import morgan from 'morgan';
 import { fileURLToPath } from 'url';
 import { db, dbType } from './db/db.js';
 import videoRoutes from './routes/videos.js';
+import { limiter, helmetConfig, corsOptions, errorSanitizer } from './middleware/security.js';
 
 dotenv.config();
 
@@ -14,10 +16,17 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Security Middleware (apply first)
+app.use(helmetConfig); // Security headers
+app.use(limiter); // Rate limiting
+app.use(cors(corsOptions)); // CORS with restrictions
+
+// Request logging
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
+
+// Body parsing middleware
+app.use(express.json({ limit: '10mb' })); // Limit JSON payload size
+app.use(express.urlencoded({ extended: true, limit: '10mb' })); // Limit URL-encoded payload size
 
 // Static files (for uploaded videos)
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
@@ -78,11 +87,8 @@ app.get('/api/test-db', async (req, res) => {
 // Routes
 app.use('/api/videos', videoRoutes);
 
-// Error handling
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Something went wrong!' });
-});
+// Error handling (must be last)
+app.use(errorSanitizer);
 
 app.listen(PORT, () => {
   console.log(`\n🚀 N5 Reading Backend Server`);

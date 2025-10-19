@@ -5,6 +5,8 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { db, dbType } from '../db/db.js';
 import { extractVideoMetadata } from '../services/videoService.js';
+import { uploadLimiter } from '../middleware/security.js';
+import { validateVideoId, validateFileUpload, sanitizeFilename } from '../middleware/validation.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,8 +25,9 @@ const storage = multer.diskStorage({
     cb(null, uploadsDir);
   },
   filename: (req, file, cb) => {
-    // Generate unique filename: timestamp-originalname
-    const uniqueName = `${Date.now()}-${file.originalname}`;
+    // Generate unique, sanitized filename: timestamp-sanitized-originalname
+    const sanitized = sanitizeFilename(file.originalname);
+    const uniqueName = `${Date.now()}-${sanitized}`;
     cb(null, uniqueName);
   }
 });
@@ -59,7 +62,7 @@ const upload = multer({
 });
 
 // POST /api/videos/upload - Upload a video
-router.post('/upload', upload.single('video'), async (req, res) => {
+router.post('/upload', uploadLimiter, upload.single('video'), validateFileUpload, async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: 'No video file uploaded' });
@@ -162,7 +165,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET /api/videos/:id - Get single video
-router.get('/:id', async (req, res) => {
+router.get('/:id', validateVideoId, async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -193,7 +196,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // DELETE /api/videos/:id - Delete a video
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', validateVideoId, async (req, res) => {
   const { id } = req.params;
 
   try {
