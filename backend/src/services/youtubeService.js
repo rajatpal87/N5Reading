@@ -7,6 +7,43 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
+ * Try downloading with different browser cookies
+ * @param {string} url - YouTube URL
+ * @param {Object} options - yt-dlp options
+ * @param {Array} browsers - List of browsers to try ['chrome', 'safari']
+ * @returns {Promise<Object>} Result from yt-dlp
+ */
+async function tryWithBrowserCookies(url, options, browsers = ['chrome', 'safari']) {
+  let lastError;
+  
+  for (const browser of browsers) {
+    try {
+      console.log(`🔐 Trying ${browser} cookies...`);
+      const result = await youtubedl(url, {
+        ...options,
+        cookiesFromBrowser: browser,
+      });
+      console.log(`✅ Success with ${browser} cookies!`);
+      return result;
+    } catch (error) {
+      lastError = error;
+      
+      // If it's a bot detection error, try next browser
+      if (error.message.includes('Sign in to confirm') || error.message.includes('bot')) {
+        console.log(`⚠️ ${browser} cookies didn't work, trying next...`);
+        continue;
+      }
+      
+      // For other errors, throw immediately
+      throw error;
+    }
+  }
+  
+  // If all browsers failed, throw the last error
+  throw lastError;
+}
+
+/**
  * Download YouTube video
  * @param {string} url - YouTube URL
  * @param {string} outputDir - Directory to save video
@@ -30,12 +67,11 @@ export async function downloadYouTubeVideo(url, outputDir) {
 
     console.log('🔍 Fetching video info first...');
     
-    // Get video info first (faster and tests if video is accessible)
-    const info = await youtubedl(url, {
+    // Get video info first (tries Chrome, then Safari cookies)
+    const info = await tryWithBrowserCookies(url, {
       dumpSingleJson: true,
       noWarnings: true,
       noPlaylist: true,
-      cookiesFromBrowser: 'chrome', // Use Chrome cookies to bypass bot detection
     });
     
     console.log('✅ Video info retrieved:', info.title);
@@ -43,8 +79,8 @@ export async function downloadYouTubeVideo(url, outputDir) {
 
     console.log('⬇️ Starting video download...');
 
-    // Download video (with browser cookies to avoid bot detection)
-    const output = await youtubedl(url, {
+    // Download video (tries Chrome, then Safari cookies)
+    const output = await tryWithBrowserCookies(url, {
       output: outputTemplate,
       format: 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
       mergeOutputFormat: 'mp4',
@@ -53,7 +89,6 @@ export async function downloadYouTubeVideo(url, outputDir) {
       noWarnings: true,
       noPart: true,
       noOverwrites: true,
-      cookiesFromBrowser: 'chrome', // Use Chrome cookies to bypass bot detection
     });
     
     console.log('✅ Download complete');
