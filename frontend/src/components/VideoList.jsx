@@ -7,6 +7,7 @@ export default function VideoList({ refreshTrigger }) {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [playingAudio, setPlayingAudio] = useState(null); // Track which video's audio is playing
 
   // Fetch videos
   const fetchVideos = async () => {
@@ -126,6 +127,11 @@ export default function VideoList({ refreshTrigger }) {
       case 'error': return '❌ Error';
       default: return status;
     }
+  };
+
+  // Toggle audio playback
+  const toggleAudioPlayback = (videoId) => {
+    setPlayingAudio(playingAudio === videoId ? null : videoId);
   };
 
   useEffect(() => {
@@ -265,6 +271,32 @@ export default function VideoList({ refreshTrigger }) {
               {video.status === 'error' && video.error_message && (
                 <div className="mt-2 p-2 bg-red-50 border border-red-200 rounded text-xs text-red-600">
                   {video.error_message}
+                </div>
+              )}
+
+              {/* Audio Player - Show if audio has been extracted */}
+              {video.audio_path && (
+                <div className="mt-3">
+                  {playingAudio === video.id ? (
+                    <div className="bg-gray-50 border border-gray-200 rounded p-2">
+                      <audio
+                        controls
+                        autoPlay
+                        className="w-full h-8"
+                        onEnded={() => setPlayingAudio(null)}
+                        src={`http://localhost:3000${video.audio_path}`}
+                      >
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => toggleAudioPlayback(video.id)}
+                      className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2 px-3 rounded transition-colors duration-200 flex items-center justify-center gap-2"
+                    >
+                      🔊 Play Audio
+                    </button>
+                  )}
                 </div>
               )}
 
