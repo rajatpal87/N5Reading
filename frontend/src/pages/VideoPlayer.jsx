@@ -8,6 +8,7 @@ export default function VideoPlayer() {
   const { id } = useParams();
   const navigate = useNavigate();
   const videoRef = useRef(null);
+  const secondFoldRef = useRef(null);
 
   const [video, setVideo] = useState(null);
   const [transcription, setTranscription] = useState(null);
@@ -15,6 +16,8 @@ export default function VideoPlayer() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [analyzing, setAnalyzing] = useState(false);
+  const [showDownCTA, setShowDownCTA] = useState(true);
+  const [showUpCTA, setShowUpCTA] = useState(false);
   
   // Playback state
   const [currentTime, setCurrentTime] = useState(0);
@@ -61,6 +64,33 @@ export default function VideoPlayer() {
     } finally {
       setLoading(false);
     }
+  };
+
+  // Floating CTA visibility logic based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const viewportH = window.innerHeight;
+      const scrollY = window.scrollY || window.pageYOffset;
+      const secondFoldTop = secondFoldRef.current?.offsetTop ?? viewportH;
+
+      // Show "View Vocabulary & Grammar" when we're above the second fold
+      setShowDownCTA(scrollY < secondFoldTop - 100);
+      // Show "Back to Video" when we've reached/passed the second fold
+      setShowUpCTA(scrollY >= secondFoldTop - 100);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSecondFold = () => {
+    const top = secondFoldRef.current?.offsetTop ?? window.innerHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
+  const scrollToFirstFold = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const triggerAnalysis = async () => {
@@ -161,17 +191,7 @@ export default function VideoPlayer() {
   const currentSegment = transcription.segments[currentSegmentIndex];
   // Construct proper video URL - browser will handle special characters
   const videoUrl = `${API_URL.replace('/api', '')}/uploads/${video.filename}`;
-
-  // Debug log
-  console.log('Video URL:', videoUrl);
-  console.log('Video object:', video);
-  console.log('Testing video fetch...');
   
-  // Test if video is accessible
-  fetch(videoUrl, { method: 'HEAD' })
-    .then(res => console.log('Video accessible:', res.ok, res.status))
-    .catch(err => console.error('Video fetch failed:', err));
-
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
@@ -191,180 +211,259 @@ export default function VideoPlayer() {
               <div>
                 <h1 className="text-xl font-bold text-gray-900">{video.original_name}</h1>
                 <p className="text-sm text-gray-500">JLPT N5 Video Analysis</p>
-                <p className="text-xs text-gray-400 font-mono">Debug: {videoUrl}</p>
               </div>
             </div>
+            <button
+              onClick={() => navigate(`/dashboard/${id}`)}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              Dashboard
+            </button>
           </div>
         </div>
       </header>
 
-      {/* Main Content - Side by Side */}
-      <main className="flex-1 flex flex-col lg:flex-row max-w-7xl mx-auto w-full">
-        {/* Left Pane: Video Player + Transcription */}
-        <div className="lg:w-2/3 bg-white border-r border-gray-200 flex flex-col">
-          {/* Video Player */}
-          <div className="relative bg-black aspect-video flex-shrink-0">
-            <video
-              ref={videoRef}
-              src={videoUrl}
-              controls
-              className="w-full h-full"
-              onTimeUpdate={handleTimeUpdate}
-              onLoadedMetadata={handleLoadedMetadata}
-              onError={(e) => {
-                console.error('Video error:', e);
-                alert(`Video playback error: ${e.target.error?.message || 'Unknown error'}`);
-              }}
-              style={{ maxHeight: '100%', objectFit: 'contain' }}
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
+      {/* Main Content */}
+      <main className="flex-1 overflow-y-auto">
+        {/* First Fold: Video + Summary + Transcription */}
+        <div className="min-h-screen relative flex flex-col lg:flex-row max-w-7xl mx-auto w-full p-4 gap-4">
+          {/* Left Column: Video Player + N5 Summary */}
+          <div className="lg:w-1/2 flex flex-col gap-4" style={{ height: 'calc(100vh - 120px)' }}>
+            {/* Video Player */}
+            <div className="relative bg-black rounded-lg overflow-hidden flex-shrink-0" style={{ height: '45%' }}>
+              <video
+                ref={videoRef}
+                src={videoUrl}
+                controls
+                className="w-full h-full"
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedMetadata={handleLoadedMetadata}
+                onError={(e) => {
+                  console.error('Video error:', e);
+                  alert(`Video playback error: ${e.target.error?.message || 'Unknown error'}`);
+                }}
+                style={{ objectFit: 'contain' }}
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
-          {/* Transcription Panel */}
-          <div className="flex-1 overflow-y-auto p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-              📝 Transcription
-              <span className="text-sm text-gray-500 font-normal">
-                ({formatTime(currentTime)} / {formatTime(duration)})
-              </span>
-            </h2>
-
-            <div className="space-y-3">
-              {transcription.segments.map((segment, idx) => {
-                const isActive = idx === currentSegmentIndex;
-                
-                return (
-                  <div
-                    key={idx}
-                    className={`p-3 rounded-lg cursor-pointer transition-all ${
-                      isActive
-                        ? 'bg-blue-50 border-2 border-blue-500'
-                        : 'bg-gray-50 hover:bg-gray-100 border-2 border-transparent'
-                    }`}
-                    onClick={() => jumpToTime(segment.start)}
-                  >
-                    <div className="flex items-start gap-2">
-                      <span className="text-xs text-gray-500 font-mono flex-shrink-0 mt-1">
-                        {formatTime(segment.start)}
-                      </span>
-                      <div className="flex-1">
-                        <p className="text-gray-900 font-medium">{segment.text}</p>
-                        <p className="text-gray-600 text-sm mt-1">{segment.translated_text}</p>
+            {/* N5 Analysis Section */}
+            <div className="flex-1 bg-white rounded-lg shadow-sm p-4 overflow-y-auto">
+              {analyzing ? (
+                <div className="text-center py-8">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                  <p className="text-gray-600">Analyzing N5 content...</p>
+                </div>
+              ) : analysis ? (
+                <div className="space-y-4">
+                  {/* Summary Card */}
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-200">
+                    <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      🎯 N5 Content Summary
+                    </h3>
+                    <div className="grid grid-cols-3 gap-3 text-center">
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-blue-600">{analysis.stats.n5_word_unique}</div>
+                        <div className="text-xs text-gray-600 mt-1">Words</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-green-600">{analysis.stats.n5_grammar_unique}</div>
+                        <div className="text-xs text-gray-600 mt-1">Grammar</div>
+                      </div>
+                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                        <div className="text-2xl font-bold text-purple-600">{analysis.stats.study_time_estimate}</div>
+                        <div className="text-xs text-gray-600 mt-1">Minutes</div>
                       </div>
                     </div>
                   </div>
-                );
-              })}
+
+                  {/* Current Segment */}
+                  {currentSegment && (
+                    <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="font-semibold text-blue-900">📖 Now Playing</h3>
+                        <span className="text-xs text-blue-600 font-mono bg-blue-100 px-2 py-1 rounded">
+                          {formatTime(currentTime)} / {formatTime(duration)}
+                        </span>
+                      </div>
+                      <p className="text-gray-900 font-medium mb-2">{currentSegment.text}</p>
+                      <p className="text-gray-700 text-sm">{currentSegment.translated_text}</p>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="text-center py-8">
+                  <p className="text-gray-600 mb-4">No analysis available</p>
+                  <button
+                    onClick={triggerAnalysis}
+                    className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  >
+                    Analyze Now
+                  </button>
+                </div>
+              )}
             </div>
           </div>
+
+          {/* Right Column: Transcription (Scrollable) */}
+          <div className="lg:w-1/2 flex flex-col bg-white rounded-lg shadow-sm" style={{ height: 'calc(100vh - 120px)' }}>
+            <div className="p-4 border-b border-gray-200 flex-shrink-0">
+              <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+                📝 Transcription
+                <span className="text-sm text-gray-500 font-normal">
+                  ({transcription.segments.length} segments)
+                </span>
+              </h2>
+            </div>
+            
+            <div className="flex-1 overflow-y-auto p-4">
+              <div className="space-y-3">
+                {transcription.segments.map((segment, idx) => {
+                  const isActive = idx === currentSegmentIndex;
+                  
+                  return (
+                    <div
+                      key={idx}
+                      className={`p-3 rounded-lg cursor-pointer transition-all ${
+                        isActive
+                          ? 'bg-blue-50 border-2 border-blue-500 shadow-md'
+                          : 'bg-gray-50 hover:bg-gray-100 border-2 border-transparent'
+                      }`}
+                      onClick={() => jumpToTime(segment.start)}
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className="text-xs text-gray-500 font-mono flex-shrink-0 mt-1 bg-white px-2 py-1 rounded">
+                          {formatTime(segment.start)}
+                        </span>
+                        <div className="flex-1">
+                          <p className="text-gray-900 font-medium">{segment.text}</p>
+                          <p className="text-gray-600 text-sm mt-1">{segment.translated_text}</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        {/* Right Pane: Analysis */}
-        <div className="lg:w-1/3 bg-gray-50 flex flex-col overflow-y-auto">
-          <div className="p-6">
-            {analyzing ? (
-              <div className="text-center py-8">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                <p className="text-gray-600">Analyzing N5 content...</p>
-              </div>
-            ) : analysis ? (
-              <>
-                {/* Summary Card */}
-                <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
-                  <h3 className="font-semibold text-gray-900 mb-3">🎯 N5 Content Summary</h3>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Unique N5 Words:</span>
-                      <span className="font-semibold text-gray-900">{analysis.stats.n5_word_unique}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Grammar Patterns:</span>
-                      <span className="font-semibold text-gray-900">{analysis.stats.n5_grammar_unique}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Study Time:</span>
-                      <span className="font-semibold text-gray-900">{analysis.stats.study_time_estimate} min</span>
-                    </div>
-                  </div>
-                </div>
+        )}
 
-                {/* Current Segment */}
-                {currentSegment && (
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-                    <h3 className="font-semibold text-blue-900 mb-2">📖 Current Segment</h3>
-                    <p className="text-gray-900 font-medium mb-2">{currentSegment.text}</p>
-                    <p className="text-gray-700 text-sm">{currentSegment.translated_text}</p>
-                  </div>
-                )}
+        {/* Second Fold: Vocabulary & Grammar Side by Side */}
+        {analysis && (analysis.vocabulary?.words?.length > 0 || analysis.grammar?.patterns?.length > 0) && (
+          <div ref={secondFoldRef} className="min-h-screen relative bg-gray-50 py-8">
 
-                {/* Vocabulary List */}
-                <div className="mb-6">
-                  <h3 className="font-semibold text-gray-900 mb-3">
-                    🟡 N5 Vocabulary ({analysis.vocabulary.unique_count})
-                  </h3>
-                  <div className="space-y-2 max-h-64 overflow-y-auto">
-                    {analysis.vocabulary.words.map((word, idx) => (
-                      <div key={idx} className="bg-white rounded-lg p-3 shadow-sm hover:shadow-md transition-shadow">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <span className="text-lg font-semibold text-gray-900">{word.kanji || word.hiragana}</span>
-                            {word.kanji && (
-                              <span className="text-sm text-gray-500 ml-2">({word.hiragana})</span>
-                            )}
-                            <p className="text-sm text-gray-600">{word.english}</p>
-                            {word.chapter && (
-                              <span className="inline-block text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded mt-1">
-                                {word.chapter}
+            <div className="max-w-7xl mx-auto px-4 pt-16">
+              <div className="grid lg:grid-cols-2 gap-6">
+                {/* Vocabulary Section */}
+                {analysis.vocabulary && analysis.vocabulary.words && analysis.vocabulary.words.length > 0 && (
+                  <div className="bg-white rounded-lg shadow-lg p-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      🟡 N5 Vocabulary
+                      <span className="text-lg font-normal text-gray-500">({analysis.vocabulary.unique_count})</span>
+                    </h3>
+                    <div className="space-y-3 max-h-[600px] overflow-y-auto">
+                      {analysis.vocabulary.words.map((word, idx) => (
+                        <div key={idx} className="bg-gradient-to-r from-yellow-50 to-white rounded-lg p-4 border border-yellow-200 hover:shadow-md transition-shadow">
+                          <div className="flex justify-between items-start">
+                            <div className="flex-1">
+                              <div className="flex items-baseline gap-2">
+                                <span className="text-2xl font-bold text-gray-900">{word.kanji || word.hiragana}</span>
+                                {word.kanji && (
+                                  <span className="text-base text-gray-500">({word.hiragana})</span>
+                                )}
+                              </div>
+                              <p className="text-base text-gray-700 mt-1">{word.english}</p>
+                              {word.chapter && (
+                                <span className="inline-block text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded mt-2">
+                                  {word.chapter}
+                                </span>
+                              )}
+                            </div>
+                            {word.occurrences && (
+                              <span className="text-sm bg-yellow-200 text-yellow-900 px-3 py-1 rounded-full font-semibold">
+                                ×{word.occurrences.length}
                               </span>
                             )}
                           </div>
-                          <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
-                            ×{word.occurrences.length}
-                          </span>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
-                {/* Grammar Patterns */}
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">
-                    📝 Grammar Patterns ({analysis.grammar.unique_count})
-                  </h3>
-                  <div className="space-y-2 max-h-64 overflow-y-auto">
-                    {analysis.grammar.patterns.map((pattern, idx) => (
-                      <div key={idx} className="bg-white rounded-lg p-3 shadow-sm">
-                        <h4 className="font-semibold text-gray-900">{pattern.pattern_name}</h4>
-                        <p className="text-sm text-gray-600 mt-1">{pattern.pattern_structure}</p>
-                        {pattern.english_explanation && (
-                          <p className="text-xs text-gray-500 mt-1">{pattern.english_explanation}</p>
-                        )}
-                        {pattern.chapter && (
-                          <span className="inline-block text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded mt-1">
-                            {pattern.chapter}
-                          </span>
-                        )}
-                      </div>
-                    ))}
+                {/* Grammar Patterns Section */}
+                {analysis.grammar && analysis.grammar.patterns && analysis.grammar.patterns.length > 0 && (
+                  <div className="bg-white rounded-lg shadow-lg p-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      📝 Grammar Patterns
+                      <span className="text-lg font-normal text-gray-500">({analysis.grammar.unique_count})</span>
+                    </h3>
+                    <div className="space-y-3 max-h-[600px] overflow-y-auto">
+                      {analysis.grammar.patterns.map((pattern, idx) => (
+                        <div key={idx} className="bg-gradient-to-r from-green-50 to-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
+                          <h4 className="text-xl font-bold text-gray-900">{pattern.pattern_name}</h4>
+                          <p className="text-base text-gray-700 mt-2 font-mono bg-gray-100 px-2 py-1 rounded">
+                            {pattern.pattern_structure}
+                          </p>
+                          {pattern.english_explanation && (
+                            <p className="text-sm text-gray-600 mt-2">{pattern.english_explanation}</p>
+                          )}
+                          {pattern.chapter && (
+                            <span className="inline-block text-xs bg-green-100 text-green-700 px-2 py-1 rounded mt-2">
+                              {pattern.chapter}
+                            </span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </>
-            ) : (
-              <div className="text-center py-8">
-                <p className="text-gray-600 mb-4">No analysis available</p>
-                <button
-                  onClick={triggerAnalysis}
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                >
-                  Analyze Now
-                </button>
+                )}
               </div>
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </main>
+
+      {/* Floating bottom-right CTA (hover-expand, switches based on scroll position) */}
+      {analysis && (analysis.vocabulary?.words?.length > 0 || analysis.grammar?.patterns?.length > 0) && (
+        <div className="fixed bottom-6 right-6 z-50">
+          {showDownCTA && (
+            <button
+              onClick={scrollToSecondFold}
+              className="group bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all flex items-center gap-2 pr-4 pl-3 py-3"
+              title="View Vocabulary & Grammar"
+            >
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all whitespace-nowrap">View Vocabulary & Grammar</span>
+            </button>
+          )}
+          {showUpCTA && (
+            <button
+              onClick={scrollToFirstFold}
+              className="group bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-900 transition-all flex items-center gap-2 pr-4 pl-3 py-3"
+              title="Back to Video"
+            >
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              </div>
+              <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all whitespace-nowrap">Back to Video</span>
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -355,11 +355,11 @@ export async function analyzeVideo(videoId) {
     for (const match of grammarMatches) {
       const insertQuery = dbType === 'postgresql'
         ? `INSERT INTO detected_grammar 
-           (transcription_id, pattern_id, matched_text, position_in_text) 
-           VALUES ($1, $2, $3, $4)`
+           (transcription_id, pattern_id, matched_text, position_in_text, start_time, end_time) 
+           VALUES ($1, $2, $3, $4, $5, $6)`
         : `INSERT INTO detected_grammar 
-           (transcription_id, pattern_id, matched_text, position_in_text) 
-           VALUES (?, ?, ?, ?)`;
+           (transcription_id, pattern_id, matched_text, position_in_text, start_time, end_time) 
+           VALUES (?, ?, ?, ?, ?, ?)`;
       
       if (dbType === 'postgresql') {
         await db.query(insertQuery, [
@@ -367,6 +367,8 @@ export async function analyzeVideo(videoId) {
           match.pattern_id,
           match.matched_text,
           match.position,
+          match.start_time,
+          match.end_time,
         ]);
       } else {
         await new Promise((resolve, reject) => {
@@ -375,6 +377,8 @@ export async function analyzeVideo(videoId) {
             match.pattern_id,
             match.matched_text,
             match.position,
+            match.start_time,
+            match.end_time,
           ], (err) => {
             if (err) reject(err);
             else resolve();
@@ -562,6 +566,8 @@ export async function getVideoAnalysis(videoId) {
       
       grammarMap.get(instance.pattern_id).occurrences.push({
         matched_text: instance.matched_text,
+        start_time: instance.start_time,
+        end_time: instance.end_time,
         position: instance.position_in_text,
       });
     });

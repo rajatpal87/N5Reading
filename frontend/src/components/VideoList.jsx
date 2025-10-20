@@ -15,18 +15,54 @@ export default function VideoList({ refreshTrigger }) {
   const [selectedVideoId, setSelectedVideoId] = useState(null);
 
   // Fetch videos
-  const fetchVideos = async () => {
-    setLoading(true);
-    setError(null);
+  const fetchVideos = async (silent = false) => {
+    if (!silent) {
+      setLoading(true);
+      setError(null);
+    }
 
     try {
       const response = await axios.get(`${API_URL}/videos`);
       setVideos(response.data.videos || []);
     } catch (err) {
       console.error('Error fetching videos:', err);
-      setError('Failed to load videos. Please try again.');
+      if (!silent) {
+        setError('Failed to load videos. Please try again.');
+      }
     } finally {
-      setLoading(false);
+      if (!silent) {
+        setLoading(false);
+      }
+    }
+  };
+
+  // Update only progress for specific videos (doesn't unmount components)
+  const updateVideoProgress = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/videos`);
+      const updatedVideos = response.data.videos || [];
+      
+      // Only update if there are actual changes to prevent unnecessary re-renders
+      setVideos(prevVideos => {
+        return prevVideos.map(prevVideo => {
+          const updatedVideo = updatedVideos.find(v => v.id === prevVideo.id);
+          if (!updatedVideo) return prevVideo;
+          
+          // Only update if progress/status actually changed
+          if (
+            prevVideo.progress !== updatedVideo.progress ||
+            prevVideo.status !== updatedVideo.status ||
+            prevVideo.status_message !== updatedVideo.status_message ||
+            prevVideo.estimated_time_remaining !== updatedVideo.estimated_time_remaining
+          ) {
+            return { ...prevVideo, ...updatedVideo };
+          }
+          
+          return prevVideo;
+        });
+      });
+    } catch (err) {
+      console.error('Error updating progress:', err);
     }
   };
 
@@ -286,7 +322,7 @@ export default function VideoList({ refreshTrigger }) {
     return `${API_URL.replace('/api', '')}${basePath}/${encodedFilename}`;
   };
 
-  // Auto-refresh when videos are processing
+  // Auto-refresh when videos are processing (using progress-only update)
   useEffect(() => {
     const hasProcessingVideos = videos.some(v => 
       ['processing', 'extracting_audio', 'compressing_audio', 'transcribing', 'translating'].includes(v.status)
@@ -294,9 +330,9 @@ export default function VideoList({ refreshTrigger }) {
     
     if (hasProcessingVideos) {
       console.log('📊 Auto-polling enabled - videos are processing');
-      // Poll every 2 seconds when processing
+      // Poll every 2 seconds when processing (progress-only, won't reset audio)
       const interval = setInterval(() => {
-        fetchVideos();
+        updateVideoProgress();
       }, 2000);
       
       return () => clearInterval(interval);

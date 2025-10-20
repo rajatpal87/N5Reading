@@ -128,18 +128,27 @@ export default function GrammarPatternsList({ grammar, onTimestampClick }) {
                   
                   <p className="text-gray-700 text-xs mb-2">{pattern.explanation || pattern.english_explanation}</p>
                   
-                  {/* Occurrence Information */}
-                  {pattern.occurrences && pattern.occurrences.length > 0 && (
+                  {/* First Occurrence Timestamp */}
+                  {firstOccurrence && (
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="text-xs text-gray-600">
-                        Found {pattern.frequency} time{pattern.frequency > 1 ? 's' : ''} in transcript
-                      </div>
+                      <button
+                        onClick={() => onTimestampClick(firstOccurrence.start_time || 0)}
+                        className="text-blue-600 hover:text-blue-800 font-mono text-xs hover:underline flex items-center gap-1"
+                        title="Jump to first occurrence in video"
+                      >
+                        <span>🕐</span>
+                        <span>{formatTime(firstOccurrence.start_time || 0)}</span>
+                      </button>
+                      <span className="text-xs text-gray-400">•</span>
+                      <span className="text-xs text-gray-600">
+                        Found {pattern.frequency} time{pattern.frequency > 1 ? 's' : ''}
+                      </span>
                       {pattern.frequency > 1 && (
                         <button
                           onClick={() => togglePattern(pattern.pattern_id)}
                           className="text-gray-500 hover:text-gray-700 text-xs flex items-center gap-1"
                         >
-                          {isExpanded ? '▼' : '▶'} Show examples
+                          {isExpanded ? '▼' : '▶'} Show all
                         </button>
                       )}
                     </div>
@@ -148,18 +157,29 @@ export default function GrammarPatternsList({ grammar, onTimestampClick }) {
                   {/* All Occurrences (when expanded) */}
                   {isExpanded && pattern.occurrences && pattern.occurrences.length > 0 && (
                     <div className="mt-2 p-2 bg-green-50 rounded border border-green-200">
-                      <div className="text-xs font-semibold text-green-800 mb-1">Examples:</div>
-                      <div className="space-y-1">
-                        {pattern.occurrences.slice(0, 3).map((occ, occIdx) => (
-                          <div key={occIdx} className="text-xs text-gray-700 italic bg-white px-2 py-1 rounded">
-                            "{occ.matched_text}"
+                      <div className="text-xs font-semibold text-green-800 mb-2">All Occurrences:</div>
+                      <div className="space-y-2">
+                        {pattern.occurrences.map((occ, occIdx) => (
+                          <div key={occIdx} className="bg-white px-2 py-2 rounded border border-green-300">
+                            <div className="flex items-center gap-2 mb-1">
+                              <button
+                                onClick={() => onTimestampClick(occ.start_time || 0)}
+                                className="text-blue-600 hover:text-blue-800 font-mono text-xs hover:underline flex items-center gap-1"
+                              >
+                                <span>🕐</span>
+                                <span>{formatTime(occ.start_time || 0)}</span>
+                              </button>
+                            </div>
+                            <div className="text-xs text-gray-700 italic">
+                              "{occ.matched_text}"
+                            </div>
+                            {occ.segment_text && (
+                              <div className="text-xs text-gray-500 mt-1">
+                                {occ.segment_text}
+                              </div>
+                            )}
                           </div>
                         ))}
-                        {pattern.occurrences.length > 3 && (
-                          <div className="text-xs text-gray-500">
-                            +{pattern.occurrences.length - 3} more
-                          </div>
-                        )}
                       </div>
                     </div>
                   )}

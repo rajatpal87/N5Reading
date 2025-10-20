@@ -596,6 +596,16 @@ router.post('/:id/transcribe', validateVideoId, async (req, res) => {
 
     console.log('✅ Transcription and translation complete for video:', video.id);
 
+    // Step 4: Run N5 analysis to populate vocabulary and grammar tables
+    console.log('📊 Running N5 analysis...');
+    try {
+      await analyzeVideo(id);
+      console.log('✅ N5 analysis complete');
+    } catch (analysisError) {
+      console.error('⚠️ N5 analysis failed (non-critical):', analysisError.message);
+      // Continue anyway - analysis can be retried later
+    }
+
     // Calculate total cost
     const totalCost = transcriptionResult.cost + translationResult.cost;
 

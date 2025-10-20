@@ -96,6 +96,8 @@ export const createTables = (db, dbType = 'sqlite') => {
         pattern_id INTEGER NOT NULL,
         matched_text TEXT NOT NULL,
         position_in_text INTEGER,
+        start_time REAL,
+        end_time REAL,
         FOREIGN KEY (transcription_id) REFERENCES transcriptions(id) ON DELETE CASCADE,
         FOREIGN KEY (pattern_id) REFERENCES grammar_patterns(id)
       )`

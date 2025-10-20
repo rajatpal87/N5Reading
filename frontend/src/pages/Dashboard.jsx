@@ -12,6 +12,7 @@ export default function Dashboard() {
   const { id } = useParams();
   const navigate = useNavigate();
   const videoRef = useRef(null);
+  const bottomSectionRef = useRef(null);
 
   const [video, setVideo] = useState(null);
   const [analysis, setAnalysis] = useState(null);
@@ -20,6 +21,8 @@ export default function Dashboard() {
   const [error, setError] = useState(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [isVideoFloating, setIsVideoFloating] = useState(false);
+  const [showDownCTA, setShowDownCTA] = useState(true);
+  const [showUpCTA, setShowUpCTA] = useState(false);
   
   const mainVideoContainerRef = useRef(null);
 
@@ -40,6 +43,27 @@ export default function Dashboard() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Observe bottom section to toggle CTAs precisely when it enters viewport
+  useEffect(() => {
+    if (!bottomSectionRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry && typeof entry.isIntersecting === 'boolean') {
+          // If bottom section is visible, show Back to Video CTA
+          setShowUpCTA(entry.isIntersecting);
+          setShowDownCTA(!entry.isIntersecting);
+        }
+      },
+      {
+        root: null,
+        threshold: 0.2,
+      }
+    );
+    observer.observe(bottomSectionRef.current);
+    return () => observer.disconnect();
+  }, [bottomSectionRef.current]);
 
   const fetchDashboardData = async () => {
     setLoading(true);
@@ -100,6 +124,17 @@ export default function Dashboard() {
     }
   };
 
+  const scrollToBottomSection = () => {
+    const headerOffset = 80; // sticky header height approx
+    const rect = bottomSectionRef.current?.getBoundingClientRect();
+    const top = (window.scrollY || window.pageYOffset) + (rect?.top || 0) - headerOffset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // Handle time update from video
   const handleTimeUpdate = () => {
     if (videoRef.current) {
@@ -147,7 +182,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -178,22 +213,22 @@ export default function Dashboard() {
       </header>
 
       {/* Main Content - Horizontal Layout */}
-      <main className="max-w-full px-4 sm:px-6 lg:px-8 py-4">
-        {/* Top Row: Video + Timeline Side by Side */}
-        <div className="flex flex-col lg:flex-row gap-4 mb-6">
+      <main className="max-w-full px-4 sm:px-6 lg:px-8 py-4" style={{ minHeight: 'calc(100vh - 80px)' }}>
+        {/* Top Row: Video + Timeline Side by Side - Fits in First Fold */}
+        <div className="flex flex-col lg:flex-row gap-4 mb-4" style={{ height: 'calc(100vh - 112px)' }}>
           {/* Left Side: Video Player + Stats */}
-          <div className="lg:w-[60%] flex flex-col space-y-3">
+          <div className="lg:w-[60%] flex flex-col space-y-3 h-full">
             {/* Video Player */}
-            <div ref={mainVideoContainerRef} className="bg-white rounded-lg shadow-md flex flex-col" style={{ maxHeight: '400px' }}>
-              <div className="flex-1 relative bg-black" style={{ minHeight: 0, maxHeight: '350px' }}>
+            <div ref={mainVideoContainerRef} className="bg-white rounded-lg shadow-md overflow-hidden flex-1 flex flex-col" style={{ minHeight: '300px' }}>
+              <div className="relative bg-black flex-1">
                 <video
                   ref={videoRef}
                   src={`${API_URL.replace('/api', '')}/uploads/${video.filename}`}
                   controls
                   controlsList="nodownload"
-                  className="w-full h-full"
-                  onTimeUpdate={handleTimeUpdate}
+                  className="absolute inset-0 w-full h-full"
                   style={{ objectFit: 'contain' }}
+                  onTimeUpdate={handleTimeUpdate}
                 >
                   Your browser does not support the video tag.
                 </video>
@@ -279,7 +314,7 @@ export default function Dashboard() {
           </div>
 
           {/* Right Side: Timeline + Best Segments */}
-          <div className="lg:w-[40%] flex flex-col" style={{ maxHeight: '700px' }}>
+          <div className="lg:w-[40%] flex flex-col h-full">
             {/* Timeline */}
             <N5Timeline
               timeline={timeline}
@@ -290,7 +325,7 @@ export default function Dashboard() {
         </div>
 
         {/* Bottom Section: Vocabulary & Grammar Side-by-Side */}
-        <div className="flex flex-col lg:flex-row gap-4" style={{ height: '600px' }}>
+        <div ref={bottomSectionRef} className="flex flex-col lg:flex-row gap-4 pb-4" style={{ height: '600px' }}>
           {/* Vocabulary Table */}
           <div className="lg:w-1/2 h-full">
             <VocabularyTable
@@ -308,6 +343,46 @@ export default function Dashboard() {
           </div>
         </div>
       </main>
+
+      {/* Floating bottom-right CTA (hover-expand) - avoid overlap with floating video */}
+      {analysis && (
+        <div
+          className="fixed z-[60]"
+          style={{
+            bottom: isVideoFloating ? '6rem' : '1.5rem',
+            right: isVideoFloating ? '22rem' : '1.5rem'
+          }}
+        >
+          {showDownCTA && (
+            <button
+              onClick={scrollToBottomSection}
+              className="group bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all flex items-center gap-2 pr-4 pl-3 py-3"
+              title="View Vocabulary & Grammar"
+            >
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+              <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all whitespace-nowrap">View Vocabulary & Grammar</span>
+            </button>
+          )}
+          {showUpCTA && (
+            <button
+              onClick={scrollToTop}
+              className="group bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-900 transition-all flex items-center gap-2 pr-4 pl-3 py-3"
+              title="Back to Video"
+            >
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              </div>
+              <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all whitespace-nowrap">Back to Video</span>
+            </button>
+          )}
+        </div>
+      )}
 
       {/* Floating Video Player (Picture-in-Picture) */}
       {isVideoFloating && video && (
