@@ -3,6 +3,7 @@ import pg from 'pg';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { createTables } from './schema.js';
+import { migrateGrammarTimestamps } from './migrateGrammarTimestamps.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,6 +31,7 @@ if (process.env.DATABASE_URL) {
       console.log('✅ Connected to PostgreSQL database');
       try {
         await createTables(db, dbType);
+        await migrateGrammarTimestamps(db);
       } catch (error) {
         console.error('❌ Error creating tables:', error);
       }
