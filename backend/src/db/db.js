@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import { createTables } from './schema.js';
 import { migrateGrammarTimestamps } from './migrateGrammarTimestamps.js';
+import { migrateProgressTracking } from './migrateProgress.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -31,7 +32,9 @@ if (process.env.DATABASE_URL) {
       console.log('✅ Connected to PostgreSQL database');
       try {
         await createTables(db, dbType);
-        await migrateGrammarTimestamps(db);
+        await migrateProgressTracking(db, dbType);
+        await migrateGrammarTimestamps(db, dbType);
+        console.log('✅ Database migrations complete\n');
       } catch (error) {
         console.error('❌ Error creating tables:', error);
       }
@@ -55,6 +58,9 @@ if (process.env.DATABASE_URL) {
       
       try {
         await createTables(db, dbType);
+        await migrateProgressTracking(db, dbType);
+        await migrateGrammarTimestamps(db, dbType);
+        console.log('✅ Database migrations complete\n');
       } catch (error) {
         console.error('❌ Error creating tables:', error);
       }

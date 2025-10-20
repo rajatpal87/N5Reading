@@ -1,9 +1,25 @@
 /**
- * Migration: Add start_time and end_time columns to detected_grammar if missing (SQLite only)
+ * Migration: Add start_time and end_time columns to detected_grammar if missing
+ * Works with both SQLite and PostgreSQL
  */
-export async function migrateGrammarTimestamps(db) {
+export async function migrateGrammarTimestamps(db, dbType = 'sqlite') {
   return new Promise((resolve, reject) => {
-    // Only for SQLite (db.run/db.all exist on sqlite3 Database)
+    // For PostgreSQL, use IF NOT EXISTS syntax
+    if (dbType === 'postgresql') {
+      (async () => {
+        try {
+          await db.query('ALTER TABLE detected_grammar ADD COLUMN IF NOT EXISTS start_time REAL');
+          await db.query('ALTER TABLE detected_grammar ADD COLUMN IF NOT EXISTS end_time REAL');
+          console.log('  ✓ Grammar timestamp columns ensured');
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
+      })();
+      return;
+    }
+
+    // SQLite path - check if columns exist first
     if (typeof db.all !== 'function') {
       resolve();
       return;

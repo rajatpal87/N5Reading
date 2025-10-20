@@ -5,7 +5,6 @@ import path from 'path';
 import morgan from 'morgan';
 import { fileURLToPath } from 'url';
 import { db, dbType } from './db/db.js';
-import { migrateProgressTracking } from './db/migrateProgress.js';
 import videoRoutes from './routes/videos.js';
 import { limiter, helmetConfig, corsOptions, errorSanitizer } from './middleware/security.js';
 
@@ -104,21 +103,11 @@ app.use('/api/videos', videoRoutes);
 // Error handling (must be last)
 app.use(errorSanitizer);
 
-app.listen(PORT, async () => {
+app.listen(PORT, () => {
   console.log(`\n🚀 N5 Reading Backend Server`);
   console.log(`   Running on: http://localhost:${PORT}`);
   console.log(`   API: http://localhost:${PORT}/api`);
   console.log(`   Health: http://localhost:${PORT}/api/health`);
   console.log(`   Test DB: http://localhost:${PORT}/api/test-db\n`);
-  
-  // Run database migrations (only for SQLite, PostgreSQL handled separately)
-  if (dbType === 'sqlite') {
-    try {
-      await migrateProgressTracking(db);
-      console.log('✅ Database migrations complete\n');
-    } catch (error) {
-      console.error('⚠️ Migration error (non-fatal):', error.message, '\n');
-    }
-  }
 });
 

@@ -7,11 +7,36 @@ const __dirname = path.dirname(__filename);
 
 /**
  * Migration: Add progress tracking columns to videos table
+ * Works with both SQLite and PostgreSQL
  */
-export async function migrateProgressTracking(db) {
+export async function migrateProgressTracking(db, dbType = 'sqlite') {
   return new Promise((resolve, reject) => {
     console.log('🔄 Running migration: Add progress tracking...');
 
+    // For PostgreSQL, use IF NOT EXISTS syntax
+    if (dbType === 'postgresql') {
+      const migrations = [
+        'ALTER TABLE videos ADD COLUMN IF NOT EXISTS progress INTEGER DEFAULT 0',
+        'ALTER TABLE videos ADD COLUMN IF NOT EXISTS status_message TEXT',
+        'ALTER TABLE videos ADD COLUMN IF NOT EXISTS estimated_time_remaining INTEGER',
+      ];
+
+      (async () => {
+        try {
+          for (const sql of migrations) {
+            await db.query(sql);
+          }
+          console.log('  ✓ Progress tracking columns ensured');
+          console.log('✅ Progress tracking migration complete');
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
+      })();
+      return;
+    }
+
+    // SQLite path
     const migrations = [
       {
         name: 'progress',
