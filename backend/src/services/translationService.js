@@ -11,7 +11,13 @@ function getTranslator() {
       throw new Error('DeepL API key not configured. Please set DEEPL_API_KEY in .env file.');
     }
 
-    translator = new deepl.Translator(apiKey);
+    // Create translator with increased timeout (60 seconds)
+    translator = new deepl.Translator(apiKey, {
+      timeout: 60000, // 60 seconds in milliseconds
+      maxRetries: 3, // Retry up to 3 times on failure
+    });
+    
+    console.log('🔧 DeepL translator initialized with 60s timeout and 3 retries');
   }
   return translator;
 }
