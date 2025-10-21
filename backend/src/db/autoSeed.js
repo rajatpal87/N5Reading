@@ -16,11 +16,11 @@ export async function autoSeedIfEmpty(db, dbType = 'sqlite') {
     // Check if vocabulary exists
     let vocabCount;
     if (dbType === 'postgresql') {
-      const result = await db.query('SELECT COUNT(*) as count FROM jlpt_vocabulary WHERE jlpt_level = 5');
+      const result = await db.query('SELECT COUNT(*) as count FROM jlpt_vocabulary');
       vocabCount = parseInt(result.rows[0].count);
     } else {
       vocabCount = await new Promise((resolve, reject) => {
-        db.get('SELECT COUNT(*) as count FROM jlpt_vocabulary WHERE jlpt_level = 5', (err, row) => {
+        db.get('SELECT COUNT(*) as count FROM jlpt_vocabulary', (err, row) => {
           if (err) reject(err);
           else resolve(row.count);
         });
@@ -29,14 +29,14 @@ export async function autoSeedIfEmpty(db, dbType = 'sqlite') {
     
     // If data exists, skip seeding
     if (vocabCount > 0) {
-      console.log(`✅ Database already seeded (${vocabCount} N5 words found)\n`);
+      console.log(`✅ Database already seeded (${vocabCount} words found)\n`);
       return;
     }
     
     console.log('🌱 Database is empty, starting auto-seed...\n');
     
-    // Load N5 vocabulary
-    console.log('📚 Loading N5 vocabulary...');
+    // Load JLPT vocabulary (N5-N1)
+    console.log('📚 Loading JLPT vocabulary (N5-N1)...');
     const vocabularyPath = path.join(__dirname, 'data', 'n5_vocabulary.json');
     const vocabulary = JSON.parse(fs.readFileSync(vocabularyPath, 'utf-8'));
     
@@ -80,7 +80,18 @@ export async function autoSeedIfEmpty(db, dbType = 'sqlite') {
         });
       }
     }
-    console.log(`✅ Inserted ${vocabulary.length} N5 vocabulary words`);
+    
+    // Count by level for summary
+    const levelCounts = {};
+    vocabulary.forEach(word => {
+      levelCounts[word.jlpt_level] = (levelCounts[word.jlpt_level] || 0) + 1;
+    });
+    const levelNames = { 1: 'N1', 2: 'N2', 3: 'N3', 4: 'N4', 5: 'N5' };
+    const summary = Object.keys(levelCounts).sort().reverse().map(level => 
+      `${levelNames[level]}: ${levelCounts[level]}`
+    ).join(', ');
+    
+    console.log(`✅ Inserted ${vocabulary.length} JLPT words (${summary})`);
     
     // Load N5 grammar patterns
     console.log('📝 Loading N5 grammar patterns...');

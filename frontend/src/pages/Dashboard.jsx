@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import VideoSummaryCard from '../components/dashboard/VideoSummaryCard';
-import VocabularyTable from '../components/dashboard/VocabularyTable';
+import VocabularyListCard from '../components/dashboard/VocabularyListCard';
+import VocabularyDetailPanel from '../components/dashboard/VocabularyDetailPanel';
 import GrammarPatternsList from '../components/dashboard/GrammarPatternsList';
 import N5Timeline from '../components/dashboard/N5Timeline';
 
@@ -23,6 +24,7 @@ export default function Dashboard() {
   const [isVideoFloating, setIsVideoFloating] = useState(false);
   const [showDownCTA, setShowDownCTA] = useState(true);
   const [showUpCTA, setShowUpCTA] = useState(false);
+  const [selectedWord, setSelectedWord] = useState(null);
   
   const mainVideoContainerRef = useRef(null);
 
@@ -327,12 +329,38 @@ export default function Dashboard() {
 
         {/* Bottom Section: Enhanced Vocabulary */}
         <div ref={bottomSectionRef} className="flex flex-col lg:flex-row gap-4 pb-4" style={{ height: '600px' }}>
-          {/* Vocabulary Table - Full Width */}
-          <div className="w-full h-full">
-            <VocabularyTable
-              vocabulary={analysis.vocabulary}
-              onTimestampClick={jumpToTime}
-            />
+          {/* Vocabulary Master-Detail View - Full Width */}
+          <div className="w-full h-full bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="flex h-full">
+              {/* Left Side: Vocabulary List */}
+              <div className="w-1/3 border-r border-gray-200 overflow-y-auto p-4 space-y-2">
+                <div className="mb-4 pb-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                  <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                    🟡 N5 Vocabulary
+                    <span className="text-sm font-normal text-gray-500">
+                      ({analysis.vocabulary?.unique_count || 0})
+                    </span>
+                  </h3>
+                </div>
+                {analysis.vocabulary?.words?.map((word, idx) => (
+                  <VocabularyListCard
+                    key={idx}
+                    word={word}
+                    isSelected={selectedWord?.kanji === word.kanji && selectedWord?.hiragana === word.hiragana}
+                    onClick={() => setSelectedWord(word)}
+                  />
+                ))}
+              </div>
+
+              {/* Right Side: Detail Panel */}
+              <div className="flex-1 overflow-y-auto">
+                <VocabularyDetailPanel
+                  word={selectedWord}
+                  onTimestampClick={jumpToTime}
+                  onClose={() => setSelectedWord(null)}
+                />
+              </div>
+            </div>
           </div>
 
           {/* Grammar Patterns List - Temporarily Hidden for Enhanced Vocabulary Focus */}

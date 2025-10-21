@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import EnhancedVocabularyCard from '../components/dashboard/EnhancedVocabularyCard';
+import VocabularyListCard from '../components/dashboard/VocabularyListCard';
+import VocabularyDetailPanel from '../components/dashboard/VocabularyDetailPanel';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
@@ -19,6 +20,7 @@ export default function VideoPlayer() {
   const [analyzing, setAnalyzing] = useState(false);
   const [showDownCTA, setShowDownCTA] = useState(true);
   const [showUpCTA, setShowUpCTA] = useState(false);
+  const [selectedWord, setSelectedWord] = useState(null);
   
   // Playback state
   const [currentTime, setCurrentTime] = useState(0);
@@ -357,57 +359,40 @@ export default function VideoPlayer() {
 
         )}
 
-        {/* Second Fold: Vocabulary & Grammar Side by Side */}
-        {analysis && (analysis.vocabulary?.words?.length > 0 || analysis.grammar?.patterns?.length > 0) && (
+        {/* Second Fold: Vocabulary Master-Detail View */}
+        {analysis && analysis.vocabulary?.words?.length > 0 && (
           <div ref={secondFoldRef} className="min-h-screen relative bg-gray-50 py-8">
-
             <div className="max-w-7xl mx-auto px-4 pt-16">
-              {/* Vocabulary Section - Full Width */}
-              {analysis.vocabulary && analysis.vocabulary.words && analysis.vocabulary.words.length > 0 && (
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    🟡 Enhanced N5 Vocabulary
-                    <span className="text-lg font-normal text-gray-500">({analysis.vocabulary.unique_count})</span>
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[800px] overflow-y-auto pr-2">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden" style={{ height: 'calc(100vh - 200px)' }}>
+                <div className="flex h-full">
+                  {/* Left Side: Vocabulary List */}
+                  <div className="w-1/3 border-r border-gray-200 overflow-y-auto p-4 space-y-2">
+                    <div className="mb-4 pb-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                      <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                        🟡 N5 Vocabulary
+                        <span className="text-sm font-normal text-gray-500">({analysis.vocabulary.unique_count})</span>
+                      </h3>
+                    </div>
                     {analysis.vocabulary.words.map((word, idx) => (
-                      <EnhancedVocabularyCard
+                      <VocabularyListCard
                         key={idx}
                         word={word}
-                        onTimestampClick={jumpToVideoTime}
+                        isSelected={selectedWord?.kanji === word.kanji && selectedWord?.hiragana === word.hiragana}
+                        onClick={() => setSelectedWord(word)}
                       />
                     ))}
                   </div>
-                </div>
-              )}
 
-                {/* Grammar Patterns Section - Temporarily Hidden for Enhanced Vocabulary Focus */}
-                {/* {analysis.grammar && analysis.grammar.patterns && analysis.grammar.patterns.length > 0 && (
-                  <div className="bg-white rounded-lg shadow-lg p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                      📝 Grammar Patterns
-                      <span className="text-lg font-normal text-gray-500">({analysis.grammar.unique_count})</span>
-                    </h3>
-                    <div className="space-y-3 max-h-[600px] overflow-y-auto">
-                      {analysis.grammar.patterns.map((pattern, idx) => (
-                        <div key={idx} className="bg-gradient-to-r from-green-50 to-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
-                          <h4 className="text-xl font-bold text-gray-900">{pattern.pattern_name}</h4>
-                          <p className="text-base text-gray-700 mt-2 font-mono bg-gray-100 px-2 py-1 rounded">
-                            {pattern.pattern_structure}
-                          </p>
-                          {pattern.english_explanation && (
-                            <p className="text-sm text-gray-600 mt-2">{pattern.english_explanation}</p>
-                          )}
-                          {pattern.chapter && (
-                            <span className="inline-block text-xs bg-green-100 text-green-700 px-2 py-1 rounded mt-2">
-                              {pattern.chapter}
-                            </span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
+                  {/* Right Side: Detail Panel */}
+                  <div className="flex-1 overflow-y-auto">
+                    <VocabularyDetailPanel
+                      word={selectedWord}
+                      onTimestampClick={jumpToTime}
+                      onClose={() => setSelectedWord(null)}
+                    />
                   </div>
-                )} */}
+                </div>
+              </div>
             </div>
           </div>
         )}

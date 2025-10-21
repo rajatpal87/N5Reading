@@ -1,0 +1,6464 @@
+[
+  {
+    "kanji": "ああ",
+    "hiragana": "ああ",
+    "romaji": null,
+    "english": "Ah!, Oh!",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "会う",
+    "hiragana": "あう",
+    "romaji": null,
+    "english": "to meet, to see",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "青",
+    "hiragana": "あお",
+    "romaji": null,
+    "english": "blue",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "青い",
+    "hiragana": "あおい",
+    "romaji": null,
+    "english": "blue",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "赤",
+    "hiragana": "あか",
+    "romaji": null,
+    "english": "red",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "赤い",
+    "hiragana": "あかい",
+    "romaji": null,
+    "english": "red",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "明るい",
+    "hiragana": "あかるい",
+    "romaji": null,
+    "english": "bright (in reference to personality or weather); cheerful",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "秋",
+    "hiragana": "あき",
+    "romaji": null,
+    "english": "fall (season)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "開く",
+    "hiragana": "あく",
+    "romaji": null,
+    "english": "to open, to become open",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "開ける",
+    "hiragana": "あける",
+    "romaji": null,
+    "english": "to open (v.t.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "上げる",
+    "hiragana": "あげる",
+    "romaji": null,
+    "english": "to raise, to lift",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "朝",
+    "hiragana": "あさ",
+    "romaji": null,
+    "english": "morning",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "朝御飯",
+    "hiragana": "あさごはん",
+    "romaji": null,
+    "english": "breakfast",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "明後日",
+    "hiragana": "あさって",
+    "romaji": null,
+    "english": "day after tomorrow",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "足; 脚",
+    "hiragana": "あし",
+    "romaji": null,
+    "english": "foot; leg",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "明日",
+    "hiragana": "あした",
+    "romaji": null,
+    "english": "tomorrow",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "あそこ",
+    "hiragana": "あそこ",
+    "romaji": null,
+    "english": "there, over there, that place",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "遊ぶ",
+    "hiragana": "あそぶ",
+    "romaji": null,
+    "english": "to play; to spend time pleasantly; to hang out",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "暖かい",
+    "hiragana": "あたたかい",
+    "romaji": null,
+    "english": "warm",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "頭",
+    "hiragana": "あたま",
+    "romaji": null,
+    "english": "head",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "新しい",
+    "hiragana": "あたらしい",
+    "romaji": null,
+    "english": "new",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "あちら",
+    "hiragana": "あちら",
+    "romaji": null,
+    "english": "this way (polite)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "暑い",
+    "hiragana": "あつい",
+    "romaji": null,
+    "english": "hot (in reference to weather), warm",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "熱い",
+    "hiragana": "あつい",
+    "romaji": null,
+    "english": "hot (objects)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "厚い",
+    "hiragana": "あつい",
+    "romaji": null,
+    "english": "kind, warm(hearted), thick, deep",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "あっち",
+    "hiragana": "あっち",
+    "romaji": null,
+    "english": "over there",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "後",
+    "hiragana": "あと",
+    "romaji": null,
+    "english": "afterwards (later); in the future; the rest; since then",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "あなた",
+    "hiragana": "あなた",
+    "romaji": null,
+    "english": "you",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "兄",
+    "hiragana": "あに",
+    "romaji": null,
+    "english": "(my) older brother (humble)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "姉",
+    "hiragana": "あね",
+    "romaji": null,
+    "english": "(my) older sister (humble)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "アパート",
+    "hiragana": "アパート",
+    "romaji": null,
+    "english": "apartment (abbr.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "あの",
+    "hiragana": "あの",
+    "romaji": null,
+    "english": "that over there; like that, that way; um...",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "浴びる",
+    "hiragana": "あびる",
+    "romaji": null,
+    "english": "to bathe, to shower",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "危ない",
+    "hiragana": "あぶない",
+    "romaji": null,
+    "english": "dangerous, critical",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "甘い",
+    "hiragana": "あまい",
+    "romaji": null,
+    "english": "generous, sweet",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "余り",
+    "hiragana": "あまり",
+    "romaji": null,
+    "english": "not very; surplus",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "雨",
+    "hiragana": "あめ",
+    "romaji": null,
+    "english": "rain",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "飴",
+    "hiragana": "あめ",
+    "romaji": null,
+    "english": "(hard) candy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "洗う",
+    "hiragana": "あらう",
+    "romaji": null,
+    "english": "to wash",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "在る",
+    "hiragana": "ある",
+    "romaji": null,
+    "english": "to be, to have",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "有る",
+    "hiragana": "ある",
+    "romaji": null,
+    "english": "to be, to have",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "歩く",
+    "hiragana": "あるく",
+    "romaji": null,
+    "english": "to walk",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "あれ",
+    "hiragana": "あれ",
+    "romaji": null,
+    "english": "that one (over there)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "いい; よい",
+    "hiragana": "いい; よい",
+    "romaji": null,
+    "english": "good",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "いいえ",
+    "hiragana": "いいえ",
+    "romaji": null,
+    "english": "no, not at all",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "言う",
+    "hiragana": "いう",
+    "romaji": null,
+    "english": "to say",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "家",
+    "hiragana": "いえ",
+    "romaji": null,
+    "english": "house, home",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "いかが",
+    "hiragana": "いかが",
+    "romaji": null,
+    "english": "how, in what way",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "行く",
+    "hiragana": "いく; ゆく",
+    "romaji": null,
+    "english": "to go",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "いくつ",
+    "hiragana": "いくつ",
+    "romaji": null,
+    "english": "how many, how old",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "いくら",
+    "hiragana": "いくら",
+    "romaji": null,
+    "english": "how much, how many",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "池",
+    "hiragana": "いけ",
+    "romaji": null,
+    "english": "pond",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "医者",
+    "hiragana": "いしゃ",
+    "romaji": null,
+    "english": "doctor; physician",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "椅子",
+    "hiragana": "いす",
+    "romaji": null,
+    "english": "chair",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "忙しい",
+    "hiragana": "いそがしい",
+    "romaji": null,
+    "english": "busy (people, days)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "痛い",
+    "hiragana": "いたい",
+    "romaji": null,
+    "english": "hurt; painful; sore",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一",
+    "hiragana": "いち",
+    "romaji": null,
+    "english": "one",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一日",
+    "hiragana": "いちにち",
+    "romaji": null,
+    "english": "one day (duration)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一番",
+    "hiragana": "いちばん",
+    "romaji": null,
+    "english": "best (most), first, number one",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "いつ",
+    "hiragana": "いつ",
+    "romaji": null,
+    "english": "when",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "五日",
+    "hiragana": "いつか",
+    "romaji": null,
+    "english": "five days; fifth day of the month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一緒",
+    "hiragana": "いっしょ",
+    "romaji": null,
+    "english": "together",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "五つ",
+    "hiragana": "いつつ",
+    "romaji": null,
+    "english": "five things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "いつも",
+    "hiragana": "いつも",
+    "romaji": null,
+    "english": "always, usually, every time, never (with neg. verb)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "犬",
+    "hiragana": "いぬ",
+    "romaji": null,
+    "english": "dog",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今",
+    "hiragana": "いま",
+    "romaji": null,
+    "english": "now",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "意味",
+    "hiragana": "いみ",
+    "romaji": null,
+    "english": "meaning, significance",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "妹",
+    "hiragana": "いもうと",
+    "romaji": null,
+    "english": "younger sister (humble)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "嫌",
+    "hiragana": "いや",
+    "romaji": null,
+    "english": "disagreeable, detestable, unpleasant",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "入口",
+    "hiragana": "いりぐち",
+    "romaji": null,
+    "english": "entrance",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "居る",
+    "hiragana": "いる",
+    "romaji": null,
+    "english": "(humble) to be (animate), to exist",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "要る",
+    "hiragana": "いる",
+    "romaji": null,
+    "english": "to need",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "入れる",
+    "hiragana": "いれる",
+    "romaji": null,
+    "english": "to put in",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "色",
+    "hiragana": "いろ",
+    "romaji": null,
+    "english": "color",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "色々",
+    "hiragana": "いろいろ",
+    "romaji": null,
+    "english": "various",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "上",
+    "hiragana": "うえ",
+    "romaji": null,
+    "english": "above (up, top, etc.), over, on top of",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "後ろ",
+    "hiragana": "うしろ",
+    "romaji": null,
+    "english": "back, behind, rear",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "薄い",
+    "hiragana": "うすい",
+    "romaji": null,
+    "english": "thin, weak",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "歌",
+    "hiragana": "うた",
+    "romaji": null,
+    "english": "a song",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "歌う",
+    "hiragana": "うたう",
+    "romaji": null,
+    "english": "to sing",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "うち",
+    "hiragana": "うち",
+    "romaji": null,
+    "english": "home; house; my place",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "生まれる",
+    "hiragana": "うまれる",
+    "romaji": null,
+    "english": "to be born",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "海",
+    "hiragana": "うみ",
+    "romaji": null,
+    "english": "sea, beach",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "売る",
+    "hiragana": "うる",
+    "romaji": null,
+    "english": "to sell (v.t.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "うるさい",
+    "hiragana": "うるさい",
+    "romaji": null,
+    "english": "noisy; annoying",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "上着",
+    "hiragana": "うわぎ",
+    "romaji": null,
+    "english": "coat, jacket",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "絵",
+    "hiragana": "え",
+    "romaji": null,
+    "english": "a painting; a picture; a drawing",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "映画",
+    "hiragana": "えいが",
+    "romaji": null,
+    "english": "movie, film",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "映画館",
+    "hiragana": "えいがかん",
+    "romaji": null,
+    "english": "movie theater, cinema",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "英語",
+    "hiragana": "えいご",
+    "romaji": null,
+    "english": "English (language)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ええ",
+    "hiragana": "ええ",
+    "romaji": null,
+    "english": "yes",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "駅",
+    "hiragana": "えき",
+    "romaji": null,
+    "english": "station",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "エレベーター",
+    "hiragana": "エレベーター",
+    "romaji": null,
+    "english": "elevator",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～円",
+    "hiragana": "～えん",
+    "romaji": null,
+    "english": "Yen",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鉛筆",
+    "hiragana": "えんぴつ",
+    "romaji": null,
+    "english": "pencil",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お～",
+    "hiragana": "お～",
+    "romaji": null,
+    "english": "honorable ~ (honorific)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "美味しい",
+    "hiragana": "おいしい",
+    "romaji": null,
+    "english": "delicious, tasty",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "多い",
+    "hiragana": "おおい",
+    "romaji": null,
+    "english": "many; there are a lot",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大きい",
+    "hiragana": "おおきい",
+    "romaji": null,
+    "english": "big, large",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大きな",
+    "hiragana": "おおきな",
+    "romaji": null,
+    "english": "big",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大勢",
+    "hiragana": "おおぜい",
+    "romaji": null,
+    "english": "great number of people",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お母さん",
+    "hiragana": "おかあさん",
+    "romaji": null,
+    "english": "mother (formal)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お菓子",
+    "hiragana": "おかし",
+    "romaji": null,
+    "english": "confections, sweets, snack",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お金",
+    "hiragana": "おかね",
+    "romaji": null,
+    "english": "money",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "起きる",
+    "hiragana": "おきる",
+    "romaji": null,
+    "english": "to get up (e.g., from sleeping); to happen",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "置く",
+    "hiragana": "おく",
+    "romaji": null,
+    "english": "to put; to lay; to place",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "奥さん",
+    "hiragana": "おくさん",
+    "romaji": null,
+    "english": "(someone else's) wife (hon.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お酒",
+    "hiragana": "おさけ",
+    "romaji": null,
+    "english": "sake; alcohol",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お皿",
+    "hiragana": "おさら",
+    "romaji": null,
+    "english": "plate, dish",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "伯父; 叔父さん",
+    "hiragana": "おじさん",
+    "romaji": null,
+    "english": "uncle, middle-aged man",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "おじいさん",
+    "hiragana": "おじいさん",
+    "romaji": null,
+    "english": "grandfather, male senior citizen",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "教える",
+    "hiragana": "おしえる",
+    "romaji": null,
+    "english": "to teach, to inform, to instruct",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "押す",
+    "hiragana": "おす",
+    "romaji": null,
+    "english": "to push, to press, to stamp (e.g., a passport)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "遅い",
+    "hiragana": "おそい",
+    "romaji": null,
+    "english": "slow; (to be) late",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お茶",
+    "hiragana": "おちゃ",
+    "romaji": null,
+    "english": "(green) tea",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お手洗い",
+    "hiragana": "おてあらい",
+    "romaji": null,
+    "english": "toilet, restroom, bathroom (lit., a place to wash one's hands)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お父さん",
+    "hiragana": "おとうさん",
+    "romaji": null,
+    "english": "father (formal)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "弟",
+    "hiragana": "おとうと",
+    "romaji": null,
+    "english": "younger brother",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "男",
+    "hiragana": "おとこ",
+    "romaji": null,
+    "english": "man, male",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "男の子",
+    "hiragana": "おとこのこ",
+    "romaji": null,
+    "english": "boy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一昨日",
+    "hiragana": "おととい",
+    "romaji": null,
+    "english": "the day before yesterday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "おととし",
+    "hiragana": "おととし",
+    "romaji": null,
+    "english": "year before last",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大人",
+    "hiragana": "おとな",
+    "romaji": null,
+    "english": "adult",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お腹",
+    "hiragana": "おなか",
+    "romaji": null,
+    "english": "stomach",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "同じ",
+    "hiragana": "おなじ",
+    "romaji": null,
+    "english": "same, identical",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お兄さん",
+    "hiragana": "おにいさん",
+    "romaji": null,
+    "english": "(someone else's) older brother (formal)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お姉さん",
+    "hiragana": "おねえさん",
+    "romaji": null,
+    "english": "older sister (formal)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "伯母さん; 叔母さん",
+    "hiragana": "おばさん",
+    "romaji": null,
+    "english": "aunt",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "おばあさん",
+    "hiragana": "おばあさん",
+    "romaji": null,
+    "english": "grandmother, female senior-citizen",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お風呂",
+    "hiragana": "おふろ",
+    "romaji": null,
+    "english": "a bath",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "お弁当",
+    "hiragana": "おべんとう",
+    "romaji": null,
+    "english": "a boxed lunch",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "覚える",
+    "hiragana": "おぼえる",
+    "romaji": null,
+    "english": "to learn, to commit to memory, to remember, to memorize",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "おまわりさん",
+    "hiragana": "おまわりさん",
+    "romaji": null,
+    "english": "policeman (friendly term)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "重い",
+    "hiragana": "おもい",
+    "romaji": null,
+    "english": "heavy; serious",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "面白い",
+    "hiragana": "おもしろい",
+    "romaji": null,
+    "english": "interesting, amusing",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "泳ぐ",
+    "hiragana": "およぐ",
+    "romaji": null,
+    "english": "to swim",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "降りる",
+    "hiragana": "おりる",
+    "romaji": null,
+    "english": "to get off",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "終る",
+    "hiragana": "おわる",
+    "romaji": null,
+    "english": "to finish, to close",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "音楽",
+    "hiragana": "おんがく",
+    "romaji": null,
+    "english": "Music",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "女",
+    "hiragana": "おんな",
+    "romaji": null,
+    "english": "woman, female",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "女の子",
+    "hiragana": "おんなのこ",
+    "romaji": null,
+    "english": "girl",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～回",
+    "hiragana": "～かい",
+    "romaji": null,
+    "english": "counter for occurrences (~ times)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～階",
+    "hiragana": "～かい",
+    "romaji": null,
+    "english": "counter for stories (floors) of a building",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "外国",
+    "hiragana": "がいこく",
+    "romaji": null,
+    "english": "foreign country; abroad",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "外国人",
+    "hiragana": "がいこくじん",
+    "romaji": null,
+    "english": "foreigner",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "会社",
+    "hiragana": "かいしゃ",
+    "romaji": null,
+    "english": "company, corporation",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "階段",
+    "hiragana": "かいだん",
+    "romaji": null,
+    "english": "stairs",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "買い物",
+    "hiragana": "かいもの",
+    "romaji": null,
+    "english": "shopping",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "買う",
+    "hiragana": "かう",
+    "romaji": null,
+    "english": "to buy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "返す",
+    "hiragana": "かえす",
+    "romaji": null,
+    "english": "to return something",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "帰る",
+    "hiragana": "かえる",
+    "romaji": null,
+    "english": "to go back, to go home, to return",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "顔",
+    "hiragana": "かお",
+    "romaji": null,
+    "english": "face (body part)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "かかる",
+    "hiragana": "かかる",
+    "romaji": null,
+    "english": "it takes (amount of time, money) (v.i.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鍵",
+    "hiragana": "かぎ",
+    "romaji": null,
+    "english": "a lock; a key",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "書く",
+    "hiragana": "かく",
+    "romaji": null,
+    "english": "to write",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "学生",
+    "hiragana": "がくせい",
+    "romaji": null,
+    "english": "student",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～か月",
+    "hiragana": "～かげつ",
+    "romaji": null,
+    "english": "(number of) months",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "掛ける",
+    "hiragana": "かける",
+    "romaji": null,
+    "english": "to put on (e.g., glasses); to hang (e.g., on a wall)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "かける",
+    "hiragana": "かける",
+    "romaji": null,
+    "english": "to dial/call (e.g., phone); to sit down",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "傘",
+    "hiragana": "かさ",
+    "romaji": null,
+    "english": "umbrella, parasol",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "貸す",
+    "hiragana": "かす",
+    "romaji": null,
+    "english": "to lend",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "風",
+    "hiragana": "かぜ",
+    "romaji": null,
+    "english": "wind, breeze",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "風邪",
+    "hiragana": "かぜ",
+    "romaji": null,
+    "english": "cold, flu",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "方",
+    "hiragana": "かた",
+    "romaji": null,
+    "english": "-- honorific form for 人 (ひと) --; way of doing",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "家族",
+    "hiragana": "かぞく",
+    "romaji": null,
+    "english": "family, members of a family",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "片仮名",
+    "hiragana": "かたかな",
+    "romaji": null,
+    "english": "katakana",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～月",
+    "hiragana": "～がつ",
+    "romaji": null,
+    "english": "month of year",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "学校",
+    "hiragana": "がっこう",
+    "romaji": null,
+    "english": "a school",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "カップ",
+    "hiragana": "カップ",
+    "romaji": null,
+    "english": "cup",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "家庭",
+    "hiragana": "かてい",
+    "romaji": null,
+    "english": "home; family",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "角",
+    "hiragana": "かど",
+    "romaji": null,
+    "english": "corner (e.g., desk, pavement)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "かばん",
+    "hiragana": "かばん",
+    "romaji": null,
+    "english": "bag, basket",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "花瓶",
+    "hiragana": "かびん",
+    "romaji": null,
+    "english": "(flower) vase",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "かぶる",
+    "hiragana": "かぶる",
+    "romaji": null,
+    "english": "to wear, to put on (e.g., a hat on the head)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "紙",
+    "hiragana": "かみ",
+    "romaji": null,
+    "english": "paper",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "カメラ",
+    "hiragana": "カメラ",
+    "romaji": null,
+    "english": "camera",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "火曜日",
+    "hiragana": "かようび",
+    "romaji": null,
+    "english": "Tuesday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "辛い",
+    "hiragana": "からい",
+    "romaji": null,
+    "english": "hot and spicy; salty",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "体",
+    "hiragana": "からだ",
+    "romaji": null,
+    "english": "body; health",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "借りる",
+    "hiragana": "かりる",
+    "romaji": null,
+    "english": "to borrow, to owe",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～がる",
+    "hiragana": "～がる",
+    "romaji": null,
+    "english": "feel",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "軽い",
+    "hiragana": "かるい",
+    "romaji": null,
+    "english": "light, non-serious, minor",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "カレー",
+    "hiragana": "カレー",
+    "romaji": null,
+    "english": "curry (abbr. for curry and rice)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "カレンダー",
+    "hiragana": "カレンダー",
+    "romaji": null,
+    "english": "calendar",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "川; 河",
+    "hiragana": "かわ",
+    "romaji": null,
+    "english": "river",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～側",
+    "hiragana": "～がわ",
+    "romaji": null,
+    "english": "~ side",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "可愛い",
+    "hiragana": "かわいい",
+    "romaji": null,
+    "english": "cute, adorable",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "漢字",
+    "hiragana": "かんじ",
+    "romaji": null,
+    "english": "kanji; Chinese character",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "木",
+    "hiragana": "き",
+    "romaji": null,
+    "english": "tree, wood, timber",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "黄色",
+    "hiragana": "きいろ",
+    "romaji": null,
+    "english": "yellow",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "黄色い",
+    "hiragana": "きいろい",
+    "romaji": null,
+    "english": "yellow",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "消える",
+    "hiragana": "きえる",
+    "romaji": null,
+    "english": "to vanish, to disappear",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "聞く",
+    "hiragana": "きく",
+    "romaji": null,
+    "english": "to hear, to listen, to ask",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "北",
+    "hiragana": "きた",
+    "romaji": null,
+    "english": "north",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ギター",
+    "hiragana": "ギター",
+    "romaji": null,
+    "english": "guitar",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "汚い",
+    "hiragana": "きたない",
+    "romaji": null,
+    "english": "dirty, unclean, filthy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "喫茶店",
+    "hiragana": "きっさてん",
+    "romaji": null,
+    "english": "café",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "切手",
+    "hiragana": "きって",
+    "romaji": null,
+    "english": "postal (postage) stamps",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "切符",
+    "hiragana": "きっぷ",
+    "romaji": null,
+    "english": "a ticket",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "昨日",
+    "hiragana": "きのう",
+    "romaji": null,
+    "english": "yesterday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "九",
+    "hiragana": "きゅう",
+    "romaji": null,
+    "english": "nine",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "牛肉",
+    "hiragana": "ぎゅうにく",
+    "romaji": null,
+    "english": "beef",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "牛乳",
+    "hiragana": "ぎゅうにゅう",
+    "romaji": null,
+    "english": "milk",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今日",
+    "hiragana": "きょう",
+    "romaji": null,
+    "english": "today, this day",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "教室",
+    "hiragana": "きょうしつ",
+    "romaji": null,
+    "english": "classroom",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "兄弟",
+    "hiragana": "きょうだい",
+    "romaji": null,
+    "english": "siblings (humble), brothers and sisters",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "去年",
+    "hiragana": "きょねん",
+    "romaji": null,
+    "english": "last year",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "嫌い",
+    "hiragana": "きらい",
+    "romaji": null,
+    "english": "dislike",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "切る",
+    "hiragana": "きる",
+    "romaji": null,
+    "english": "to cut; to hang up (a phone)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "着る",
+    "hiragana": "きる",
+    "romaji": null,
+    "english": "to put on (clothes above your waist); to wear",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "綺麗",
+    "hiragana": "きれい",
+    "romaji": null,
+    "english": "pretty, clean, tidy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "キロ; キログラム",
+    "hiragana": "キロ; キログラム",
+    "romaji": null,
+    "english": "(abbr.) kilo (kilogram)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "キロ; キロメートル",
+    "hiragana": "キロ; キロメートル",
+    "romaji": null,
+    "english": "(abbr.) kilo (kilometer)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "銀行",
+    "hiragana": "ぎんこう",
+    "romaji": null,
+    "english": "bank",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "金曜日",
+    "hiragana": "きんようび",
+    "romaji": null,
+    "english": "Friday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "九",
+    "hiragana": "く",
+    "romaji": null,
+    "english": "nine",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "薬",
+    "hiragana": "くすり",
+    "romaji": null,
+    "english": "medicine",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "下さい",
+    "hiragana": "ください",
+    "romaji": null,
+    "english": "(with te-form verb) please do for me",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "果物",
+    "hiragana": "くだもの",
+    "romaji": null,
+    "english": "fruit",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "口",
+    "hiragana": "くち",
+    "romaji": null,
+    "english": "job opening; mouth",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "靴",
+    "hiragana": "くつ",
+    "romaji": null,
+    "english": "shoes, footwear",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "靴下",
+    "hiragana": "くつした",
+    "romaji": null,
+    "english": "socks",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "国",
+    "hiragana": "くに",
+    "romaji": null,
+    "english": "country; place of origin",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "曇り",
+    "hiragana": "くもり",
+    "romaji": null,
+    "english": "cloudiness, cloudy weather",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "曇る",
+    "hiragana": "くもる",
+    "romaji": null,
+    "english": "to become cloudy, to become dim",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "暗い",
+    "hiragana": "くらい",
+    "romaji": null,
+    "english": "dark, gloomy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～くらい; ぐらい",
+    "hiragana": "～くらい; ぐらい",
+    "romaji": null,
+    "english": "approximate (quantity)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "クラス",
+    "hiragana": "クラス",
+    "romaji": null,
+    "english": "a class",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "グラム",
+    "hiragana": "グラム",
+    "romaji": null,
+    "english": "gram",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "来る",
+    "hiragana": "くる",
+    "romaji": null,
+    "english": "to come",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "車",
+    "hiragana": "くるま",
+    "romaji": null,
+    "english": "car, vehicle",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "黒",
+    "hiragana": "くろ",
+    "romaji": null,
+    "english": "black",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "黒い",
+    "hiragana": "くろい",
+    "romaji": null,
+    "english": "black; dark",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "警官",
+    "hiragana": "けいかん",
+    "romaji": null,
+    "english": "police officer",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今朝",
+    "hiragana": "けさ",
+    "romaji": null,
+    "english": "this morning",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "消す",
+    "hiragana": "けす",
+    "romaji": null,
+    "english": "to erase, to delete, to turn off power",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "結構",
+    "hiragana": "けっこう",
+    "romaji": null,
+    "english": "splendid; enough, tolerably",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "結婚",
+    "hiragana": "けっこん (する)",
+    "romaji": null,
+    "english": "marriage (get married)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "月曜日",
+    "hiragana": "げつようび",
+    "romaji": null,
+    "english": "Monday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "玄関",
+    "hiragana": "げんかん",
+    "romaji": null,
+    "english": "entrance (to a house or a building)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "元気",
+    "hiragana": "げんき",
+    "romaji": null,
+    "english": "health(y), energetic",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～個",
+    "hiragana": "～こ",
+    "romaji": null,
+    "english": "counter for small items (e.g., fruits, cups)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "五",
+    "hiragana": "ご",
+    "romaji": null,
+    "english": "five",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～語",
+    "hiragana": "～ご",
+    "romaji": null,
+    "english": "word, language",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "公園",
+    "hiragana": "こうえん",
+    "romaji": null,
+    "english": "a park",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "交差点",
+    "hiragana": "こうさてん",
+    "romaji": null,
+    "english": "intersection",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "紅茶",
+    "hiragana": "こうちゃ",
+    "romaji": null,
+    "english": "black tea",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "交番",
+    "hiragana": "こうばん",
+    "romaji": null,
+    "english": "police box",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "声",
+    "hiragana": "こえ",
+    "romaji": null,
+    "english": "voice",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "コート",
+    "hiragana": "コート",
+    "romaji": null,
+    "english": "coat; court (e.g., tennis)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "コーヒー",
+    "hiragana": "コーヒー",
+    "romaji": null,
+    "english": "coffee",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ここ",
+    "hiragana": "ここ",
+    "romaji": null,
+    "english": "here, this place",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "午後",
+    "hiragana": "ごご",
+    "romaji": null,
+    "english": "afternoon, P.M.",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "九日",
+    "hiragana": "ここのか",
+    "romaji": null,
+    "english": "nine days; ninth day of the month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "九つ",
+    "hiragana": "ここのつ",
+    "romaji": null,
+    "english": "nine things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "午前",
+    "hiragana": "ごぜん",
+    "romaji": null,
+    "english": "morning, A.M.",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "答える",
+    "hiragana": "こたえる",
+    "romaji": null,
+    "english": "to answer, to reply",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "こちら",
+    "hiragana": "こちら",
+    "romaji": null,
+    "english": "this person (polite); this way (polite)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "こっち",
+    "hiragana": "こっち",
+    "romaji": null,
+    "english": "this person; this direction; this side",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "コップ",
+    "hiragana": "コップ",
+    "romaji": null,
+    "english": "a tumbler; a glass",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今年",
+    "hiragana": "ことし",
+    "romaji": null,
+    "english": "this year",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "言葉",
+    "hiragana": "ことば",
+    "romaji": null,
+    "english": "language; word(s); expression(s)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "子供",
+    "hiragana": "こども",
+    "romaji": null,
+    "english": "child(ren)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "この",
+    "hiragana": "この",
+    "romaji": null,
+    "english": "this",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "御飯",
+    "hiragana": "ごはん",
+    "romaji": null,
+    "english": "rice (cooked); meal",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "コピーする",
+    "hiragana": "コピーする",
+    "romaji": null,
+    "english": "to copy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "困る",
+    "hiragana": "こまる",
+    "romaji": null,
+    "english": "to be bothered, to have difficulty",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "これ",
+    "hiragana": "これ",
+    "romaji": null,
+    "english": "this one",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～ころ; ～ごろ",
+    "hiragana": "～ころ; ～ごろ",
+    "romaji": null,
+    "english": "about, toward, approximately (time)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今月",
+    "hiragana": "こんげつ",
+    "romaji": null,
+    "english": "this month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今週",
+    "hiragana": "こんしゅう",
+    "romaji": null,
+    "english": "this week",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "こんな",
+    "hiragana": "こんな",
+    "romaji": null,
+    "english": "such, like this",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "今晩",
+    "hiragana": "こんばん",
+    "romaji": null,
+    "english": "tonight, this evening",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "さあ",
+    "hiragana": "さあ",
+    "romaji": null,
+    "english": "come now, well",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～歳",
+    "hiragana": "～さい",
+    "romaji": null,
+    "english": "~ years old",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "財布",
+    "hiragana": "さいふ",
+    "romaji": null,
+    "english": "wallet",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "魚",
+    "hiragana": "さかな",
+    "romaji": null,
+    "english": "fish",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "先",
+    "hiragana": "さき",
+    "romaji": null,
+    "english": "future; recent, previous",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "咲く",
+    "hiragana": "さく",
+    "romaji": null,
+    "english": "to bloom",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "作文",
+    "hiragana": "さくぶん",
+    "romaji": null,
+    "english": "essay; composition",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "差す",
+    "hiragana": "さす",
+    "romaji": null,
+    "english": "to raise (stretch out) hands, to raise (e.g., umbrella)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～冊",
+    "hiragana": "～さつ",
+    "romaji": null,
+    "english": "counter for books",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "雑誌",
+    "hiragana": "ざっし",
+    "romaji": null,
+    "english": "magazine, journal",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "砂糖",
+    "hiragana": "さとう",
+    "romaji": null,
+    "english": "sugar",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "寒い",
+    "hiragana": "さむい",
+    "romaji": null,
+    "english": "cold (in reference to weather)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "さ来年",
+    "hiragana": "さらいねん",
+    "romaji": null,
+    "english": "year after next",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～さん",
+    "hiragana": "～さん",
+    "romaji": null,
+    "english": "Mr. ~, Ms. ~",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "三",
+    "hiragana": "さん",
+    "romaji": null,
+    "english": "three",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "散歩",
+    "hiragana": "さんぽ (する)",
+    "romaji": null,
+    "english": "walk, stroll",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "四",
+    "hiragana": "し",
+    "romaji": null,
+    "english": "four",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～時",
+    "hiragana": "～じ",
+    "romaji": null,
+    "english": "~ o'clock (time)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "塩",
+    "hiragana": "しお",
+    "romaji": null,
+    "english": "salt",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "しかし",
+    "hiragana": "しかし",
+    "romaji": null,
+    "english": "however; but",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "時間",
+    "hiragana": "じかん",
+    "romaji": null,
+    "english": "time",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～時間",
+    "hiragana": "～じかん",
+    "romaji": null,
+    "english": "~ hours",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "仕事",
+    "hiragana": "しごと",
+    "romaji": null,
+    "english": "work, job, occupation, employment",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "辞書",
+    "hiragana": "じしょ",
+    "romaji": null,
+    "english": "dictionary",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "静か",
+    "hiragana": "しずか",
+    "romaji": null,
+    "english": "quiet, calm",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "下",
+    "hiragana": "した",
+    "romaji": null,
+    "english": "under, below, beneath",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "七",
+    "hiragana": "しち",
+    "romaji": null,
+    "english": "seven",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "質問",
+    "hiragana": "しつもん",
+    "romaji": null,
+    "english": "question, inquiry",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "自転車",
+    "hiragana": "じてんしゃ",
+    "romaji": null,
+    "english": "bicycle",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "自動車",
+    "hiragana": "じどうしゃ",
+    "romaji": null,
+    "english": "automobile",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "死ぬ",
+    "hiragana": "しぬ",
+    "romaji": null,
+    "english": "to die",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "字引",
+    "hiragana": "じびき",
+    "romaji": null,
+    "english": "dictionary",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "自分",
+    "hiragana": "じぶん",
+    "romaji": null,
+    "english": "myself, oneself",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "閉まる",
+    "hiragana": "しまる",
+    "romaji": null,
+    "english": "to close, to be closed",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "閉める",
+    "hiragana": "しめる",
+    "romaji": null,
+    "english": "to close, to shut",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "締める",
+    "hiragana": "しめる",
+    "romaji": null,
+    "english": "to tie, to fasten, to tighten",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "じゃ; じゃあ",
+    "hiragana": "じゃ; じゃあ",
+    "romaji": null,
+    "english": "well, well then",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "写真",
+    "hiragana": "しゃしん",
+    "romaji": null,
+    "english": "a picture; a photograph",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "シャツ",
+    "hiragana": "シャツ",
+    "romaji": null,
+    "english": "shirt",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "シャワー",
+    "hiragana": "シャワー",
+    "romaji": null,
+    "english": "shower",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "十",
+    "hiragana": "じゅう",
+    "romaji": null,
+    "english": "ten",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～中",
+    "hiragana": "～じゅう",
+    "romaji": null,
+    "english": "during, while",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～週間",
+    "hiragana": "～しゅうかん",
+    "romaji": null,
+    "english": "~ weeks",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "授業",
+    "hiragana": "じゅぎょう",
+    "romaji": null,
+    "english": "a class (of school)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "宿題",
+    "hiragana": "しゅくだい",
+    "romaji": null,
+    "english": "homework",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "上手",
+    "hiragana": "じょうず",
+    "romaji": null,
+    "english": "be good at, skillful",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "丈夫",
+    "hiragana": "じょうぶ",
+    "romaji": null,
+    "english": "strong, solid, durable",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "醤油",
+    "hiragana": "しょうゆ",
+    "romaji": null,
+    "english": "soy sauce",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "食堂",
+    "hiragana": "しょくどう",
+    "romaji": null,
+    "english": "cafeteria, dining hall",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "知る",
+    "hiragana": "しる",
+    "romaji": null,
+    "english": "to know, to understand",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "白",
+    "hiragana": "しろ",
+    "romaji": null,
+    "english": "white",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "白い",
+    "hiragana": "しろい",
+    "romaji": null,
+    "english": "white",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～人",
+    "hiragana": "～じん",
+    "romaji": null,
+    "english": "counter for people",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "新聞",
+    "hiragana": "しんぶん",
+    "romaji": null,
+    "english": "newspaper",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "水曜日",
+    "hiragana": "すいようび",
+    "romaji": null,
+    "english": "Wednesday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "吸う",
+    "hiragana": "すう",
+    "romaji": null,
+    "english": "to breathe in, to suck",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "スカート",
+    "hiragana": "スカート",
+    "romaji": null,
+    "english": "skirt",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "好き",
+    "hiragana": "すき",
+    "romaji": null,
+    "english": "liking, fondness, love",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～すぎ",
+    "hiragana": "～すぎ",
+    "romaji": null,
+    "english": "past; to exceed, ~ too much",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "少ない",
+    "hiragana": "すくない",
+    "romaji": null,
+    "english": "a little; a few",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "すぐに",
+    "hiragana": "すぐに",
+    "romaji": null,
+    "english": "immediately, soon",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "少し",
+    "hiragana": "すこし",
+    "romaji": null,
+    "english": "little, few",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "涼しい",
+    "hiragana": "すずしい",
+    "romaji": null,
+    "english": "cool, refreshing (in reference to weather)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～ずつ",
+    "hiragana": "～ずつ",
+    "romaji": null,
+    "english": "at a time",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ストーブ",
+    "hiragana": "ストーブ",
+    "romaji": null,
+    "english": "heater (lit: stove)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "スプーン",
+    "hiragana": "スプーン",
+    "romaji": null,
+    "english": "spoon",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "スポーツ",
+    "hiragana": "スポーツ",
+    "romaji": null,
+    "english": "sport(s)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ズボン",
+    "hiragana": "ズボン",
+    "romaji": null,
+    "english": "trousers",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "住む",
+    "hiragana": "すむ",
+    "romaji": null,
+    "english": "to reside, to live in",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "する",
+    "hiragana": "する",
+    "romaji": null,
+    "english": "to do, to try; to wear small items (e.g., necktie, watch, etc.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "座る",
+    "hiragana": "すわる",
+    "romaji": null,
+    "english": "to sit",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "背",
+    "hiragana": "せい",
+    "romaji": null,
+    "english": "(one's) height, stature",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "生徒",
+    "hiragana": "せいと",
+    "romaji": null,
+    "english": "student; pupil",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "セーター",
+    "hiragana": "セーター",
+    "romaji": null,
+    "english": "sweater",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "石鹸",
+    "hiragana": "せっけん",
+    "romaji": null,
+    "english": "soap",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "背広",
+    "hiragana": "せびろ",
+    "romaji": null,
+    "english": "men's suit",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "狭い",
+    "hiragana": "せまい",
+    "romaji": null,
+    "english": "narrow; not spacious",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ゼロ",
+    "hiragana": "ゼロ",
+    "romaji": null,
+    "english": "zero",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "千",
+    "hiragana": "せん",
+    "romaji": null,
+    "english": "thousand",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "先月",
+    "hiragana": "せんげつ",
+    "romaji": null,
+    "english": "last month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "先週",
+    "hiragana": "せんしゅう",
+    "romaji": null,
+    "english": "last week",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "先生",
+    "hiragana": "せんせい",
+    "romaji": null,
+    "english": "teacher, professor; master; doctor",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "洗濯",
+    "hiragana": "せんたく",
+    "romaji": null,
+    "english": "washing, laundry",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "全部",
+    "hiragana": "ぜんぶ",
+    "romaji": null,
+    "english": "all, entire, whole",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "そう; そうです",
+    "hiragana": "そう; そうです",
+    "romaji": null,
+    "english": "yes; appears, to be the case",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "掃除",
+    "hiragana": "そうじ (する)",
+    "romaji": null,
+    "english": "cleaning, sweeping",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "そうして; そして",
+    "hiragana": "そうして; そして",
+    "romaji": null,
+    "english": "and, like that",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "そこ",
+    "hiragana": "そこ",
+    "romaji": null,
+    "english": "that place, there; bottom, sole",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "そちら",
+    "hiragana": "そちら",
+    "romaji": null,
+    "english": "over there",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "そっち",
+    "hiragana": "そっち",
+    "romaji": null,
+    "english": "over there",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "外",
+    "hiragana": "そと",
+    "romaji": null,
+    "english": "outside, exterior",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "その",
+    "hiragana": "その",
+    "romaji": null,
+    "english": "that",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "そば",
+    "hiragana": "そば",
+    "romaji": null,
+    "english": "near, close, beside; Japanese traditional buckwheat noodle",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "空",
+    "hiragana": "そら",
+    "romaji": null,
+    "english": "sky",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "それ",
+    "hiragana": "それ",
+    "romaji": null,
+    "english": "that one",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "それから",
+    "hiragana": "それから",
+    "romaji": null,
+    "english": "and then, after that",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "それでは",
+    "hiragana": "それでは",
+    "romaji": null,
+    "english": "in that situation, well then...",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～台",
+    "hiragana": "～だい",
+    "romaji": null,
+    "english": "counter for vehicles; machines",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大学",
+    "hiragana": "だいがく",
+    "romaji": null,
+    "english": "college; university",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大使館",
+    "hiragana": "たいしかん",
+    "romaji": null,
+    "english": "embassy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大丈夫",
+    "hiragana": "だいじょうぶ",
+    "romaji": null,
+    "english": "It's ok (all right); No need to worry; Everything is under control",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大好き",
+    "hiragana": "だいすき",
+    "romaji": null,
+    "english": "very like-able, like very much",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大切",
+    "hiragana": "たいせつ",
+    "romaji": null,
+    "english": "important",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "台所",
+    "hiragana": "だいどころ",
+    "romaji": null,
+    "english": "kitchen",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "大変",
+    "hiragana": "たいへん",
+    "romaji": null,
+    "english": "very; difficult, hard",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "高い",
+    "hiragana": "たかい",
+    "romaji": null,
+    "english": "tall, high; expensive",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～だけ",
+    "hiragana": "～だけ",
+    "romaji": null,
+    "english": "only ~, just ~, as ~",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "沢山",
+    "hiragana": "たくさん",
+    "romaji": null,
+    "english": "many, much",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "タクシー",
+    "hiragana": "タクシー",
+    "romaji": null,
+    "english": "taxi",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "出す",
+    "hiragana": "だす",
+    "romaji": null,
+    "english": "to take (something) out; to hand in (something)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～たち",
+    "hiragana": "～たち",
+    "romaji": null,
+    "english": "plural suffix",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "立つ",
+    "hiragana": "たつ",
+    "romaji": null,
+    "english": "to stand up",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "たて",
+    "hiragana": "たて",
+    "romaji": null,
+    "english": "length, height",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "建物",
+    "hiragana": "たてもの",
+    "romaji": null,
+    "english": "building",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "楽しい",
+    "hiragana": "たのしい",
+    "romaji": null,
+    "english": "enjoyable, fun",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "頼む",
+    "hiragana": "たのむ",
+    "romaji": null,
+    "english": "to request, to ask (a favor)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "たばこ",
+    "hiragana": "たばこ",
+    "romaji": null,
+    "english": "tobacco, cigarettes",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "多分",
+    "hiragana": "たぶん",
+    "romaji": null,
+    "english": "perhaps, probably, maybe",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "食べ物",
+    "hiragana": "たべもの",
+    "romaji": null,
+    "english": "food",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "食べる",
+    "hiragana": "たべる",
+    "romaji": null,
+    "english": "to eat",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "卵",
+    "hiragana": "たまご",
+    "romaji": null,
+    "english": "egg",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "誰",
+    "hiragana": "だれ",
+    "romaji": null,
+    "english": "who",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "誰か",
+    "hiragana": "だれか",
+    "romaji": null,
+    "english": "someone",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "誕生日",
+    "hiragana": "たんじょうび",
+    "romaji": null,
+    "english": "birthday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "段々",
+    "hiragana": "だんだん",
+    "romaji": null,
+    "english": "gradually, by degrees",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "小さい",
+    "hiragana": "ちいさい",
+    "romaji": null,
+    "english": "small, little",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "小さな",
+    "hiragana": "ちいさな",
+    "romaji": null,
+    "english": "small, little",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "近い",
+    "hiragana": "ちかい",
+    "romaji": null,
+    "english": "near, close by, short",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "違う",
+    "hiragana": "ちがう",
+    "romaji": null,
+    "english": "to be different; to differ; wrong",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "近く",
+    "hiragana": "ちかく",
+    "romaji": null,
+    "english": "nearby; in the neighborhood",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "地下鉄",
+    "hiragana": "ちかてつ",
+    "romaji": null,
+    "english": "underground train, subway",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "地図",
+    "hiragana": "ちず",
+    "romaji": null,
+    "english": "a map",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "父",
+    "hiragana": "ちち",
+    "romaji": null,
+    "english": "(my) father",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "茶色",
+    "hiragana": "ちゃいろ",
+    "romaji": null,
+    "english": "brown",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "茶碗",
+    "hiragana": "ちゃわん",
+    "romaji": null,
+    "english": "rice bowl",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～中",
+    "hiragana": "～ちゅう",
+    "romaji": null,
+    "english": "during, while ~ing",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "丁度",
+    "hiragana": "ちょうど",
+    "romaji": null,
+    "english": "just, right, exactly",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ちょっと",
+    "hiragana": "ちょっと",
+    "romaji": null,
+    "english": "a little, somewhat; just a little, somewhat",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一日",
+    "hiragana": "ついたち",
+    "romaji": null,
+    "english": "one day; first day of the month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "使う",
+    "hiragana": "つかう",
+    "romaji": null,
+    "english": "to use",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "疲れる",
+    "hiragana": "つかれる",
+    "romaji": null,
+    "english": "to get (become) tired; to become fatigued",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "次",
+    "hiragana": "つぎ",
+    "romaji": null,
+    "english": "next",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "着く",
+    "hiragana": "つく",
+    "romaji": null,
+    "english": "to arrive at, to reach",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "机",
+    "hiragana": "つくえ",
+    "romaji": null,
+    "english": "desk",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "作る",
+    "hiragana": "つくる",
+    "romaji": null,
+    "english": "to make, to create",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "つける",
+    "hiragana": "つける",
+    "romaji": null,
+    "english": "to turn on (e.g., a light); to take",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "勤める",
+    "hiragana": "つとめる",
+    "romaji": null,
+    "english": "to work (for)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "つまらない",
+    "hiragana": "つまらない",
+    "romaji": null,
+    "english": "boring, dull; insignificant",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "冷たい",
+    "hiragana": "つめたい",
+    "romaji": null,
+    "english": "cold (things, people)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "強い",
+    "hiragana": "つよい",
+    "romaji": null,
+    "english": "strong, powerful",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "手",
+    "hiragana": "て",
+    "romaji": null,
+    "english": "hand",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "テープ",
+    "hiragana": "テープ",
+    "romaji": null,
+    "english": "tape",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "テープレコーダー",
+    "hiragana": "テープレコーダー",
+    "romaji": null,
+    "english": "tape recorder",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "テーブル",
+    "hiragana": "テーブル",
+    "romaji": null,
+    "english": "table",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "出かける",
+    "hiragana": "でかける",
+    "romaji": null,
+    "english": "to go out; to depart",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "手紙",
+    "hiragana": "てがみ",
+    "romaji": null,
+    "english": "letter",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "できる",
+    "hiragana": "できる",
+    "romaji": null,
+    "english": "to be able to (to accomplish)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "出口",
+    "hiragana": "でぐち",
+    "romaji": null,
+    "english": "an exit",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "テスト",
+    "hiragana": "テスト",
+    "romaji": null,
+    "english": "test",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "では",
+    "hiragana": "では",
+    "romaji": null,
+    "english": "then, well, so",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "デパート",
+    "hiragana": "デパート",
+    "romaji": null,
+    "english": "(abbr.) department store",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "でも",
+    "hiragana": "でも",
+    "romaji": null,
+    "english": "but, however",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "出る",
+    "hiragana": "でる",
+    "romaji": null,
+    "english": "to appear, to leave",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "テレビ",
+    "hiragana": "テレビ",
+    "romaji": null,
+    "english": "television, TV",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "天気",
+    "hiragana": "てんき",
+    "romaji": null,
+    "english": "weather",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "電気",
+    "hiragana": "でんき",
+    "romaji": null,
+    "english": "electricity, (electric) light",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "電車",
+    "hiragana": "でんしゃ",
+    "romaji": null,
+    "english": "electric train",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "電話",
+    "hiragana": "でんわ",
+    "romaji": null,
+    "english": "a telephone",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "戸",
+    "hiragana": "と",
+    "romaji": null,
+    "english": "door (Japanese style)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～度",
+    "hiragana": "～ど",
+    "romaji": null,
+    "english": "counter for occurrences; ~ degree; ~ point",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ドア",
+    "hiragana": "ドア",
+    "romaji": null,
+    "english": "door (Western style)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "トイレ",
+    "hiragana": "トイレ",
+    "romaji": null,
+    "english": "bathroom; toilet",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どう",
+    "hiragana": "どう",
+    "romaji": null,
+    "english": "how, in what way",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どうして",
+    "hiragana": "どうして",
+    "romaji": null,
+    "english": "why, for what reason",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どうぞ",
+    "hiragana": "どうぞ",
+    "romaji": null,
+    "english": "please, kindly, by all means",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "動物",
+    "hiragana": "どうぶつ",
+    "romaji": null,
+    "english": "animal",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どうも",
+    "hiragana": "どうも",
+    "romaji": null,
+    "english": "Thank you; somehow; no matter how hard one may try",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "十",
+    "hiragana": "(〜を) とお",
+    "romaji": null,
+    "english": "ten (~)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "遠い",
+    "hiragana": "とおい",
+    "romaji": null,
+    "english": "far (away), distant",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "十日",
+    "hiragana": "とおか",
+    "romaji": null,
+    "english": "ten days; tenth day of the month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～時",
+    "hiragana": "～とき",
+    "romaji": null,
+    "english": "at the time of ~",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "時々",
+    "hiragana": "ときどき",
+    "romaji": null,
+    "english": "sometimes",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "時計",
+    "hiragana": "とけい",
+    "romaji": null,
+    "english": "a watch; a clock",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どこ",
+    "hiragana": "どこ",
+    "romaji": null,
+    "english": "where, what place",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "所",
+    "hiragana": "ところ",
+    "romaji": null,
+    "english": "place",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "年",
+    "hiragana": "とし",
+    "romaji": null,
+    "english": "year, age",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "図書館",
+    "hiragana": "としょかん",
+    "romaji": null,
+    "english": "library",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どちら",
+    "hiragana": "どちら",
+    "romaji": null,
+    "english": "which (one) (way); where (polite)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どっち",
+    "hiragana": "どっち",
+    "romaji": null,
+    "english": "which one, which way",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "とても",
+    "hiragana": "とても",
+    "romaji": null,
+    "english": "very (much), greatly, exceedingly",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どなた",
+    "hiragana": "どなた",
+    "romaji": null,
+    "english": "who",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "隣",
+    "hiragana": "となり",
+    "romaji": null,
+    "english": "next to, next door to",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どの",
+    "hiragana": "どの",
+    "romaji": null,
+    "english": "which",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "飛ぶ",
+    "hiragana": "とぶ",
+    "romaji": null,
+    "english": "to fly, to hop",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "止まる",
+    "hiragana": "とまる",
+    "romaji": null,
+    "english": "to come to a halt",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "友達",
+    "hiragana": "ともだち",
+    "romaji": null,
+    "english": "friend",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "土曜日",
+    "hiragana": "どようび",
+    "romaji": null,
+    "english": "Saturday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鳥",
+    "hiragana": "とり",
+    "romaji": null,
+    "english": "chicken (lit., bird)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鶏肉",
+    "hiragana": "とりにく",
+    "romaji": null,
+    "english": "chicken meat",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "取る",
+    "hiragana": "とる",
+    "romaji": null,
+    "english": "to take (a class); to get (a grade)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "撮る",
+    "hiragana": "とる",
+    "romaji": null,
+    "english": "to take (a photo), to make (a film)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どれ",
+    "hiragana": "どれ",
+    "romaji": null,
+    "english": "which one",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "どんな",
+    "hiragana": "どんな",
+    "romaji": null,
+    "english": "what, what kind of",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ない",
+    "hiragana": "ない",
+    "romaji": null,
+    "english": "there isn't, doesn't have",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ナイフ",
+    "hiragana": "ナイフ",
+    "romaji": null,
+    "english": "knife",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "中",
+    "hiragana": "なか",
+    "romaji": null,
+    "english": "inside, middle, among",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "長い",
+    "hiragana": "ながい",
+    "romaji": null,
+    "english": "long, lengthy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鳴く",
+    "hiragana": "なく",
+    "romaji": null,
+    "english": "to make sound (animal)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "無くす",
+    "hiragana": "なくす",
+    "romaji": null,
+    "english": "to lose something",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "なぜ",
+    "hiragana": "なぜ",
+    "romaji": null,
+    "english": "why (same as どうして)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "夏",
+    "hiragana": "なつ",
+    "romaji": null,
+    "english": "summer",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "夏休み",
+    "hiragana": "なつやすみ",
+    "romaji": null,
+    "english": "summer vacation",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～など",
+    "hiragana": "～など",
+    "romaji": null,
+    "english": "et cetera",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "七つ",
+    "hiragana": "ななつ",
+    "romaji": null,
+    "english": "seven things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何",
+    "hiragana": "なん; なに",
+    "romaji": null,
+    "english": "what",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "七日",
+    "hiragana": "なのか",
+    "romaji": null,
+    "english": "seven days; seventh day (of the month)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "名前",
+    "hiragana": "なまえ",
+    "romaji": null,
+    "english": "name",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "習う",
+    "hiragana": "ならう",
+    "romaji": null,
+    "english": "to learn",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "並ぶ",
+    "hiragana": "ならぶ",
+    "romaji": null,
+    "english": "to line up, to stand in a line (v.i.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "並べる",
+    "hiragana": "ならべる",
+    "romaji": null,
+    "english": "to put (things) side by side; to line up",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "なる",
+    "hiragana": "なる",
+    "romaji": null,
+    "english": "to become",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "何～",
+    "hiragana": "なん～",
+    "romaji": null,
+    "english": "what sort of ~",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "二",
+    "hiragana": "に",
+    "romaji": null,
+    "english": "two",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "にぎやか",
+    "hiragana": "にぎやか",
+    "romaji": null,
+    "english": "bustling, busy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "肉",
+    "hiragana": "にく",
+    "romaji": null,
+    "english": "meat",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "西",
+    "hiragana": "にし",
+    "romaji": null,
+    "english": "west",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～日",
+    "hiragana": "～にち",
+    "romaji": null,
+    "english": "~ day of the month, for ~ days",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "日曜日",
+    "hiragana": "にちようび",
+    "romaji": null,
+    "english": "Sunday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "荷物",
+    "hiragana": "にもつ",
+    "romaji": null,
+    "english": "luggage; baggage",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ニュース",
+    "hiragana": "ニュース",
+    "romaji": null,
+    "english": "news",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "庭",
+    "hiragana": "にわ",
+    "romaji": null,
+    "english": "garden",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～人",
+    "hiragana": "～にん",
+    "romaji": null,
+    "english": "counter for people",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "脱ぐ",
+    "hiragana": "ぬぐ",
+    "romaji": null,
+    "english": "to take off (clothes)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "温い",
+    "hiragana": "ぬるい",
+    "romaji": null,
+    "english": "lukewarm",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ネクタイ",
+    "hiragana": "ネクタイ",
+    "romaji": null,
+    "english": "tie, necktie",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "猫",
+    "hiragana": "ねこ",
+    "romaji": null,
+    "english": "cat",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "寝る",
+    "hiragana": "ねる",
+    "romaji": null,
+    "english": "to sleep; to go to sleep; to go to bed",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～年",
+    "hiragana": "～ねん",
+    "romaji": null,
+    "english": "~ years",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ノート",
+    "hiragana": "ノート",
+    "romaji": null,
+    "english": "notebook",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "登る",
+    "hiragana": "のぼる",
+    "romaji": null,
+    "english": "to climb",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "飲み物",
+    "hiragana": "のみもの",
+    "romaji": null,
+    "english": "drink, beverage",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "飲む",
+    "hiragana": "のむ",
+    "romaji": null,
+    "english": "to drink",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "乗る",
+    "hiragana": "のる",
+    "romaji": null,
+    "english": "to get on, to ride in, to board",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "歯",
+    "hiragana": "は",
+    "romaji": null,
+    "english": "tooth",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "パーティー",
+    "hiragana": "パーティー",
+    "romaji": null,
+    "english": "a party",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "はい",
+    "hiragana": "はい",
+    "romaji": null,
+    "english": "yes",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～杯",
+    "hiragana": "～はい",
+    "romaji": null,
+    "english": "counter for cupfuls",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "灰皿",
+    "hiragana": "はいざら",
+    "romaji": null,
+    "english": "ashtray",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "入る",
+    "hiragana": "はいる",
+    "romaji": null,
+    "english": "to enter, to contain, to hold",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "葉書",
+    "hiragana": "はがき",
+    "romaji": null,
+    "english": "postcard",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "はく",
+    "hiragana": "はく",
+    "romaji": null,
+    "english": "to put on (items below your waist)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "箱",
+    "hiragana": "はこ",
+    "romaji": null,
+    "english": "box",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "橋",
+    "hiragana": "はし",
+    "romaji": null,
+    "english": "bridge",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "箸",
+    "hiragana": "はし",
+    "romaji": null,
+    "english": "chopsticks",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "始まる",
+    "hiragana": "はじまる",
+    "romaji": null,
+    "english": "(something) begins",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "初め; 始め",
+    "hiragana": "はじめ",
+    "romaji": null,
+    "english": "beginning, start",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "初めて",
+    "hiragana": "はじめて",
+    "romaji": null,
+    "english": "for the first time",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "走る",
+    "hiragana": "はしる",
+    "romaji": null,
+    "english": "to run",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "バス",
+    "hiragana": "バス",
+    "romaji": null,
+    "english": "bus; bath; bass",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "バター",
+    "hiragana": "バター",
+    "romaji": null,
+    "english": "butter",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "二十歳",
+    "hiragana": "はたち",
+    "romaji": null,
+    "english": "20 years old",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "働く",
+    "hiragana": "はたらく",
+    "romaji": null,
+    "english": "to work",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "八",
+    "hiragana": "はち",
+    "romaji": null,
+    "english": "eight",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "二十日",
+    "hiragana": "はつか",
+    "romaji": null,
+    "english": "twenty days, twentieth (day of the month)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "花",
+    "hiragana": "はな",
+    "romaji": null,
+    "english": "flower",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "鼻",
+    "hiragana": "はな",
+    "romaji": null,
+    "english": "nose",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "話",
+    "hiragana": "はなし",
+    "romaji": null,
+    "english": "talk (chat), story",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "話す",
+    "hiragana": "はなす",
+    "romaji": null,
+    "english": "to speak",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "母",
+    "hiragana": "はは",
+    "romaji": null,
+    "english": "(my) mother",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "早い",
+    "hiragana": "はやい",
+    "romaji": null,
+    "english": "early",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "速い",
+    "hiragana": "はやい",
+    "romaji": null,
+    "english": "fast, quick",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "春",
+    "hiragana": "はる",
+    "romaji": null,
+    "english": "spring",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "貼る",
+    "hiragana": "はる",
+    "romaji": null,
+    "english": "to post; to paste; to attach",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "晴れ",
+    "hiragana": "はれ",
+    "romaji": null,
+    "english": "clear (sunny) weather",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "晴れる",
+    "hiragana": "はれる",
+    "romaji": null,
+    "english": "to be sunny",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "半",
+    "hiragana": "はん",
+    "romaji": null,
+    "english": "half (e.g., にじはん | half-past two)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "晩",
+    "hiragana": "ばん",
+    "romaji": null,
+    "english": "evening",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～番",
+    "hiragana": "～ばん",
+    "romaji": null,
+    "english": "~st; ~th best",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "パン",
+    "hiragana": "パン",
+    "romaji": null,
+    "english": "bread",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ハンカチ",
+    "hiragana": "ハンカチ",
+    "romaji": null,
+    "english": "handkerchief",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "番号",
+    "hiragana": "ばんごう",
+    "romaji": null,
+    "english": "number, series of digits",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "晩御飯",
+    "hiragana": "ばんごはん",
+    "romaji": null,
+    "english": "dinner, evening meal",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "半分",
+    "hiragana": "はんぶん",
+    "romaji": null,
+    "english": "half",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "東",
+    "hiragana": "ひがし",
+    "romaji": null,
+    "english": "east",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～匹",
+    "hiragana": "～ひき",
+    "romaji": null,
+    "english": "counter for small animals",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "引く",
+    "hiragana": "ひく",
+    "romaji": null,
+    "english": "to pull, to draw; subtract",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "弾く",
+    "hiragana": "ひく",
+    "romaji": null,
+    "english": "to play (a string instrument or piano)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "低い",
+    "hiragana": "ひくい",
+    "romaji": null,
+    "english": "short, low",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "飛行機",
+    "hiragana": "ひこうき",
+    "romaji": null,
+    "english": "airplane",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "左",
+    "hiragana": "ひだり",
+    "romaji": null,
+    "english": "left hand side",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "人",
+    "hiragana": "ひと",
+    "romaji": null,
+    "english": "man, person",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一つ",
+    "hiragana": "ひとつ",
+    "romaji": null,
+    "english": "one thing",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一月",
+    "hiragana": "ひとつき",
+    "romaji": null,
+    "english": "one month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "一人",
+    "hiragana": "ひとり",
+    "romaji": null,
+    "english": "one person",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "暇",
+    "hiragana": "ひま",
+    "romaji": null,
+    "english": "free time, leisure",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "百",
+    "hiragana": "ひゃく",
+    "romaji": null,
+    "english": "hundred",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "病院",
+    "hiragana": "びょういん",
+    "romaji": null,
+    "english": "hospital",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "病気",
+    "hiragana": "びょうき",
+    "romaji": null,
+    "english": "illness; sickness",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "平仮名",
+    "hiragana": "ひらがな",
+    "romaji": null,
+    "english": "hiragana",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "昼",
+    "hiragana": "ひる",
+    "romaji": null,
+    "english": "noon, daytime",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "昼御飯",
+    "hiragana": "ひるごはん",
+    "romaji": null,
+    "english": "lunch, midday meal",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "広い",
+    "hiragana": "ひろい",
+    "romaji": null,
+    "english": "spacious; wide; broad",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "フィルム",
+    "hiragana": "フィルム",
+    "romaji": null,
+    "english": "film (roll of)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "封筒",
+    "hiragana": "ふうとう",
+    "romaji": null,
+    "english": "envelope",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "プール",
+    "hiragana": "プール",
+    "romaji": null,
+    "english": "swimming pool",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "フォーク",
+    "hiragana": "フォーク",
+    "romaji": null,
+    "english": "fork",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "吹く",
+    "hiragana": "ふく",
+    "romaji": null,
+    "english": "to blow (wind, etc.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "服",
+    "hiragana": "ふく",
+    "romaji": null,
+    "english": "clothes",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "二つ",
+    "hiragana": "ふたつ",
+    "romaji": null,
+    "english": "two things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "豚肉",
+    "hiragana": "ぶたにく",
+    "romaji": null,
+    "english": "pork",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "二人",
+    "hiragana": "ふたり",
+    "romaji": null,
+    "english": "two people",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "二日",
+    "hiragana": "ふつか",
+    "romaji": null,
+    "english": "two days; second day of the month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "太い",
+    "hiragana": "ふとい",
+    "romaji": null,
+    "english": "fat, thick",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "冬",
+    "hiragana": "ふゆ",
+    "romaji": null,
+    "english": "winter",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "降る",
+    "hiragana": "ふる",
+    "romaji": null,
+    "english": "to precipitate, to fall (e.g., rain, snow, etc.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "古い",
+    "hiragana": "ふるい",
+    "romaji": null,
+    "english": "old (in reference to objects, not people), aged, ancient",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～分",
+    "hiragana": "～ふん",
+    "romaji": null,
+    "english": "~ minutes",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "文章",
+    "hiragana": "ぶんしょう",
+    "romaji": null,
+    "english": "sentence, text",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ページ",
+    "hiragana": "ページ",
+    "romaji": null,
+    "english": "a page",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "下手",
+    "hiragana": "へた",
+    "romaji": null,
+    "english": "unskillful, poor",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ベッド",
+    "hiragana": "ベッド",
+    "romaji": null,
+    "english": "bed",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ペット",
+    "hiragana": "ペット",
+    "romaji": null,
+    "english": "pet",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "部屋",
+    "hiragana": "へや",
+    "romaji": null,
+    "english": "a room",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "辺",
+    "hiragana": "へん",
+    "romaji": null,
+    "english": "area, vicinity",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ペン",
+    "hiragana": "ペン",
+    "romaji": null,
+    "english": "pen",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "勉強",
+    "hiragana": "べんきょう (する)",
+    "romaji": null,
+    "english": "study",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "便利",
+    "hiragana": "べんり",
+    "romaji": null,
+    "english": "convenient, handy",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "帽子",
+    "hiragana": "ぼうし",
+    "romaji": null,
+    "english": "hat; cap",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ボールペン",
+    "hiragana": "ボールペン",
+    "romaji": null,
+    "english": "ball-point pen",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "外",
+    "hiragana": "ほか",
+    "romaji": null,
+    "english": "other, the rest",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ポケット",
+    "hiragana": "ポケット",
+    "romaji": null,
+    "english": "pocket",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "欲しい",
+    "hiragana": "ほしい",
+    "romaji": null,
+    "english": "to want, in need of",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ポスト",
+    "hiragana": "ポスト",
+    "romaji": null,
+    "english": "mailbox; post, position",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "細い",
+    "hiragana": "ほそい",
+    "romaji": null,
+    "english": "thin, slender, fine",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ボタン",
+    "hiragana": "ボタン",
+    "romaji": null,
+    "english": "button",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ホテル",
+    "hiragana": "ホテル",
+    "romaji": null,
+    "english": "hotel",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "本",
+    "hiragana": "ほん",
+    "romaji": null,
+    "english": "book",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～本",
+    "hiragana": "～ほん",
+    "romaji": null,
+    "english": "counter for long cylindrical things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "本棚",
+    "hiragana": "ほんだな",
+    "romaji": null,
+    "english": "bookshelf",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "本当",
+    "hiragana": "ほんとう",
+    "romaji": null,
+    "english": "real, true",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～枚",
+    "hiragana": "～まい",
+    "romaji": null,
+    "english": "counter for flat things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎朝",
+    "hiragana": "まいあさ",
+    "romaji": null,
+    "english": "every morning",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎月",
+    "hiragana": "まいげつ; まいつき",
+    "romaji": null,
+    "english": "every month, monthly",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎週",
+    "hiragana": "まいしゅう",
+    "romaji": null,
+    "english": "every week",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎日",
+    "hiragana": "まいにち",
+    "romaji": null,
+    "english": "every day",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎年",
+    "hiragana": "まいねん; まいとし",
+    "romaji": null,
+    "english": "every year, yearly, annually",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "毎晩",
+    "hiragana": "まいばん",
+    "romaji": null,
+    "english": "every night",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "前",
+    "hiragana": "まえ",
+    "romaji": null,
+    "english": "before, in front",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～前",
+    "hiragana": "～まえ",
+    "romaji": null,
+    "english": "in front of ~",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "曲る",
+    "hiragana": "まがる",
+    "romaji": null,
+    "english": "to turn, to bend",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "まずい",
+    "hiragana": "まずい",
+    "romaji": null,
+    "english": "terrible (in reference to food), unappetizing, unpleasant (taste)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "また",
+    "hiragana": "また",
+    "romaji": null,
+    "english": "and; furthermore",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "まだ",
+    "hiragana": "まだ",
+    "romaji": null,
+    "english": "yet, still, besides",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "町",
+    "hiragana": "まち",
+    "romaji": null,
+    "english": "town; city",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "待つ",
+    "hiragana": "まつ",
+    "romaji": null,
+    "english": "to wait",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "まっすぐ",
+    "hiragana": "まっすぐ",
+    "romaji": null,
+    "english": "straight (ahead), direct",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "マッチ",
+    "hiragana": "マッチ",
+    "romaji": null,
+    "english": "match",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "窓",
+    "hiragana": "まど",
+    "romaji": null,
+    "english": "window",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "丸い; 円い",
+    "hiragana": "まるい",
+    "romaji": null,
+    "english": "round, circular",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "万",
+    "hiragana": "まん",
+    "romaji": null,
+    "english": "ten thousand",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "万年筆",
+    "hiragana": "まんねんひつ",
+    "romaji": null,
+    "english": "fountain pen",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "磨く",
+    "hiragana": "みがく",
+    "romaji": null,
+    "english": "to brush (teeth); to polish",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "右",
+    "hiragana": "みぎ",
+    "romaji": null,
+    "english": "right hand side",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "短い",
+    "hiragana": "みじかい",
+    "romaji": null,
+    "english": "short (length)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "水",
+    "hiragana": "みず",
+    "romaji": null,
+    "english": "water",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "店",
+    "hiragana": "みせ",
+    "romaji": null,
+    "english": "store, shop",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "見せる",
+    "hiragana": "みせる",
+    "romaji": null,
+    "english": "to show, to display",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "道",
+    "hiragana": "みち",
+    "romaji": null,
+    "english": "road, street; way, directions",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "三日",
+    "hiragana": "みっか",
+    "romaji": null,
+    "english": "three days, third day of the month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "三つ",
+    "hiragana": "みっつ",
+    "romaji": null,
+    "english": "three things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "緑",
+    "hiragana": "みどり",
+    "romaji": null,
+    "english": "green",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "皆さん",
+    "hiragana": "みなさん",
+    "romaji": null,
+    "english": "all of you, everyone",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "南",
+    "hiragana": "みなみ",
+    "romaji": null,
+    "english": "South",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "耳",
+    "hiragana": "みみ",
+    "romaji": null,
+    "english": "ear",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "見る",
+    "hiragana": "みる",
+    "romaji": null,
+    "english": "to see, to look",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "みんな",
+    "hiragana": "みんな",
+    "romaji": null,
+    "english": "all, everyone, everybody",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "六日",
+    "hiragana": "むいか",
+    "romaji": null,
+    "english": "six days; sixth day of month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "向こう",
+    "hiragana": "むこう",
+    "romaji": null,
+    "english": "beyond, over there",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "難しい",
+    "hiragana": "むずかしい",
+    "romaji": null,
+    "english": "difficult",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "六つ",
+    "hiragana": "むっつ",
+    "romaji": null,
+    "english": "six things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "村",
+    "hiragana": "むら",
+    "romaji": null,
+    "english": "village",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "目",
+    "hiragana": "め",
+    "romaji": null,
+    "english": "eye(s)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "メートル",
+    "hiragana": "メートル",
+    "romaji": null,
+    "english": "meter",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "眼鏡",
+    "hiragana": "めがね",
+    "romaji": null,
+    "english": "eye glasses",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "もう",
+    "hiragana": "もう",
+    "romaji": null,
+    "english": "already; again; more",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "木曜日",
+    "hiragana": "もくようび",
+    "romaji": null,
+    "english": "Thursday",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "もしもし",
+    "hiragana": "もしもし",
+    "romaji": null,
+    "english": "Hello? (used on the phone)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "持つ",
+    "hiragana": "もつ",
+    "romaji": null,
+    "english": "to hold, to carry; to possess",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "もっと",
+    "hiragana": "もっと",
+    "romaji": null,
+    "english": "more",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "物",
+    "hiragana": "もの",
+    "romaji": null,
+    "english": "thing (concrete object)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "門",
+    "hiragana": "もん",
+    "romaji": null,
+    "english": "gate",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "問題",
+    "hiragana": "もんだい",
+    "romaji": null,
+    "english": "a problem",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "～屋",
+    "hiragana": "～や",
+    "romaji": null,
+    "english": "~ shop",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "八百屋",
+    "hiragana": "やおや",
+    "romaji": null,
+    "english": "greengrocer",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "野菜",
+    "hiragana": "やさい",
+    "romaji": null,
+    "english": "vegetable",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "易しい",
+    "hiragana": "やさしい",
+    "romaji": null,
+    "english": "easy, plain, simple",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "安い",
+    "hiragana": "やすい",
+    "romaji": null,
+    "english": "inexpensive; cheap (things)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "休み",
+    "hiragana": "やすみ",
+    "romaji": null,
+    "english": "holiday; day off; absence",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "休む",
+    "hiragana": "やすむ",
+    "romaji": null,
+    "english": "to rest, to have a break, to get time off",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "八つ",
+    "hiragana": "やっつ",
+    "romaji": null,
+    "english": "eight things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "山",
+    "hiragana": "やま",
+    "romaji": null,
+    "english": "mountain",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "やる",
+    "hiragana": "やる",
+    "romaji": null,
+    "english": "to do; to give (to pets, parents, siblings, etc.)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "夕方",
+    "hiragana": "ゆうがた",
+    "romaji": null,
+    "english": "late afternoon (typically just before dinner time), evening",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "夕飯",
+    "hiragana": "ゆうはん",
+    "romaji": null,
+    "english": "dinner, supper, evening meal",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "郵便局",
+    "hiragana": "ゆうびんきょく",
+    "romaji": null,
+    "english": "post office",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "昨夜",
+    "hiragana": "ゆうべ",
+    "romaji": null,
+    "english": "last night",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "有名",
+    "hiragana": "ゆうめい",
+    "romaji": null,
+    "english": "famous",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "雪",
+    "hiragana": "ゆき",
+    "romaji": null,
+    "english": "snow",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ゆっくりと",
+    "hiragana": "ゆっくりと",
+    "romaji": null,
+    "english": "slowly, at ease",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "八日",
+    "hiragana": "ようか",
+    "romaji": null,
+    "english": "eight days; eighth day of the month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "洋服",
+    "hiragana": "ようふく",
+    "romaji": null,
+    "english": "Western-style clothes",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "よく",
+    "hiragana": "よく",
+    "romaji": null,
+    "english": "frequently, often (much); well, skillfully",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "横",
+    "hiragana": "よこ",
+    "romaji": null,
+    "english": "beside; side; width",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "四日",
+    "hiragana": "よっか",
+    "romaji": null,
+    "english": "four days; fourth day of the month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "四つ",
+    "hiragana": "よっつ",
+    "romaji": null,
+    "english": "four things",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "呼ぶ",
+    "hiragana": "よぶ",
+    "romaji": null,
+    "english": "to call (one's name); to invite",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "読む",
+    "hiragana": "よむ",
+    "romaji": null,
+    "english": "to read",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "夜",
+    "hiragana": "よる",
+    "romaji": null,
+    "english": "evening, night",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "弱い",
+    "hiragana": "よわい",
+    "romaji": null,
+    "english": "weak",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "来月",
+    "hiragana": "らいげつ",
+    "romaji": null,
+    "english": "next month",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "来週",
+    "hiragana": "らいしゅう",
+    "romaji": null,
+    "english": "next week",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "来年",
+    "hiragana": "らいねん",
+    "romaji": null,
+    "english": "next year",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ラジオ",
+    "hiragana": "ラジオ",
+    "romaji": null,
+    "english": "radio",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ラジオカセ",
+    "hiragana": "ラジオカセ",
+    "romaji": null,
+    "english": "radio cassette player",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "りっぱ",
+    "hiragana": "りっぱ",
+    "romaji": null,
+    "english": "splendid, fine",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "留学生",
+    "hiragana": "りゅうがくせい",
+    "romaji": null,
+    "english": "international student",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "両親",
+    "hiragana": "りょうしん",
+    "romaji": null,
+    "english": "parents (lit., both parents)",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "料理",
+    "hiragana": "りょうり",
+    "romaji": null,
+    "english": "cooking; cuisine",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "旅行",
+    "hiragana": "りょこう",
+    "romaji": null,
+    "english": "travel, trip",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "零",
+    "hiragana": "れい",
+    "romaji": null,
+    "english": "zero, nought",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "冷蔵庫",
+    "hiragana": "れいぞうこ",
+    "romaji": null,
+    "english": "refrigerator",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "レコード",
+    "hiragana": "レコード",
+    "romaji": null,
+    "english": "record",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "レストラン",
+    "hiragana": "レストラン",
+    "romaji": null,
+    "english": "restaurant",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "練習",
+    "hiragana": "れんしゅう (する)",
+    "romaji": null,
+    "english": "(to) practice",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "廊下",
+    "hiragana": "ろうか",
+    "romaji": null,
+    "english": "corridor",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "六",
+    "hiragana": "ろく",
+    "romaji": null,
+    "english": "six",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "ワイシャツ",
+    "hiragana": "ワイシャツ",
+    "romaji": null,
+    "english": "shirt (lit: white shirt), business shirt",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "若い",
+    "hiragana": "わかい",
+    "romaji": null,
+    "english": "young",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "分かる",
+    "hiragana": "わかる",
+    "romaji": null,
+    "english": "to understand",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "忘れる",
+    "hiragana": "わすれる",
+    "romaji": null,
+    "english": "to forget",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "私",
+    "hiragana": "わたし",
+    "romaji": null,
+    "english": "I, myself",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "私",
+    "hiragana": "わたくし",
+    "romaji": null,
+    "english": "I (formal), myself, private affairs",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "渡す",
+    "hiragana": "わたす",
+    "romaji": null,
+    "english": "to hand (something) over (v.t.); to get across",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "渡る",
+    "hiragana": "わたる",
+    "romaji": null,
+    "english": "to cross over, to go across",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  },
+  {
+    "kanji": "悪い",
+    "hiragana": "わるい",
+    "romaji": null,
+    "english": "bad, sinful; inferior",
+    "part_of_speech": null,
+    "chapter": null,
+    "jlpt_level": 5
+  }
+]
