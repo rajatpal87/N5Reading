@@ -1,8 +1,11 @@
 import { useState, useMemo } from 'react';
+import EnhancedVocabularyCard from './EnhancedVocabularyCard';
+import { getPosCategory, getAllPosCategories, getPosCategoryIcon } from '../../utils/posHelper';
 
 export default function VocabularyTable({ vocabulary, onTimestampClick }) {
-  const [sortBy, setSortBy] = useState('frequency'); // 'frequency', 'alphabetical', 'chapter'
+  const [sortBy, setSortBy] = useState('frequency'); // 'frequency', 'alphabetical', 'chapter', 'pos'
   const [filterChapter, setFilterChapter] = useState('all');
+  const [filterPos, setFilterPos] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const words = vocabulary?.words || [];
@@ -23,6 +26,16 @@ export default function VocabularyTable({ vocabulary, onTimestampClick }) {
       filtered = filtered.filter(w => w.chapter === filterChapter);
     }
 
+    // Filter by POS category
+    if (filterPos !== 'all') {
+      filtered = filtered.filter(w => {
+        // Get POS from first occurrence or part_of_speech field
+        const pos = w.occurrences?.[0]?.pos || w.part_of_speech || '';
+        const category = getPosCategory(pos);
+        return category === filterPos;
+      });
+    }
+
     // Filter by search term
     if (searchTerm) {
       const lower = searchTerm.toLowerCase();
@@ -41,19 +54,16 @@ export default function VocabularyTable({ vocabulary, onTimestampClick }) {
         return (a.japanese || a.reading || '').localeCompare(b.japanese || b.reading || '');
       } else if (sortBy === 'chapter') {
         return (a.chapter || '').localeCompare(b.chapter || '');
+      } else if (sortBy === 'pos') {
+        const posA = getPosCategory(a.occurrences?.[0]?.pos || a.part_of_speech || '');
+        const posB = getPosCategory(b.occurrences?.[0]?.pos || b.part_of_speech || '');
+        return posA.localeCompare(posB);
       }
       return 0;
     });
 
     return filtered;
-  }, [words, sortBy, filterChapter, searchTerm]);
-
-  const formatTime = (seconds) => {
-    if (!seconds && seconds !== 0) return '0:00';
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
-  };
+  }, [words, sortBy, filterChapter, filterPos, searchTerm]);
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
@@ -71,9 +81,23 @@ export default function VocabularyTable({ vocabulary, onTimestampClick }) {
             onChange={(e) => setSortBy(e.target.value)}
             className="text-xs border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-yellow-500"
           >
-            <option value="frequency">Sort by: Frequency</option>
-            <option value="alphabetical">Sort by: Alphabetical</option>
-            <option value="chapter">Sort by: Chapter</option>
+            <option value="frequency">Sort: Frequency</option>
+            <option value="alphabetical">Sort: Alphabetical</option>
+            <option value="pos">Sort: Type</option>
+            <option value="chapter">Sort: Chapter</option>
+          </select>
+
+          <select
+            value={filterPos}
+            onChange={(e) => setFilterPos(e.target.value)}
+            className="text-xs border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="all">All Types</option>
+            {getAllPosCategories().map(cat => (
+              <option key={cat} value={cat}>
+                {getPosCategoryIcon(cat)} {cat}
+              </option>
+            ))}
           </select>
 
           <select
@@ -97,44 +121,17 @@ export default function VocabularyTable({ vocabulary, onTimestampClick }) {
         </div>
       </div>
 
-      {/* Table */}
-      <div className="flex-1 overflow-auto">
-        <table className="w-full">
-          <thead className="bg-gray-50 border-b border-gray-200 sticky top-0">
-            <tr>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Japanese</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reading</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">English</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Chapter</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Count</th>
-              <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">First Appears</th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {sortedWords.map((word, idx) => (
-              <tr key={idx} className="hover:bg-yellow-50 transition-colors">
-                <td className="px-4 py-3 whitespace-nowrap font-semibold text-sm text-gray-900">{word.japanese || word.kanji}</td>
-                <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-700">{word.reading || word.hiragana}</td>
-                <td className="px-4 py-3 text-sm text-gray-700">{word.english}</td>
-                <td className="px-4 py-3 whitespace-nowrap text-xs text-gray-500">{word.chapter}</td>
-                <td className="px-4 py-3 whitespace-nowrap text-center">
-                  <span className="inline-flex items-center justify-center px-2 py-0.5 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                    {word.frequency || 1}×
-                  </span>
-                </td>
-                <td className="px-4 py-3 whitespace-nowrap">
-                  <button
-                    onClick={() => onTimestampClick(word.first_appearance || 0)}
-                    className="text-blue-600 hover:text-blue-800 font-mono text-xs hover:underline flex items-center gap-1"
-                  >
-                    <span>🕐</span>
-                    <span>{formatTime(word.first_appearance || 0)}</span>
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Vocabulary Cards Grid */}
+      <div className="flex-1 overflow-auto p-4 bg-gray-50">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {sortedWords.map((word, idx) => (
+            <EnhancedVocabularyCard
+              key={idx}
+              word={word}
+              onTimestampClick={onTimestampClick}
+            />
+          ))}
+        </div>
       </div>
 
       {sortedWords.length === 0 && (

@@ -264,14 +264,15 @@ export default function Dashboard() {
                   <div className="text-xs font-semibold text-yellow-700">N5 Vocabulary</div>
                   <div className="text-xs text-yellow-600">Unique words</div>
                 </div>
-                <div className="bg-gradient-to-br from-green-50 to-green-100 border border-green-300 rounded-lg p-2">
+                {/* Grammar Patterns - Temporarily Hidden for Enhanced Vocabulary Focus */}
+                {/* <div className="bg-gradient-to-br from-green-50 to-green-100 border border-green-300 rounded-lg p-2">
                   <div className="flex items-center gap-1.5 mb-0.5">
                     <span className="text-xl">📝</span>
                     <div className="text-xl font-bold text-green-800">{analysis?.stats?.n5_grammar_unique || analysis?.summary?.n5_grammar_unique || analysis?.grammar?.unique_count || 0}</div>
                   </div>
                   <div className="text-xs font-semibold text-green-700">Grammar Patterns</div>
                   <div className="text-xs text-green-600">N5 structures</div>
-                </div>
+                </div> */}
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-300 rounded-lg p-2">
                   <div className="flex items-center gap-1.5 mb-0.5">
                     <span className="text-xl">⏱️</span>
@@ -324,23 +325,23 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Bottom Section: Vocabulary & Grammar Side-by-Side */}
+        {/* Bottom Section: Enhanced Vocabulary */}
         <div ref={bottomSectionRef} className="flex flex-col lg:flex-row gap-4 pb-4" style={{ height: '600px' }}>
-          {/* Vocabulary Table */}
-          <div className="lg:w-1/2 h-full">
+          {/* Vocabulary Table - Full Width */}
+          <div className="w-full h-full">
             <VocabularyTable
               vocabulary={analysis.vocabulary}
               onTimestampClick={jumpToTime}
             />
           </div>
 
-          {/* Grammar Patterns List */}
-          <div className="lg:w-1/2 h-full">
+          {/* Grammar Patterns List - Temporarily Hidden for Enhanced Vocabulary Focus */}
+          {/* <div className="lg:w-1/2 h-full">
             <GrammarPatternsList
               grammar={analysis.grammar}
               onTimestampClick={jumpToTime}
             />
-          </div>
+          </div> */}
         </div>
       </main>
 
@@ -357,14 +358,14 @@ export default function Dashboard() {
             <button
               onClick={scrollToBottomSection}
               className="group bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all flex items-center gap-2 pr-4 pl-3 py-3"
-              title="View Vocabulary & Grammar"
+              title="View Vocabulary"
             >
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </div>
-              <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all whitespace-nowrap">View Vocabulary & Grammar</span>
+              <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all whitespace-nowrap">View Vocabulary</span>
             </button>
           )}
           {showUpCTA && (

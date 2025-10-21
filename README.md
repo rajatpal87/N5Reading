@@ -1,178 +1,313 @@
-# JLPT N5 Video Coach 🎌
+# N5 Reading - JLPT N5 Video Learning Platform
 
-Transform any Japanese video into an interactive N5 learning experience with automatic vocabulary highlighting, grammar pattern detection, and synchronized translations.
+> Transform YouTube videos into powerful Japanese language learning tools with AI-powered N5 vocabulary and grammar analysis.
 
-## 🎯 What This Does
+## 🎯 Overview
 
-Upload a Japanese video → Get:
-- ✅ Timestamped Japanese transcription
-- ✅ English translations
-- ✅ N5 vocabulary automatically highlighted
-- ✅ Grammar patterns detected and explained
-- ✅ Clickable timestamps to jump to N5-rich segments
-- ✅ Vocabulary lists with chapter references
-- ✅ Study time estimates
+N5 Reading is an intelligent Japanese language learning platform that analyzes Japanese videos, identifies N5-level vocabulary and grammar patterns, and creates interactive learning experiences. Perfect for JLPT N5 students who want to learn through authentic Japanese content.
 
-## 📋 Quick Links
+## ✨ Key Features
 
-- **[📖 Complete Project Plan](./PROJECT_PLAN.md)** - Full technical documentation
-- **[🎬 Demo Videos](#)** - Coming soon
-- **[🐛 Issue Tracker](#)** - Coming soon
+### 📊 Enhanced Vocabulary Analysis
+- **718 N5 Words** from official JLPT vocabulary lists
+- **Advanced Tokenization** using Kuromoji for accurate word detection
+- **Rich Linguistic Data**: Part-of-speech, readings, conjugation forms
+- **Smart Matching**: Detects dictionary forms even in conjugated text
+- **All Word Forms**: See every variation (masu, te, ta, nai forms, etc.)
 
-## 🚀 Quick Start
+### 🎨 Interactive Learning Dashboard
+- **Video Timeline**: Visual representation of N5 content density
+- **Best Segments**: Automatically identified learning moments
+- **Expandable Vocabulary Cards**: Click to see detailed information
+- **Timestamp Navigation**: Jump directly to any word's usage in video
+- **Color-Coded Categories**: Visual organization by word type
+
+### 🔤 Word Categorization
+- **Automatic POS Tagging**: Verbs, Nouns, Adjectives, Particles, etc.
+- **Smart Filtering**: View only verbs, only nouns, or any category
+- **Sort by Type**: Organize vocabulary by grammatical category
+- **Color-Coded Badges**: Each word type has unique color and icon
+
+### 📝 Vocabulary Card Details
+For each word, see:
+- **Main Information**: Kanji, Hiragana, English meaning
+- **Word Type**: Verb, Noun, Adjective, etc. (color-coded)
+- **All Forms Found**: Every variation that appeared in video
+- **Readings**: Hiragana, Katakana, Romaji
+- **Usage Frequency**: How many times it appeared
+- **Clickable Timestamps**: Jump to each occurrence
+- **Conjugation Details**: For verbs and adjectives
+- **JLPT Chapter**: Chapter organization
+
+### 📥 Export Features
+- **CSV Format**: Open in Excel/Google Sheets
+- **Anki Format**: Direct import to flashcard app
+
+### 🎬 Video Processing
+- **YouTube Integration**: Paste any YouTube URL
+- **Local Upload**: Upload your own MP4 files
+- **Automatic Transcription**: Using Whisper AI
+- **Translation**: Japanese → English via DeepL
+- **Progress Tracking**: See processing status in real-time
+
+## 🏗️ Architecture
+
+### Backend (Node.js/Express)
+- **Database**: SQLite (dev) / PostgreSQL (production)
+- **Transcription**: OpenAI Whisper
+- **Translation**: DeepL API
+- **Tokenization**: Kuromoji (Japanese NLP)
+- **Analysis**: Custom N5 detection engine
+
+### Frontend (React + Vite)
+- **Framework**: React 18 with Hooks
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **State**: Local component state
+- **UI**: Responsive design, mobile-friendly
+
+### Key Technologies
+- **Kuromoji**: Advanced Japanese tokenization with POS tagging
+- **Whisper**: State-of-the-art speech recognition
+- **DeepL**: High-quality translation
+- **yt-dlp**: Reliable YouTube video downloading
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+
-- OpenAI API key (for Whisper)
-- DeepL API key (for translation)
+- Node.js 18+ and npm
+- Python 3.8+ (for Whisper)
+- FFmpeg (for audio processing)
+- DeepL API key
 
 ### Installation
+
+1. **Clone the repository**
 ```bash
-# Coming soon after Phase 0 setup
+git clone <repository-url>
+cd N5Reading
 ```
 
-## 📊 Project Status
-
-**Current Phase**: Phase 2 - Video Processing Pipeline
-
-### ✅ Completed Phases
-
-**Phase 0: Setup & Data Preparation**
-- [x] Project planning & documentation
-- [x] Initialize Git repository
-- [x] Frontend setup (React + Vite + Tailwind)
-- [x] Backend setup (Express + SQLite)
-- [x] Extract N5 data (296 words + 50 grammar patterns)
-- [x] Database seeding
-
-**Phase 1: Video Upload & Storage**
-- [x] Drag-and-drop upload UI
-- [x] File validation (size, format, type)
-- [x] Video metadata extraction
-- [x] Video list with cards
-- [x] Delete functionality
-
-**Phase 1B: Security Hardening** 🔒
-- [x] Rate limiting (IP-based)
-- [x] Security headers (Helmet.js)
-- [x] Input validation & sanitization
-- [x] CORS restrictions
-- [x] Request logging
-- [x] Error sanitization
-- [x] XSS & SQL injection protection
-
-### 🚧 Next Steps
-- [ ] YouTube URL download (Phase 2)
-- [ ] Audio extraction with FFmpeg (Phase 2)
-- [ ] Background job queue (Phase 2)
-- [ ] Whisper API integration (Phase 3)
-- [ ] DeepL translation (Phase 3)
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React + Vite + Tailwind CSS
-- **Backend**: Node.js + Express
-- **Security**: Rate limiting, Helmet.js, Input validation, CORS
-- **Database**: SQLite (MVP) → PostgreSQL (Production)
-- **APIs**: OpenAI Whisper, DeepL
-- **Processing**: FFmpeg, TinySegmenter/Kuromoji
-- **Deployment**: Render.com (ready for $7/month)
-
-## 📖 Documentation
-
-- [PROJECT_PLAN.md](./PROJECT_PLAN.md) - Complete project documentation
-  - Technology stack details
-  - System architecture
-  - Database schema
-  - Development phases (week-by-week)
-  - Japanese text processing strategy
-  - Kanji handling approach
-  - External services & costs
-- [SECURITY.md](./SECURITY.md) - 🔒 Security documentation
-  - Implemented security measures
-  - Rate limiting configuration
-  - Input validation
-  - Testing instructions
-  - Incident response plan
-- [DEPLOYMENT_PLAN.md](./DEPLOYMENT_PLAN.md) - 🚀 Deployment guide
-  - Render.com setup ($7/month)
-  - Environment configuration
-  - Scaling strategy
-
-## 🎓 For Developers
-
-### Understanding the Core Challenge
-
-Japanese text has no spaces:
-```
-❌ English: "I am a student" (easy to split)
-✅ Japanese: "私は学生です" (no spaces - needs tokenization!)
+2. **Backend Setup**
+```bash
+cd backend
+npm install
+pip install -r requirements.txt
 ```
 
-This project solves this using Japanese tokenizers to:
-1. Split text into words
-2. Match against N5 vocabulary database
-3. Handle multiple written forms (kanji/hiragana)
-4. Detect grammar patterns
+3. **Configure Environment**
+```bash
+# Create .env file in backend/
+DEEPL_AUTH_KEY=your_deepl_key_here
+DATABASE_URL=your_postgres_url_for_production  # Optional
+```
 
-**Read [PROJECT_PLAN.md](./PROJECT_PLAN.md#japanese-text-processing) for full details**
+4. **Frontend Setup**
+```bash
+cd frontend
+npm install
+```
 
-## 💰 Estimated Costs
+5. **Start Development Servers**
 
-**Development**: ~$2/month  
-**Production** (100 videos/month): ~$15-20/month
+Backend:
+```bash
+cd backend
+npm run dev
+# Runs on http://localhost:3000
+```
 
-See [cost breakdown](./PROJECT_PLAN.md#external-services--costs) for details.
+Frontend:
+```bash
+cd frontend
+npm run dev
+# Runs on http://localhost:5173
+```
 
-## 🗓️ Timeline
+### First Use
 
-- **Week 1-2**: Setup, data preparation, video upload
-- **Week 3**: Transcription & translation pipeline
-- **Week 4**: N5 analysis engine
-- **Week 5**: Interactive video player
-- **Week 6**: Dashboard & polish
+1. Open http://localhost:5173
+2. Upload a Japanese video or paste a YouTube URL
+3. Wait for transcription and analysis (takes a few minutes)
+4. Explore the dashboard with interactive vocabulary cards!
 
-**Total MVP**: 3-4 weeks
+## 📖 Usage Guide
 
-## 💰 Pricing - Progressive JLPT Level Subscriptions
+### Uploading Videos
 
-### Free Trial (7 Days)
-- Full access to N5 analysis
-- Process unlimited videos
-- No credit card required
+**Option 1: YouTube URL**
+1. Go to "Add Video"
+2. Paste any Japanese YouTube URL
+3. Click "Download & Process"
 
-### Subscription Tiers (After Trial)
-- **Free**: 2 videos/month (N5 only)
-- **N5 Learner**: $9.99/month - N5 analysis, unlimited videos *(MVP)*
-- **N4 Learner**: $14.99/month - N5 + N4 analysis *(Phase 11)*
-- **N3 Learner**: $19.99/month - N5 + N4 + N3 analysis *(Phase 12)*
-- **N2 Learner**: $24.99/month - N5 + N4 + N3 + N2 analysis *(Future)*
-- **N1 Master**: $29.99/month - Complete JLPT coverage (N5→N1) *(Future)*
+**Option 2: Local File**
+1. Go to "Add Video"
+2. Click "Upload Local Video"
+3. Select MP4 file
+4. Processing starts automatically
 
-### Annual Plans (Phase 10+)
-Save 17-20% with annual billing:
-- **N5**: $99/year (save $20)
-- **N4**: $149/year (save $30)
-- **N3**: $199/year (save $40)
-- **N2**: $249/year (save $50)
-- **N1**: $299/year (save $60)
+### Using the Dashboard
 
-**Natural Upgrade Path**: Progress from N5 → N4 → N3 → N2 → N1 as you advance in your Japanese learning journey!
+**Video Player**
+- Play/pause the video
+- Player floats when you scroll down
+- Click timestamps to jump to specific words
 
-[See detailed monetization strategy](./PROJECT_PLAN.md#monetization-strategy)
+**N5 Content Timeline**
+- Visual bars show N5 content density
+- Stars ⭐ mark best learning segments
+- Click any segment to jump there
 
----
+**Vocabulary Section**
+- **Filter by Type**: Show only verbs, nouns, etc.
+- **Filter by Chapter**: Focus on specific JLPT chapters
+- **Sort Options**: Frequency, alphabetical, type, chapter
+- **Search**: Find specific words
 
-## 📝 License
+**Vocabulary Cards**
+- Click any card to expand
+- See all forms and conjugations
+- Click timestamps to jump to video
+- View readings and explanations
 
-[To be determined]
+### Export Options
+
+**CSV Export**
+```
+Word | Reading | English | Type | Frequency | First Appears
+食べる | たべる | to eat | Verb | 5 | 1:23
+```
+
+**Anki Export**
+- Optimized for flashcard learning
+- Includes all metadata
+- Ready to import
+
+## 🗄️ Database Schema
+
+### Main Tables
+- **videos**: Video metadata and processing status
+- **transcriptions**: Whisper transcription output
+- **jlpt_vocabulary**: 718 N5 words with metadata
+- **vocabulary_instances**: Every word occurrence with linguistic data
+- **grammar_patterns**: N5 grammar patterns (50 patterns)
+- **detected_grammar**: Grammar occurrences in videos
+
+### Enhanced Metadata (New!)
+Each vocabulary instance now includes:
+- `pos`: Part of speech (動詞, 名詞, etc.)
+- `basic_form`: Dictionary form
+- `reading`: Katakana reading
+- `conjugation_type`: Verb conjugation type
+- `conjugation_form`: Specific form (連用形, 未然形, etc.)
+
+## 🔧 Key Components
+
+### Backend Services
+- `analysisService.js`: Core N5 analysis with Kuromoji
+- `transcriptionService.js`: Whisper integration
+- `translationService.js`: DeepL integration
+- `youtubeService.js`: Video downloading
+
+### Frontend Components
+- `Dashboard.jsx`: Main learning interface
+- `VideoPlayer.jsx`: Video playback with transcription
+- `EnhancedVocabularyCard.jsx`: Rich vocabulary display
+- `VocabularyTable.jsx`: Filterable vocabulary list
+- `N5Timeline.jsx`: Visual content density
+
+### Utilities
+- `posHelper.js`: Part-of-speech categorization
+- `conjugationHelper.js`: Verb conjugation analysis
+
+## 📚 Documentation
+
+- `ENHANCED_VOCABULARY_IMPLEMENTATION.md`: Technical details of vocabulary system
+- `POS_CATEGORIZATION.md`: How word type detection works
+- `CONJUGATION_FORMS.md`: Verb conjugation display
+- `MOCKUPS.md`: UI design mockups
+- `SESSION_SUMMARY.md`: Recent development summary
+
+## 🧪 Testing
+
+**Re-analyze a Video**
+```bash
+curl -X POST http://localhost:3000/api/videos/{VIDEO_ID}/analyze
+```
+
+**Check API Health**
+```bash
+curl http://localhost:3000/api/health
+```
+
+**Test Database**
+```bash
+curl http://localhost:3000/api/test-db
+```
+
+## 📦 Deployment
+
+### Production (Render.com)
+
+**Backend**
+- Automatically deploys from main branch
+- Uses PostgreSQL database
+- Environment variables in Render dashboard
+
+**Frontend**
+- Deploy to Vercel/Netlify
+- Set `VITE_API_URL` to production backend URL
+
+### Migrations
+All database migrations run automatically on startup:
+- Progress tracking columns
+- Grammar timestamps
+- Vocabulary metadata (POS, conjugations)
+
+### Seeding
+Database automatically seeds N5 vocabulary and grammar on first run.
+
+## 🎓 Learning Flow
+
+1. **Upload Video** → System processes
+2. **View Dashboard** → See N5 content summary
+3. **Filter Vocabulary** → Focus on word types
+4. **Expand Cards** → Study individual words
+5. **Click Timestamps** → Hear pronunciation in context
+6. **Export for Review** → Create flashcards
+
+## 🔮 Future Enhancements
+
+- [ ] User accounts and progress tracking
+- [ ] Spaced repetition system integration
+- [ ] N4/N3/N2 level support
+- [ ] Pronunciation practice
+- [ ] Community-shared playlists
+- [ ] Mobile app
+- [ ] Improved grammar pattern recognition
 
 ## 🤝 Contributing
 
-This is currently in active development. Contributions welcome after MVP!
+This is a personal learning project, but suggestions and feedback are welcome!
+
+## 📄 License
+
+[Your License Here]
+
+## 🙏 Acknowledgments
+
+- **Kuromoji**: Japanese morphological analyzer
+- **OpenAI Whisper**: Speech recognition
+- **DeepL**: Translation API
+- **JLPT Resources**: Vocabulary and grammar data
+
+## 📞 Support
+
+For issues or questions, please check the documentation files in this repository.
 
 ---
 
-**Last Updated**: October 19, 2025  
-**Version**: 0.1.0 (Planning Phase)
+**Built with ❤️ for Japanese language learners**
 
+*Current Status: ✅ Production Ready*
+*Last Updated: October 2025*

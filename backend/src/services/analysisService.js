@@ -1,16 +1,96 @@
-import TinySegmenter from 'tiny-segmenter';
+import kuromoji from 'kuromoji';
 import { db, dbType } from '../db/db.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const segmenter = new TinySegmenter();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Lazy-loaded Kuromoji tokenizer
+let kuromojiTokenizer = null;
 
 /**
- * Tokenize Japanese text into words
- * @param {string} text - Japanese text to tokenize
- * @returns {Array<string>} Array of tokens
+ * Initialize Kuromoji tokenizer (lazy loading)
+ * @returns {Promise<Object>} Kuromoji tokenizer instance
  */
-function tokenizeJapanese(text) {
+function getTokenizer() {
+  return new Promise((resolve, reject) => {
+    if (kuromojiTokenizer) {
+      resolve(kuromojiTokenizer);
+    } else {
+      const dicPath = path.join(__dirname, '../../node_modules/kuromoji/dict');
+      kuromoji.builder({ dicPath }).build((err, tokenizer) => {
+        if (err) {
+          reject(err);
+        } else {
+          kuromojiTokenizer = tokenizer;
+          console.log('✅ Kuromoji tokenizer initialized');
+          resolve(tokenizer);
+        }
+      });
+    }
+  });
+}
+
+/**
+ * Tokenize Japanese text into words using Kuromoji
+ * @param {string} text - Japanese text to tokenize
+ * @returns {Promise<Array<string>>} Array of tokens (surface forms)
+ */
+async function tokenizeJapanese(text) {
   if (!text || text.trim().length === 0) return [];
-  return segmenter.segment(text);
+  
+  try {
+    const tokenizer = await getTokenizer();
+    const tokens = tokenizer.tokenize(text);
+    
+    // Return surface forms (like TinySegmenter did)
+    return tokens.map(t => t.surface_form);
+  } catch (error) {
+    console.error('❌ Kuromoji tokenization error:', error);
+    // Fallback: return the original text as a single token
+    return [text];
+  }
+}
+
+/**
+ * Tokenize Japanese text with detailed Kuromoji metadata
+ * Returns full token objects with POS, basic_form, reading, conjugation info
+ * @param {string} text - Japanese text to tokenize
+ * @returns {Promise<Array>} Array of token objects with full metadata
+ */
+async function tokenizeJapaneseDetailed(text) {
+  if (!text || text.trim().length === 0) return [];
+  
+  try {
+    const tokenizer = await getTokenizer();
+    const tokens = tokenizer.tokenize(text);
+    
+    // Return full token objects with all Kuromoji metadata
+    return tokens.map(t => ({
+      surface_form: t.surface_form,
+      pos: t.pos || '*',
+      pos_detail_1: t.pos_detail_1 || '*',
+      pos_detail_2: t.pos_detail_2 || '*',
+      pos_detail_3: t.pos_detail_3 || '*',
+      conjugation_type: t.conjugated_type || '*',
+      conjugation_form: t.conjugated_form || '*',
+      basic_form: t.basic_form || t.surface_form,
+      reading: t.reading || '*',
+      pronunciation: t.pronunciation || '*'
+    }));
+  } catch (error) {
+    console.error('❌ Kuromoji detailed tokenization error:', error);
+    // Fallback: return basic token object
+    return [{
+      surface_form: text,
+      pos: '*',
+      basic_form: text,
+      reading: '*',
+      conjugation_type: '*',
+      conjugation_form: '*'
+    }];
+  }
 }
 
 /**
@@ -63,13 +143,13 @@ async function getN5GrammarPatterns() {
  * Find N5 vocabulary matches in text
  * @param {string} text - Japanese text to analyze
  * @param {Array} vocabulary - N5 vocabulary list
- * @returns {Array} Matched words with positions
+ * @returns {Promise<Array>} Matched words with positions
  */
-function findVocabularyMatches(text, vocabulary) {
-  const tokens = tokenizeJapanese(text);
+async function findVocabularyMatches(text, vocabulary) {
+  const tokens = await tokenizeJapaneseDetailed(text);
   const matches = [];
   
-  // Create lookup maps for faster matching
+  // Create lookup maps for faster matching (match by surface form and basic form)
   const kanjiMap = new Map();
   const hiraganaMap = new Map();
   
@@ -94,33 +174,52 @@ function findVocabularyMatches(text, vocabulary) {
   // Track position in original text
   let currentPos = 0;
   
-  tokens.forEach(token => {
-    // Find token position in text
-    const tokenPos = text.indexOf(token, currentPos);
+  tokens.forEach(tokenObj => {
+    const surfaceForm = tokenObj.surface_form;
+    const basicForm = tokenObj.basic_form;
     
-    // Check if token matches any N5 word
+    // Find token position in text
+    const tokenPos = text.indexOf(surfaceForm, currentPos);
+    
+    // Check if token matches any N5 word (by surface form or basic/dictionary form)
     let matchedWord = null;
     
-    if (kanjiMap.has(token)) {
-      matchedWord = kanjiMap.get(token);
-    } else if (hiraganaMap.has(token)) {
-      matchedWord = hiraganaMap.get(token);
+    // First try surface form
+    if (kanjiMap.has(surfaceForm)) {
+      matchedWord = kanjiMap.get(surfaceForm);
+    } else if (hiraganaMap.has(surfaceForm)) {
+      matchedWord = hiraganaMap.get(surfaceForm);
+    }
+    
+    // If not found, try basic form (dictionary form)
+    if (!matchedWord && basicForm && basicForm !== '*') {
+      if (kanjiMap.has(basicForm)) {
+        matchedWord = kanjiMap.get(basicForm);
+      } else if (hiraganaMap.has(basicForm)) {
+        matchedWord = hiraganaMap.get(basicForm);
+      }
     }
     
     if (matchedWord) {
       matches.push({
         word_id: matchedWord.id,
-        matched_text: token,
+        matched_text: surfaceForm,
         position: tokenPos,
         kanji: matchedWord.kanji,
         hiragana: matchedWord.hiragana,
         english: matchedWord.english,
         part_of_speech: matchedWord.part_of_speech,
         chapter: matchedWord.chapter,
+        // Store Kuromoji metadata
+        pos: tokenObj.pos,
+        basic_form: tokenObj.basic_form,
+        reading: tokenObj.reading,
+        conjugation_type: tokenObj.conjugation_type,
+        conjugation_form: tokenObj.conjugation_form,
       });
     }
     
-    currentPos = tokenPos + token.length;
+    currentPos = tokenPos + surfaceForm.length;
   });
   
   return matches;
@@ -163,13 +262,13 @@ function findGrammarMatches(text, patterns) {
  * Analyze vocabulary in transcription segments
  * @param {Array} segments - Transcription segments with timestamps
  * @param {Array} vocabulary - N5 vocabulary list
- * @returns {Array} Vocabulary matches with timestamps
+ * @returns {Promise<Array>} Vocabulary matches with timestamps
  */
-function analyzeVocabularyInSegments(segments, vocabulary) {
+async function analyzeVocabularyInSegments(segments, vocabulary) {
   const allMatches = [];
   
-  segments.forEach(segment => {
-    const matches = findVocabularyMatches(segment.text || '', vocabulary);
+  for (const segment of segments) {
+    const matches = await findVocabularyMatches(segment.text || '', vocabulary);
     
     matches.forEach(match => {
       allMatches.push({
@@ -179,7 +278,7 @@ function analyzeVocabularyInSegments(segments, vocabulary) {
         segment_text: segment.text,
       });
     });
-  });
+  }
   
   return allMatches;
 }
@@ -256,7 +355,7 @@ export async function analyzeVideo(videoId) {
     console.log(`📚 Loaded ${vocabulary.length} N5 words, ${grammarPatterns.length} patterns`);
     
     // 3. Analyze vocabulary
-    const vocabularyMatches = analyzeVocabularyInSegments(segments, vocabulary);
+    const vocabularyMatches = await analyzeVocabularyInSegments(segments, vocabulary);
     
     // Deduplicate (same word might appear multiple times)
     const uniqueWords = new Map();
@@ -321,11 +420,11 @@ export async function analyzeVideo(videoId) {
     for (const match of vocabularyMatches) {
       const insertQuery = dbType === 'postgresql'
         ? `INSERT INTO vocabulary_instances 
-           (transcription_id, word_id, matched_text, start_time, end_time) 
-           VALUES ($1, $2, $3, $4, $5)`
+           (transcription_id, word_id, matched_text, start_time, end_time, pos, basic_form, reading, conjugation_type, conjugation_form) 
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`
         : `INSERT INTO vocabulary_instances 
-           (transcription_id, word_id, matched_text, start_time, end_time) 
-           VALUES (?, ?, ?, ?, ?)`;
+           (transcription_id, word_id, matched_text, start_time, end_time, pos, basic_form, reading, conjugation_type, conjugation_form) 
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
       
       if (dbType === 'postgresql') {
         await db.query(insertQuery, [
@@ -334,6 +433,11 @@ export async function analyzeVideo(videoId) {
           match.matched_text,
           match.start_time,
           match.end_time,
+          match.pos || null,
+          match.basic_form || null,
+          match.reading || null,
+          match.conjugation_type || null,
+          match.conjugation_form || null,
         ]);
       } else {
         await new Promise((resolve, reject) => {
@@ -343,6 +447,11 @@ export async function analyzeVideo(videoId) {
             match.matched_text,
             match.start_time,
             match.end_time,
+            match.pos || null,
+            match.basic_form || null,
+            match.reading || null,
+            match.conjugation_type || null,
+            match.conjugation_form || null,
           ], (err) => {
             if (err) reject(err);
             else resolve();
@@ -388,7 +497,7 @@ export async function analyzeVideo(videoId) {
     }
     
     // 6. Calculate statistics
-    const totalWords = tokenizeJapanese(fullText).length;
+    const totalWords = (await tokenizeJapanese(fullText)).length;
     const n5WordCount = vocabularyMatches.length;
     const n5Density = totalWords > 0 ? (n5WordCount / totalWords) : 0;
     
@@ -520,7 +629,7 @@ export async function getVideoAnalysis(videoId) {
       });
     }
     
-    // Group vocabulary by word
+    // Group vocabulary by word with enhanced Kuromoji metadata
     const vocabularyMap = new Map();
     vocabularyInstances.forEach(instance => {
       if (!vocabularyMap.has(instance.word_id)) {
@@ -532,6 +641,7 @@ export async function getVideoAnalysis(videoId) {
           part_of_speech: instance.part_of_speech,
           chapter: instance.chapter,
           occurrences: [],
+          forms: new Set(), // Track all forms this word appears in
           first_appearance: instance.start_time, // Initialize with first occurrence
         });
       }
@@ -543,10 +653,20 @@ export async function getVideoAnalysis(videoId) {
         wordData.first_appearance = instance.start_time;
       }
       
+      // Track unique forms
+      if (instance.matched_text) {
+        wordData.forms.add(instance.matched_text);
+      }
+      
       wordData.occurrences.push({
         start_time: instance.start_time,
         end_time: instance.end_time,
         matched_text: instance.matched_text,
+        pos: instance.pos,
+        basic_form: instance.basic_form,
+        reading: instance.reading,
+        conjugation_type: instance.conjugation_type,
+        conjugation_form: instance.conjugation_form,
       });
     });
     
@@ -585,6 +705,7 @@ export async function getVideoAnalysis(videoId) {
           reading: word.hiragana,
           frequency: word.occurrences.length,
           first_appearance: word.first_appearance,
+          forms: Array.from(word.forms), // Convert Set to Array
         })),
       },
       grammar: {
@@ -748,7 +869,7 @@ export async function getN5Timeline(videoId, segmentDuration = 15) {
       const segmentsInRange = segments.filter(s => s.start >= startTime && s.start < endTime);
       for (const seg of segmentsInRange) {
         if (seg.text) {
-          totalWords += tokenizeJapanese(seg.text).length;
+          totalWords += (await tokenizeJapanese(seg.text)).length;
         }
       }
       

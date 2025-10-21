@@ -85,6 +85,11 @@ export const createTables = (db, dbType = 'sqlite') => {
         matched_text TEXT NOT NULL,
         start_time REAL,
         end_time REAL,
+        pos TEXT,
+        basic_form TEXT,
+        reading TEXT,
+        conjugation_type TEXT,
+        conjugation_form TEXT,
         FOREIGN KEY (transcription_id) REFERENCES transcriptions(id) ON DELETE CASCADE,
         FOREIGN KEY (word_id) REFERENCES jlpt_vocabulary(id)
       )`,

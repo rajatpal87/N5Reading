@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import EnhancedVocabularyCard from '../components/dashboard/EnhancedVocabularyCard';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
@@ -73,7 +74,7 @@ export default function VideoPlayer() {
       const scrollY = window.scrollY || window.pageYOffset;
       const secondFoldTop = secondFoldRef.current?.offsetTop ?? viewportH;
 
-      // Show "View Vocabulary & Grammar" when we're above the second fold
+      // Show "View Vocabulary" when we're above the second fold
       setShowDownCTA(scrollY < secondFoldTop - 100);
       // Show "Back to Video" when we've reached/passed the second fold
       setShowUpCTA(scrollY >= secondFoldTop - 100);
@@ -270,10 +271,11 @@ export default function VideoPlayer() {
                         <div className="text-2xl font-bold text-blue-600">{analysis.stats.n5_word_unique}</div>
                         <div className="text-xs text-gray-600 mt-1">Words</div>
                       </div>
-                      <div className="bg-white rounded-lg p-3 shadow-sm">
+                      {/* Grammar - Temporarily Hidden for Enhanced Vocabulary Focus */}
+                      {/* <div className="bg-white rounded-lg p-3 shadow-sm">
                         <div className="text-2xl font-bold text-green-600">{analysis.stats.n5_grammar_unique}</div>
                         <div className="text-xs text-gray-600 mt-1">Grammar</div>
-                      </div>
+                      </div> */}
                       <div className="bg-white rounded-lg p-3 shadow-sm">
                         <div className="text-2xl font-bold text-purple-600">{analysis.stats.study_time_estimate}</div>
                         <div className="text-xs text-gray-600 mt-1">Minutes</div>
@@ -360,46 +362,27 @@ export default function VideoPlayer() {
           <div ref={secondFoldRef} className="min-h-screen relative bg-gray-50 py-8">
 
             <div className="max-w-7xl mx-auto px-4 pt-16">
-              <div className="grid lg:grid-cols-2 gap-6">
-                {/* Vocabulary Section */}
-                {analysis.vocabulary && analysis.vocabulary.words && analysis.vocabulary.words.length > 0 && (
-                  <div className="bg-white rounded-lg shadow-lg p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                      🟡 N5 Vocabulary
-                      <span className="text-lg font-normal text-gray-500">({analysis.vocabulary.unique_count})</span>
-                    </h3>
-                    <div className="space-y-3 max-h-[600px] overflow-y-auto">
-                      {analysis.vocabulary.words.map((word, idx) => (
-                        <div key={idx} className="bg-gradient-to-r from-yellow-50 to-white rounded-lg p-4 border border-yellow-200 hover:shadow-md transition-shadow">
-                          <div className="flex justify-between items-start">
-                            <div className="flex-1">
-                              <div className="flex items-baseline gap-2">
-                                <span className="text-2xl font-bold text-gray-900">{word.kanji || word.hiragana}</span>
-                                {word.kanji && (
-                                  <span className="text-base text-gray-500">({word.hiragana})</span>
-                                )}
-                              </div>
-                              <p className="text-base text-gray-700 mt-1">{word.english}</p>
-                              {word.chapter && (
-                                <span className="inline-block text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded mt-2">
-                                  {word.chapter}
-                                </span>
-                              )}
-                            </div>
-                            {word.occurrences && (
-                              <span className="text-sm bg-yellow-200 text-yellow-900 px-3 py-1 rounded-full font-semibold">
-                                ×{word.occurrences.length}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+              {/* Vocabulary Section - Full Width */}
+              {analysis.vocabulary && analysis.vocabulary.words && analysis.vocabulary.words.length > 0 && (
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                    🟡 Enhanced N5 Vocabulary
+                    <span className="text-lg font-normal text-gray-500">({analysis.vocabulary.unique_count})</span>
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[800px] overflow-y-auto pr-2">
+                    {analysis.vocabulary.words.map((word, idx) => (
+                      <EnhancedVocabularyCard
+                        key={idx}
+                        word={word}
+                        onTimestampClick={jumpToVideoTime}
+                      />
+                    ))}
                   </div>
-                )}
+                </div>
+              )}
 
-                {/* Grammar Patterns Section */}
-                {analysis.grammar && analysis.grammar.patterns && analysis.grammar.patterns.length > 0 && (
+                {/* Grammar Patterns Section - Temporarily Hidden for Enhanced Vocabulary Focus */}
+                {/* {analysis.grammar && analysis.grammar.patterns && analysis.grammar.patterns.length > 0 && (
                   <div className="bg-white rounded-lg shadow-lg p-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                       📝 Grammar Patterns
@@ -424,28 +407,27 @@ export default function VideoPlayer() {
                       ))}
                     </div>
                   </div>
-                )}
-              </div>
+                )} */}
             </div>
           </div>
         )}
       </main>
 
       {/* Floating bottom-right CTA (hover-expand, switches based on scroll position) */}
-      {analysis && (analysis.vocabulary?.words?.length > 0 || analysis.grammar?.patterns?.length > 0) && (
+      {analysis && analysis.vocabulary?.words?.length > 0 && (
         <div className="fixed bottom-6 right-6 z-50">
           {showDownCTA && (
             <button
               onClick={scrollToSecondFold}
               className="group bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all flex items-center gap-2 pr-4 pl-3 py-3"
-              title="View Vocabulary & Grammar"
+              title="View Vocabulary"
             >
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </div>
-              <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all whitespace-nowrap">View Vocabulary & Grammar</span>
+              <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all whitespace-nowrap">View Vocabulary</span>
             </button>
           )}
           {showUpCTA && (

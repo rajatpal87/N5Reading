@@ -1,0 +1,6063 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "original_text": "みなさん こんにちは なおこです",
+      "token_count": 8,
+      "tokens_tiny": "みなさん |   | こん | にち | は |   | なおこ | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 6,
+      "kuromoji_words": "みなさん |   | こんにちは |   | なおこ | です",
+      "kuromoji_basic": "みなさん | * | こんにちは | * | なおこ | です",
+      "kuromoji_pos": "名詞 | 記号 | 感動詞 | 記号 | 名詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "みなさん",
+          "pos": "名詞",
+          "basic": "みなさん",
+          "reading": "ミナサン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "こんにちは",
+          "pos": "感動詞",
+          "basic": "こんにちは",
+          "reading": "コンニチハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "なおこ",
+          "pos": "名詞",
+          "basic": "なおこ",
+          "reading": "ナオコ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": 2
+    },
+    {
+      "id": 2,
+      "original_text": "みなさん きのうは なにをしましたか?",
+      "token_count": 13,
+      "tokens_tiny": "みなさん |   | き | のう | は |   | なに | を | し | まし | た | か | ?",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 12,
+      "kuromoji_words": "みなさん |   | きのう | は |   | なに | を | し | まし | た | か | ?",
+      "kuromoji_basic": "みなさん | * | きのう | は | * | なに | を | する | ます | た | か | *",
+      "kuromoji_pos": "名詞 | 記号 | 名詞 | 助詞 | 記号 | 名詞 | 助詞 | 動詞 | 助動詞 | 助動詞 | 助詞 | 名詞",
+      "kuromoji_detailed": [
+        {
+          "word": "みなさん",
+          "pos": "名詞",
+          "basic": "みなさん",
+          "reading": "ミナサン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "きのう",
+          "pos": "名詞",
+          "basic": "きのう",
+          "reading": "キノウ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "なに",
+          "pos": "名詞",
+          "basic": "なに",
+          "reading": "ナニ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        },
+        {
+          "word": "?",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 3,
+      "original_text": "きょうは きのうしたことについて はなします",
+      "token_count": 13,
+      "tokens_tiny": "きょう | は |   | き | のう | し | た | こと | について |   | は | なし | ます",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 11,
+      "kuromoji_words": "きょう | は |   | きのう | し | た | こと | について |   | はなし | ます",
+      "kuromoji_basic": "きょう | は | * | きのう | する | た | こと | について | * | はなす | ます",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 動詞 | 助動詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "きょう",
+          "pos": "名詞",
+          "basic": "きょう",
+          "reading": "キョウ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "きのう",
+          "pos": "名詞",
+          "basic": "きのう",
+          "reading": "キノウ"
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "こと",
+          "pos": "名詞",
+          "basic": "こと",
+          "reading": "コト"
+        },
+        {
+          "word": "について",
+          "pos": "助詞",
+          "basic": "について",
+          "reading": "ニツイテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "はなし",
+          "pos": "動詞",
+          "basic": "はなす",
+          "reading": "ハナシ"
+        },
+        {
+          "word": "ます",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マス"
+        }
+      ],
+      "token_diff": 2
+    },
+    {
+      "id": 4,
+      "original_text": "どれくらい りかいできるか チャレンジです",
+      "token_count": 8,
+      "tokens_tiny": "どれくらい |   | りかい | できる | か |   | チャレンジ | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 10,
+      "kuromoji_words": "どれ | くらい |   | り | かい | できる | か |   | チャレンジ | です",
+      "kuromoji_basic": "どれ | くらい | * | り | かい | できる | か | * | チャレンジ | です",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 助動詞 | 助詞 | 動詞 | 助詞 | 記号 | 名詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "どれ",
+          "pos": "名詞",
+          "basic": "どれ",
+          "reading": "ドレ"
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "り",
+          "pos": "助動詞",
+          "basic": "り",
+          "reading": "リ"
+        },
+        {
+          "word": "かい",
+          "pos": "助詞",
+          "basic": "かい",
+          "reading": "カイ"
+        },
+        {
+          "word": "できる",
+          "pos": "動詞",
+          "basic": "できる",
+          "reading": "デキル"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "チャレンジ",
+          "pos": "名詞",
+          "basic": "チャレンジ",
+          "reading": "チャレンジ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 5,
+      "original_text": "どうぞ",
+      "token_count": 1,
+      "tokens_tiny": "どうぞ",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 1,
+      "kuromoji_words": "どうぞ",
+      "kuromoji_basic": "どうぞ",
+      "kuromoji_pos": "感動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "どうぞ",
+          "pos": "感動詞",
+          "basic": "どうぞ",
+          "reading": "ドウゾ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 6,
+      "original_text": "わたしは きのう あさ 8じくらいに おきて",
+      "token_count": 12,
+      "tokens_tiny": "わたし | は |   | きのう |   | あさ |   | 8 | じくらい | に |   | おきて",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "わたし | は |   | きのう |   | あ | さ |   | 8 | じ | くらい | に |   | おき | て",
+      "kuromoji_basic": "わたし | は | * | きのう | * | あ | さ | * | * | じ | くらい | に | * | おきる | て",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 記号 | 感動詞 | 助詞 | 記号 | 名詞 | 助動詞 | 助詞 | 助詞 | 記号 | 動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "わたし",
+          "pos": "名詞",
+          "basic": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "きのう",
+          "pos": "名詞",
+          "basic": "きのう",
+          "reading": "キノウ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あ",
+          "pos": "感動詞",
+          "basic": "あ",
+          "reading": "ア"
+        },
+        {
+          "word": "さ",
+          "pos": "助詞",
+          "basic": "さ",
+          "reading": "サ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "8",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "じ",
+          "pos": "助動詞",
+          "basic": "じ",
+          "reading": "ジ"
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "おき",
+          "pos": "動詞",
+          "basic": "おきる",
+          "reading": "オキ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        }
+      ],
+      "token_diff": -3
+    },
+    {
+      "id": 7,
+      "original_text": "かおを あらって はを みがきました",
+      "token_count": 11,
+      "tokens_tiny": "かお | を |   | あらって |   | は | を |   | みがき | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 12,
+      "kuromoji_words": "かお | を |   | あらっ | て |   | は | を |   | みがき | まし | た",
+      "kuromoji_basic": "かお | を | * | あらう | て | * | は | を | * | みがく | ます | た",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 動詞 | 助詞 | 記号 | 助詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "かお",
+          "pos": "名詞",
+          "basic": "かお",
+          "reading": "カオ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あらっ",
+          "pos": "動詞",
+          "basic": "あらう",
+          "reading": "アラッ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "みがき",
+          "pos": "動詞",
+          "basic": "みがく",
+          "reading": "ミガキ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 8,
+      "original_text": "そして メイクをして きがえました",
+      "token_count": 10,
+      "tokens_tiny": "そして |   | メイク | を | して |   | き | がえ | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 10,
+      "kuromoji_words": "そして |   | メイク | を | し | て |   | きがえ | まし | た",
+      "kuromoji_basic": "そして | * | メイク | を | する | て | * | きがえる | ます | た",
+      "kuromoji_pos": "接続詞 | 記号 | 名詞 | 助詞 | 動詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "メイク",
+          "pos": "名詞",
+          "basic": "メイク",
+          "reading": "メイク"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "きがえ",
+          "pos": "動詞",
+          "basic": "きがえる",
+          "reading": "キガエ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 9,
+      "original_text": "そして おみずを いっぱい のみました",
+      "token_count": 10,
+      "tokens_tiny": "そして |   | おみず | を |   | いっぱい |   | のみ | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 12,
+      "kuromoji_words": "そして |   | お | み | ず | を |   | いっぱい |   | のみ | まし | た",
+      "kuromoji_basic": "そして | * | お | みる | ぬ | を | * | いっぱい | * | のむ | ます | た",
+      "kuromoji_pos": "接続詞 | 記号 | 接頭詞 | 動詞 | 助動詞 | 助詞 | 記号 | 副詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "お",
+          "pos": "接頭詞",
+          "basic": "お",
+          "reading": "オ"
+        },
+        {
+          "word": "み",
+          "pos": "動詞",
+          "basic": "みる",
+          "reading": "ミ"
+        },
+        {
+          "word": "ず",
+          "pos": "助動詞",
+          "basic": "ぬ",
+          "reading": "ズ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いっぱい",
+          "pos": "副詞",
+          "basic": "いっぱい",
+          "reading": "イッパイ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "のみ",
+          "pos": "動詞",
+          "basic": "のむ",
+          "reading": "ノミ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 10,
+      "original_text": "わたしは ふだん あさごはんを ぜんぜん たべません",
+      "token_count": 13,
+      "tokens_tiny": "わたし | は |   | ふだん |   | あさご | はん | を |   | ぜんぜん |   | たべませ | ん",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "わたし | は |   | ふだん |   | あ | さ | ごはん | を |   | ぜんぜん |   | たべ | ませ | ん",
+      "kuromoji_basic": "わたし | は | * | ふだん | * | あ | さ | ごはん | を | * | ぜんぜん | * | たべる | ます | ん",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 記号 | 感動詞 | 助詞 | 名詞 | 助詞 | 記号 | 副詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "わたし",
+          "pos": "名詞",
+          "basic": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ふだん",
+          "pos": "名詞",
+          "basic": "ふだん",
+          "reading": "フダン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あ",
+          "pos": "感動詞",
+          "basic": "あ",
+          "reading": "ア"
+        },
+        {
+          "word": "さ",
+          "pos": "助詞",
+          "basic": "さ",
+          "reading": "サ"
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ぜんぜん",
+          "pos": "副詞",
+          "basic": "ぜんぜん",
+          "reading": "ゼンゼン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "ませ",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マセ"
+        },
+        {
+          "word": "ん",
+          "pos": "助動詞",
+          "basic": "ん",
+          "reading": "ン"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 11,
+      "original_text": "こうこうせいのときは よく あさごはんを たべていました",
+      "token_count": 18,
+      "tokens_tiny": "こう | こう | せい | の | とき | は |   | よく |   | あさご | はん | を |   | たべ | て | い | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 18,
+      "kuromoji_words": "こう | こうせい | の | とき | は |   | よく |   | あ | さ | ごはん | を |   | たべ | て | い | まし | た",
+      "kuromoji_basic": "こう | こうせい | の | とき | は | * | よく | * | あ | さ | ごはん | を | * | たべる | て | いる | ます | た",
+      "kuromoji_pos": "副詞 | 名詞 | 助詞 | 名詞 | 助詞 | 記号 | 副詞 | 記号 | 感動詞 | 助詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "こう",
+          "pos": "副詞",
+          "basic": "こう",
+          "reading": "コウ"
+        },
+        {
+          "word": "こうせい",
+          "pos": "名詞",
+          "basic": "こうせい",
+          "reading": "コウセイ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": "とき",
+          "pos": "名詞",
+          "basic": "とき",
+          "reading": "トキ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "よく",
+          "pos": "副詞",
+          "basic": "よく",
+          "reading": "ヨク"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あ",
+          "pos": "感動詞",
+          "basic": "あ",
+          "reading": "ア"
+        },
+        {
+          "word": "さ",
+          "pos": "助詞",
+          "basic": "さ",
+          "reading": "サ"
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": "い",
+          "pos": "動詞",
+          "basic": "いる",
+          "reading": "イ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 12,
+      "original_text": "たとえば みそしるとか ごはんとか ぱん",
+      "token_count": 12,
+      "tokens_tiny": "た | とえば |   | みそしる | とか |   | ご | はん | と | か |   | ぱん",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 10,
+      "kuromoji_words": "たとえば |   | みそ | しる | とか |   | ごはん | とか |   | ぱん",
+      "kuromoji_basic": "たとえば | * | みそ | しる | とか | * | ごはん | とか | * | *",
+      "kuromoji_pos": "接続詞 | 記号 | 名詞 | 動詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 名詞",
+      "kuromoji_detailed": [
+        {
+          "word": "たとえば",
+          "pos": "接続詞",
+          "basic": "たとえば",
+          "reading": "タトエバ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "みそ",
+          "pos": "名詞",
+          "basic": "みそ",
+          "reading": "ミソ"
+        },
+        {
+          "word": "しる",
+          "pos": "動詞",
+          "basic": "しる",
+          "reading": "シル"
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ぱん",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        }
+      ],
+      "token_diff": 2
+    },
+    {
+      "id": 13,
+      "original_text": "そして まえのひの よるごはんに たべた のこり",
+      "token_count": 16,
+      "tokens_tiny": "そして |   | まえ | の | ひ | の |   | よる | ご | はん | に |   | たべた |   | の | こり",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "そして |   | まえ | の | ひ | の |   | よる | ごはん | に |   | たべ | た |   | のこり",
+      "kuromoji_basic": "そして | * | まえる | の | ひる | の | * | よる | ごはん | に | * | たべる | た | * | のこる",
+      "kuromoji_pos": "接続詞 | 記号 | 動詞 | 助詞 | 動詞 | 助詞 | 記号 | 動詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 記号 | 動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "まえ",
+          "pos": "動詞",
+          "basic": "まえる",
+          "reading": "マエ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": "ひ",
+          "pos": "動詞",
+          "basic": "ひる",
+          "reading": "ヒ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "よる",
+          "pos": "動詞",
+          "basic": "よる",
+          "reading": "ヨル"
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "のこり",
+          "pos": "動詞",
+          "basic": "のこる",
+          "reading": "ノコリ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 14,
+      "original_text": "のこりものを よく たべていました",
+      "token_count": 12,
+      "tokens_tiny": "の | こり | もの | を |   | よく |   | たべ | て | い | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 11,
+      "kuromoji_words": "のこり | もの | を |   | よく |   | たべ | て | い | まし | た",
+      "kuromoji_basic": "のこる | もの | を | * | よく | * | たべる | て | いる | ます | た",
+      "kuromoji_pos": "動詞 | 名詞 | 助詞 | 記号 | 副詞 | 記号 | 動詞 | 助詞 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "のこり",
+          "pos": "動詞",
+          "basic": "のこる",
+          "reading": "ノコリ"
+        },
+        {
+          "word": "もの",
+          "pos": "名詞",
+          "basic": "もの",
+          "reading": "モノ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "よく",
+          "pos": "副詞",
+          "basic": "よく",
+          "reading": "ヨク"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": "い",
+          "pos": "動詞",
+          "basic": "いる",
+          "reading": "イ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 15,
+      "original_text": "のこりものです",
+      "token_count": 4,
+      "tokens_tiny": "の | こり | もの | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 3,
+      "kuromoji_words": "のこり | もの | です",
+      "kuromoji_basic": "のこる | もの | です",
+      "kuromoji_pos": "動詞 | 名詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "のこり",
+          "pos": "動詞",
+          "basic": "のこる",
+          "reading": "ノコリ"
+        },
+        {
+          "word": "もの",
+          "pos": "名詞",
+          "basic": "もの",
+          "reading": "モノ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 16,
+      "original_text": "でも さいきんは ぜんぜん あさごはんを たべません",
+      "token_count": 13,
+      "tokens_tiny": "でも |   | さいきん | は |   | ぜんぜん |   | あさご | はん | を |   | たべませ | ん",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 16,
+      "kuromoji_words": "でも |   | さいき | ん | は |   | ぜんぜん |   | あ | さ | ごはん | を |   | たべ | ませ | ん",
+      "kuromoji_basic": "でも | * | さいき | ん | は | * | ぜんぜん | * | あ | さ | ごはん | を | * | たべる | ます | ん",
+      "kuromoji_pos": "接続詞 | 記号 | 名詞 | 名詞 | 助詞 | 記号 | 副詞 | 記号 | 感動詞 | 助詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "でも",
+          "pos": "接続詞",
+          "basic": "でも",
+          "reading": "デモ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "さいき",
+          "pos": "名詞",
+          "basic": "さいき",
+          "reading": "サイキ"
+        },
+        {
+          "word": "ん",
+          "pos": "名詞",
+          "basic": "ん",
+          "reading": "ン"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ぜんぜん",
+          "pos": "副詞",
+          "basic": "ぜんぜん",
+          "reading": "ゼンゼン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あ",
+          "pos": "感動詞",
+          "basic": "あ",
+          "reading": "ア"
+        },
+        {
+          "word": "さ",
+          "pos": "助詞",
+          "basic": "さ",
+          "reading": "サ"
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "ませ",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マセ"
+        },
+        {
+          "word": "ん",
+          "pos": "助動詞",
+          "basic": "ん",
+          "reading": "ン"
+        }
+      ],
+      "token_diff": -3
+    },
+    {
+      "id": 17,
+      "original_text": "そして せんたくをして せんたくものを ほしました",
+      "token_count": 15,
+      "tokens_tiny": "そして |   | せん | たく | を | し | て |   | せんたく | もの | を |   | ほし | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 16,
+      "kuromoji_words": "そして |   | せん | たく | を | し | て |   | せん | たく | もの | を |   | ほし | まし | た",
+      "kuromoji_basic": "そして | * | せん | たく | を | する | て | * | せん | たく | もの | を | * | ほす | ます | た",
+      "kuromoji_pos": "接続詞 | 記号 | 名詞 | 名詞 | 助詞 | 動詞 | 助詞 | 記号 | 名詞 | 動詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "せん",
+          "pos": "名詞",
+          "basic": "せん",
+          "reading": "セン"
+        },
+        {
+          "word": "たく",
+          "pos": "名詞",
+          "basic": "たく",
+          "reading": "タク"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "せん",
+          "pos": "名詞",
+          "basic": "せん",
+          "reading": "セン"
+        },
+        {
+          "word": "たく",
+          "pos": "動詞",
+          "basic": "たく",
+          "reading": "タク"
+        },
+        {
+          "word": "もの",
+          "pos": "名詞",
+          "basic": "もの",
+          "reading": "モノ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ほし",
+          "pos": "動詞",
+          "basic": "ほす",
+          "reading": "ホシ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 18,
+      "original_text": "そして あさの 9じくらいに",
+      "token_count": 7,
+      "tokens_tiny": "そして |   | あさの |   | 9 | じくらい | に",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 8,
+      "kuromoji_words": "そして |   | あさの |   | 9 | じ | くらい | に",
+      "kuromoji_basic": "そして | * | あさの | * | * | じ | くらい | に",
+      "kuromoji_pos": "接続詞 | 記号 | 名詞 | 記号 | 名詞 | 助動詞 | 助詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あさの",
+          "pos": "名詞",
+          "basic": "あさの",
+          "reading": "アサノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "9",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "じ",
+          "pos": "助動詞",
+          "basic": "じ",
+          "reading": "ジ"
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 19,
+      "original_text": "わたしの しんせきの はたけに いきました",
+      "token_count": 13,
+      "tokens_tiny": "わたし | の |   | しんせき | の |   | は | たけ | に |   | いき | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 13,
+      "kuromoji_words": "わたし | の |   | しん | せき | の |   | はたけ | に |   | いき | まし | た",
+      "kuromoji_basic": "わたし | の | * | しん | せき | の | * | はたける | に | * | いく | ます | た",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "わたし",
+          "pos": "名詞",
+          "basic": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "しん",
+          "pos": "名詞",
+          "basic": "しん",
+          "reading": "シン"
+        },
+        {
+          "word": "せき",
+          "pos": "名詞",
+          "basic": "せき",
+          "reading": "セキ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "はたけ",
+          "pos": "動詞",
+          "basic": "はたける",
+          "reading": "ハタケ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いき",
+          "pos": "動詞",
+          "basic": "いく",
+          "reading": "イキ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 20,
+      "original_text": "ごぜんちゅうは はたけで すこし はたらきました",
+      "token_count": 13,
+      "tokens_tiny": "ごぜんちゅう | は |   | は | たけ | で |   | すこし |   | は | たらき | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 12,
+      "kuromoji_words": "ご | ぜんち | ゅうは |   | はたけ | で |   | すこし |   | はたらき | まし | た",
+      "kuromoji_basic": "ご | ぜんち | * | * | はたける | で | * | すこし | * | はたらく | ます | た",
+      "kuromoji_pos": "接頭詞 | 名詞 | 名詞 | 記号 | 動詞 | 助詞 | 記号 | 副詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ご",
+          "pos": "接頭詞",
+          "basic": "ご",
+          "reading": "ゴ"
+        },
+        {
+          "word": "ぜんち",
+          "pos": "名詞",
+          "basic": "ぜんち",
+          "reading": "ゼンチ"
+        },
+        {
+          "word": "ゅうは",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "はたけ",
+          "pos": "動詞",
+          "basic": "はたける",
+          "reading": "ハタケ"
+        },
+        {
+          "word": "で",
+          "pos": "助詞",
+          "basic": "で",
+          "reading": "デ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "すこし",
+          "pos": "副詞",
+          "basic": "すこし",
+          "reading": "スコシ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "はたらき",
+          "pos": "動詞",
+          "basic": "はたらく",
+          "reading": "ハタラキ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 21,
+      "original_text": "ビーツの たねを まきました",
+      "token_count": 9,
+      "tokens_tiny": "ビーツ | の |   | たね | を |   | まき | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 9,
+      "kuromoji_words": "ビーツ | の |   | たね | を |   | まき | まし | た",
+      "kuromoji_basic": "* | の | * | たね | を | * | まく | ます | た",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ビーツ",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たね",
+          "pos": "名詞",
+          "basic": "たね",
+          "reading": "タネ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "まき",
+          "pos": "動詞",
+          "basic": "まく",
+          "reading": "マキ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 22,
+      "original_text": "ビーツは あかいやさいですね",
+      "token_count": 6,
+      "tokens_tiny": "ビーツ | は |   | あかいやさい | です | ね",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 7,
+      "kuromoji_words": "ビーツ | は |   | あかい | やさい | です | ね",
+      "kuromoji_basic": "* | は | * | あかい | やさい | です | ね",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 形容詞 | 形容詞 | 助動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ビーツ",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あかい",
+          "pos": "形容詞",
+          "basic": "あかい",
+          "reading": "アカイ"
+        },
+        {
+          "word": "やさい",
+          "pos": "形容詞",
+          "basic": "やさい",
+          "reading": "ヤサイ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        },
+        {
+          "word": "ね",
+          "pos": "助詞",
+          "basic": "ね",
+          "reading": "ネ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 23,
+      "original_text": "たくさん たねを まいたので たべるのが たのしみです",
+      "token_count": 18,
+      "tokens_tiny": "たく | さん |   | たね | を |   | まい | た | の | で |   | たべる | の | が |   | た | のしみ | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "たくさん |   | たね | を |   | まい | た | ので |   | たべる | の | が |   | たのしみ | です",
+      "kuromoji_basic": "たくさん | * | たね | を | * | まく | た | ので | * | たべる | の | が | * | たのしむ | です",
+      "kuromoji_pos": "名詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助詞 | 記号 | 動詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "たくさん",
+          "pos": "名詞",
+          "basic": "たくさん",
+          "reading": "タクサン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たね",
+          "pos": "名詞",
+          "basic": "たね",
+          "reading": "タネ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "まい",
+          "pos": "動詞",
+          "basic": "まく",
+          "reading": "マイ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "ので",
+          "pos": "助詞",
+          "basic": "ので",
+          "reading": "ノデ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべる",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベル"
+        },
+        {
+          "word": "の",
+          "pos": "名詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": "が",
+          "pos": "助詞",
+          "basic": "が",
+          "reading": "ガ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たのしみ",
+          "pos": "動詞",
+          "basic": "たのしむ",
+          "reading": "タノシミ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": 3
+    },
+    {
+      "id": 24,
+      "original_text": "そして おひるは いえに かえりました",
+      "token_count": 11,
+      "tokens_tiny": "そして |   | おひる | は |   | いえ | に |   | かえり | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 12,
+      "kuromoji_words": "そして |   | お | ひる | は |   | いえ | に |   | かえり | まし | た",
+      "kuromoji_basic": "そして | * | お | ひる | は | * | いえ | に | * | かえる | ます | た",
+      "kuromoji_pos": "接続詞 | 記号 | 接頭詞 | 動詞 | 助詞 | 記号 | 接続詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "お",
+          "pos": "接頭詞",
+          "basic": "お",
+          "reading": "オ"
+        },
+        {
+          "word": "ひる",
+          "pos": "動詞",
+          "basic": "ひる",
+          "reading": "ヒル"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いえ",
+          "pos": "接続詞",
+          "basic": "いえ",
+          "reading": "イエ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "かえり",
+          "pos": "動詞",
+          "basic": "かえる",
+          "reading": "カエリ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 25,
+      "original_text": "いえに かえって おひるごはんを たべました",
+      "token_count": 14,
+      "tokens_tiny": "いえ | に |   | かえっ | て |   | おひる | ご | はん | を |   | たべ | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 13,
+      "kuromoji_words": "いえ | に |   | かえって |   | お | ひる | ごはん | を |   | たべ | まし | た",
+      "kuromoji_basic": "いえ | に | * | かえって | * | お | ひる | ごはん | を | * | たべる | ます | た",
+      "kuromoji_pos": "接続詞 | 助詞 | 記号 | 副詞 | 記号 | 接頭詞 | 動詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "いえ",
+          "pos": "接続詞",
+          "basic": "いえ",
+          "reading": "イエ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "かえって",
+          "pos": "副詞",
+          "basic": "かえって",
+          "reading": "カエッテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "お",
+          "pos": "接頭詞",
+          "basic": "お",
+          "reading": "オ"
+        },
+        {
+          "word": "ひる",
+          "pos": "動詞",
+          "basic": "ひる",
+          "reading": "ヒル"
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 26,
+      "original_text": "きのうは なにを たべたかな",
+      "token_count": 10,
+      "tokens_tiny": "き | のう | は |   | なに | を |   | たべ | たか | な",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 10,
+      "kuromoji_words": "きのう | は |   | なに | を |   | たべ | た | か | な",
+      "kuromoji_basic": "きのう | は | * | なに | を | * | たべる | た | か | な",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "きのう",
+          "pos": "名詞",
+          "basic": "きのう",
+          "reading": "キノウ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "なに",
+          "pos": "名詞",
+          "basic": "なに",
+          "reading": "ナニ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        },
+        {
+          "word": "な",
+          "pos": "助詞",
+          "basic": "な",
+          "reading": "ナ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 27,
+      "original_text": "あ パスタ パスタです",
+      "token_count": 6,
+      "tokens_tiny": "あ |   | パスタ |   | パスタ | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 6,
+      "kuromoji_words": "あ |   | パスタ |   | パスタ | です",
+      "kuromoji_basic": "あ | * | パスタ | * | パスタ | です",
+      "kuromoji_pos": "フィラー | 記号 | 名詞 | 記号 | 名詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "あ",
+          "pos": "フィラー",
+          "basic": "あ",
+          "reading": "ア"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "パスタ",
+          "pos": "名詞",
+          "basic": "パスタ",
+          "reading": "パスタ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "パスタ",
+          "pos": "名詞",
+          "basic": "パスタ",
+          "reading": "パスタ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 28,
+      "original_text": "トマトソースと アンチョビと チーズのパスタを つくりました",
+      "token_count": 14,
+      "tokens_tiny": "トマトソース | と |   | アンチョビ | と |   | チーズ | の | パスタ | を |   | つくり | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "トマト | ソース | と |   | アンチョビ | と |   | チーズ | の | パスタ | を |   | つくり | まし | た",
+      "kuromoji_basic": "トマト | ソース | と | * | * | と | * | チーズ | の | パスタ | を | * | つくる | ます | た",
+      "kuromoji_pos": "名詞 | 名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 名詞 | 助詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "トマト",
+          "pos": "名詞",
+          "basic": "トマト",
+          "reading": "トマト"
+        },
+        {
+          "word": "ソース",
+          "pos": "名詞",
+          "basic": "ソース",
+          "reading": "ソース"
+        },
+        {
+          "word": "と",
+          "pos": "助詞",
+          "basic": "と",
+          "reading": "ト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "アンチョビ",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "と",
+          "pos": "助詞",
+          "basic": "と",
+          "reading": "ト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "チーズ",
+          "pos": "名詞",
+          "basic": "チーズ",
+          "reading": "チーズ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": "パスタ",
+          "pos": "名詞",
+          "basic": "パスタ",
+          "reading": "パスタ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "つくり",
+          "pos": "動詞",
+          "basic": "つくる",
+          "reading": "ツクリ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 29,
+      "original_text": "しりあいが いえにきたので たくさん つくりました",
+      "token_count": 15,
+      "tokens_tiny": "しり | あい | が |   | いえ | にき | た | の | で |   | たくさん |   | つくり | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 14,
+      "kuromoji_words": "しりあい | が |   | いえ | に | き | た | ので |   | たくさん |   | つくり | まし | た",
+      "kuromoji_basic": "しりあう | が | * | いえ | に | くる | た | ので | * | たくさん | * | つくる | ます | た",
+      "kuromoji_pos": "動詞 | 助詞 | 記号 | 接続詞 | 助詞 | 動詞 | 助動詞 | 助詞 | 記号 | 名詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "しりあい",
+          "pos": "動詞",
+          "basic": "しりあう",
+          "reading": "シリアイ"
+        },
+        {
+          "word": "が",
+          "pos": "助詞",
+          "basic": "が",
+          "reading": "ガ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いえ",
+          "pos": "接続詞",
+          "basic": "いえ",
+          "reading": "イエ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": "き",
+          "pos": "動詞",
+          "basic": "くる",
+          "reading": "キ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "ので",
+          "pos": "助詞",
+          "basic": "ので",
+          "reading": "ノデ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たくさん",
+          "pos": "名詞",
+          "basic": "たくさん",
+          "reading": "タクサン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "つくり",
+          "pos": "動詞",
+          "basic": "つくる",
+          "reading": "ツクリ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 30,
+      "original_text": "トマトソースと チーズと アンチョビ",
+      "token_count": 7,
+      "tokens_tiny": "トマトソース | と |   | チーズ | と |   | アンチョビ",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 8,
+      "kuromoji_words": "トマト | ソース | と |   | チーズ | と |   | アンチョビ",
+      "kuromoji_basic": "トマト | ソース | と | * | チーズ | と | * | *",
+      "kuromoji_pos": "名詞 | 名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 名詞",
+      "kuromoji_detailed": [
+        {
+          "word": "トマト",
+          "pos": "名詞",
+          "basic": "トマト",
+          "reading": "トマト"
+        },
+        {
+          "word": "ソース",
+          "pos": "名詞",
+          "basic": "ソース",
+          "reading": "ソース"
+        },
+        {
+          "word": "と",
+          "pos": "助詞",
+          "basic": "と",
+          "reading": "ト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "チーズ",
+          "pos": "名詞",
+          "basic": "チーズ",
+          "reading": "チーズ"
+        },
+        {
+          "word": "と",
+          "pos": "助詞",
+          "basic": "と",
+          "reading": "ト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "アンチョビ",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 31,
+      "original_text": "この くみあわせは さいこうです",
+      "token_count": 7,
+      "tokens_tiny": "この |   | くみあわせ | は |   | さいこう | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 9,
+      "kuromoji_words": "この |   | くみあわせ | は |   | さ | いこ | う | です",
+      "kuromoji_basic": "この | * | くみあわせる | は | * | さ | いく | う | です",
+      "kuromoji_pos": "連体詞 | 記号 | 動詞 | 助詞 | 記号 | 副詞 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "この",
+          "pos": "連体詞",
+          "basic": "この",
+          "reading": "コノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "くみあわせ",
+          "pos": "動詞",
+          "basic": "くみあわせる",
+          "reading": "クミアワセ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "さ",
+          "pos": "副詞",
+          "basic": "さ",
+          "reading": "サ"
+        },
+        {
+          "word": "いこ",
+          "pos": "動詞",
+          "basic": "いく",
+          "reading": "イコ"
+        },
+        {
+          "word": "う",
+          "pos": "助動詞",
+          "basic": "う",
+          "reading": "ウ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 32,
+      "original_text": "ほんとに おいしい",
+      "token_count": 4,
+      "tokens_tiny": "ほんと | に |   | おいしい",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 3,
+      "kuromoji_words": "ほんとに |   | おいしい",
+      "kuromoji_basic": "ほんとに | * | おいしい",
+      "kuromoji_pos": "副詞 | 記号 | 形容詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ほんとに",
+          "pos": "副詞",
+          "basic": "ほんとに",
+          "reading": "ホントニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "おいしい",
+          "pos": "形容詞",
+          "basic": "おいしい",
+          "reading": "オイシイ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 33,
+      "original_text": "そして ごはんを たべたあと カフェに いきました",
+      "token_count": 16,
+      "tokens_tiny": "そして |   | ご | はん | を |   | たべ | た | あと |   | カフェ | に |   | いき | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "そして |   | ごはん | を |   | たべ | た | あと |   | カフェ | に |   | いき | まし | た",
+      "kuromoji_basic": "そして | * | ごはん | を | * | たべる | た | あと | * | カフェ | に | * | いく | ます | た",
+      "kuromoji_pos": "接続詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 名詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "あと",
+          "pos": "名詞",
+          "basic": "あと",
+          "reading": "アト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "カフェ",
+          "pos": "名詞",
+          "basic": "カフェ",
+          "reading": "カフェ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いき",
+          "pos": "動詞",
+          "basic": "いく",
+          "reading": "イキ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 34,
+      "original_text": "くるまで カフェに いきました",
+      "token_count": 9,
+      "tokens_tiny": "くる | まで |   | カフェ | に |   | いき | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 9,
+      "kuromoji_words": "くる | まで |   | カフェ | に |   | いき | まし | た",
+      "kuromoji_basic": "くる | まで | * | カフェ | に | * | いく | ます | た",
+      "kuromoji_pos": "動詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "くる",
+          "pos": "動詞",
+          "basic": "くる",
+          "reading": "クル"
+        },
+        {
+          "word": "まで",
+          "pos": "助詞",
+          "basic": "まで",
+          "reading": "マデ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "カフェ",
+          "pos": "名詞",
+          "basic": "カフェ",
+          "reading": "カフェ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いき",
+          "pos": "動詞",
+          "basic": "いく",
+          "reading": "イキ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 35,
+      "original_text": "みなさんは くるまを うんてんするのは すきですか",
+      "token_count": 16,
+      "tokens_tiny": "みなさん | は |   | くるま | を |   | うん | て | ん | する | の | は |   | すき | です | か",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "みなさん | は |   | くるま | を |   | うん | てん | する | の | は |   | すき | です | か",
+      "kuromoji_basic": "みなさん | は | * | くるむ | を | * | うん | てん | する | の | は | * | すき | です | か",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 動詞 | 助詞 | 記号 | 感動詞 | 名詞 | 動詞 | 名詞 | 助詞 | 記号 | 名詞 | 助動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "みなさん",
+          "pos": "名詞",
+          "basic": "みなさん",
+          "reading": "ミナサン"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "くるま",
+          "pos": "動詞",
+          "basic": "くるむ",
+          "reading": "クルマ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "うん",
+          "pos": "感動詞",
+          "basic": "うん",
+          "reading": "ウン"
+        },
+        {
+          "word": "てん",
+          "pos": "名詞",
+          "basic": "てん",
+          "reading": "テン"
+        },
+        {
+          "word": "する",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "スル"
+        },
+        {
+          "word": "の",
+          "pos": "名詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "すき",
+          "pos": "名詞",
+          "basic": "すき",
+          "reading": "スキ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 36,
+      "original_text": "わたしは あまり すきじゃなかったです",
+      "token_count": 9,
+      "tokens_tiny": "わたし | は |   | あまり |   | すきじゃ | なかっ | た | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 10,
+      "kuromoji_words": "わたし | は |   | あまり |   | すき | じゃ | なかっ | た | です",
+      "kuromoji_basic": "わたし | は | * | あまり | * | すき | じゃ | ない | た | です",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 副詞 | 記号 | 名詞 | 助詞 | 助動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "わたし",
+          "pos": "名詞",
+          "basic": "わたし",
+          "reading": "ワタシ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あまり",
+          "pos": "副詞",
+          "basic": "あまり",
+          "reading": "アマリ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "すき",
+          "pos": "名詞",
+          "basic": "すき",
+          "reading": "スキ"
+        },
+        {
+          "word": "じゃ",
+          "pos": "助詞",
+          "basic": "じゃ",
+          "reading": "ジャ"
+        },
+        {
+          "word": "なかっ",
+          "pos": "助動詞",
+          "basic": "ない",
+          "reading": "ナカッ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 37,
+      "original_text": "でんしゃに のるほうが すきでした",
+      "token_count": 9,
+      "tokens_tiny": "でんしゃ | に |   | のる | ほう | が |   | すきでし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 11,
+      "kuromoji_words": "でん | しゃ | に |   | の | るほう | が |   | すき | でし | た",
+      "kuromoji_basic": "でん | す | に | * | の | るほう | が | * | すき | です | た",
+      "kuromoji_pos": "副詞 | 動詞 | 助詞 | 記号 | 助詞 | 名詞 | 助詞 | 記号 | 名詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "でん",
+          "pos": "副詞",
+          "basic": "でん",
+          "reading": "デン"
+        },
+        {
+          "word": "しゃ",
+          "pos": "動詞",
+          "basic": "す",
+          "reading": "シャ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": "るほう",
+          "pos": "名詞",
+          "basic": "るほう",
+          "reading": "ルホウ"
+        },
+        {
+          "word": "が",
+          "pos": "助詞",
+          "basic": "が",
+          "reading": "ガ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "すき",
+          "pos": "名詞",
+          "basic": "すき",
+          "reading": "スキ"
+        },
+        {
+          "word": "でし",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 38,
+      "original_text": "でも さいきんは くるまを うんてんするのも すきです",
+      "token_count": 17,
+      "tokens_tiny": "でも |   | さいきん | は |   | くるま | を |   | うん | て | ん | する | の | も |   | すき | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 17,
+      "kuromoji_words": "でも |   | さいき | ん | は |   | くるま | を |   | うん | てん | する | の | も |   | すき | です",
+      "kuromoji_basic": "でも | * | さいき | ん | は | * | くるむ | を | * | うん | てん | する | の | も | * | すき | です",
+      "kuromoji_pos": "接続詞 | 記号 | 名詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞 | 記号 | 感動詞 | 名詞 | 動詞 | 名詞 | 助詞 | 記号 | 名詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "でも",
+          "pos": "接続詞",
+          "basic": "でも",
+          "reading": "デモ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "さいき",
+          "pos": "名詞",
+          "basic": "さいき",
+          "reading": "サイキ"
+        },
+        {
+          "word": "ん",
+          "pos": "名詞",
+          "basic": "ん",
+          "reading": "ン"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "くるま",
+          "pos": "動詞",
+          "basic": "くるむ",
+          "reading": "クルマ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "うん",
+          "pos": "感動詞",
+          "basic": "うん",
+          "reading": "ウン"
+        },
+        {
+          "word": "てん",
+          "pos": "名詞",
+          "basic": "てん",
+          "reading": "テン"
+        },
+        {
+          "word": "する",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "スル"
+        },
+        {
+          "word": "の",
+          "pos": "名詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": "も",
+          "pos": "助詞",
+          "basic": "も",
+          "reading": "モ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "すき",
+          "pos": "名詞",
+          "basic": "すき",
+          "reading": "スキ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 39,
+      "original_text": "そう ごごは カフェで こうひを のみながら",
+      "token_count": 12,
+      "tokens_tiny": "そう |   | ごごは |   | カフェ | で |   | こうひ | を |   | のみ | ながら",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "そう |   | ご | ご | は |   | カフェ | で |   | こう | ひ | を |   | のみ | ながら",
+      "kuromoji_basic": "そう | * | ご | ご | は | * | カフェ | で | * | こう | ひる | を | * | のみ | ながら",
+      "kuromoji_pos": "副詞 | 記号 | 接頭詞 | 接頭詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 副詞 | 動詞 | 助詞 | 記号 | 助詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そう",
+          "pos": "副詞",
+          "basic": "そう",
+          "reading": "ソウ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ご",
+          "pos": "接頭詞",
+          "basic": "ご",
+          "reading": "ゴ"
+        },
+        {
+          "word": "ご",
+          "pos": "接頭詞",
+          "basic": "ご",
+          "reading": "ゴ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "カフェ",
+          "pos": "名詞",
+          "basic": "カフェ",
+          "reading": "カフェ"
+        },
+        {
+          "word": "で",
+          "pos": "助詞",
+          "basic": "で",
+          "reading": "デ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "こう",
+          "pos": "副詞",
+          "basic": "こう",
+          "reading": "コウ"
+        },
+        {
+          "word": "ひ",
+          "pos": "動詞",
+          "basic": "ひる",
+          "reading": "ヒ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "のみ",
+          "pos": "助詞",
+          "basic": "のみ",
+          "reading": "ノミ"
+        },
+        {
+          "word": "ながら",
+          "pos": "助詞",
+          "basic": "ながら",
+          "reading": "ナガラ"
+        }
+      ],
+      "token_diff": -3
+    },
+    {
+      "id": 40,
+      "original_text": "にほんごと スペイン語の べんきょうを しました",
+      "token_count": 12,
+      "tokens_tiny": "にほんご | と |   | スペイン | 語 | の |   | べんきょう | を |   | しまし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 16,
+      "kuromoji_words": "に | ほん | ごと |   | スペイン | 語 | の |   | べ | ん | きょう | を |   | し | まし | た",
+      "kuromoji_basic": "に | ほん | ごと | * | スペイン | 語 | の | * | べ | ん | きょう | を | * | する | ます | た",
+      "kuromoji_pos": "助詞 | 名詞 | 名詞 | 記号 | 名詞 | 名詞 | 助詞 | 記号 | 助詞 | 助詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": "ほん",
+          "pos": "名詞",
+          "basic": "ほん",
+          "reading": "ホン"
+        },
+        {
+          "word": "ごと",
+          "pos": "名詞",
+          "basic": "ごと",
+          "reading": "ゴト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "スペイン",
+          "pos": "名詞",
+          "basic": "スペイン",
+          "reading": "スペイン"
+        },
+        {
+          "word": "語",
+          "pos": "名詞",
+          "basic": "語",
+          "reading": "ゴ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "べ",
+          "pos": "助詞",
+          "basic": "べ",
+          "reading": "ベ"
+        },
+        {
+          "word": "ん",
+          "pos": "助詞",
+          "basic": "ん",
+          "reading": "ン"
+        },
+        {
+          "word": "きょう",
+          "pos": "名詞",
+          "basic": "きょう",
+          "reading": "キョウ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -4
+    },
+    {
+      "id": 41,
+      "original_text": "そう にほんごです",
+      "token_count": 4,
+      "tokens_tiny": "そう |   | にほんご | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 6,
+      "kuromoji_words": "そう |   | に | ほん | ご | です",
+      "kuromoji_basic": "そう | * | に | ほる | ご | です",
+      "kuromoji_pos": "副詞 | 記号 | 助詞 | 動詞 | 接頭詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そう",
+          "pos": "副詞",
+          "basic": "そう",
+          "reading": "ソウ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": "ほん",
+          "pos": "動詞",
+          "basic": "ほる",
+          "reading": "ホン"
+        },
+        {
+          "word": "ご",
+          "pos": "接頭詞",
+          "basic": "ご",
+          "reading": "ゴ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 42,
+      "original_text": "にほんじんだけど さいきん にほんごが むずかしいなと おもって",
+      "token_count": 13,
+      "tokens_tiny": "に | ほんじん | だけど |   | さいきん |   | にほんご | が |   | むずかしい | なと |   | おもって",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 20,
+      "kuromoji_words": "に | ほん | じん | だ | けど |   | さいき | ん |   | に | ほん | ご | が |   | むずかしい | な | と |   | おもっ | て",
+      "kuromoji_basic": "に | ほん | じん | だ | けど | * | さいき | ん | * | に | ほる | ご | が | * | むずかしい | な | と | * | おもう | て",
+      "kuromoji_pos": "助詞 | 名詞 | 名詞 | 助動詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 助詞 | 動詞 | 接頭詞 | 接続詞 | 記号 | 形容詞 | 助詞 | 助詞 | 記号 | 動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": "ほん",
+          "pos": "名詞",
+          "basic": "ほん",
+          "reading": "ホン"
+        },
+        {
+          "word": "じん",
+          "pos": "名詞",
+          "basic": "じん",
+          "reading": "ジン"
+        },
+        {
+          "word": "だ",
+          "pos": "助動詞",
+          "basic": "だ",
+          "reading": "ダ"
+        },
+        {
+          "word": "けど",
+          "pos": "助詞",
+          "basic": "けど",
+          "reading": "ケド"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "さいき",
+          "pos": "名詞",
+          "basic": "さいき",
+          "reading": "サイキ"
+        },
+        {
+          "word": "ん",
+          "pos": "助詞",
+          "basic": "ん",
+          "reading": "ン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": "ほん",
+          "pos": "動詞",
+          "basic": "ほる",
+          "reading": "ホン"
+        },
+        {
+          "word": "ご",
+          "pos": "接頭詞",
+          "basic": "ご",
+          "reading": "ゴ"
+        },
+        {
+          "word": "が",
+          "pos": "接続詞",
+          "basic": "が",
+          "reading": "ガ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "むずかしい",
+          "pos": "形容詞",
+          "basic": "むずかしい",
+          "reading": "ムズカシイ"
+        },
+        {
+          "word": "な",
+          "pos": "助詞",
+          "basic": "な",
+          "reading": "ナ"
+        },
+        {
+          "word": "と",
+          "pos": "助詞",
+          "basic": "と",
+          "reading": "ト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "おもっ",
+          "pos": "動詞",
+          "basic": "おもう",
+          "reading": "オモッ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        }
+      ],
+      "token_diff": -7
+    },
+    {
+      "id": 43,
+      "original_text": "にほんごを べんきょうしています",
+      "token_count": 8,
+      "tokens_tiny": "にほんご | を |   | べんきょう | し | て | い | ます",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 12,
+      "kuromoji_words": "に | ほん | ご | を |   | べ | ん | きょう | し | て | い | ます",
+      "kuromoji_basic": "に | ほる | ご | を | * | べ | ん | きょう | する | て | いる | ます",
+      "kuromoji_pos": "助詞 | 動詞 | 接頭詞 | 助詞 | 記号 | 助詞 | 助詞 | 名詞 | 動詞 | 助詞 | 動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": "ほん",
+          "pos": "動詞",
+          "basic": "ほる",
+          "reading": "ホン"
+        },
+        {
+          "word": "ご",
+          "pos": "接頭詞",
+          "basic": "ご",
+          "reading": "ゴ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "べ",
+          "pos": "助詞",
+          "basic": "べ",
+          "reading": "ベ"
+        },
+        {
+          "word": "ん",
+          "pos": "助詞",
+          "basic": "ん",
+          "reading": "ン"
+        },
+        {
+          "word": "きょう",
+          "pos": "名詞",
+          "basic": "きょう",
+          "reading": "キョウ"
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": "い",
+          "pos": "動詞",
+          "basic": "いる",
+          "reading": "イ"
+        },
+        {
+          "word": "ます",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マス"
+        }
+      ],
+      "token_diff": -4
+    },
+    {
+      "id": 44,
+      "original_text": "むずかしい",
+      "token_count": 1,
+      "tokens_tiny": "むずかしい",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 1,
+      "kuromoji_words": "むずかしい",
+      "kuromoji_basic": "むずかしい",
+      "kuromoji_pos": "形容詞",
+      "kuromoji_detailed": [
+        {
+          "word": "むずかしい",
+          "pos": "形容詞",
+          "basic": "むずかしい",
+          "reading": "ムズカシイ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 45,
+      "original_text": "そして いえに かえるまえに スーパーに いきました",
+      "token_count": 15,
+      "tokens_tiny": "そして |   | いえ | に |   | かえる | まえ | に |   | スーパー | に |   | いき | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "そして |   | いえ | に |   | かえる | まえ | に |   | スーパー | に |   | いき | まし | た",
+      "kuromoji_basic": "そして | * | いえ | に | * | かえる | まう | に | * | スーパー | に | * | いく | ます | た",
+      "kuromoji_pos": "接続詞 | 記号 | 接続詞 | 助詞 | 記号 | 動詞 | 動詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いえ",
+          "pos": "接続詞",
+          "basic": "いえ",
+          "reading": "イエ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "かえる",
+          "pos": "動詞",
+          "basic": "かえる",
+          "reading": "カエル"
+        },
+        {
+          "word": "まえ",
+          "pos": "動詞",
+          "basic": "まう",
+          "reading": "マエ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "スーパー",
+          "pos": "名詞",
+          "basic": "スーパー",
+          "reading": "スーパー"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いき",
+          "pos": "動詞",
+          "basic": "いく",
+          "reading": "イキ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 46,
+      "original_text": "ゆうがたの 5じ くらいかな",
+      "token_count": 10,
+      "tokens_tiny": "ゆう | が | た | の |   | 5 | じ |   | くらいか | な",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 10,
+      "kuromoji_words": "ゆう | がた | の |   | 5 | じ |   | くらい | か | な",
+      "kuromoji_basic": "ゆう | がた | の | * | * | じ | * | くらい | か | な",
+      "kuromoji_pos": "動詞 | 名詞 | 助詞 | 記号 | 名詞 | 助動詞 | 記号 | 助詞 | 助詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ゆう",
+          "pos": "動詞",
+          "basic": "ゆう",
+          "reading": "ユウ"
+        },
+        {
+          "word": "がた",
+          "pos": "名詞",
+          "basic": "がた",
+          "reading": "ガタ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "5",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "じ",
+          "pos": "助動詞",
+          "basic": "じ",
+          "reading": "ジ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        },
+        {
+          "word": "な",
+          "pos": "助詞",
+          "basic": "な",
+          "reading": "ナ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 47,
+      "original_text": "ゆうがた スーパーに いくと",
+      "token_count": 8,
+      "tokens_tiny": "ゆう | が | た |   | スーパー | に |   | いくと",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 8,
+      "kuromoji_words": "ゆう | がた |   | スーパー | に |   | いく | と",
+      "kuromoji_basic": "ゆう | がた | * | スーパー | に | * | いく | と",
+      "kuromoji_pos": "動詞 | 名詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ゆう",
+          "pos": "動詞",
+          "basic": "ゆう",
+          "reading": "ユウ"
+        },
+        {
+          "word": "がた",
+          "pos": "名詞",
+          "basic": "がた",
+          "reading": "ガタ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "スーパー",
+          "pos": "名詞",
+          "basic": "スーパー",
+          "reading": "スーパー"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いく",
+          "pos": "動詞",
+          "basic": "いく",
+          "reading": "イク"
+        },
+        {
+          "word": "と",
+          "pos": "助詞",
+          "basic": "と",
+          "reading": "ト"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 48,
+      "original_text": "はんがくの さしみとか からあげとか おにぎりが うられています",
+      "token_count": 18,
+      "tokens_tiny": "はん | がく | の |   | さしみ | とか |   | から | あげ | とか |   | おにぎり | が |   | うられ | て | い | ます",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 20,
+      "kuromoji_words": "はん | がく | の |   | さ | しみ | とか |   | から | あげ | とか |   | おにぎり | が |   | うら | れ | て | い | ます",
+      "kuromoji_basic": "はん | がく | の | * | さ | しむ | とか | * | から | あげる | とか | * | おにぎり | が | * | うる | れる | て | いる | ます",
+      "kuromoji_pos": "名詞 | 名詞 | 助詞 | 記号 | 副詞 | 動詞 | 助詞 | 記号 | 助詞 | 動詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 動詞 | 助詞 | 動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "はん",
+          "pos": "名詞",
+          "basic": "はん",
+          "reading": "ハン"
+        },
+        {
+          "word": "がく",
+          "pos": "名詞",
+          "basic": "がく",
+          "reading": "ガク"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "さ",
+          "pos": "副詞",
+          "basic": "さ",
+          "reading": "サ"
+        },
+        {
+          "word": "しみ",
+          "pos": "動詞",
+          "basic": "しむ",
+          "reading": "シミ"
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "から",
+          "pos": "助詞",
+          "basic": "から",
+          "reading": "カラ"
+        },
+        {
+          "word": "あげ",
+          "pos": "動詞",
+          "basic": "あげる",
+          "reading": "アゲ"
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "おにぎり",
+          "pos": "名詞",
+          "basic": "おにぎり",
+          "reading": "オニギリ"
+        },
+        {
+          "word": "が",
+          "pos": "助詞",
+          "basic": "が",
+          "reading": "ガ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "うら",
+          "pos": "動詞",
+          "basic": "うる",
+          "reading": "ウラ"
+        },
+        {
+          "word": "れ",
+          "pos": "動詞",
+          "basic": "れる",
+          "reading": "レ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": "い",
+          "pos": "動詞",
+          "basic": "いる",
+          "reading": "イ"
+        },
+        {
+          "word": "ます",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マス"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 49,
+      "original_text": "だけど きのうは なにも かいませんでした",
+      "token_count": 14,
+      "tokens_tiny": "だけど |   | き | のう | は |   | なに | も |   | かいませ | ん | で | し | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 13,
+      "kuromoji_words": "だけど |   | きのう | は |   | なに | も |   | かい | ませ | ん | でし | た",
+      "kuromoji_basic": "だけど | * | きのう | は | * | なに | も | * | かう | ます | ん | です | た",
+      "kuromoji_pos": "接続詞 | 記号 | 名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "だけど",
+          "pos": "接続詞",
+          "basic": "だけど",
+          "reading": "ダケド"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "きのう",
+          "pos": "名詞",
+          "basic": "きのう",
+          "reading": "キノウ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "なに",
+          "pos": "名詞",
+          "basic": "なに",
+          "reading": "ナニ"
+        },
+        {
+          "word": "も",
+          "pos": "助詞",
+          "basic": "も",
+          "reading": "モ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "かい",
+          "pos": "動詞",
+          "basic": "かう",
+          "reading": "カイ"
+        },
+        {
+          "word": "ませ",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マセ"
+        },
+        {
+          "word": "ん",
+          "pos": "助動詞",
+          "basic": "ん",
+          "reading": "ン"
+        },
+        {
+          "word": "でし",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 50,
+      "original_text": "6じ くらいに いえに かえりました",
+      "token_count": 11,
+      "tokens_tiny": "6じ |   | くらい | に |   | いえ | に |   | かえり | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 12,
+      "kuromoji_words": "6 | じ |   | くらい | に |   | いえ | に |   | かえり | まし | た",
+      "kuromoji_basic": "* | じ | * | くらい | に | * | いえ | に | * | かえる | ます | た",
+      "kuromoji_pos": "名詞 | 助動詞 | 記号 | 助詞 | 助詞 | 記号 | 接続詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "6",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "じ",
+          "pos": "助動詞",
+          "basic": "じ",
+          "reading": "ジ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "いえ",
+          "pos": "接続詞",
+          "basic": "いえ",
+          "reading": "イエ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "かえり",
+          "pos": "動詞",
+          "basic": "かえる",
+          "reading": "カエリ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 51,
+      "original_text": "そして よるごはんは ちくぜんに という",
+      "token_count": 11,
+      "tokens_tiny": "そして |   | よる | ご | はん | は |   | ちくぜん | に |   | という",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 11,
+      "kuromoji_words": "そして |   | よる | ごはん | は |   | ちく | ぜん | に |   | という",
+      "kuromoji_basic": "そして | * | よる | ごはん | は | * | ちく | ぜん | に | * | という",
+      "kuromoji_pos": "接続詞 | 記号 | 動詞 | 名詞 | 助詞 | 記号 | 名詞 | 名詞 | 助詞 | 記号 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "よる",
+          "pos": "動詞",
+          "basic": "よる",
+          "reading": "ヨル"
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ちく",
+          "pos": "名詞",
+          "basic": "ちく",
+          "reading": "チク"
+        },
+        {
+          "word": "ぜん",
+          "pos": "名詞",
+          "basic": "ぜん",
+          "reading": "ゼン"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "という",
+          "pos": "助詞",
+          "basic": "という",
+          "reading": "トイウ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 52,
+      "original_text": "にほんの りょうりを たべました",
+      "token_count": 9,
+      "tokens_tiny": "にほん | の |   | りょうり | を |   | たべ | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 9,
+      "kuromoji_words": "に | ほんの |   | りょうり | を |   | たべ | まし | た",
+      "kuromoji_basic": "に | ほんの | * | りょうる | を | * | たべる | ます | た",
+      "kuromoji_pos": "助詞 | 連体詞 | 記号 | 動詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": "ほんの",
+          "pos": "連体詞",
+          "basic": "ほんの",
+          "reading": "ホンノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "りょうり",
+          "pos": "動詞",
+          "basic": "りょうる",
+          "reading": "リョウリ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 53,
+      "original_text": "これは にんじんとか れんこんとか とりにくが はいています",
+      "token_count": 19,
+      "tokens_tiny": "これ | は |   | にんじん | と | か |   | れんこん | と | か |   | とり | にく | が |   | はい | て | い | ます",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 18,
+      "kuromoji_words": "これ | は |   | にんじん | とか |   | れん | こん | とか |   | とり | にく | が |   | はい | て | い | ます",
+      "kuromoji_basic": "これ | は | * | にんじん | とか | * | れん | こん | とか | * | とる | にくい | が | * | はい | て | いる | ます",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 名詞 | 名詞 | 助詞 | 記号 | 動詞 | 形容詞 | 助詞 | 記号 | 感動詞 | 助詞 | 動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "これ",
+          "pos": "名詞",
+          "basic": "これ",
+          "reading": "コレ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "にんじん",
+          "pos": "名詞",
+          "basic": "にんじん",
+          "reading": "ニンジン"
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "れん",
+          "pos": "名詞",
+          "basic": "れん",
+          "reading": "レン"
+        },
+        {
+          "word": "こん",
+          "pos": "名詞",
+          "basic": "こん",
+          "reading": "コン"
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "とり",
+          "pos": "動詞",
+          "basic": "とる",
+          "reading": "トリ"
+        },
+        {
+          "word": "にく",
+          "pos": "形容詞",
+          "basic": "にくい",
+          "reading": "ニク"
+        },
+        {
+          "word": "が",
+          "pos": "助詞",
+          "basic": "が",
+          "reading": "ガ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "はい",
+          "pos": "感動詞",
+          "basic": "はい",
+          "reading": "ハイ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": "い",
+          "pos": "動詞",
+          "basic": "いる",
+          "reading": "イ"
+        },
+        {
+          "word": "ます",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マス"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 54,
+      "original_text": "すこし あまい りょうりかな",
+      "token_count": 5,
+      "tokens_tiny": "すこし |   | あまい |   | りょうりかな",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 7,
+      "kuromoji_words": "すこし |   | あまい |   | りょうり | か | な",
+      "kuromoji_basic": "すこし | * | あまい | * | りょうる | か | な",
+      "kuromoji_pos": "副詞 | 記号 | 形容詞 | 記号 | 動詞 | 助詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "すこし",
+          "pos": "副詞",
+          "basic": "すこし",
+          "reading": "スコシ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あまい",
+          "pos": "形容詞",
+          "basic": "あまい",
+          "reading": "アマイ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "りょうり",
+          "pos": "動詞",
+          "basic": "りょうる",
+          "reading": "リョウリ"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        },
+        {
+          "word": "な",
+          "pos": "助詞",
+          "basic": "な",
+          "reading": "ナ"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 55,
+      "original_text": "おいしかったです",
+      "token_count": 3,
+      "tokens_tiny": "おいしかっ | た | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 3,
+      "kuromoji_words": "おいしかっ | た | です",
+      "kuromoji_basic": "おいしい | た | です",
+      "kuromoji_pos": "形容詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "おいしかっ",
+          "pos": "形容詞",
+          "basic": "おいしい",
+          "reading": "オイシカッ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 56,
+      "original_text": "そして よるごはんを たべたあと",
+      "token_count": 10,
+      "tokens_tiny": "そして |   | よる | ご | はん | を |   | たべ | た | あと",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 9,
+      "kuromoji_words": "そして |   | よる | ごはん | を |   | たべ | た | あと",
+      "kuromoji_basic": "そして | * | よる | ごはん | を | * | たべる | た | あと",
+      "kuromoji_pos": "接続詞 | 記号 | 動詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 名詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "よる",
+          "pos": "動詞",
+          "basic": "よる",
+          "reading": "ヨル"
+        },
+        {
+          "word": "ごはん",
+          "pos": "名詞",
+          "basic": "ごはん",
+          "reading": "ゴハン"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たべ",
+          "pos": "動詞",
+          "basic": "たべる",
+          "reading": "タベ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "あと",
+          "pos": "名詞",
+          "basic": "あと",
+          "reading": "アト"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 57,
+      "original_text": "おさらを あらったり おさらを ふいたり",
+      "token_count": 10,
+      "tokens_tiny": "おさら | を |   | あらっ | たり |   | おさら | を |   | ふいたり",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 13,
+      "kuromoji_words": "お | さら | を |   | あらっ | たり |   | お | さら | を |   | ふい | たり",
+      "kuromoji_basic": "お | さら | を | * | あらう | たり | * | お | さら | を | * | ふく | たり",
+      "kuromoji_pos": "接頭詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞 | 記号 | 接頭詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "お",
+          "pos": "接頭詞",
+          "basic": "お",
+          "reading": "オ"
+        },
+        {
+          "word": "さら",
+          "pos": "名詞",
+          "basic": "さら",
+          "reading": "サラ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あらっ",
+          "pos": "動詞",
+          "basic": "あらう",
+          "reading": "アラッ"
+        },
+        {
+          "word": "たり",
+          "pos": "助詞",
+          "basic": "たり",
+          "reading": "タリ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "お",
+          "pos": "接頭詞",
+          "basic": "お",
+          "reading": "オ"
+        },
+        {
+          "word": "さら",
+          "pos": "名詞",
+          "basic": "さら",
+          "reading": "サラ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ふい",
+          "pos": "動詞",
+          "basic": "ふく",
+          "reading": "フイ"
+        },
+        {
+          "word": "たり",
+          "pos": "助詞",
+          "basic": "たり",
+          "reading": "タリ"
+        }
+      ],
+      "token_diff": -3
+    },
+    {
+      "id": 58,
+      "original_text": "あと せんたくものを たたんだり しました",
+      "token_count": 12,
+      "tokens_tiny": "あと |   | せんたく | もの | を |   | たたん | だり |   | し | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 13,
+      "kuromoji_words": "あと |   | せん | たく | もの | を |   | たたん | だり |   | し | まし | た",
+      "kuromoji_basic": "あと | * | せん | たく | もの | を | * | たたむ | だり | * | する | ます | た",
+      "kuromoji_pos": "名詞 | 記号 | 名詞 | 動詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "あと",
+          "pos": "名詞",
+          "basic": "あと",
+          "reading": "アト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "せん",
+          "pos": "名詞",
+          "basic": "せん",
+          "reading": "セン"
+        },
+        {
+          "word": "たく",
+          "pos": "動詞",
+          "basic": "たく",
+          "reading": "タク"
+        },
+        {
+          "word": "もの",
+          "pos": "名詞",
+          "basic": "もの",
+          "reading": "モノ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "たたん",
+          "pos": "動詞",
+          "basic": "たたむ",
+          "reading": "タタン"
+        },
+        {
+          "word": "だり",
+          "pos": "助詞",
+          "basic": "だり",
+          "reading": "ダリ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 59,
+      "original_text": "かじを しました",
+      "token_count": 5,
+      "tokens_tiny": "かじ | を |   | しまし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 6,
+      "kuromoji_words": "かじ | を |   | し | まし | た",
+      "kuromoji_basic": "かじ | を | * | する | ます | た",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "かじ",
+          "pos": "名詞",
+          "basic": "かじ",
+          "reading": "カジ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 60,
+      "original_text": "すこしだけ かじ",
+      "token_count": 4,
+      "tokens_tiny": "すこし | だけ |   | かじ",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 4,
+      "kuromoji_words": "すこし | だけ |   | かじ",
+      "kuromoji_basic": "すこし | だけ | * | かじ",
+      "kuromoji_pos": "副詞 | 助詞 | 記号 | 名詞",
+      "kuromoji_detailed": [
+        {
+          "word": "すこし",
+          "pos": "副詞",
+          "basic": "すこし",
+          "reading": "スコシ"
+        },
+        {
+          "word": "だけ",
+          "pos": "助詞",
+          "basic": "だけ",
+          "reading": "ダケ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "かじ",
+          "pos": "名詞",
+          "basic": "かじ",
+          "reading": "カジ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 61,
+      "original_text": "そして そのあと",
+      "token_count": 4,
+      "tokens_tiny": "そして |   | その | あと",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 4,
+      "kuromoji_words": "そして |   | その | あと",
+      "kuromoji_basic": "そして | * | その | あと",
+      "kuromoji_pos": "接続詞 | 記号 | 連体詞 | 名詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "その",
+          "pos": "連体詞",
+          "basic": "その",
+          "reading": "ソノ"
+        },
+        {
+          "word": "あと",
+          "pos": "名詞",
+          "basic": "あと",
+          "reading": "アト"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 62,
+      "original_text": "YouTubeの へんしゅうをしたり",
+      "token_count": 7,
+      "tokens_tiny": "YouTube | の |   | へんしゅう | を | し | たり",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 8,
+      "kuromoji_words": "YouTube | の |   | へん | しゅう | を | し | たり",
+      "kuromoji_basic": "* | の | * | へん | しゅう | を | する | たり",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 名詞 | 助詞 | 動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "YouTube",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "へん",
+          "pos": "名詞",
+          "basic": "へん",
+          "reading": "ヘン"
+        },
+        {
+          "word": "しゅう",
+          "pos": "名詞",
+          "basic": "しゅう",
+          "reading": "シュウ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "たり",
+          "pos": "助詞",
+          "basic": "たり",
+          "reading": "タリ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 63,
+      "original_text": "ブログを かいたり しました",
+      "token_count": 9,
+      "tokens_tiny": "ブログ | を |   | かい | たり |   | し | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 9,
+      "kuromoji_words": "ブログ | を |   | かい | たり |   | し | まし | た",
+      "kuromoji_basic": "* | を | * | かい | たり | * | する | ます | た",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ブログ",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "かい",
+          "pos": "名詞",
+          "basic": "かい",
+          "reading": "カイ"
+        },
+        {
+          "word": "たり",
+          "pos": "助詞",
+          "basic": "たり",
+          "reading": "タリ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 64,
+      "original_text": "で そのあと おふろに はいりました",
+      "token_count": 11,
+      "tokens_tiny": "で |   | その | あと |   | おふろ | に |   | はいり | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 12,
+      "kuromoji_words": "で |   | その | あと |   | お | ふろ | に |   | はいり | まし | た",
+      "kuromoji_basic": "で | * | その | あと | * | お | ふろ | に | * | はいる | ます | た",
+      "kuromoji_pos": "接続詞 | 記号 | 連体詞 | 名詞 | 記号 | 接頭詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "で",
+          "pos": "接続詞",
+          "basic": "で",
+          "reading": "デ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "その",
+          "pos": "連体詞",
+          "basic": "その",
+          "reading": "ソノ"
+        },
+        {
+          "word": "あと",
+          "pos": "名詞",
+          "basic": "あと",
+          "reading": "アト"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "お",
+          "pos": "接頭詞",
+          "basic": "お",
+          "reading": "オ"
+        },
+        {
+          "word": "ふろ",
+          "pos": "名詞",
+          "basic": "ふろ",
+          "reading": "フロ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "はいり",
+          "pos": "動詞",
+          "basic": "はいる",
+          "reading": "ハイリ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 65,
+      "original_text": "しゃわを あびました",
+      "token_count": 6,
+      "tokens_tiny": "しゃわ | を |   | あび | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 6,
+      "kuromoji_words": "し | ゃわを |   | あび | まし | た",
+      "kuromoji_basic": "する | * | * | あびる | ます | た",
+      "kuromoji_pos": "動詞 | 名詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "ゃわを",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "あび",
+          "pos": "動詞",
+          "basic": "あびる",
+          "reading": "アビ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 66,
+      "original_text": "もちろん はも みがけました",
+      "token_count": 8,
+      "tokens_tiny": "もちろん |   | は | も |   | みがけ | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 8,
+      "kuromoji_words": "もちろん |   | は | も |   | みがけ | まし | た",
+      "kuromoji_basic": "もちろん | * | は | も | * | みがける | ます | た",
+      "kuromoji_pos": "副詞 | 記号 | 助詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "もちろん",
+          "pos": "副詞",
+          "basic": "もちろん",
+          "reading": "モチロン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": "も",
+          "pos": "助詞",
+          "basic": "も",
+          "reading": "モ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "みがけ",
+          "pos": "動詞",
+          "basic": "みがける",
+          "reading": "ミガケ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 67,
+      "original_text": "そして だいたい よるの 11じくらいに",
+      "token_count": 12,
+      "tokens_tiny": "そして |   | だい | たい |   | よる | の |   | 1 | 1 | じくらい | に",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 11,
+      "kuromoji_words": "そして |   | だいたい |   | よる | の |   | 11 | じ | くらい | に",
+      "kuromoji_basic": "そして | * | だいたい | * | よる | の | * | * | じ | くらい | に",
+      "kuromoji_pos": "接続詞 | 記号 | 副詞 | 記号 | 動詞 | 名詞 | 記号 | 名詞 | 助動詞 | 助詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "だいたい",
+          "pos": "副詞",
+          "basic": "だいたい",
+          "reading": "ダイタイ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "よる",
+          "pos": "動詞",
+          "basic": "よる",
+          "reading": "ヨル"
+        },
+        {
+          "word": "の",
+          "pos": "名詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "11",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "じ",
+          "pos": "助動詞",
+          "basic": "じ",
+          "reading": "ジ"
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 68,
+      "original_text": "ベッドにはいって けいたいを みていました",
+      "token_count": 13,
+      "tokens_tiny": "ベッド | に | はいって |   | けい | たい | を |   | み | て | い | まし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "ベッド | に | は | いっ | て |   | けい | たい | を |   | み | て | い | まし | た",
+      "kuromoji_basic": "ベッド | に | は | いう | て | * | けい | たい | を | * | みる | て | いる | ます | た",
+      "kuromoji_pos": "名詞 | 助詞 | 助詞 | 動詞 | 助詞 | 記号 | 名詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ベッド",
+          "pos": "名詞",
+          "basic": "ベッド",
+          "reading": "ベッド"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": "は",
+          "pos": "助詞",
+          "basic": "は",
+          "reading": "ハ"
+        },
+        {
+          "word": "いっ",
+          "pos": "動詞",
+          "basic": "いう",
+          "reading": "イッ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "けい",
+          "pos": "名詞",
+          "basic": "けい",
+          "reading": "ケイ"
+        },
+        {
+          "word": "たい",
+          "pos": "名詞",
+          "basic": "たい",
+          "reading": "タイ"
+        },
+        {
+          "word": "を",
+          "pos": "助詞",
+          "basic": "を",
+          "reading": "ヲ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "み",
+          "pos": "動詞",
+          "basic": "みる",
+          "reading": "ミ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": "い",
+          "pos": "動詞",
+          "basic": "いる",
+          "reading": "イ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -2
+    },
+    {
+      "id": 69,
+      "original_text": "1じかんくらい みていたかな",
+      "token_count": 8,
+      "tokens_tiny": "1じ | かんくらい |   | み | て | い | たか | な",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 11,
+      "kuromoji_words": "1 | じ | かん | くらい |   | み | て | い | た | か | な",
+      "kuromoji_basic": "* | じ | かん | くらい | * | みる | て | いる | た | か | な",
+      "kuromoji_pos": "名詞 | 助動詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞 | 動詞 | 助動詞 | 助詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "1",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "じ",
+          "pos": "助動詞",
+          "basic": "じ",
+          "reading": "ジ"
+        },
+        {
+          "word": "かん",
+          "pos": "名詞",
+          "basic": "かん",
+          "reading": "カン"
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "み",
+          "pos": "動詞",
+          "basic": "みる",
+          "reading": "ミ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": "い",
+          "pos": "動詞",
+          "basic": "いる",
+          "reading": "イ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        },
+        {
+          "word": "な",
+          "pos": "助詞",
+          "basic": "な",
+          "reading": "ナ"
+        }
+      ],
+      "token_diff": -3
+    },
+    {
+      "id": 70,
+      "original_text": "Netflixとか インスタとか ニュースとか YouTubeとか",
+      "token_count": 15,
+      "tokens_tiny": "Netflix | と | か |   | インスタ | と | か |   | ニュース | と | か |   | YouTube | と | か",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 11,
+      "kuromoji_words": "Netflix | とか |   | インスタ | とか |   | ニュース | とか |   | YouTube | とか",
+      "kuromoji_basic": "* | とか | * | * | とか | * | ニュース | とか | * | * | とか",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 名詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "Netflix",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "インスタ",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ニュース",
+          "pos": "名詞",
+          "basic": "ニュース",
+          "reading": "ニュース"
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "YouTube",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "とか",
+          "pos": "助詞",
+          "basic": "とか",
+          "reading": "トカ"
+        }
+      ],
+      "token_diff": 4
+    },
+    {
+      "id": 71,
+      "original_text": "そして よるの 12じから 1じくらいのあいだに ねました",
+      "token_count": 19,
+      "tokens_tiny": "そして |   | よる | の |   | 1 | 2 | じ | から |   | 1 | じくらい | の | あい | だ | に |   | ねまし | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 19,
+      "kuromoji_words": "そして |   | よる | の |   | 12 | じ | から |   | 1 | じ | くらい | の | あいだ | に |   | ね | まし | た",
+      "kuromoji_basic": "そして | * | よる | の | * | * | じ | から | * | * | じ | くらい | の | あいだ | に | * | ねる | ます | た",
+      "kuromoji_pos": "接続詞 | 記号 | 動詞 | 名詞 | 記号 | 名詞 | 助動詞 | 助詞 | 記号 | 名詞 | 助動詞 | 助詞 | 助詞 | 名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "そして",
+          "pos": "接続詞",
+          "basic": "そして",
+          "reading": "ソシテ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "よる",
+          "pos": "動詞",
+          "basic": "よる",
+          "reading": "ヨル"
+        },
+        {
+          "word": "の",
+          "pos": "名詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "12",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "じ",
+          "pos": "助動詞",
+          "basic": "じ",
+          "reading": "ジ"
+        },
+        {
+          "word": "から",
+          "pos": "助詞",
+          "basic": "から",
+          "reading": "カラ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "1",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "じ",
+          "pos": "助動詞",
+          "basic": "じ",
+          "reading": "ジ"
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": "の",
+          "pos": "助詞",
+          "basic": "の",
+          "reading": "ノ"
+        },
+        {
+          "word": "あいだ",
+          "pos": "名詞",
+          "basic": "あいだ",
+          "reading": "アイダ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ね",
+          "pos": "動詞",
+          "basic": "ねる",
+          "reading": "ネ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 72,
+      "original_text": "いじょうです",
+      "token_count": 2,
+      "tokens_tiny": "いじょう | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 2,
+      "kuromoji_words": "いじ | ょうです",
+      "kuromoji_basic": "いじる | *",
+      "kuromoji_pos": "動詞 | 名詞",
+      "kuromoji_detailed": [
+        {
+          "word": "いじ",
+          "pos": "動詞",
+          "basic": "いじる",
+          "reading": "イジ"
+        },
+        {
+          "word": "ょうです",
+          "pos": "名詞",
+          "basic": "*",
+          "reading": ""
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 73,
+      "original_text": "みなさん ききとれましたか",
+      "token_count": 7,
+      "tokens_tiny": "みなさん |   | きき | とれ | まし | た | か",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 6,
+      "kuromoji_words": "みなさん |   | ききとれ | まし | た | か",
+      "kuromoji_basic": "みなさん | * | ききとれる | ます | た | か",
+      "kuromoji_pos": "名詞 | 記号 | 動詞 | 助動詞 | 助動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "みなさん",
+          "pos": "名詞",
+          "basic": "みなさん",
+          "reading": "ミナサン"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ききとれ",
+          "pos": "動詞",
+          "basic": "ききとれる",
+          "reading": "キキトレ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        }
+      ],
+      "token_diff": 1
+    },
+    {
+      "id": 74,
+      "original_text": "どれくらい わかりましたか",
+      "token_count": 6,
+      "tokens_tiny": "どれくらい |   | わかり | まし | た | か",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 7,
+      "kuromoji_words": "どれ | くらい |   | わかり | まし | た | か",
+      "kuromoji_basic": "どれ | くらい | * | わかる | ます | た | か",
+      "kuromoji_pos": "名詞 | 助詞 | 記号 | 動詞 | 助動詞 | 助動詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "どれ",
+          "pos": "名詞",
+          "basic": "どれ",
+          "reading": "ドレ"
+        },
+        {
+          "word": "くらい",
+          "pos": "助詞",
+          "basic": "くらい",
+          "reading": "クライ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "わかり",
+          "pos": "動詞",
+          "basic": "わかる",
+          "reading": "ワカリ"
+        },
+        {
+          "word": "まし",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マシ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        },
+        {
+          "word": "か",
+          "pos": "助詞",
+          "basic": "か",
+          "reading": "カ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 75,
+      "original_text": "ぜんぶ わかったら すごいです",
+      "token_count": 7,
+      "tokens_tiny": "ぜんぶ |   | わかっ | たら |   | すごい | です",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 7,
+      "kuromoji_words": "ぜんぶ |   | わかっ | たら |   | すごい | です",
+      "kuromoji_basic": "ぜんぶ | * | わかる | た | * | すごい | です",
+      "kuromoji_pos": "名詞 | 記号 | 動詞 | 助動詞 | 記号 | 形容詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "ぜんぶ",
+          "pos": "名詞",
+          "basic": "ぜんぶ",
+          "reading": "ゼンブ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "わかっ",
+          "pos": "動詞",
+          "basic": "わかる",
+          "reading": "ワカッ"
+        },
+        {
+          "word": "たら",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タラ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "すごい",
+          "pos": "形容詞",
+          "basic": "すごい",
+          "reading": "スゴイ"
+        },
+        {
+          "word": "です",
+          "pos": "助動詞",
+          "basic": "です",
+          "reading": "デス"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 76,
+      "original_text": "おつかれさまでした",
+      "token_count": 5,
+      "tokens_tiny": "おつかれ | さ | まで | し | た",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 6,
+      "kuromoji_words": "お | つかれ | さ | まで | し | た",
+      "kuromoji_basic": "お | つかれる | さ | まで | する | た",
+      "kuromoji_pos": "接頭詞 | 動詞 | 名詞 | 助詞 | 動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "お",
+          "pos": "接頭詞",
+          "basic": "お",
+          "reading": "オ"
+        },
+        {
+          "word": "つかれ",
+          "pos": "動詞",
+          "basic": "つかれる",
+          "reading": "ツカレ"
+        },
+        {
+          "word": "さ",
+          "pos": "名詞",
+          "basic": "さ",
+          "reading": "サ"
+        },
+        {
+          "word": "まで",
+          "pos": "助詞",
+          "basic": "まで",
+          "reading": "マデ"
+        },
+        {
+          "word": "し",
+          "pos": "動詞",
+          "basic": "する",
+          "reading": "シ"
+        },
+        {
+          "word": "た",
+          "pos": "助動詞",
+          "basic": "た",
+          "reading": "タ"
+        }
+      ],
+      "token_diff": -1
+    },
+    {
+      "id": 77,
+      "original_text": "さいごまで みてくれて ほんとうに ありがとうございます",
+      "token_count": 15,
+      "tokens_tiny": "さい | ご | まで |   | みてくれ | て |   | ほんとう | に |   | あり | が | とう | ござい | ます",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 15,
+      "kuromoji_words": "さい | ごま | で |   | み | て | くれ | て |   | ほんとう | に |   | ありがとう | ござい | ます",
+      "kuromoji_basic": "さい | ごま | で | * | みる | て | くれる | て | * | ほんとう | に | * | ありがとう | ござる | ます",
+      "kuromoji_pos": "名詞 | 名詞 | 助詞 | 記号 | 動詞 | 助詞 | 動詞 | 助詞 | 記号 | 名詞 | 助詞 | 記号 | 感動詞 | 助動詞 | 助動詞",
+      "kuromoji_detailed": [
+        {
+          "word": "さい",
+          "pos": "名詞",
+          "basic": "さい",
+          "reading": "サイ"
+        },
+        {
+          "word": "ごま",
+          "pos": "名詞",
+          "basic": "ごま",
+          "reading": "ゴマ"
+        },
+        {
+          "word": "で",
+          "pos": "助詞",
+          "basic": "で",
+          "reading": "デ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "み",
+          "pos": "動詞",
+          "basic": "みる",
+          "reading": "ミ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": "くれ",
+          "pos": "動詞",
+          "basic": "くれる",
+          "reading": "クレ"
+        },
+        {
+          "word": "て",
+          "pos": "助詞",
+          "basic": "て",
+          "reading": "テ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ほんとう",
+          "pos": "名詞",
+          "basic": "ほんとう",
+          "reading": "ホントウ"
+        },
+        {
+          "word": "に",
+          "pos": "助詞",
+          "basic": "に",
+          "reading": "ニ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "ありがとう",
+          "pos": "感動詞",
+          "basic": "ありがとう",
+          "reading": "アリガトウ"
+        },
+        {
+          "word": "ござい",
+          "pos": "助動詞",
+          "basic": "ござる",
+          "reading": "ゴザイ"
+        },
+        {
+          "word": "ます",
+          "pos": "助動詞",
+          "basic": "ます",
+          "reading": "マス"
+        }
+      ],
+      "token_diff": 0
+    },
+    {
+      "id": 78,
+      "original_text": "じゃ またね",
+      "token_count": 3,
+      "tokens_tiny": "じゃ |   | またね",
+      "tokens_kuromoji": "",
+      "kuromoji_count": 4,
+      "kuromoji_words": "じゃ |   | また | ね",
+      "kuromoji_basic": "じゃ | * | また | ね",
+      "kuromoji_pos": "接続詞 | 記号 | 接続詞 | 助詞",
+      "kuromoji_detailed": [
+        {
+          "word": "じゃ",
+          "pos": "接続詞",
+          "basic": "じゃ",
+          "reading": "ジャ"
+        },
+        {
+          "word": " ",
+          "pos": "記号",
+          "basic": "*",
+          "reading": ""
+        },
+        {
+          "word": "また",
+          "pos": "接続詞",
+          "basic": "また",
+          "reading": "マタ"
+        },
+        {
+          "word": "ね",
+          "pos": "助詞",
+          "basic": "ね",
+          "reading": "ネ"
+        }
+      ],
+      "token_diff": -1
+    }
+  ],
+  "stats": {
+    "total_samples": 78,
+    "tiny_total_tokens": 790,
+    "kuromoji_total_tokens": 826,
+    "avg_tiny": "10.13",
+    "avg_kuromoji": "10.59",
+    "more_tokens_tiny": 20,
+    "same_tokens": 25,
+    "fewer_tokens_tiny": 33,
+    "avg_diff": "1.18"
+  }
+}

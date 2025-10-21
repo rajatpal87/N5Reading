@@ -1,0 +1,548 @@
+[
+  {
+    "id": 1,
+    "original_text": "みなさん こんにちは なおこです",
+    "token_count": 8,
+    "tokens_tiny": "みなさん |   | こん | にち | は |   | なおこ | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 2,
+    "original_text": "みなさん きのうは なにをしましたか?",
+    "token_count": 13,
+    "tokens_tiny": "みなさん |   | き | のう | は |   | なに | を | し | まし | た | か | ?",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 3,
+    "original_text": "きょうは きのうしたことについて はなします",
+    "token_count": 13,
+    "tokens_tiny": "きょう | は |   | き | のう | し | た | こと | について |   | は | なし | ます",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 4,
+    "original_text": "どれくらい りかいできるか チャレンジです",
+    "token_count": 8,
+    "tokens_tiny": "どれくらい |   | りかい | できる | か |   | チャレンジ | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 5,
+    "original_text": "どうぞ",
+    "token_count": 1,
+    "tokens_tiny": "どうぞ",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 6,
+    "original_text": "わたしは きのう あさ 8じくらいに おきて",
+    "token_count": 12,
+    "tokens_tiny": "わたし | は |   | きのう |   | あさ |   | 8 | じくらい | に |   | おきて",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 7,
+    "original_text": "かおを あらって はを みがきました",
+    "token_count": 11,
+    "tokens_tiny": "かお | を |   | あらって |   | は | を |   | みがき | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 8,
+    "original_text": "そして メイクをして きがえました",
+    "token_count": 10,
+    "tokens_tiny": "そして |   | メイク | を | して |   | き | がえ | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 9,
+    "original_text": "そして おみずを いっぱい のみました",
+    "token_count": 10,
+    "tokens_tiny": "そして |   | おみず | を |   | いっぱい |   | のみ | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 10,
+    "original_text": "わたしは ふだん あさごはんを ぜんぜん たべません",
+    "token_count": 13,
+    "tokens_tiny": "わたし | は |   | ふだん |   | あさご | はん | を |   | ぜんぜん |   | たべませ | ん",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 11,
+    "original_text": "こうこうせいのときは よく あさごはんを たべていました",
+    "token_count": 18,
+    "tokens_tiny": "こう | こう | せい | の | とき | は |   | よく |   | あさご | はん | を |   | たべ | て | い | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 12,
+    "original_text": "たとえば みそしるとか ごはんとか ぱん",
+    "token_count": 12,
+    "tokens_tiny": "た | とえば |   | みそしる | とか |   | ご | はん | と | か |   | ぱん",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 13,
+    "original_text": "そして まえのひの よるごはんに たべた のこり",
+    "token_count": 16,
+    "tokens_tiny": "そして |   | まえ | の | ひ | の |   | よる | ご | はん | に |   | たべた |   | の | こり",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 14,
+    "original_text": "のこりものを よく たべていました",
+    "token_count": 12,
+    "tokens_tiny": "の | こり | もの | を |   | よく |   | たべ | て | い | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 15,
+    "original_text": "のこりものです",
+    "token_count": 4,
+    "tokens_tiny": "の | こり | もの | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 16,
+    "original_text": "でも さいきんは ぜんぜん あさごはんを たべません",
+    "token_count": 13,
+    "tokens_tiny": "でも |   | さいきん | は |   | ぜんぜん |   | あさご | はん | を |   | たべませ | ん",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 17,
+    "original_text": "そして せんたくをして せんたくものを ほしました",
+    "token_count": 15,
+    "tokens_tiny": "そして |   | せん | たく | を | し | て |   | せんたく | もの | を |   | ほし | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 18,
+    "original_text": "そして あさの 9じくらいに",
+    "token_count": 7,
+    "tokens_tiny": "そして |   | あさの |   | 9 | じくらい | に",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 19,
+    "original_text": "わたしの しんせきの はたけに いきました",
+    "token_count": 13,
+    "tokens_tiny": "わたし | の |   | しんせき | の |   | は | たけ | に |   | いき | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 20,
+    "original_text": "ごぜんちゅうは はたけで すこし はたらきました",
+    "token_count": 13,
+    "tokens_tiny": "ごぜんちゅう | は |   | は | たけ | で |   | すこし |   | は | たらき | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 21,
+    "original_text": "ビーツの たねを まきました",
+    "token_count": 9,
+    "tokens_tiny": "ビーツ | の |   | たね | を |   | まき | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 22,
+    "original_text": "ビーツは あかいやさいですね",
+    "token_count": 6,
+    "tokens_tiny": "ビーツ | は |   | あかいやさい | です | ね",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 23,
+    "original_text": "たくさん たねを まいたので たべるのが たのしみです",
+    "token_count": 18,
+    "tokens_tiny": "たく | さん |   | たね | を |   | まい | た | の | で |   | たべる | の | が |   | た | のしみ | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 24,
+    "original_text": "そして おひるは いえに かえりました",
+    "token_count": 11,
+    "tokens_tiny": "そして |   | おひる | は |   | いえ | に |   | かえり | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 25,
+    "original_text": "いえに かえって おひるごはんを たべました",
+    "token_count": 14,
+    "tokens_tiny": "いえ | に |   | かえっ | て |   | おひる | ご | はん | を |   | たべ | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 26,
+    "original_text": "きのうは なにを たべたかな",
+    "token_count": 10,
+    "tokens_tiny": "き | のう | は |   | なに | を |   | たべ | たか | な",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 27,
+    "original_text": "あ パスタ パスタです",
+    "token_count": 6,
+    "tokens_tiny": "あ |   | パスタ |   | パスタ | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 28,
+    "original_text": "トマトソースと アンチョビと チーズのパスタを つくりました",
+    "token_count": 14,
+    "tokens_tiny": "トマトソース | と |   | アンチョビ | と |   | チーズ | の | パスタ | を |   | つくり | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 29,
+    "original_text": "しりあいが いえにきたので たくさん つくりました",
+    "token_count": 15,
+    "tokens_tiny": "しり | あい | が |   | いえ | にき | た | の | で |   | たくさん |   | つくり | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 30,
+    "original_text": "トマトソースと チーズと アンチョビ",
+    "token_count": 7,
+    "tokens_tiny": "トマトソース | と |   | チーズ | と |   | アンチョビ",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 31,
+    "original_text": "この くみあわせは さいこうです",
+    "token_count": 7,
+    "tokens_tiny": "この |   | くみあわせ | は |   | さいこう | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 32,
+    "original_text": "ほんとに おいしい",
+    "token_count": 4,
+    "tokens_tiny": "ほんと | に |   | おいしい",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 33,
+    "original_text": "そして ごはんを たべたあと カフェに いきました",
+    "token_count": 16,
+    "tokens_tiny": "そして |   | ご | はん | を |   | たべ | た | あと |   | カフェ | に |   | いき | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 34,
+    "original_text": "くるまで カフェに いきました",
+    "token_count": 9,
+    "tokens_tiny": "くる | まで |   | カフェ | に |   | いき | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 35,
+    "original_text": "みなさんは くるまを うんてんするのは すきですか",
+    "token_count": 16,
+    "tokens_tiny": "みなさん | は |   | くるま | を |   | うん | て | ん | する | の | は |   | すき | です | か",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 36,
+    "original_text": "わたしは あまり すきじゃなかったです",
+    "token_count": 9,
+    "tokens_tiny": "わたし | は |   | あまり |   | すきじゃ | なかっ | た | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 37,
+    "original_text": "でんしゃに のるほうが すきでした",
+    "token_count": 9,
+    "tokens_tiny": "でんしゃ | に |   | のる | ほう | が |   | すきでし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 38,
+    "original_text": "でも さいきんは くるまを うんてんするのも すきです",
+    "token_count": 17,
+    "tokens_tiny": "でも |   | さいきん | は |   | くるま | を |   | うん | て | ん | する | の | も |   | すき | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 39,
+    "original_text": "そう ごごは カフェで こうひを のみながら",
+    "token_count": 12,
+    "tokens_tiny": "そう |   | ごごは |   | カフェ | で |   | こうひ | を |   | のみ | ながら",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 40,
+    "original_text": "にほんごと スペイン語の べんきょうを しました",
+    "token_count": 12,
+    "tokens_tiny": "にほんご | と |   | スペイン | 語 | の |   | べんきょう | を |   | しまし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 41,
+    "original_text": "そう にほんごです",
+    "token_count": 4,
+    "tokens_tiny": "そう |   | にほんご | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 42,
+    "original_text": "にほんじんだけど さいきん にほんごが むずかしいなと おもって",
+    "token_count": 13,
+    "tokens_tiny": "に | ほんじん | だけど |   | さいきん |   | にほんご | が |   | むずかしい | なと |   | おもって",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 43,
+    "original_text": "にほんごを べんきょうしています",
+    "token_count": 8,
+    "tokens_tiny": "にほんご | を |   | べんきょう | し | て | い | ます",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 44,
+    "original_text": "むずかしい",
+    "token_count": 1,
+    "tokens_tiny": "むずかしい",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 45,
+    "original_text": "そして いえに かえるまえに スーパーに いきました",
+    "token_count": 15,
+    "tokens_tiny": "そして |   | いえ | に |   | かえる | まえ | に |   | スーパー | に |   | いき | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 46,
+    "original_text": "ゆうがたの 5じ くらいかな",
+    "token_count": 10,
+    "tokens_tiny": "ゆう | が | た | の |   | 5 | じ |   | くらいか | な",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 47,
+    "original_text": "ゆうがた スーパーに いくと",
+    "token_count": 8,
+    "tokens_tiny": "ゆう | が | た |   | スーパー | に |   | いくと",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 48,
+    "original_text": "はんがくの さしみとか からあげとか おにぎりが うられています",
+    "token_count": 18,
+    "tokens_tiny": "はん | がく | の |   | さしみ | とか |   | から | あげ | とか |   | おにぎり | が |   | うられ | て | い | ます",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 49,
+    "original_text": "だけど きのうは なにも かいませんでした",
+    "token_count": 14,
+    "tokens_tiny": "だけど |   | き | のう | は |   | なに | も |   | かいませ | ん | で | し | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 50,
+    "original_text": "6じ くらいに いえに かえりました",
+    "token_count": 11,
+    "tokens_tiny": "6じ |   | くらい | に |   | いえ | に |   | かえり | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 51,
+    "original_text": "そして よるごはんは ちくぜんに という",
+    "token_count": 11,
+    "tokens_tiny": "そして |   | よる | ご | はん | は |   | ちくぜん | に |   | という",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 52,
+    "original_text": "にほんの りょうりを たべました",
+    "token_count": 9,
+    "tokens_tiny": "にほん | の |   | りょうり | を |   | たべ | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 53,
+    "original_text": "これは にんじんとか れんこんとか とりにくが はいています",
+    "token_count": 19,
+    "tokens_tiny": "これ | は |   | にんじん | と | か |   | れんこん | と | か |   | とり | にく | が |   | はい | て | い | ます",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 54,
+    "original_text": "すこし あまい りょうりかな",
+    "token_count": 5,
+    "tokens_tiny": "すこし |   | あまい |   | りょうりかな",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 55,
+    "original_text": "おいしかったです",
+    "token_count": 3,
+    "tokens_tiny": "おいしかっ | た | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 56,
+    "original_text": "そして よるごはんを たべたあと",
+    "token_count": 10,
+    "tokens_tiny": "そして |   | よる | ご | はん | を |   | たべ | た | あと",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 57,
+    "original_text": "おさらを あらったり おさらを ふいたり",
+    "token_count": 10,
+    "tokens_tiny": "おさら | を |   | あらっ | たり |   | おさら | を |   | ふいたり",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 58,
+    "original_text": "あと せんたくものを たたんだり しました",
+    "token_count": 12,
+    "tokens_tiny": "あと |   | せんたく | もの | を |   | たたん | だり |   | し | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 59,
+    "original_text": "かじを しました",
+    "token_count": 5,
+    "tokens_tiny": "かじ | を |   | しまし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 60,
+    "original_text": "すこしだけ かじ",
+    "token_count": 4,
+    "tokens_tiny": "すこし | だけ |   | かじ",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 61,
+    "original_text": "そして そのあと",
+    "token_count": 4,
+    "tokens_tiny": "そして |   | その | あと",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 62,
+    "original_text": "YouTubeの へんしゅうをしたり",
+    "token_count": 7,
+    "tokens_tiny": "YouTube | の |   | へんしゅう | を | し | たり",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 63,
+    "original_text": "ブログを かいたり しました",
+    "token_count": 9,
+    "tokens_tiny": "ブログ | を |   | かい | たり |   | し | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 64,
+    "original_text": "で そのあと おふろに はいりました",
+    "token_count": 11,
+    "tokens_tiny": "で |   | その | あと |   | おふろ | に |   | はいり | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 65,
+    "original_text": "しゃわを あびました",
+    "token_count": 6,
+    "tokens_tiny": "しゃわ | を |   | あび | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 66,
+    "original_text": "もちろん はも みがけました",
+    "token_count": 8,
+    "tokens_tiny": "もちろん |   | は | も |   | みがけ | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 67,
+    "original_text": "そして だいたい よるの 11じくらいに",
+    "token_count": 12,
+    "tokens_tiny": "そして |   | だい | たい |   | よる | の |   | 1 | 1 | じくらい | に",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 68,
+    "original_text": "ベッドにはいって けいたいを みていました",
+    "token_count": 13,
+    "tokens_tiny": "ベッド | に | はいって |   | けい | たい | を |   | み | て | い | まし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 69,
+    "original_text": "1じかんくらい みていたかな",
+    "token_count": 8,
+    "tokens_tiny": "1じ | かんくらい |   | み | て | い | たか | な",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 70,
+    "original_text": "Netflixとか インスタとか ニュースとか YouTubeとか",
+    "token_count": 15,
+    "tokens_tiny": "Netflix | と | か |   | インスタ | と | か |   | ニュース | と | か |   | YouTube | と | か",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 71,
+    "original_text": "そして よるの 12じから 1じくらいのあいだに ねました",
+    "token_count": 19,
+    "tokens_tiny": "そして |   | よる | の |   | 1 | 2 | じ | から |   | 1 | じくらい | の | あい | だ | に |   | ねまし | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 72,
+    "original_text": "いじょうです",
+    "token_count": 2,
+    "tokens_tiny": "いじょう | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 73,
+    "original_text": "みなさん ききとれましたか",
+    "token_count": 7,
+    "tokens_tiny": "みなさん |   | きき | とれ | まし | た | か",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 74,
+    "original_text": "どれくらい わかりましたか",
+    "token_count": 6,
+    "tokens_tiny": "どれくらい |   | わかり | まし | た | か",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 75,
+    "original_text": "ぜんぶ わかったら すごいです",
+    "token_count": 7,
+    "tokens_tiny": "ぜんぶ |   | わかっ | たら |   | すごい | です",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 76,
+    "original_text": "おつかれさまでした",
+    "token_count": 5,
+    "tokens_tiny": "おつかれ | さ | まで | し | た",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 77,
+    "original_text": "さいごまで みてくれて ほんとうに ありがとうございます",
+    "token_count": 15,
+    "tokens_tiny": "さい | ご | まで |   | みてくれ | て |   | ほんとう | に |   | あり | が | とう | ござい | ます",
+    "tokens_kuromoji": ""
+  },
+  {
+    "id": 78,
+    "original_text": "じゃ またね",
+    "token_count": 3,
+    "tokens_tiny": "じゃ |   | またね",
+    "tokens_kuromoji": ""
+  }
+]

@@ -5,6 +5,7 @@ import path from 'path';
 import { createTables } from './schema.js';
 import { migrateGrammarTimestamps } from './migrateGrammarTimestamps.js';
 import { migrateProgressTracking } from './migrateProgress.js';
+import { migrateVocabularyMetadata } from './migrateVocabularyMetadata.js';
 import { autoSeedIfEmpty } from './autoSeed.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -35,6 +36,7 @@ if (process.env.DATABASE_URL) {
         await createTables(db, dbType);
         await migrateProgressTracking(db, dbType);
         await migrateGrammarTimestamps(db, dbType);
+        await migrateVocabularyMetadata(db, dbType);
         console.log('✅ Database migrations complete');
         await autoSeedIfEmpty(db, dbType);
       } catch (error) {
@@ -62,6 +64,7 @@ if (process.env.DATABASE_URL) {
         await createTables(db, dbType);
         await migrateProgressTracking(db, dbType);
         await migrateGrammarTimestamps(db, dbType);
+        await migrateVocabularyMetadata(db, dbType);
         console.log('✅ Database migrations complete');
         await autoSeedIfEmpty(db, dbType);
       } catch (error) {
