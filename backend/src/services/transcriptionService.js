@@ -25,6 +25,38 @@ function getOpenAIClient() {
 }
 
 /**
+ * Generate mock transcription for testing without OpenAI API
+ * @param {string} audioPath - Path to audio file (for duration calculation)
+ * @returns {Object} Mock transcription result
+ */
+function generateMockTranscription(audioPath) {
+  console.log('🧪 Generating mock Japanese transcription for testing...');
+  
+  // Sample N5 Japanese conversation
+  const mockSegments = [
+    { start: 0, end: 3.5, text: 'こんにちは。元気ですか。' },
+    { start: 3.5, end: 6.0, text: 'はい、元気です。ありがとうございます。' },
+    { start: 6.0, end: 9.5, text: '今日はいい天気ですね。' },
+    { start: 9.5, end: 12.0, text: 'そうですね。とてもいいです。' },
+    { start: 12.0, end: 15.5, text: '週末は何をしますか。' },
+    { start: 15.5, end: 19.0, text: '友達と公園に行きます。' },
+    { start: 19.0, end: 22.5, text: 'それはいいですね。楽しんでください。' },
+    { start: 22.5, end: 25.0, text: 'ありがとうございます。さようなら。' },
+  ];
+  
+  const fullText = mockSegments.map(s => s.text).join(' ');
+  const duration = mockSegments[mockSegments.length - 1].end;
+  
+  return {
+    text: fullText,
+    language: 'ja',
+    duration: duration,
+    segments: mockSegments,
+    cost: 0, // No cost for mock data
+  };
+}
+
+/**
  * Compress audio file to meet Whisper API 25MB limit
  * @param {string} inputPath - Path to input audio file
  * @param {Function} onProgress - Progress callback (optional)
@@ -159,6 +191,11 @@ export async function transcribeAudio(audioPath, onProgress = null) {
 
     // Check for API key issues
     if (error.message.includes('Incorrect API key') || error.message.includes('authentication')) {
+      // If TEST_MODE is enabled, return mock transcription instead of failing
+      if (process.env.TEST_MODE === 'true') {
+        console.log('⚠️ TEST_MODE enabled - using mock transcription');
+        return generateMockTranscription(audioPath);
+      }
       throw new Error('Invalid OpenAI API key. Please check your OPENAI_API_KEY in .env file.');
     }
 

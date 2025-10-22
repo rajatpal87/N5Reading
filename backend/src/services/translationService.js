@@ -23,6 +23,44 @@ function getTranslator() {
 }
 
 /**
+ * Simple mock translation for testing
+ * @param {string} text - Japanese text
+ * @returns {string} Mock English translation
+ */
+function mockTranslate(text) {
+  // Simple character-by-character mock translation
+  const mockMap = {
+    'こんにちは': 'Hello',
+    '元気': 'fine/healthy',
+    'ですか': '(question)',
+    'はい': 'yes',
+    'ありがとうございます': 'thank you very much',
+    '今日': 'today',
+    'いい': 'good',
+    '天気': 'weather',
+    'ですね': 'isn\'t it',
+    'そうですね': 'that\'s right',
+    'とても': 'very',
+    '週末': 'weekend',
+    '何': 'what',
+    'します': 'do',
+    '友達': 'friend',
+    '公園': 'park',
+    '行きます': 'go',
+    'それは': 'that',
+    '楽しんでください': 'please enjoy',
+    'さようなら': 'goodbye',
+  };
+  
+  let translated = text;
+  for (const [jp, en] of Object.entries(mockMap)) {
+    translated = translated.replace(new RegExp(jp, 'g'), en);
+  }
+  
+  return translated;
+}
+
+/**
  * Translate Japanese text to English using DeepL API
  * @param {string} text - Japanese text to translate
  * @returns {Promise<Object>} Translation result
@@ -68,6 +106,17 @@ export async function translateText(text) {
 
     // Check for API key issues
     if (error.message.includes('Authorization') || error.message.includes('403')) {
+      // If TEST_MODE is enabled, return mock translation instead of failing
+      if (process.env.TEST_MODE === 'true') {
+        console.log('⚠️ TEST_MODE enabled - using mock translation');
+        const mockResult = mockTranslate(text);
+        return {
+          translatedText: mockResult,
+          detectedSourceLang: 'ja',
+          charCount: text.length,
+          cost: 0,
+        };
+      }
       throw new Error('Invalid DeepL API key. Please check your DEEPL_API_KEY in .env file.');
     }
 
