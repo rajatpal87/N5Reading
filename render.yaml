@@ -7,7 +7,7 @@ services:
     region: oregon
     plan: starter
     buildCommand: cd backend && bash render-build.sh
-    startCommand: cd backend && npm start
+    startCommand: cd backend && bash start.sh
     envVars:
       - key: NODE_ENV
         value: production
