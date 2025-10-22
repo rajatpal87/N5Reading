@@ -16,6 +16,11 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Trust proxy - Required for Render.com (behind reverse proxy)
+if (process.env.NODE_ENV === 'production' || process.env.RENDER) {
+  app.set('trust proxy', 1);
+}
+
 // Security Middleware (apply first)
 app.use(helmetConfig); // Security headers
 app.use(limiter); // Rate limiting
