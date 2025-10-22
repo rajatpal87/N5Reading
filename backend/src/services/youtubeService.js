@@ -53,6 +53,7 @@ export async function downloadYouTubeVideo(url, outputDir) {
   try {
     console.log('📥 Starting YouTube download:', url);
     console.log('📁 Output directory:', outputDir);
+    console.log('🌍 Environment:', process.env.NODE_ENV);
     
     // Ensure output directory exists
     if (!fs.existsSync(outputDir)) {
@@ -67,20 +68,34 @@ export async function downloadYouTubeVideo(url, outputDir) {
 
     console.log('🔍 Fetching video info first...');
     
-    // Get video info first (tries Chrome, then Safari cookies)
-    const info = await tryWithBrowserCookies(url, {
-      dumpSingleJson: true,
-      noWarnings: true,
-      noPlaylist: true,
-    });
+    // Determine if we're in production (Render) or local development
+    const isProduction = process.env.NODE_ENV === 'production' || process.env.RENDER;
+    
+    let info;
+    if (isProduction) {
+      // Production: Don't use browser cookies (not available on servers)
+      console.log('🌐 Production mode - downloading without browser cookies');
+      info = await youtubedl(url, {
+        dumpSingleJson: true,
+        noWarnings: true,
+        noPlaylist: true,
+      });
+    } else {
+      // Development: Try with browser cookies for better success rate
+      console.log('💻 Development mode - trying with browser cookies');
+      info = await tryWithBrowserCookies(url, {
+        dumpSingleJson: true,
+        noWarnings: true,
+        noPlaylist: true,
+      });
+    }
     
     console.log('✅ Video info retrieved:', info.title);
     console.log('📊 Duration:', info.duration, 'seconds');
 
     console.log('⬇️ Starting video download...');
 
-    // Download video (tries Chrome, then Safari cookies)
-    const output = await tryWithBrowserCookies(url, {
+    const downloadOptions = {
       output: outputTemplate,
       format: 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
       mergeOutputFormat: 'mp4',
@@ -89,7 +104,16 @@ export async function downloadYouTubeVideo(url, outputDir) {
       noWarnings: true,
       noPart: true,
       noOverwrites: true,
-    });
+    };
+
+    let output;
+    if (isProduction) {
+      // Production: Download without browser cookies
+      output = await youtubedl(url, downloadOptions);
+    } else {
+      // Development: Try with browser cookies
+      output = await tryWithBrowserCookies(url, downloadOptions);
+    }
     
     console.log('✅ Download complete');
 
