@@ -254,8 +254,8 @@ router.post('/youtube', uploadLimiter, async (req, res) => {
     } else if (error.message.includes('too large') || error.message.includes('max-filesize')) {
       errorMessage = 'Video exceeds 100MB size limit';
       statusCode = 400;
-    } else if (error.message.includes('Sign in to confirm')) {
-      errorMessage = 'This video requires age verification or sign-in';
+    } else if (error.message.includes('Sign in to confirm') || error.message.includes('not a bot')) {
+      errorMessage = 'YouTube has blocked downloads from this server. Please download the video to your computer and use the "Upload Video" feature instead.';
       statusCode = 403;
     }
     
