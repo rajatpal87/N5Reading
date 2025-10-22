@@ -159,6 +159,9 @@ router.post('/youtube', uploadLimiter, async (req, res) => {
     }
 
     console.log('📥 Downloading YouTube video:', url);
+    console.log('🌍 Environment:', process.env.NODE_ENV);
+    console.log('🖥️ Platform:', process.platform);
+    console.log('📁 Upload directory:', uploadsDir);
 
     // Download video
     const videoInfo = await downloadYouTubeVideo(url, uploadsDir);
@@ -229,9 +232,35 @@ router.post('/youtube', uploadLimiter, async (req, res) => {
     });
 
   } catch (error) {
-    console.error('Error downloading YouTube video:', error);
-    res.status(500).json({ 
-      error: 'Failed to download YouTube video', 
+    console.error('❌ Error downloading YouTube video:', error);
+    console.error('❌ Error stack:', error.stack);
+    console.error('❌ Error details:', {
+      message: error.message,
+      code: error.code,
+      stderr: error.stderr,
+      stdout: error.stdout
+    });
+    
+    // Provide more specific error messages
+    let errorMessage = 'Failed to download YouTube video';
+    let statusCode = 500;
+    
+    if (error.message.includes('yt-dlp') || error.message.includes('ENOENT')) {
+      errorMessage = 'YouTube downloader (yt-dlp) is not available on the server';
+      statusCode = 503;
+    } else if (error.message.includes('unavailable') || error.message.includes('private')) {
+      errorMessage = 'This video is unavailable, private, or restricted';
+      statusCode = 400;
+    } else if (error.message.includes('too large') || error.message.includes('max-filesize')) {
+      errorMessage = 'Video exceeds 100MB size limit';
+      statusCode = 400;
+    } else if (error.message.includes('Sign in to confirm')) {
+      errorMessage = 'This video requires age verification or sign-in';
+      statusCode = 403;
+    }
+    
+    res.status(statusCode).json({ 
+      error: errorMessage, 
       details: error.message 
     });
   }
