@@ -2,9 +2,33 @@ import youtubedl from 'youtube-dl-exec';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+/**
+ * Check if yt-dlp is available, if not, provide installation guidance
+ */
+function checkYtDlpAvailability() {
+  try {
+    // Try to get yt-dlp version
+    execSync('yt-dlp --version', { stdio: 'pipe' });
+    console.log('✅ yt-dlp is available');
+    return true;
+  } catch (error) {
+    console.error('❌ yt-dlp is not installed or not in PATH');
+    console.error('Please install yt-dlp:');
+    console.error('  - Ubuntu/Debian: sudo apt install yt-dlp');
+    console.error('  - macOS: brew install yt-dlp');
+    console.error('  - pip: pip3 install --user yt-dlp');
+    console.error('  - Or download from: https://github.com/yt-dlp/yt-dlp');
+    return false;
+  }
+}
+
+// Check on module load
+checkYtDlpAvailability();
 
 /**
  * Try downloading with different browser cookies
@@ -175,27 +199,39 @@ export async function downloadYouTubeVideo(url, outputDir) {
 
   } catch (error) {
     console.error('❌ YouTube download error:', error.message);
-    
+    console.error('Error details:', error);
+
     // Check if yt-dlp is not installed
-    if (error.message.includes('spawn') || error.message.includes('ENOENT')) {
-      throw new Error('yt-dlp is not installed. Please install it with: brew install yt-dlp');
+    if (error.message.includes('spawn') || error.message.includes('ENOENT') || error.code === 'ENOENT') {
+      const installInstructions = `
+yt-dlp is not installed or not in PATH.
+
+Installation options:
+• Ubuntu/Debian: sudo apt install yt-dlp
+• macOS: brew install yt-dlp
+• Using pip: pip3 install --user yt-dlp
+• Download binary: https://github.com/yt-dlp/yt-dlp/releases
+
+After installing, you may need to restart the server.
+      `.trim();
+      throw new Error(installInstructions);
     }
-    
+
     // Check for bot detection / authentication required
     if (error.message.includes('Sign in to confirm') || error.message.includes('not a bot')) {
       throw new Error('YouTube blocked this request due to bot detection. Please try a different video or use the file upload feature to upload a downloaded video instead.');
     }
-    
+
     // Check for video unavailability
     if (error.message.includes('unavailable') || error.message.includes('not available')) {
       throw new Error('This video is unavailable or private');
     }
-    
+
     // Check for file size limit
     if (error.message.includes('too large') || error.message.includes('max-filesize')) {
       throw new Error('Video exceeds 100MB size limit');
     }
-    
+
     throw new Error(`Failed to download YouTube video: ${error.message}`);
   }
 }
