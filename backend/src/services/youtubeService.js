@@ -1,4 +1,4 @@
-import youtubedl from 'youtube-dl-exec';
+import { create as createYoutubeDl } from 'youtube-dl-exec';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
@@ -8,27 +8,50 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
- * Check if yt-dlp is available, if not, provide installation guidance
+ * Find yt-dlp binary path
+ * @returns {string|null} Path to yt-dlp or null if not found
  */
-function checkYtDlpAvailability() {
+function findYtDlpBinary() {
+  // Try to find yt-dlp in PATH
   try {
-    // Try to get yt-dlp version
-    execSync('yt-dlp --version', { stdio: 'pipe' });
-    console.log('✅ yt-dlp is available');
-    return true;
+    const result = execSync('which yt-dlp', { encoding: 'utf8' }).trim();
+    if (result) {
+      console.log('✅ Found yt-dlp at:', result);
+      return result;
+    }
   } catch (error) {
-    console.error('❌ yt-dlp is not installed or not in PATH');
-    console.error('Please install yt-dlp:');
-    console.error('  - Ubuntu/Debian: sudo apt install yt-dlp');
-    console.error('  - macOS: brew install yt-dlp');
-    console.error('  - pip: pip3 install --user yt-dlp');
-    console.error('  - Or download from: https://github.com/yt-dlp/yt-dlp');
-    return false;
+    // Not in PATH, try common locations
   }
+
+  // Try common installation locations
+  const possiblePaths = [
+    '/usr/local/bin/yt-dlp',
+    '/usr/bin/yt-dlp',
+    '/opt/homebrew/bin/yt-dlp',
+    '/home/user/.local/bin/yt-dlp',
+    `${process.env.HOME}/.local/bin/yt-dlp`,
+    '/root/.local/bin/yt-dlp',
+  ];
+
+  for (const binPath of possiblePaths) {
+    if (fs.existsSync(binPath)) {
+      console.log('✅ Found yt-dlp at:', binPath);
+      return binPath;
+    }
+  }
+
+  console.error('❌ yt-dlp is not installed or not in PATH');
+  console.error('Please install yt-dlp:');
+  console.error('  - Ubuntu/Debian: sudo apt install yt-dlp');
+  console.error('  - macOS: brew install yt-dlp');
+  console.error('  - pip: pip3 install --user yt-dlp');
+  console.error('  - Or download from: https://github.com/yt-dlp/yt-dlp');
+  return null;
 }
 
-// Check on module load
-checkYtDlpAvailability();
+// Find and configure yt-dlp binary
+const ytDlpPath = findYtDlpBinary();
+const youtubedl = ytDlpPath ? createYoutubeDl(ytDlpPath) : createYoutubeDl();
 
 /**
  * Try downloading with different browser cookies
@@ -74,10 +97,26 @@ async function tryWithBrowserCookies(url, options, browsers = ['chrome', 'safari
  * @returns {Promise<Object>} Downloaded video info
  */
 export async function downloadYouTubeVideo(url, outputDir) {
+  // Check if yt-dlp is available
+  if (!ytDlpPath) {
+    throw new Error(`
+yt-dlp is not installed or not in PATH.
+
+Installation options:
+• Ubuntu/Debian: sudo apt install yt-dlp
+• macOS: brew install yt-dlp
+• Using pip: pip3 install --user yt-dlp
+• Download binary: https://github.com/yt-dlp/yt-dlp/releases
+
+After installing, you may need to restart the server.
+    `.trim());
+  }
+
   try {
     console.log('📥 Starting YouTube download:', url);
     console.log('📁 Output directory:', outputDir);
     console.log('🌍 Environment:', process.env.NODE_ENV);
+    console.log('🔧 Using yt-dlp at:', ytDlpPath);
     
     // Ensure output directory exists
     if (!fs.existsSync(outputDir)) {
@@ -92,37 +131,42 @@ export async function downloadYouTubeVideo(url, outputDir) {
 
     console.log('🔍 Fetching video info first...');
     
-    // Determine if we're in production (Render) or local development
-    const isProduction = process.env.NODE_ENV === 'production' || process.env.RENDER;
-    
+    // Use standard download options without cookies
+    console.log('📡 Fetching video info...');
+    const baseOptions = {
+      dumpSingleJson: true,
+      noWarnings: true,
+      noPlaylist: true,
+      // Bot bypass options
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      referer: 'https://www.youtube.com/',
+      addHeader: [
+        'Accept-Language:en-US,en;q=0.9',
+        'Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Encoding:gzip, deflate',
+        'DNT:1'
+      ],
+      extractorArgs: 'youtube:player_client=android,web',
+      noCheckCertificates: true,
+    };
+
     let info;
-    if (isProduction) {
-      // Production: Use bot bypass options
-      console.log('🌐 Production mode - using bot bypass options');
-      info = await youtubedl(url, {
-        dumpSingleJson: true,
-        noWarnings: true,
-        noPlaylist: true,
-        // Bot bypass options
-        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        referer: 'https://www.youtube.com/',
-        addHeader: [
-          'Accept-Language:en-US,en;q=0.9',
-          'Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-          'Accept-Encoding:gzip, deflate',
-          'DNT:1'
-        ],
-        extractor_args: 'youtube:player_client=android,web',
-        noCheckCertificates: true,
-      });
-    } else {
-      // Development: Try with browser cookies for better success rate
-      console.log('💻 Development mode - trying with browser cookies');
-      info = await tryWithBrowserCookies(url, {
-        dumpSingleJson: true,
-        noWarnings: true,
-        noPlaylist: true,
-      });
+    try {
+      // First try without cookies
+      info = await youtubedl(url, baseOptions);
+    } catch (error) {
+      // If it fails and we have browser cookies available, try with cookies
+      if (error.message.includes('Sign in') || error.message.includes('bot')) {
+        console.log('⚠️ Standard download failed, trying with browser cookies...');
+        try {
+          info = await tryWithBrowserCookies(url, baseOptions);
+        } catch (cookieError) {
+          // If cookies also fail, throw the original error
+          throw error;
+        }
+      } else {
+        throw error;
+      }
     }
     
     console.log('✅ Video info retrieved:', info.title);
@@ -141,26 +185,39 @@ export async function downloadYouTubeVideo(url, outputDir) {
       noOverwrites: true,
     };
 
+    // Combine download options with bot bypass headers
+    const finalDownloadOptions = {
+      ...downloadOptions,
+      // Bot bypass options
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      referer: 'https://www.youtube.com/',
+      addHeader: [
+        'Accept-Language:en-US,en;q=0.9',
+        'Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Encoding:gzip, deflate',
+        'DNT:1'
+      ],
+      extractorArgs: 'youtube:player_client=android,web',
+      noCheckCertificates: true,
+    };
+
     let output;
-    if (isProduction) {
-      // Production: Download with bot bypass options
-      output = await youtubedl(url, {
-        ...downloadOptions,
-        // Bot bypass options
-        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        referer: 'https://www.youtube.com/',
-        addHeader: [
-          'Accept-Language:en-US,en;q=0.9',
-          'Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-          'Accept-Encoding:gzip, deflate',
-          'DNT:1'
-        ],
-        extractor_args: 'youtube:player_client=android,web',
-        noCheckCertificates: true,
-      });
-    } else {
-      // Development: Try with browser cookies
-      output = await tryWithBrowserCookies(url, downloadOptions);
+    try {
+      // First try without cookies
+      output = await youtubedl(url, finalDownloadOptions);
+    } catch (error) {
+      // If it fails and we have browser cookies available, try with cookies
+      if (error.message.includes('Sign in') || error.message.includes('bot')) {
+        console.log('⚠️ Standard download failed, trying with browser cookies...');
+        try {
+          output = await tryWithBrowserCookies(url, downloadOptions);
+        } catch (cookieError) {
+          // If cookies also fail, throw the original error
+          throw error;
+        }
+      } else {
+        throw error;
+      }
     }
     
     console.log('✅ Download complete');
