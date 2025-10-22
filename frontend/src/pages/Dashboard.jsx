@@ -4,6 +4,7 @@ import axios from 'axios';
 import VideoSummaryCard from '../components/dashboard/VideoSummaryCard';
 import VocabularyListCard from '../components/dashboard/VocabularyListCard';
 import VocabularyDetailPanel from '../components/dashboard/VocabularyDetailPanel';
+import { getPosCategory, getAllPosCategories, getPosCategoryColor, getPosCategoryIcon } from '../utils/posHelper';
 import GrammarPatternsList from '../components/dashboard/GrammarPatternsList';
 import N5Timeline from '../components/dashboard/N5Timeline';
 
@@ -25,6 +26,7 @@ export default function Dashboard() {
   const [showDownCTA, setShowDownCTA] = useState(true);
   const [showUpCTA, setShowUpCTA] = useState(false);
   const [selectedWord, setSelectedWord] = useState(null);
+  const [selectedPosFilter, setSelectedPosFilter] = useState('All');
   
   const mainVideoContainerRef = useRef(null);
 
@@ -333,23 +335,77 @@ export default function Dashboard() {
           <div className="w-full h-full bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="flex h-full">
               {/* Left Side: Vocabulary List */}
-              <div className="w-1/3 border-r border-gray-200 overflow-y-auto p-4 space-y-2">
-                <div className="mb-4 pb-4 border-b border-gray-200 sticky top-0 bg-white z-10">
-                  <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+              <div className="w-1/3 border-r border-gray-200 flex flex-col">
+                {/* Sticky Header with Filters */}
+                <div className="p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                  <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2 mb-3">
                     🟡 N5 Vocabulary
                     <span className="text-sm font-normal text-gray-500">
-                      ({analysis.vocabulary?.unique_count || 0})
+                      ({(() => {
+                        const filtered = analysis.vocabulary?.words?.filter(word => {
+                          if (selectedPosFilter === 'All') return true;
+                          const posTag = word.occurrences?.[0]?.pos || '';
+                          return getPosCategory(posTag) === selectedPosFilter;
+                        }) || [];
+                        return filtered.length;
+                      })()})
                     </span>
                   </h3>
+                  
+                  {/* POS Filter Buttons */}
+                  <div className="flex flex-wrap gap-1">
+                    <button
+                      onClick={() => setSelectedPosFilter('All')}
+                      className={`px-2 py-1 text-xs rounded-lg border transition-colors ${
+                        selectedPosFilter === 'All'
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100'
+                      }`}
+                    >
+                      All
+                    </button>
+                    {['Verb', 'Noun', 'Adjective', 'Na-Adjective', 'Adverb', 'Particle'].map(category => (
+                      <button
+                        key={category}
+                        onClick={() => setSelectedPosFilter(category)}
+                        className={`px-2 py-1 text-xs rounded-lg border transition-colors ${
+                          selectedPosFilter === category
+                            ? getPosCategoryColor(category).replace('bg-', 'bg-').replace('text-', 'text-').replace('border-', 'border-')
+                            : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100'
+                        }`}
+                      >
+                        {getPosCategoryIcon(category)} {category}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                {analysis.vocabulary?.words?.map((word, idx) => (
-                  <VocabularyListCard
-                    key={idx}
-                    word={word}
-                    isSelected={selectedWord?.kanji === word.kanji && selectedWord?.hiragana === word.hiragana}
-                    onClick={() => setSelectedWord(word)}
-                  />
-                ))}
+                
+                {/* Scrollable Vocabulary List */}
+                <div className="flex-1 overflow-y-auto p-4 space-y-2">
+                  {analysis.vocabulary?.words
+                    ?.filter(word => {
+                      if (selectedPosFilter === 'All') return true;
+                      const posTag = word.occurrences?.[0]?.pos || '';
+                      return getPosCategory(posTag) === selectedPosFilter;
+                    })
+                    .map((word, idx) => (
+                      <VocabularyListCard
+                        key={idx}
+                        word={word}
+                        isSelected={selectedWord?.kanji === word.kanji && selectedWord?.hiragana === word.hiragana}
+                        onClick={() => setSelectedWord(word)}
+                      />
+                    ))}
+                  {analysis.vocabulary?.words?.filter(word => {
+                    if (selectedPosFilter === 'All') return true;
+                    const posTag = word.occurrences?.[0]?.pos || '';
+                    return getPosCategory(posTag) === selectedPosFilter;
+                  }).length === 0 && (
+                    <div className="text-center text-gray-500 py-8">
+                      <p className="text-sm">No {selectedPosFilter.toLowerCase()}s found</p>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Right Side: Detail Panel */}
