@@ -73,12 +73,23 @@ export async function downloadYouTubeVideo(url, outputDir) {
     
     let info;
     if (isProduction) {
-      // Production: Don't use browser cookies (not available on servers)
-      console.log('🌐 Production mode - downloading without browser cookies');
+      // Production: Use bot bypass options
+      console.log('🌐 Production mode - using bot bypass options');
       info = await youtubedl(url, {
         dumpSingleJson: true,
         noWarnings: true,
         noPlaylist: true,
+        // Bot bypass options
+        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        referer: 'https://www.youtube.com/',
+        addHeader: [
+          'Accept-Language:en-US,en;q=0.9',
+          'Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Encoding:gzip, deflate',
+          'DNT:1'
+        ],
+        extractor_args: 'youtube:player_client=android,web',
+        noCheckCertificates: true,
       });
     } else {
       // Development: Try with browser cookies for better success rate
@@ -108,8 +119,21 @@ export async function downloadYouTubeVideo(url, outputDir) {
 
     let output;
     if (isProduction) {
-      // Production: Download without browser cookies
-      output = await youtubedl(url, downloadOptions);
+      // Production: Download with bot bypass options
+      output = await youtubedl(url, {
+        ...downloadOptions,
+        // Bot bypass options
+        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        referer: 'https://www.youtube.com/',
+        addHeader: [
+          'Accept-Language:en-US,en;q=0.9',
+          'Accept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Encoding:gzip, deflate',
+          'DNT:1'
+        ],
+        extractor_args: 'youtube:player_client=android,web',
+        noCheckCertificates: true,
+      });
     } else {
       // Development: Try with browser cookies
       output = await tryWithBrowserCookies(url, downloadOptions);
@@ -155,6 +179,11 @@ export async function downloadYouTubeVideo(url, outputDir) {
     // Check if yt-dlp is not installed
     if (error.message.includes('spawn') || error.message.includes('ENOENT')) {
       throw new Error('yt-dlp is not installed. Please install it with: brew install yt-dlp');
+    }
+    
+    // Check for bot detection / authentication required
+    if (error.message.includes('Sign in to confirm') || error.message.includes('not a bot')) {
+      throw new Error('YouTube blocked this request due to bot detection. Please try a different video or use the file upload feature to upload a downloaded video instead.');
     }
     
     // Check for video unavailability
