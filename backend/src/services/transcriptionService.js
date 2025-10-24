@@ -19,7 +19,11 @@ function getOpenAIClient() {
 
     openai = new OpenAI({
       apiKey: apiKey,
+      timeout: 120000, // 120 seconds (2 minutes)
+      maxRetries: 3, // Retry up to 3 times on network errors
     });
+    
+    console.log('🔧 OpenAI client initialized with 120s timeout and 3 retries');
   }
   return openai;
 }
@@ -188,6 +192,21 @@ export async function transcribeAudio(audioPath, onProgress = null) {
 
   } catch (error) {
     console.error('❌ Transcription error:', error.message);
+
+    // Check for connection/network errors
+    if (error.message.includes('Connection error') || 
+        error.message.includes('ECONNREFUSED') ||
+        error.message.includes('ETIMEDOUT') ||
+        error.message.includes('ENOTFOUND') ||
+        error.code === 'ECONNRESET' ||
+        error.code === 'ETIMEDOUT') {
+      // If TEST_MODE is enabled, use mock transcription
+      if (process.env.TEST_MODE === 'true') {
+        console.log('⚠️ TEST_MODE enabled - using mock transcription due to connection error');
+        return generateMockTranscription(audioPath);
+      }
+      throw new Error('Cannot connect to OpenAI API. This could be due to network issues on the server. Please try again in a few moments, or enable TEST_MODE for offline testing.');
+    }
 
     // Check for API key issues
     if (error.message.includes('Incorrect API key') || error.message.includes('authentication')) {
